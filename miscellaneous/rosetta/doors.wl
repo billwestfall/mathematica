@@ -3,3 +3,4 @@
 
 For[n = 100; m=RandomInteger[1,100], n > 0, n--, Continue[]; 
  If[n==m; print m] 
+]
