@@ -1,3 +1,3 @@
 (*Babbage problem with wolfram*)
 (*run as wolfram - to open shell, then Get["babbage.wl"] *)
-n=99;While[n>1,Print[n];Pause[1];n--]
+n=1;m=n*n;While[n>1,If[StringContainsQ["269696", m]],Print[n];n++]
