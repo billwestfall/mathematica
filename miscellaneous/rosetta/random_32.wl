@@ -1,1 +1,2 @@
-X = RandomInteger[{0,imax}]
+X = RandomInteger[{0,2147483647}]
+print X
