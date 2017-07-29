@@ -1,0 +1,49 @@
+pi@raspberrypi:~ $ wolfram
+Wolfram Language (Raspberry Pi Pilot Release)
+Copyright 1988-2016 Wolfram Research
+Information & help: wolfram.com/raspi
+
+In[1]:= 5 + 7                                                                   
+
+Out[1]= 12
+
+In[2]:= 3 ^ 100                                                                 
+
+Out[2]= 515377520732011331036461129765621272702107522001
+
+In[3]:= N[%]                                                                    
+
+                  47
+Out[3]= 5.15378 10
+
+In[4]:= N[ Sqrt[10], 50 ]                                                       
+
+Out[4]= 3.1622776601683793319988935444327185337195551393252
+
+In[5]:= (3 + 4 I) ^ 10                                                          
+
+Out[5]= -9653287 + 1476984 I
+
+In[6]:= BesselJ[0, 14.5]                                                        
+
+Out[6]= 0.0875449
+
+In[7]:= FindRoot[BesselJ[0, x], {x, 14.5}]                                      
+
+Out[7]= {x -> 14.9309}
+
+In[8]:= N[ Zeta[ 1/2 + 13 I], 40]                                               
+
+Out[8]= 0.4430047825053681891978974413328491262590 - 
+ 
+>    0.6554830983211689430513696491913355062168 I
+
+In[9]:= NIntegrate[ Sin[Sin[x]], {x, 0, Pi} ]                                   
+
+Out[9]= 1.78649
+
+In[10]:= FactorInteger[ 70612139395722186 ]                                     
+
+Out[10]= {{2, 1}, {3, 2}, {43, 5}, {26684839, 1}}
+
+In[11]:=                                                                        
