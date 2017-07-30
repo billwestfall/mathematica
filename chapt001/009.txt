@@ -1,0 +1,133 @@
+pi@raspberrypi:~ $ wolfram
+Wolfram Language (Raspberry Pi Pilot Release)
+Copyright 1988-2016 Wolfram Research
+Information & help: wolfram.com/raspi
+
+In[1]:= r = (1 + x)/(2 (2 - y))                                                 
+
+          1 + x
+Out[1]= ---------
+        2 (2 - y)
+
+In[2]:= Denominator[%]                                                          
+
+Out[2]= 2 (2 - y)
+
+In[3]:= Denominator[1/x + 2/y]                                                  
+
+Out[3]= 1
+
+In[4]:= Expand[(x + 5 y + 10)^4] ;                                              
+
+In[5]:= % //Short                                                               
+
+                                     2       3    4                  3        4
+Out[5]//Short= 10000 + 4000 x + 600 x  + 40 x  + x  + <<8>> + 500 x y  + 625 y
+
+In[6]:= % //Short[%, 3]                                                         
+
+                               2       3    4                             2
+Out[6]= (10000 + 4000 x + 600 x  + 40 x  + x  + 20000 y + 6000 x y + 600 x  y + 
+ 
+           3            2           2        2  2         3          3        4
+>      20 x  y + 15000 y  + 3000 x y  + 150 x  y  + 5000 y  + 500 x y  + 625 y )
+ 
+                             2       3    4                             2
+>     [10000 + 4000 x + 600 x  + 40 x  + x  + 20000 y + 6000 x y + 600 x  y + 
+ 
+          3            2           2        2  2         3          3        4
+>     20 x  y + 15000 y  + 3000 x y  + 150 x  y  + 5000 y  + 500 x y  + 625 y ]
+
+In[7]:= Length[%]                                                               
+
+Out[7]= 1
+
+In[8]:= 12 meters                                                               
+
+Out[8]= 12 meters
+
+In[9]:= % + 5.3 meters                                                          
+
+Out[9]= 17.3 meters
+
+In[10]:= % / (25 seconds)                                                       
+
+         0.692 meters
+Out[10]= ------------
+           seconds
+
+In[11]:= % /. meters -> 3.28084 feet                                            
+
+         2.27034 feet
+Out[11]= ------------
+           seconds
+
+In[12]:= 12 Meter/Second                                                        
+
+         12 Meter
+Out[12]= --------
+          Second
+
+In[13]:= Convert[ %, Mile/Hour ]                                                
+
+                 12 Meter  Mile
+Out[13]= Convert[--------, ----]
+                  Second   Hour
+
+In[14]:= <<Miscellaneous`Units`                                                 
+
+Get::noopen: Cannot open Miscellaneous`Units`.
+
+Out[14]= $Failed
+
+In[15]:= D[ x^n , x ]                                                           
+
+            -1 + n
+Out[15]= n x
+
+In[16]:= D[x^2 Log[x + a], x]                                                   
+
+           2
+          x
+Out[16]= ----- + 2 x Log[a + x]
+         a + x
+
+In[17]:= D[ x^n , x ]                                                           
+
+            -1 + n
+Out[17]= n x
+
+In[18]:= D[ ArcTan[x] , x ]                                                     
+
+           1
+Out[18]= ------
+              2
+         1 + x
+
+In[19]:= D[ x^n, {x, 3} ]                                                       
+
+                              -3 + n
+Out[19]= (-2 + n) (-1 + n) n x
+
+In[20]:= Dt[ x^n, x ]                                                           
+
+          n  n
+Out[20]= x  (- + Dt[n, x] Log[x])
+             x
+
+In[21]:= Dt[ x^n ]                                                              
+
+          n  n Dt[x]
+Out[21]= x  (------- + Dt[n] Log[x])
+                x
+
+In[22]:= D[ f[x], x]                                                            
+
+Out[22]= f'[x]
+
+In[23]:= D[ 2 x f[x^2], x ]                                                     
+
+              2       2     2
+Out[23]= 2 f[x ] + 4 x  f'[x ]
+
+In[24]:=                                                                        
