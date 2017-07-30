@@ -1,0 +1,44 @@
+
+pi@raspberrypi:~ $ mathematica
+Can't open display ""
+pi@raspberrypi:~ $ wolfram
+Wolfram Language (Raspberry Pi Pilot Release)
+Copyright 1988-2016 Wolfram Research
+Information & help: wolfram.com/raspi
+
+In[1]:= 2.3 + 5.63                                                              
+
+Out[1]= 7.93
+
+In[2]:= 2.4 / 8.9 ^ 2                                                           
+
+Out[2]= 0.0302992
+
+In[3]:= 2 3 4                                                                   
+
+Out[3]= 24
+
+In[4]:= (3 + 4) ^ 2 - 2 (3 + 1)                                                 
+
+Out[4]= 41
+
+In[5]:= (3+4)^2-2(3+1)                                                          
+
+Out[5]= 41
+
+In[6]:= 2.4 ^ 45                                                                
+
+                  17
+Out[6]= 1.28678 10
+
+In[7]:= 2.3 20^-70                                                              
+
+                  -91
+Out[7]= 1.94818 10
+
+In[8]:= 2.3 10^-70                                                              
+
+              -70
+Out[8]= 2.3 10
+
+In[9]:=                                                                         
