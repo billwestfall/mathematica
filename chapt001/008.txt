@@ -1,0 +1,254 @@
+billw@billw-ThinkPad-X220:~$ ssh pi@10.0.0.225
+pi@10.0.0.225's password: 
+
+The programs included with the Debian GNU/Linux system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Debian GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent
+permitted by applicable law.
+Last login: Sun Jul 30 01:02:03 2017 from 10.0.0.184
+
+SSH is enabled and the default password for the 'pi' user has not been changed.
+This is a security risk - please login as the 'pi' user and type 'passwd' to set a new password.
+
+pi@raspberrypi:~ $ mathematica
+Can't open display ""
+pi@raspberrypi:~ $ wolfram
+Wolfram Language (Raspberry Pi Pilot Release)
+Copyright 1988-2016 Wolfram Research
+Information & help: wolfram.com/raspi
+
+In[1]:= e = (x - 1)^2 (2 + x) / ((1 + x) (x - 3)^2))                            
+
+Syntax::sntxf: "e = (x - 1)^2 (2 + x) / ((1 + x) (x - 3)^2)"
+     cannot be followed by ")".
+
+
+In[2]:= e = (x - 1)^2 (2 + x) / ((1 + x) (x - 3)^2)                             
+
+                2
+        (-1 + x)  (2 + x)
+Out[2]= -----------------
+                2
+        (-3 + x)  (1 + x)
+
+In[3]:= Expand[e]                                                               
+
+                                                        3
+                2                  3 x                 x
+Out[3]= ----------------- - ----------------- + -----------------
+                2                   2                   2
+        (-3 + x)  (1 + x)   (-3 + x)  (1 + x)   (-3 + x)  (1 + x)
+
+In[4]:= ExpandAll[e]                                                            
+
+                                                             3
+                 2                    3 x                   x
+Out[4]= ------------------- - ------------------- + -------------------
+                     2    3                2    3                2    3
+        9 + 3 x - 5 x  + x    9 + 3 x - 5 x  + x    9 + 3 x - 5 x  + x
+
+In[5]:= Together[e]                                                             
+
+                2
+        (-1 + x)  (2 + x)
+Out[5]= -----------------
+                2
+        (-3 + x)  (1 + x)
+
+In[6]:= Together[%]                                                             
+
+                2
+        (-1 + x)  (2 + x)
+Out[6]= -----------------
+                2
+        (-3 + x)  (1 + x)
+
+In[7]:= ExpandAll[e]                                                            
+
+                                                             3
+                 2                    3 x                   x
+Out[7]= ------------------- - ------------------- + -------------------
+                     2    3                2    3                2    3
+        9 + 3 x - 5 x  + x    9 + 3 x - 5 x  + x    9 + 3 x - 5 x  + x
+
+In[8]:= Together[%]                                                             
+
+                     3
+          2 - 3 x + x
+Out[8]= -----------------
+                2
+        (-3 + x)  (1 + x)
+
+In[9]:= Apart[%]                                                                
+
+                5           19           1
+Out[9]= 1 + --------- + ---------- + ---------
+                    2   4 (-3 + x)   4 (1 + x)
+            (-3 + x)
+
+In[10]:= Factor[%]                                                              
+
+                 2
+         (-1 + x)  (2 + x)
+Out[10]= -----------------
+                 2
+         (-3 + x)  (1 + x)
+
+In[11]:= Simplify[e]                                                            
+
+                 2
+         (-1 + x)  (2 + x)
+Out[11]= -----------------
+                 2
+         (-3 + x)  (1 + x)
+
+In[12]:= v = Expand[(3 + 2 x)^2 (x + 2 y)^2]                                    
+
+            2       3      4                2         3         2         2
+Out[12]= 9 x  + 12 x  + 4 x  + 36 x y + 48 x  y + 16 x  y + 36 y  + 48 x y  + 
+ 
+         2  2
+>    16 x  y
+
+In[13]:= Collect[v, x]                                                          
+
+            4       2    3                2                 2
+Out[13]= 4 x  + 36 y  + x  (12 + 16 y) + x  (9 + 48 y + 16 y ) + 
+ 
+                   2
+>    x (36 y + 48 y )
+
+In[14]:= Collect [v, y]                                                         
+
+            2       3      4               2       3                       2   2
+Out[14]= 9 x  + 12 x  + 4 x  + (36 x + 48 x  + 16 x ) y + (36 + 48 x + 16 x ) y
+
+In[15]:= FactorTerms[v, y]                                                      
+
+                        2    2              2
+Out[15]= (9 + 12 x + 4 x ) (x  + 4 x y + 4 y )
+
+In[16]:= Expand[Cos[x]^3 Sin[x}^2, Trig -> True]                                
+
+Syntax::sntxf: "Expand[Cos[x]^3 Sin[x" cannot be followed by 
+    "}^2, Trig -> True]".
+
+
+In[17]:= Expand[Cos[x]^3 Sin[x}^2, Trig->True]                                  
+
+Syntax::sntxf: "Expand[Cos[x]^3 Sin[x" cannot be followed by "}^2, Trig->True]".
+
+
+In[18]:= Expand[Cos[x]^3 Sin[x]^2, Trig->True]                                  
+
+               3       2
+Out[18]= Cos[x]  Sin[x]
+
+In[19]:= ComplexExpand[ Sin[x + I y] ]                                          
+
+Out[19]= Cosh[y] Sin[x] + I Cos[x] Sinh[y]
+
+In[20]:= ComplexExpand[ Sin[x + I y], {x, y} ]                                  
+
+Out[20]= -(Cosh[Im[x] + Re[y]] Sin[Im[y] - Re[x]]) + 
+ 
+>    I Cos[Im[y] - Re[x]] Sinh[Im[x] + Re[y]]
+
+In[21]:= Sqrt[ x y ]                                                            
+
+Out[21]= Sqrt[x y]
+
+In[22]:= PowerExpand[%]                                                         
+
+Out[22]= Sqrt[x] Sqrt[y]
+
+In[23]:= {Sqrt [x, y], Sqrt[x] Sqrt[y]} /. {x -> -1, y -> -1}                   
+
+Sqrt::argx: Sqrt called with 2 arguments; 1 argument is expected.
+
+Sqrt::argx: Sqrt called with 2 arguments; 1 argument is expected.
+
+Out[23]= {Sqrt[-1, -1], -1}
+
+In[24]:= {Sqrt [x y], Sqrt[x] Sqrt[y]} /. {x -> -1, y -> -1}                    
+
+Out[24]= {1, -1}
+
+In[25]:= e = Expand[(1 + 3x + 4y^2)^2]                                          
+
+                      2      2         2       4
+Out[25]= 1 + 6 x + 9 x  + 8 y  + 24 x y  + 16 y
+
+In[26]:= Coefficient[e, x]                                                      
+
+                 2
+Out[26]= 6 + 24 y
+
+In[27]:= Exponent[e, y]                                                         
+
+Out[27]= 4
+
+In[28]:= Part[e, 4]                                                             
+
+            2
+Out[28]= 8 y
+
+In[29]:= x = (1 + x)/(2 (2 - y))                                                
+
+$RecursionLimit::reclim2: 
+   Recursion depth of 1024 exceeded during evaluation of 1 + x.
+
+                1 + x
+Out[29]= Hold[---------]
+              2 (2 - y)
+
+In[30]:= Denominator[%]                                                         
+
+Out[30]= 1
+
+In[31]:= x = (1 + x)/(2 (2 - y))                                                
+
+$RecursionLimit::reclim2: 
+   Recursion depth of 1024 exceeded during evaluation of 1 + x.
+
+                    1 + x
+Out[31]= Hold[x = ---------]
+                  2 (2 - y)
+
+In[32]:= Denominator[x]                                                         
+
+$RecursionLimit::reclim2: 
+   Recursion depth of 1024 exceeded during evaluation of 1 + x.
+
+Out[32]= Hold[Denominator[x]]
+
+In[33]:= x = (1 + x)/(2 (2 - y))                                                
+
+$RecursionLimit::reclim2: 
+   Recursion depth of 1024 exceeded during evaluation of 1 + x.
+
+                    1 + x
+Out[33]= Hold[x = ---------]
+                  2 (2 - y)
+
+In[34]:= Denominator[1/x + 2/y]                                                 
+
+$RecursionLimit::reclim2: 
+   Recursion depth of 1024 exceeded during evaluation of 1 + x.
+
+                          1   2
+Out[34]= Hold[Denominator[- + -]]
+                          x   y
+
+In[35]:= r = (1 + x)/(2 (2 - y))                                                
+
+$RecursionLimit::reclim2: 
+   Recursion depth of 1024 exceeded during evaluation of 1 + x.
+
+                    1 + x
+Out[35]= Hold[r = ---------]
+                  2 (2 - y)
+
+In[36]:=                                                                        
