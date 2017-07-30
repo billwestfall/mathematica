@@ -1,0 +1,92 @@
+pi@raspberrypi:~ $ wolfram
+Wolfram Language (Raspberry Pi Pilot Release)
+Copyright 1988-2016 Wolfram Research
+Information & help: wolfram.com/raspi
+
+In[1]:= 2 + 2 == 4                                                              
+
+Out[1]= True
+
+In[2]:= x = 4                                                                   
+
+Out[2]= 4
+
+In[3]:= x                                                                       
+
+Out[3]= 4
+
+In[4]:= x ==4                                                                   
+
+Out[4]= True
+
+In[5]:= x == 6                                                                  
+
+Out[5]= False
+
+In[6]:= x =.                                                                    
+
+In[7]:= x == 5                                                                  
+
+Out[7]= x == 5
+
+In[8]:= % /. x -> 4                                                             
+
+Out[8]= False
+
+In[9]:= 2 x + x^2 == 2 x + x^2                                                  
+
+Out[9]= True
+
+In[10]:= 2 x + x^2 == x (2 + x)                                                 
+
+                2
+Out[10]= 2 x + x  == x (2 + x)
+
+In[11]:= x^2 + 2 x -7 == 0                                                      
+
+                     2
+Out[11]= -7 + 2 x + x  == 0
+
+In[12]:= eqn = %                                                                
+
+                     2
+Out[12]= -7 + 2 x + x  == 0
+
+In[13]:= eqn                                                                    
+
+                     2
+Out[13]= -7 + 2 x + x  == 0
+
+In[14]:= 10 < 7                                                                 
+
+Out[14]= False
+
+In[15]:= 3 != 2 != 3                                                            
+
+Out[15]= False
+
+In[16]:= 3 < 5 <= 6                                                             
+
+Out[16]= True
+
+In[17]:= x > y                                                                  
+
+Out[17]= x > y
+
+In[18]:= 7 > 4 && 2 != 3                                                        
+
+Out[18]= True
+
+In[19]:=  p && q                                                                
+
+Out[19]= p && q
+
+In[20]:= (p || q) && !(r || s)                                                  
+
+Out[20]= (p || q) && !(r || s)
+
+In[21]:= LogicalExpand[ % ]                                                     
+
+Out[21]= (p && !r && !s) || (q && !r && !s)
+
+In[22]:=                                                                        
