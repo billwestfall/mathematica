@@ -1,0 +1,137 @@
+billw@billw-ThinkPad-X220:~$ ssh pi@10.0.0.225
+pi@10.0.0.225's password: 
+
+The programs included with the Debian GNU/Linux system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Debian GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent
+permitted by applicable law.
+Last login: Sun Jul 30 14:44:15 2017 from 10.0.0.184
+
+SSH is enabled and the default password for the 'pi' user has not been changed.
+This is a security risk - please login as the 'pi' user and type 'passwd' to set a new password.
+
+pi@raspberrypi:~ $ mathematica
+Can't open display ""
+pi@raspberrypi:~ $ wolfram
+Wolfram Language (Raspberry Pi Pilot Release)
+Copyright 1988-2016 Wolfram Research
+Information & help: wolfram.com/raspi
+
+In[1]:= Integrate[x^n, x]                                                       
+
+         1 + n
+        x
+Out[1]= ------
+        1 + n
+
+In[2]:= Integrate[1/(x^4 - a^4), x]                                             
+
+                x
+        -ArcTan[-]
+                a    Log[a - x]   Log[a + x]
+Out[2]= ---------- + ---------- - ----------
+              3            3            3
+           2 a          4 a          4 a
+
+In[3]:= Integrate[ Log[x]^2 (1 + x^2)/x , x]                                    
+
+         2    2           2       2         3
+        x    x  Log[x]   x  Log[x]    Log[x]
+Out[3]= -- - --------- + ---------- + -------
+        4        2           2           3
+
+In[4]:= Integrate[ Sin[Sin[x]], x ]                                             
+
+Out[4]= Integrate[Sin[Sin[x]], x]
+
+In[5]:= Integrate[ Log[x], {x, a, b}]                                           
+
+Out[5]= ConditionalExpression[-(a (-1 + Log[a])) + b (-1 + Log[b]), 
+ 
+                          a               a              a
+>    Re[a] >= 0 && ((Re[------] >= 0 && ----- != 0) || ----- ∉ Reals || 
+                        -a + b          a - b          a - b
+ 
+             a
+>       Re[-----] > 1)]
+           a - b
+
+In[6]:= Integrate[ Sin[Sin[x]], {x, 0, 1} ]                                     
+
+Out[6]= Integrate[Sin[Sin[x]], {x, 0, 1}]
+
+In[7]:= N[ % ]                                                                  
+
+Out[7]= 0.430606
+
+In[8]:= Integrate[ x^2 + y^2, {x, 0, 1}, {y, 0, x}]                             
+
+        1
+Out[8]= -
+        3
+
+In[9]:= Sum[x^i/i, {i, 1, 7}]                                                   
+
+             2    3    4    5    6    7
+            x    x    x    x    x    x
+Out[9]= x + -- + -- + -- + -- + -- + --
+            2    3    4    5    6    7
+
+In[10]:= Sum[x^i/i, {i, 7}]                                                     
+
+              2    3    4    5    6    7
+             x    x    x    x    x    x
+Out[10]= x + -- + -- + -- + -- + -- + --
+             2    3    4    5    6    7
+
+In[11]:= Sum[x^i/i, {i, 1, 5, 2}]                                               
+
+              3    5
+             x    x
+Out[11]= x + -- + --
+             3    5
+
+In[12]:= Product[x + i, {i, 1, 4}]                                              
+
+Out[12]= (1 + x) (2 + x) (3 + x) (4 + x)
+
+In[13]:= Sum[i/1^3, {i, 1, 20}]                                                 
+
+Out[13]= 210
+
+In[14]:= Sum[i/i^3, {i, 1, 20}]                                                 
+
+         17299975731542641
+Out[14]= -----------------
+         10838475198270720
+
+In[15]:= N[ % ]                                                                 
+
+Out[15]= 1.59616
+
+In[16]:= Sum[1/i^3, {i, 1, 20}]                                                 
+
+         336658814638864376538323
+Out[16]= ------------------------
+         280346265322438720204800
+
+In[17]:= N[ % ]                                                                 
+
+Out[17]= 1.20087
+
+In[18]:= Sum[1/i^3, {i, 1, Infinity}]                                           
+
+Out[18]= Zeta[3]
+
+In[19]:= N[ % ]                                                                 
+
+Out[19]= 1.20206
+
+In[20]:= Sum[x^i y^j, {i, 1, 3}, {j, 1, i}]                                     
+
+                2      3      2  2    3  2    3  3
+Out[20]= x y + x  y + x  y + x  y  + x  y  + x  y
+
+In[21]:=                                                                        
