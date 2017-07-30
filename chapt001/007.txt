@@ -1,0 +1,142 @@
+pi@raspberrypi:~ $ wolfram
+Wolfram Language (Raspberry Pi Pilot Release)
+Copyright 1988-2016 Wolfram Research
+Information & help: wolfram.com/raspi
+
+In[1]:= 1 + 2x /. x -> 3                                                        
+
+Out[1]= 7
+
+In[2]:= 1 + x + x^2 /. x -> 2 - y                                               
+
+                   2
+Out[2]= 3 + (2 - y)  - y
+
+In[3]:= x -> 3 + y                                                              
+
+Out[3]= x -> 3 + y
+
+In[4]:= x^2 - 9 /. %                                                            
+
+                    2
+Out[4]= -9 + (3 + y)
+
+In[5]:= (x + y) (x - y)^2 /. {x -> 3, y -> 1 - a}                               
+
+                       2
+Out[5]= (4 - a) (2 + a)
+
+In[6]:= x = 3                                                                   
+
+Out[6]= 3
+
+In[7]:= x^2 - 1                                                                 
+
+Out[7]= 8
+
+In[8]:= x = 1 + a                                                               
+
+Out[8]= 1 + a
+
+In[9]:= x^2 - 1                                                                 
+
+                    2
+Out[9]= -1 + (1 + a)
+
+In[10]:= x + 5 - 2x                                                             
+
+Out[10]= 6 + a - 2 (1 + a)
+
+In[11]:= x =.                                                                   
+
+In[12]:= x + 5 - 2x                                                             
+
+Out[12]= 5 - x
+
+In[13]:= t = 1 + x^2                                                            
+
+              2
+Out[13]= 1 + x
+
+In[14]:= t /. x -> 2                                                            
+
+Out[14]= 5
+
+In[15]:= t /. x -> 5a                                                           
+
+                 2
+Out[15]= 1 + 25 a
+
+In[16]:= t /. x -> Pi //N                                                       
+
+Out[16]= 10.8696
+
+In[17]:= Expand[ 1 + x^2]                                                       
+
+              2
+Out[17]= 1 + x
+
+In[18]:= Expand[ (1 + x)^2]                                                     
+
+                    2
+Out[18]= 1 + 2 x + x
+
+In[19]:= Factor[ % ]                                                            
+
+                2
+Out[19]= (1 + x)
+
+In[20]:= Expand[ (1 + x + 3 y)^4 ]                                              
+
+                      2      3    4                       2         3
+Out[20]= 1 + 4 x + 6 x  + 4 x  + x  + 12 y + 36 x y + 36 x  y + 12 x  y + 
+ 
+         2          2       2  2        3          3       4
+>    54 y  + 108 x y  + 54 x  y  + 108 y  + 108 x y  + 81 y
+
+In[21]:= Factor [ % ]                                                           
+
+                      4
+Out[21]= (1 + x + 3 y)
+
+In[22]:= Factor[ x^10 - 1]                                                      
+
+                                    2    3    4            2    3    4
+Out[22]= (-1 + x) (1 + x) (1 - x + x  - x  + x ) (1 + x + x  + x  + x )
+
+In[23]:= Expand [ % ]                                                           
+
+               10
+Out[23]= -1 + x
+
+In[24]:= Simplify[ x^2 + 2 x + 1]                                               
+
+                2
+Out[24]= (1 + x)
+
+In[25]:= Simplify[x^10 - 1]                                                     
+
+               10
+Out[25]= -1 + x
+
+In[26]:= Integrate[1/(x^4 - 1), x]                                              
+
+         -ArcTan[x]   Log[1 - x]   Log[1 + x]
+Out[26]= ---------- + ---------- - ----------
+             2            4            4
+
+In[27]:= D[% , x]                                                               
+
+            -1           1           1
+Out[27]= --------- - --------- - ----------
+         4 (1 - x)   4 (1 + x)           2
+                                 2 (1 + x )
+
+In[28]:= Simplify[%]                                                            
+
+            1
+Out[28]= -------
+               4
+         -1 + x
+
+In[29]:=                                                                        
