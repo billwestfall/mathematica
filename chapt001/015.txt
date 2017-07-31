@@ -1,0 +1,86 @@
+Wolfram Language (Raspberry Pi Pilot Release)
+Copyright 1988-2016 Wolfram Research
+Information & help: wolfram.com/raspi
+
+In[1]:= ConstrainedMin[x - y - z, {y + z < 3, x > 7}, {x, y, z}]                
+
+ConstrainedMin::deprec: 
+   ConstrainedMin is deprecated and will not be supported in future versions of
+     the Wolfram Language. Use NMinimize or Minimize instead.
+
+Out[1]= {4, {x -> 7, y -> 3, z -> 0}}
+
+In[2]:= FindMinimum[x Cos[x], {x, 1}]                                           
+
+FindMinimum::lstol: 
+   The line search decreased the step size to within the tolerance specified by
+     AccuracyGoal and PrecisionGoal but was unable to find a sufficient decrease
+     in the function. You may need more than MachinePrecision
+     digits of working precision to meet these tolerances.
+
+Out[2]= {-3.28837, {x -> 3.42562}}
+
+In[3]:= FindMinimum[x Cos[x], {x, 10}]                                          
+
+Out[3]= {-9.47729, {x -> 9.52933}}
+
+In[4]:= FindMinimum[Sin[x y], {x, 2}, {y, 2}]                                   
+
+Out[4]= {-1., {x -> 2.1708, y -> 2.1708}}
+
+In[5]:= data = Table[Exp[x/5.] , {x, 7}]                                        
+
+Out[5]= {1.2214, 1.49182, 1.82212, 2.22554, 2.71828, 3.32012, 4.0552}
+
+In[6]:= Fit[data, {1, x, x^2], x]                                               
+
+Syntax::sntxf: "Fit[data, {1, x, x^2" cannot be followed by "], x]".
+
+
+In[7]:= Fit[data, {1, x, x^2}, x]                                               
+
+                                           2
+Out[7]= 1.09428 + 0.0986337 x + 0.0459482 x
+
+In[8]:= Fit[data, {1, x, x^3, x^5}, x]                                          
+
+                                           3             -6  5
+Out[8]= 0.96806 + 0.246829 x + 0.00428281 x  - 6.57948 10   x
+
+In[9]:= data = Table[ {x, Exp[Sin[x]]}, {x, 0., 1., 0.2}]                       
+
+Out[9]= {{0., 1.}, {0.2, 1.21978}, {0.4, 1.47612}, {0.6, 1.75882}, 
+ 
+>    {0.8, 2.04901}, {1., 2.31978}}
+
+In[10]:= Fit[ %, {1, Sin[x], Sin[2x]}, x]                                       
+
+Out[10]= 0.989559 + 2.04199 Sin[x] - 0.418176 Sin[2 x]
+
+In[11]:= data = {1, 1, 1, 1, -1, -1, -1, -1}                                    
+
+Out[11]= {1, 1, 1, 1, -1, -1, -1, -1}
+
+In[12]:= Fourier[data]                                                          
+
+Out[12]= {0. + 0. I, 0.707107 + 1.70711 I, 0. + 0. I, 0.707107 + 0.292893 I, 
+ 
+>    0. + 0. I, 0.707107 - 0.292893 I, 0. + 0. I, 0.707107 - 1.70711 I}
+
+In[13]:= data = {4.3, 7.2, 8.4, 5.8, 9.2, 3.9}                                  
+
+Out[13]= {4.3, 7.2, 8.4, 5.8, 9.2, 3.9}
+
+In[14]:= Mean[data]                                                             
+
+Out[14]= 6.46667
+
+In[15]:= Variance[data]                                                         
+
+Out[15]= 4.69467
+
+In[16]:= DispersionReport[data]                                                 
+
+Out[16]= DispersionReport[{4.3, 7.2, 8.4, 5.8, 9.2, 3.9}]
+
+In[17]:=                                                                        
