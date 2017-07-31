@@ -1,0 +1,59 @@
+pi@raspberrypi:~ $ wolfram
+Wolfram Language (Raspberry Pi Pilot Release)
+Copyright 1988-2016 Wolfram Research
+Information & help: wolfram.com/raspi
+
+In[1]:= f[x_] := x^2                                                            
+
+In[2]:= f[a+1]                                                                  
+
+               2
+Out[2]= (1 + a)
+
+In[3]:= f[4]                                                                    
+
+Out[3]= 16
+
+In[4]:= f[3x + x^2]                                                             
+
+                2 2
+Out[4]= (3 x + x )
+
+In[5]:= Expand[f[(x+1+y)]]                                                      
+
+                   2                  2
+Out[5]= 1 + 2 x + x  + 2 y + 2 x y + y
+
+In[6]:= ?f                                                                      
+Global`f
+
+f[x_] := x^2
+
+In[7]:= hump[x_, xmax_] := {x - xmax}^2 / xmax                                  
+
+In[8]:= 2 + hump[x, 3.5]                                                        
+
+                                2
+Out[8]= {2 + 0.285714 (-3.5 + x) }
+
+In[9]:= hump[x_, xmax_] := {x - xmax}^4                                         
+
+In[10]:= ?hump                                                                  
+Global`hump
+
+hump[x_, xmax_] := {x - xmax}^4
+
+In[11]:= Clear[hump]                                                            
+
+In[12]:= Expand[Product[x + i, {i, 3}]                                          
+         ]                                                                      
+
+                       2    3
+Out[12]= 6 + 11 x + 6 x  + x
+
+In[13]:= Expand[Product[x + i, {i, 4}] ]                                        
+
+                         2       3    4
+Out[13]= 24 + 50 x + 35 x  + 10 x  + x
+
+In[14]:=                                                                        
