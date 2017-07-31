@@ -1,0 +1,188 @@
+pi@raspberrypi:~ $ wolfram
+Wolfram Language (Raspberry Pi Pilot Release)
+Copyright 1988-2016 Wolfram Research
+Information & help: wolfram.com/raspi
+
+In[1]:= DSolve[ y'[x] == a y[x], y[x], x ]                                      
+
+                   a x
+Out[1]= {{y[x] -> E    C[1]}}
+
+In[2]:= Dsolve[ y'[x] == a y[x], y[0] == 1}, y[x], x]                           
+
+Syntax::sntxf: "Dsolve[ y'[x] == a y[x], y[0] == 1" cannot be followed by 
+    "}, y[x], x]".
+
+
+In[3]:= Dsolve[ {y'[x] == a y[x], y[0] == 1}, y[x], x]                          
+
+Out[3]= Dsolve[{y'[x] == a y[x], y[0] == 1}, y[x], x]
+
+In[4]:= DSolve[ {y'[x] == a y[x], y[0] == 1}, y[x], x]                          
+
+                   a x
+Out[4]= {{y[x] -> E   }}
+
+In[5]:= DSolve[ {x'[t] == y[t], y'[t] == x[t]}, {x[t], y[t]}, t ]               
+
+                        2 t                2 t
+                  (1 + E   ) C[1]   (-1 + E   ) C[2]
+Out[5]= {{x[t] -> --------------- + ----------------, 
+                          t                  t
+                       2 E                2 E
+ 
+                     2 t               2 t
+              (-1 + E   ) C[1]   (1 + E   ) C[2]
+>     y[t] -> ---------------- + ---------------}}
+                       t                 t
+                    2 E               2 E
+
+In[6]:= DSolve[ y'[x] == x + y[x], y, x]                                        
+
+                                       x
+Out[6]= {{y -> Function[{x}, -1 - x + E  C[1]]}}
+
+In[7]:= y''[x] + y[x] /. %                                                      
+
+                     x
+Out[7]= {-1 - x + 2 E  C[1]}
+
+In[8]:= Series[ (1 + x)^n, {x, 0, 3}]                                           
+
+                              2                        3
+                  (-1 + n) n x    (-2 + n) (-1 + n) n x        4
+Out[8]= 1 + n x + ------------- + ---------------------- + O[x]
+                        2                   6
+
+In[9]:= Series[ 1 + f[t], {t. 0. 3}]                                            
+
+Series::sspec: Series specification {3 t . 0.}
+     is not a list with three elements.
+
+Out[9]= Series[1 + f[t], {3 t . 0.}]
+
+In[10]:= Series[ 1 + f[t], {t, 0, 3}]                                           
+
+                                 2           3  (3)
+                                t  f''[0]   t  f   [0]       4
+Out[10]= (1 + f[0]) + f'[0] t + --------- + ---------- + O[t]
+                                    2           6
+
+In[11]:= Series[ Exp[x], {x, 0, 5}]                                             
+
+                  2    3    4    5
+                 x    x    x    x         6
+Out[11]= 1 + x + -- + -- + -- + --- + O[x]
+                 2    6    24   120
+
+In[12]:= %^2 (1 + %)                                                            
+
+                       2       3       4       5
+                   13 x    35 x    97 x    55 x        6
+Out[12]= 2 + 5 x + ----- + ----- + ----- + ----- + O[x]
+                     2       6      24      24
+
+In[13]:= Normal[%]                                                              
+
+                       2       3       4       5
+                   13 x    35 x    97 x    55 x
+Out[13]= 2 + 5 x + ----- + ----- + ----- + -----
+                     2       6      24      24
+
+In[14]:= %^2                                                                    
+
+                        2       3       4       5
+                    13 x    35 x    97 x    55 x  2
+Out[14]= (2 + 5 x + ----- + ----- + ----- + -----)
+                      2       6      24      24
+
+In[15]:= Expand[%]                                                              
+
+                                 3        4         5         6         7
+                        2   265 x    467 x    1505 x    7883 x    1385 x
+Out[15]= 4 + 20 x + 51 x  + ------ + ------ + ------- + ------- + ------- + 
+                              3        4        12        72        18
+ 
+            8         9         10
+     24809 x    5335 x    3025 x
+>    -------- + ------- + --------
+       576        288       576
+
+In[16]:= t = Sin[x]/x                                                           
+
+         Sin[x]
+Out[16]= ------
+           x
+
+In[17]:= t /. x -> 0                                                            
+
+                                 1
+Power::infy: Infinite expression - encountered.
+                                 0
+
+Infinity::indet: Indeterminate expression 0 ComplexInfinity encountered.
+
+Out[17]= Indeterminate
+
+In[18]:= t /. x -> 0.01                                                         
+
+Out[18]= 0.999983
+
+In[19]:= Limit[t, x->0]                                                         
+
+Out[19]= 1
+
+In[20]:= LaplaceTransform[ t^3 Exp[a t], t, s]                                  
+
+                 3
+           Sin[x]
+Out[20]= -----------
+                   3
+         (-a + s) x
+
+In[21]:= InverseLaplaceTransform[ %, s, t]                                      
+
+          (a Sin[x])/x       3
+         E             Sin[x]
+Out[21]= ---------------------
+                   3
+                  x
+
+In[22]:= SetCoordinates[Spherical[r, theta, phi]]                               
+
+Out[22]= SetCoordinates[Spherical[r, theta, phi]]
+
+In[23]:= <<Calculus`VectorAnalysis`                                             
+
+Get::noopen: Cannot open Calculus`VectorAnalysis`.
+
+Out[23]= $Failed
+
+In[24]:= Grad[r^2 Sin[theta]]                                                   
+
+Grad::argtu: Grad called with 1 argument; 2 or 3 arguments are expected.
+
+               2
+Out[24]= Grad[r  Sin[theta]]
+
+In[25]:= Simplify[SymbolicSum[i^5 - 2/i^2, {i, n}]                              
+                                                                                
+         :                                                                      
+         ;                                                                      
+         ]                                                                      
+
+Syntax::sntxf: "Simplify[SymbolicSum[i^5 - 2/i^2, {i, n}]"
+
+
+     cannot be followed by ":".
+
+
+In[26]:= Simplify[SymbolicSum[i^5 - 2/i^2, {i, n}] ]                            
+
+                           7
+                     -2 + i
+Out[26]= SymbolicSum[-------, {i, n}]
+                        2
+                       i
+
+In[27]:=                                                                        
