@@ -1,0 +1,151 @@
+pi@raspberrypi:~ $ wolfram
+Wolfram Language (Raspberry Pi Pilot Release)
+Copyright 1988-2016 Wolfram Research
+Information & help: wolfram.com/raspi
+
+In[1]:= m = {{a, b}, {c, d}}                                                    
+
+Out[1]= {{a, b}, {c, d}}
+
+In[2]:= m[[1]]                                                                  
+
+Out[2]= {a, b}
+
+In[3]:= m[[1, 2]]                                                               
+
+Out[3]= b
+
+In[4]:= m[[1,2]]                                                                
+
+Out[4]= b
+
+In[5]:= v = {x, y}                                                              
+
+Out[5]= {x, y}
+
+In[6]:= p v + q                                                                 
+
+Out[6]= {q + p x, q + p y}
+
+In[7]:= v + {xp, yp} + {xpp, ypp}                                               
+
+Out[7]= {x + xp + xpp, y + yp + ypp}
+
+In[8]:= {x, y} . {xp, yp}                                                       
+
+Out[8]= x xp + y yp
+
+In[9]:= m . v                                                                   
+
+Out[9]= {a x + b y, c x + d y}
+
+In[10]:= m . m                                                                  
+
+            2                                       2
+Out[10]= {{a  + b c, a b + b d}, {a c + c d, b c + d }}
+
+In[11]:= v . m                                                                  
+
+Out[11]= {a x + c y, b x + d y}
+
+In[12]:= v . m . v                                                              
+
+Out[12]= x (a x + c y) + y (b x + d y)
+
+In[13]:= s = Table[ i + j, {i, 3}, {j, 3}]                                      
+
+Out[13]= {{2, 3, 4}, {3, 4, 5}, {4, 5, 6}}
+
+In[14]:= MatrixForm[s]                                                          
+
+Out[14]//MatrixForm= 2   3   4
+
+                     3   4   5
+
+                     4   5   6
+
+In[15]:= Array[a, 4]                                                            
+
+Out[15]= {a[1], a[2], a[3], a[4]}
+
+In[16]:= Array[p, {3, 2}]                                                       
+
+Out[16]= {{p[1, 1], p[1, 2]}, {p[2, 1], p[2, 2]}, {p[3, 1], p[3, 2]}}
+
+In[17]:= Dimensions[%]                                                          
+
+Out[17]= {3, 2}
+
+In[18]:= DiagonalMatrix[ {a, b, c}]                                             
+
+Out[18]= {{a, 0, 0}, {0, b, 0}, {0, 0, c}}
+
+In[19]:= m                                                                      
+
+Out[19]= {{a, b}, {c, d}}
+
+In[20]:= Det[m]                                                                 
+
+Out[20]= -(b c) + a d
+
+In[21]:= Transpose[m]                                                           
+
+Out[21]= {{a, c}, {b, d}}
+
+In[22]:= Inverse[m]                                                             
+
+                d               b                  c              a
+Out[22]= {{------------, -(------------)}, {-(------------), ------------}}
+           -(b c) + a d    -(b c) + a d       -(b c) + a d   -(b c) + a d
+
+In[23]:= h = Table[1/(i+j-1), {i. 3}, {j, 3}]                                   
+
+Table::iterb: Iterator {i . 3} does not have appropriate bounds.
+
+                   1
+Out[23]= Table[---------, {i . 3}, {j, 3}]
+               i + j - 1
+
+In[24]:= h = Table[1/(i+j-1), {i, 3}, {j, 3}]                                   
+
+              1  1    1  1  1    1  1  1
+Out[24]= {{1, -, -}, {-, -, -}, {-, -, -}}
+              2  3    2  3  4    3  4  5
+
+In[25]:= Inverse[h}                                                             
+
+Syntax::sntxf: "Inverse[h" cannot be followed by "}".
+
+
+In[26]:= Inverse[h]                                                             
+
+Out[26]= {{9, -36, 30}, {-36, 192, -180}, {30, -180, 180}}
+
+In[27]:= % . h                                                                  
+
+Out[27]= {{1, 0, 0}, {0, 1, 0}, {0, 0, 1}}
+
+In[28]:= r = Table[i + j + 1, {i, 3}, {j, 3}]                                   
+
+Out[28]= {{3, 4, 5}, {4, 5, 6}, {5, 6, 7}}
+
+In[29]:= EigenValues[r]                                                         
+
+Out[29]= EigenValues[{{3, 4, 5}, {4, 5, 6}, {5, 6, 7}}]
+
+In[30]:= Eigenvalues[r]                                                         
+
+          15 + Sqrt[249]  15 - Sqrt[249]
+Out[30]= {--------------, --------------, 0}
+                2               2
+
+In[31]:= rn = N[r]                                                              
+
+Out[31]= {{3., 4., 5.}, {4., 5., 6.}, {5., 6., 7.}}
+
+In[32]:= Eigenvalues[rn]                                                        
+
+                                         -15
+Out[32]= {15.3899, -0.389867, -1.89851 10   }
+
+In[33]:=                                                                        
