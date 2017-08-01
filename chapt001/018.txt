@@ -1,0 +1,184 @@
+pi@raspberrypi:~ $ wolfram
+Wolfram Language (Raspberry Pi Pilot Release)
+Copyright 1988-2016 Wolfram Research
+Information & help: wolfram.com/raspi
+
+In[1]:= Do[ Print[i], {i, 10}]                                                  
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+
+In[2]:= Table[i, {i, 10}]                                                       
+
+Out[2]= {1, 2, 3, 4, 5, 6, 7, 8, 9, 10}
+
+In[3]:= Table[2i, {i, 10}]                                                      
+
+Out[3]= {2, 4, 6, 8, 10, 12, 14, 16, 18, 20}
+
+In[4]:= Table[i/3, {i, 10}]                                                     
+
+         1  2     4  5     7  8     10
+Out[4]= {-, -, 1, -, -, 2, -, -, 3, --}
+         3  3     3  3     3  3     3
+
+In[5]:= NTable[i/3, {i, 10}]                                                    
+
+               i
+Out[5]= NTable[-, {i, 10}]
+               3
+
+In[6]:= Table[i/3, {i, 10}]                                                     
+
+         1  2     4  5     7  8     10
+Out[6]= {-, -, 1, -, -, 2, -, -, 3, --}
+         3  3     3  3     3  3     3
+
+In[7]:= N[%]                                                                    
+
+Out[7]= {0.333333, 0.666667, 1., 1.33333, 1.66667, 2., 2.33333, 2.66667, 3., 
+ 
+>    3.33333}
+
+In[8]:= {2, 3, 4}                                                               
+
+Out[8]= {2, 3, 4}
+
+In[9]:= x^% - 1                                                                 
+
+               2        3        4
+Out[9]= {-1 + x , -1 + x , -1 + x }
+
+In[10]:= D[%, x]                                                                
+
+                  2     3
+Out[10]= {2 x, 3 x , 4 x }
+
+In[11]:= % /. x -> 3                                                            
+
+Out[11]= {6, 27, 108}
+
+In[12]:= Table[i^2, {i, 6}]                                                     
+
+Out[12]= {1, 4, 9, 16, 25, 36}
+
+In[13]:= Table[Sin[n, Pi/5], {n, 0, 4}]                                         
+
+Sin::argx: Sin called with 2 arguments; 1 argument is expected.
+
+Sin::argx: Sin called with 2 arguments; 1 argument is expected.
+
+Sin::argx: Sin called with 2 arguments; 1 argument is expected.
+
+General::stop: Further output of Sin::argx
+     will be suppressed during this calculation.
+
+                 Pi          Pi          Pi          Pi          Pi
+Out[13]= {Sin[0, --], Sin[1, --], Sin[2, --], Sin[3, --], Sin[4, --]}
+                 5           5           5           5           5
+
+In[14]:= N[%]                                                                   
+
+Sin::argx: Sin called with 2 arguments; 1 argument is expected.
+
+Sin::argx: Sin called with 2 arguments; 1 argument is expected.
+
+Sin::argx: Sin called with 2 arguments; 1 argument is expected.
+
+General::stop: Further output of Sin::argx
+     will be suppressed during this calculation.
+
+Out[14]= {Sin[0., 0.628319], Sin[1., 0.628319], Sin[2., 0.628319], 
+ 
+>    Sin[3., 0.628319], Sin[4., 0.628319]}
+
+In[15]:= Table[x^i + 2 i, {i, 5}]                                               
+
+                      2       3       4        5
+Out[15]= {2 + x, 4 + x , 6 + x , 8 + x , 10 + x }
+
+In[16]:= N[%]                                                                   
+
+                        2        3        4         5
+Out[16]= {2. + x, 4. + x , 6. + x , 8. + x , 10. + x }
+
+In[17]:= Product[x^i + 2 i, {i, 5}]                                             
+
+                       2        3        4         5
+Out[17]= (2 + x) (4 + x ) (6 + x ) (8 + x ) (10 + x )
+
+In[18]:= Table[Sqrt[x], {x, 0, 1, 0.25}]                                        
+
+Out[18]= {0., 0.5, 0.707107, 0.866025, 1.}
+
+In[19]:= %^2 + 3                                                                
+
+Out[19]= {3., 3.25, 3.5, 3.75, 4.}
+
+In[20]:= % // TableForm                                                         
+
+Out[20]//TableForm= 3.
+
+                    3.25
+
+                    3.5
+
+                    3.75
+
+                    4.
+
+In[21]:= Table[x^i + y^j, {i, 3}, {j, 2}]                                       
+
+                       2     2       2    2     3       3    2
+Out[21]= {{x + y, x + y }, {x  + y, x  + y }, {x  + y, x  + y }}
+
+In[22]:= Table[x, {4}]                                                          
+
+Out[22]= {x, x, x, x}
+
+In[23]:= Table[ Random[], {4}]                                                  
+
+Out[23]= {0.00154877, 0.497228, 0.884434, 0.927671}
+
+In[24]:= Table[ Random[], {4}]                                                  
+
+Out[24]= {0.513457, 0.985466, 0.726777, 0.41223}
+
+In[25]:= m = Table[i - j, {i, 2}, {j, 2}]                                       
+
+Out[25]= {{0, -1}, {1, 0}}
+
+In[26]:= m[{1}]                                                                 
+
+Out[26]= {{0, -1}, {1, 0}}[{1}]
+
+In[27]:= m[[1]]                                                                 
+
+Out[27]= {0, -1}
+
+In[28]:= %[[2]]                                                                 
+
+Out[28]= -1
+
+In[29]:= m[[1,2]]                                                               
+
+Out[29]= -1
+
+In[30]:= TableForm[m]                                                           
+
+Out[30]//TableForm= 0   -1
+
+                    1   0
+
+In[31]:= Table[i j^2 k^3, {i, 2}, {j, 2}, {k, 2}]                               
+
+Out[31]= {{{1, 8}, {4, 32}}, {{2, 16}, {8, 64}}}
+
+In[32]:=                                                                        
