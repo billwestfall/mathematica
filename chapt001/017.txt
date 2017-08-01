@@ -1,0 +1,90 @@
+pi@raspberrypi:~ $ wolfram
+Wolfram Language (Raspberry Pi Pilot Release)
+Copyright 1988-2016 Wolfram Research
+Information & help: wolfram.com/raspi
+
+In[1]:= exprod[n_] := Expand[ Product[ x + i, {i, 1, n}]]                       
+
+In[2]:= exprod[5]                                                               
+
+                           2       3       4    5
+Out[2]= 120 + 274 x + 225 x  + 85 x  + 15 x  + x
+
+In[3]:= cex[n_, i] := (t = exprod[n]; Coefficient[t, x^i])                      
+
+In[4]:= cex[5, 3]                                                               
+
+Out[4]= cex[5, 3]
+
+In[5]:= cex[n_, i_] := (t = exprod[n]; Coefficient[t, x^i])                     
+
+In[6]:= cex[5, 3]                                                               
+
+Out[6]= 85
+
+In[7]:= t                                                                       
+
+                           2       3       4    5
+Out[7]= 120 + 274 x + 225 x  + 85 x  + 15 x  + x
+
+In[8]:= ncex[n_, i_] := Module[{u}, u = exprod[n]; Coeeficient[u, x^i]]         
+
+In[9]:= ncex[5, 3]                                                              
+
+                                       2       3       4    5   3
+Out[9]= Coeeficient[120 + 274 x + 225 x  + 85 x  + 15 x  + x , x ]
+
+In[10]:= ncex[n_, i_] := Module[{u}, u = exprod[n]; Coefficient[u, x^i]]        
+
+In[11]:= ncex[5, 3]                                                             
+
+Out[11]= 85
+
+In[12]:= u                                                                      
+
+Out[12]= u
+
+In[13]:= Do[ Print[i!], {i, 5}]                                                 
+1
+2
+6
+24
+120
+
+In[14]:= Table[ i!, {i, 5}]                                                     
+
+Out[14]= {1, 2, 6, 24, 120}
+
+In[15]:= r = 1; Do[ r = 1/(1 + r), {100} ]; r                                   
+
+         573147844013817084101
+Out[15]= ---------------------
+         927372692193078999176
+
+In[16]:= 1 + f[x] + f[y] /. x -> 3                                              
+
+Out[16]= 1 + f[3] + f[y]
+
+In[17]:= 1 + f[x] + f[y] /. x -> p                                              
+
+Out[17]= 1 + f[p] + f[y]
+
+In[18]:= 1 + f[x] + f[y] /. f[x] -> p                                           
+
+Out[18]= 1 + p + f[y]
+
+In[19]:= 1 + f[x] + f[y] /. f[t_] -> t^2                                        
+
+                                   2       3       4    5 2
+Out[19]= 1 + 2 (120 + 274 x + 225 x  + 85 x  + 15 x  + x )
+
+In[20]:= f[a b] + f[c d] /. f[x_ y_] -> f[x] + f[y]                             
+
+Out[20]= f[a] + f[b] + f[c] + f[d]
+
+In[21]:= 1 + x^2 + x^4 /. x^p -> f[p]                                           
+
+              2    4
+Out[21]= 1 + x  + x
+
+In[22]:=                                                                        
