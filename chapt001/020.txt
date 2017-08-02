@@ -1,0 +1,79 @@
+pi@raspberrypi:~ $ wolfram
+Wolfram Language (Raspberry Pi Pilot Release)
+Copyright 1988-2016 Wolfram Research
+Information & help: wolfram.com/raspi
+
+In[1]:= t = {a,b,c,d,e,f,g}                                                     
+
+Out[1]= {a, b, c, d, e, f, g}
+
+In[2]:= Last[t]                                                                 
+
+Out[2]= g
+
+In[3]:= t[[3]]                                                                  
+
+Out[3]= c
+
+In[4]:= t[[ {1, 4} ]]                                                           
+
+Out[4]= {a, d}
+
+In[5]:= Take[t, 3]                                                              
+
+Out[5]= {a, b, c}
+
+In[6]:= Take[t, -3]                                                             
+
+Out[6]= {e, f, g}
+
+In[7]:= Take[t, {2, 5}]                                                         
+
+Out[7]= {b, c, d, e}
+
+In[8]:= Rest[t]                                                                 
+
+Out[8]= {b, c, d, e, f, g}
+
+In[9]:= Drop[t, 3]                                                              
+
+Out[9]= {d, e, f, g}
+
+In[10]:= Drop[t, {3, 3}]                                                        
+
+Out[10]= {a, b, d, e, f, g}
+
+In[11]:= t = {{a, b, c}, {d, e, f}}                                             
+
+Out[11]= {{a, b, c}, {d, e, f}}
+
+In[12]:= t[{1}]                                                                 
+
+Out[12]= {{a, b, c}, {d, e, f}}[{1}]
+
+In[13]:= t[[1]]                                                                 
+
+Out[13]= {a, b, c}
+
+In[14]:= t[[1, 2]]                                                              
+
+Out[14]= b
+
+In[15]:= t[[1]][[2]]                                                            
+
+Out[15]= b
+
+In[16]:= t[[{2, 2, 1}]]                                                         
+
+Out[16]= {{d, e, f}, {d, e, f}, {a, b, c}}
+
+In[17]:= t[[{2, 2, 1}, {2, 3]]                                                  
+
+Syntax::sntxf: "t[[{2, 2, 1}, {2, 3" cannot be followed by "]]".
+
+
+In[18]:= t[[{2, 2, 1}, {2, 3}]]                                                 
+
+Out[18]= {{e, f}, {e, f}, {b, c}}
+
+In[19]:=                                                                        
