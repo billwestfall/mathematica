@@ -1,0 +1,132 @@
+pi@raspberrypi:~ $ wolfram
+Wolfram Language (Raspberry Pi Pilot Release)
+Copyright 1988-2016 Wolfram Research
+Information & help: wolfram.com/raspi
+
+In[1]:= Join[{a, b, c}, {x, y}, {c, {d, e}, a}]                                 
+
+Out[1]= {a, b, c, x, y, c, {d, e}, a}
+
+In[2]:= Union[{a, b, c}, {c, a, d}, {a, d}]                                     
+
+Out[2]= {a, b, c, d}
+
+In[3]:= Union[{c, a, b}, {d, a, c}, {a, e}]                                     
+
+Out[3]= {a, b, c, d, e}
+
+In[4]:= Intersection[{a, c, b}, {b, a, d, a}]                                   
+
+Out[4]= {a, b}
+
+In[5]:= Complement[{a, b, c, d}, {a, d}]                                        
+
+Out[5]= {b, c}
+
+In[6]:= Sort[{b, a, c, a, b}]                                                   
+
+Out[6]= {a, a, b, b, c}
+
+In[7]:= Union[{b, a, c, a, b}]                                                  
+
+Out[7]= {a, b, c}
+
+In[8]:= Reverse[{a, b, c, d}]                                                   
+
+Out[8]= {d, c, b, a}
+
+In[9]:= RotateLeft[{a, b, c, d, e}, 2]                                          
+
+Out[9]= {c, d, e, a, b}
+
+In[10]:= RotateLeft[{a, b, c, d, e}, -2]                                        
+
+Out[10]= {d, e, a, b, c}
+
+In[11]:= t = {a, b, c, d, e, f, g}                                              
+
+Out[11]= {a, b, c, d, e, f, g}
+
+In[12]:= Partition[t, 2]                                                        
+
+Out[12]= {{a, b}, {c, d}, {e, f}}
+
+In[13]:= Partition[t, 3]                                                        
+
+Out[13]= {{a, b, c}, {d, e, f}}
+
+In[14]:= Partition[t, 3, 1]                                                     
+
+Out[14]= {{a, b, c}, {b, c, d}, {c, d, e}, {d, e, f}, {e, f, g}}
+
+In[15]:= Apply[Plus, {a, b, c, d}]                                              
+
+Out[15]= a + b + c + d
+
+In[16]:= t = {{a, b}, {c, d}, {e, f}}                                           
+
+Out[16]= {{a, b}, {c, d}, {e, f}}
+
+In[17]:= Transpose[t]                                                           
+
+Out[17]= {{a, c, e}, {b, d, f}}
+
+In[18]:= Flatten[t]                                                             
+
+Out[18]= {a, b, c, d, e, f}
+
+In[19]:= t = Table[i^2 +j^2 +k^2, {i, 2}, {j, 2}, {k. 2}]                       
+
+Table::iterb: Iterator {k . 2} does not have appropriate bounds.
+
+Table::iterb: Iterator {k . 2} does not have appropriate bounds.
+
+                2    2    2
+Out[19]= Table[i  + j  + k , {i, 2}, {j, 2}, {k . 2}]
+
+In[20]:= Flatten[t]                                                             
+
+Table::iterb: Iterator {k . 2} does not have appropriate bounds.
+
+Table::iterb: Iterator {k . 2} does not have appropriate bounds.
+
+                2    2    2
+Out[20]= Table[i  + j  + k , {i, 2}, {j, 2}, {k . 2}]
+
+In[21]:= Flatten[t, 1]                                                          
+
+Table::iterb: Iterator {k . 2} does not have appropriate bounds.
+
+Table::iterb: Iterator {k . 2} does not have appropriate bounds.
+
+                2    2    2
+Out[21]= Table[i  + j  + k , {i, 2}, {j, 2}, {k . 2}]
+
+In[22]:= FlattenAt[{a, b}, {c, d}, 2]                                           
+
+FlattenAt::argt: 
+   FlattenAt called with 3 arguments; 1 or 2 arguments are expected.
+
+Out[22]= FlattenAt[{a, b}, {c, d}, 2]
+
+In[23]:= FlattenAt[{{a, b}, {c, d}}, 2]                                         
+
+Out[23]= {{a, b}, c, d}
+
+In[24]:= Permuatation[{a, b, c}]                                                
+
+Out[24]= Permuatation[{a, b, c}]
+
+In[25]:= Permutation[{a, b, c}]                                                 
+
+Out[25]= Permutation[{a, b, c}]
+
+In[26]:= Permutations[{a, b, c}]                                                
+
+Out[26]= {{a, b, c}, {a, c, b}, {b, a, c}, {b, c, a}, {c, a, b}, {c, b, a}}
+
+In[27]:= Outer[List, {a, b}, {c, d}]                                            
+
+Out[27]= {{{a, c}, {a, d}}, {{b, c}, {b, d}}}
+
+In[28]:=                                                                        
