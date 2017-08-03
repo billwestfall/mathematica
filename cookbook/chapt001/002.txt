@@ -1,0 +1,63 @@
+Precision[N[Sqrt[2],20]]
+Precision[2 + N[Sqrt[2],20]]
+TableForm[Table[{2^n + N[Sqrt[2],20],Precision[2^n + N[Sqrt[2],20]]},{n,0,10}],TableHeadings -> {None, {"Result", "Precision"}}]
+2^^101 (*Binary*)
+16^^FFFF (*Hexidecimal*)
+BaseForm[2^^1010101, 16]
+16^^A0 + 16^^0F // BaseForm[#,16]&
+Hash["Hello meh nem is Bill", "MD5"] //BaseForm[#,16]&
+123.777 // BaseForm[#,16]&
+12.1 + 67.2I // BaseForm[#,16]&
+IntegerDigits[12345]
+N[1/31]
+RealDigits[N[1/31],10]
+12!
+IntegerDigits[12!,10,5]
+12! //BaseForm[#,16]& (*12! in Base 10*)
+IntegerDigits[12!, 16] (*Base 16 integer digits*)
+IntegerDigits[12!, 16] // BaseForm[#,16]& (*Force base 16*)
+N[Pi, 10] (*Pi to 10 digits precision*)
+RealDigits[Pi, 10, 3] (*Extract first 3 digits*)
+RealDigits[Pi, 10, 3, -2] (*Extract 3rd to fifth digit*)
+RealDigits[Pi, 10, 3, -5]
+N[Pi,10] // BaseForm[#,2]&
+RealDigits[Pi,2,5,-2] (*Base 2*)
+Tuples[IntegerDigits[43210],4] //Short[#,4]&
+DeleteCases[Tuples[IntegerDigits[43210],4], {z__/;z==0, n__}] //Short[#,4]&
+FromDigits[IntegerDigits[987654321]]
+Fromdigits[IntegerDigits[987654321,2],2] (*In base 2*)
+FromDigits["4750"] + 1
+FromDigits["MMXIX", "Roman"] - 10
+IntegerString[4750] //InputForm
+IntegerString[2009, "Roman"] //InputForm
+Clear[error1, error2, mass, velocity, kineticEnergy]; error1 = 0.01; error2 = 0.005; mass = Interval[{1.10-error1,1.10+error1}];
+velocity = Interval[(7.50 - error2, 7.50 + error2)];kineticEnergy = 1/2 mass velocity ^ 2
+Subtract @@ kineticEnergy[[1]] //Abs (*Computes interval*)
+Clear[error1,mass,velocity,kineticEnergy];
+error1 = 0.01;
+mass = Interval[{1.10-error1,1.10+error1}];
+velocity = 7.5;
+kineticEnergy = 1/2 mass velocity^2
+Subtract @@ kineticEnergy[[1]] //Abs
+Interval[{1,2}]
+Interval[{2,1}]
+Interval[{4,3}, {2,1}]
+Interval[{1,2}] + Interval[{3,4}]
+Interval[{1,2}]  Interval[{3,4}] (*multiplication*)
+Interval[{1,2}] / Interval[{3,4}]
+Sqrt[Interval[{1.0,2.0}]]
+Clear[x]; Limit[Sin[x] + 1/2Cos[x], x -> infinity]
+Limit[2Sin[1/x] + 1/2Cos[x], x -> 0]
+Head[4/2]
+Floor[5/2]
+Ceiling[5/2]
+Round[5/2]
+Round[7/2]
+Rationalize[3.14159]
+Rationalize[3.1415927]
+Rationalize[3.1415927, 10^-8]
+Rationalize[3.1415927,0]
+UnbiasedRound[x_] := Block[{whole=Floor[x], v}, v = 10 * (x - whole); whole + Floor[v/10 + RandomReal[]]]
+Table[UnbiasedRound[10.5], {20}]
+Table[UnbiasedRound[10.1], {20}]
+Table[UnbiasedRound[10.8], {20}]
