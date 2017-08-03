@@ -42,3 +42,13 @@ Accuracy[N[30, {Infinity,20}]]
 {$MinPrecision, $MaxPrecision}
 SetPrecision[(1 + Exp[Sqrt[2] + Sqrt[3]]) / 2^25,32]
 Block[{$MinPrecision = 32, $MaxPrecision = 32}, SetPrecision[(1 + Exp[Sqrt[2] + Sqrt[3]])/2^25,32]]
+(2Pi)/3 + Pi/3
+Sqrt[Sin[2 Pi E] /1/2E^2]
+(2.0Pi)/3 + Pi/3
+1. + (2Pi)/3 + Pi/3
+x = N[Sqrt[2],30] * N[Sqrt[3],10]
+Precision[x]
+Accuracy[x]
+x = N[Sqrt[5],{Infinity,30}] + N[Sqrt[7], {Infinity,10}]
+Precision[x]
+Accuracy[x]
