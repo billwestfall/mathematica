@@ -1,0 +1,8 @@
+LogPlot[Exp [-x] + 4 Exp[-2x], {x,0,6}]
+p = Table[Prime[n], {n,10}]
+TextListPlot[p]
+BarChart[p]
+PieChart[p]
+Table[ Plot3D[BesselJ[0,Sqrt[x^2 + y^2] + t], {x,-10,10}, {y,-10,10}, Axes -> False, PlotRange -> {-0.5,1.0}, DisplayFunction -> Identity], {t,0,8}] //Short
+Show[ GraphicsArray[ Partition[%,3]]]
+Show[ GraphicsGrid[ Partition[%,3]]]
