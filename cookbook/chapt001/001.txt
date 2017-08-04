@@ -1,16 +1,4 @@
-Last login: Thu Aug  3 11:06:43 on ttys002
-MacBook-Air:~ billw$ ssh pi@10.0.0.225
-pi@10.0.0.225's password: 
-Permission denied, please try again.
-pi@10.0.0.225's password: 
 
-The programs included with the Debian GNU/Linux system are free software;
-the exact distribution terms for each program are described in the
-individual files in /usr/share/doc/*/copyright.
-
-Debian GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent
-permitted by applicable law.
-Last login: Wed Aug  2 23:20:27 2017 from 10.0.0.107
 pi@raspberrypi:~ $ wolfram
 Wolfram Language (Raspberry Pi Pilot Release)
 Copyright 1988-2016 Wolfram Research
