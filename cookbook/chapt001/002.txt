@@ -1,63 +1,307 @@
-Precision[N[Sqrt[2],20]]
-Precision[2 + N[Sqrt[2],20]]
-TableForm[Table[{2^n + N[Sqrt[2],20],Precision[2^n + N[Sqrt[2],20]]},{n,0,10}],TableHeadings -> {None, {"Result", "Precision"}}]
-2^^101 (*Binary*)
-16^^FFFF (*Hexidecimal*)
-BaseForm[2^^1010101, 16]
-16^^A0 + 16^^0F // BaseForm[#,16]&
-Hash["Hello meh nem is Bill", "MD5"] //BaseForm[#,16]&
-123.777 // BaseForm[#,16]&
-12.1 + 67.2I // BaseForm[#,16]&
-IntegerDigits[12345]
-N[1/31]
-RealDigits[N[1/31],10]
-12!
-IntegerDigits[12!,10,5]
-12! //BaseForm[#,16]& (*12! in Base 10*)
-IntegerDigits[12!, 16] (*Base 16 integer digits*)
-IntegerDigits[12!, 16] // BaseForm[#,16]& (*Force base 16*)
-N[Pi, 10] (*Pi to 10 digits precision*)
-RealDigits[Pi, 10, 3] (*Extract first 3 digits*)
-RealDigits[Pi, 10, 3, -2] (*Extract 3rd to fifth digit*)
-RealDigits[Pi, 10, 3, -5]
-N[Pi,10] // BaseForm[#,2]&
-RealDigits[Pi,2,5,-2] (*Base 2*)
-Tuples[IntegerDigits[43210],4] //Short[#,4]&
-DeleteCases[Tuples[IntegerDigits[43210],4], {z__/;z==0, n__}] //Short[#,4]&
-FromDigits[IntegerDigits[987654321]]
-Fromdigits[IntegerDigits[987654321,2],2] (*In base 2*)
-FromDigits["4750"] + 1
-FromDigits["MMXIX", "Roman"] - 10
-IntegerString[4750] //InputForm
-IntegerString[2009, "Roman"] //InputForm
-Clear[error1, error2, mass, velocity, kineticEnergy]; error1 = 0.01; error2 = 0.005; mass = Interval[{1.10-error1,1.10+error1}];
-velocity = Interval[(7.50 - error2, 7.50 + error2)];kineticEnergy = 1/2 mass velocity ^ 2
-Subtract @@ kineticEnergy[[1]] //Abs (*Computes interval*)
-Clear[error1,mass,velocity,kineticEnergy];
-error1 = 0.01;
-mass = Interval[{1.10-error1,1.10+error1}];
-velocity = 7.5;
-kineticEnergy = 1/2 mass velocity^2
-Subtract @@ kineticEnergy[[1]] //Abs
-Interval[{1,2}]
-Interval[{2,1}]
-Interval[{4,3}, {2,1}]
-Interval[{1,2}] + Interval[{3,4}]
-Interval[{1,2}]  Interval[{3,4}] (*multiplication*)
-Interval[{1,2}] / Interval[{3,4}]
-Sqrt[Interval[{1.0,2.0}]]
-Clear[x]; Limit[Sin[x] + 1/2Cos[x], x -> infinity]
-Limit[2Sin[1/x] + 1/2Cos[x], x -> 0]
-Head[4/2]
-Floor[5/2]
-Ceiling[5/2]
-Round[5/2]
-Round[7/2]
-Rationalize[3.14159]
-Rationalize[3.1415927]
-Rationalize[3.1415927, 10^-8]
-Rationalize[3.1415927,0]
-UnbiasedRound[x_] := Block[{whole=Floor[x], v}, v = 10 * (x - whole); whole + Floor[v/10 + RandomReal[]]]
-Table[UnbiasedRound[10.5], {20}]
-Table[UnbiasedRound[10.1], {20}]
-Table[UnbiasedRound[10.8], {20}]
+In[49]:= Precision[N[Sqrt[2],20]]                                               
+
+Out[49]= 20.
+
+In[50]:= Precision[2 + N[Sqrt[2],20]]                                           
+
+Out[50]= 20.3828
+
+In[51]:= TableForm[Table[{2^n + N[Sqrt[2],20],Precision[2^n + N[Sqrt[2],20]]},{n
+,0,10}],TableHeadings -> {None, {"Result", "Precision"}}]                       
+
+Out[51]//TableForm=    Result                     Precision
+                       2.4142135623730950488      20.2323
+
+                       3.4142135623730950488      20.3828
+
+                       5.4142135623730950488      20.583
+
+                       9.4142135623730950488      20.8233
+
+                       17.4142135623730950488     21.0904
+
+                       33.4142135623730950488     21.3734
+
+                       65.4142135623730950488     21.6652
+
+                       129.4142135623730950488    21.9615
+
+                       257.4142135623730950488    22.2601
+
+                       513.4142135623730950488    22.56
+
+                       1025.4142135623730950488   22.8604
+
+In[52]:= 2^^101 (*Binary*)                                                      
+
+Out[52]= 5
+
+In[53]:= 16^^FFFF (*Hexidecimal*)                                               
+
+Out[53]= 65535
+
+In[54]:= BaseForm[2^^1010101, 16]                                               
+
+Out[54]//BaseForm= 55
+                     16
+
+In[55]:= 16^^A0 + 16^^0F // BaseForm[#,16]&                                     
+
+Out[55]//BaseForm= af
+                     16
+
+In[56]:= Hash["Hello meh nem is Bill", "MD5"] //BaseForm[#,16]&                 
+
+^C
+Interrupt during LinkRead> 
+??
+Your options are:
+	interrupt (or r) to send an interrupt message to the external program
+	abort (or a) to send an abort message to the external program
+	continue (or c) to continue
+	kill (or k) to send a terminate message to the external program
+	exit (or quit) to exit Mathematica
+	back out (or b) to back out of the MathLink call--the link may die.
+
+Interrupt during LinkRead> aboty
+??
+Your options are:
+	interrupt (or r) to send an interrupt message to the external program
+	abort (or a) to send an abort message to the external program
+	continue (or c) to continue
+	kill (or k) to send a terminate message to the external program
+	exit (or quit) to exit Mathematica
+	back out (or b) to back out of the MathLink call--the link may die.
+
+Interrupt during LinkRead> abort
+
+Out[56]//BaseForm= Hash[Hello meh nem is Bill, MD5]
+
+In[57]:= 123.777 // BaseForm[#,16]&                                             
+
+Out[57]//BaseForm= 7b.c6f
+                         16
+
+In[58]:= 12.1 + 67.2I // BaseForm[#,16]&                                        
+
+Out[58]//BaseForm= c.199a   + 43.333   I
+                         16         16
+
+In[59]:= IntegerDigits[12345]                                                   
+
+Out[59]= {1, 2, 3, 4, 5}
+
+In[60]:= N[1/31]                                                                
+
+Out[60]= 0.0322581
+
+In[61]:= RealDigits[N[1/31],10]                                                 
+
+Out[61]= {{3, 2, 2, 5, 8, 0, 6, 4, 5, 1, 6, 1, 2, 9, 0, 3}, -1}
+
+In[62]:= 12!                                                                    
+
+Out[62]= 479001600
+
+In[63]:= IntegerDigits[12!,10,5]                                                
+
+Out[63]= {0, 1, 6, 0, 0}
+
+In[64]:= 12! //BaseForm[#,16]& (*12! in Base 10*)                               
+
+Out[64]//BaseForm= 1c8cfc00
+                           16
+
+In[65]:= IntegerDigits[12!, 16] (*Base 16 integer digits*)                      
+
+Out[65]= {1, 12, 8, 12, 15, 12, 0, 0}
+
+In[66]:= IntegerDigits[12!, 16] // BaseForm[#,16]& (*Force base 16*)            
+
+Out[66]//BaseForm= {1  , c  , 8  , c  , f  , c  , 0  , 0  }
+                     16   16   16   16   16   16   16   16
+
+In[67]:= N[Pi, 10] (*Pi to 10 digits precision*)                                
+
+Out[67]= 3.141592654
+
+In[68]:= RealDigits[Pi, 10, 3] (*Extract first 3 digits*)                       
+
+Out[68]= {{3, 1, 4}, 1}
+
+In[69]:= RealDigits[Pi, 10, 3, -2] (*Extract 3rd to fifth digit*)               
+
+Out[69]= {{4, 1, 5}, -1}
+
+In[70]:= RealDigits[Pi, 10, 3, -5]                                              
+
+Out[70]= {{9, 2, 6}, -4}
+
+In[71]:= N[Pi,10] // BaseForm[#,2]&                                             
+
+Out[71]//BaseForm= 11.0010010000111111011010101000100
+                                                     2
+
+In[72]:= RealDigits[Pi,2,5,-2] (*Base 2*)                                       
+
+Out[72]= {{0, 1, 0, 0, 1}, -1}
+
+In[73]:= Tuples[IntegerDigits[43210],4] //Short[#,4]&                           
+
+Out[73]//Short= {{4, 4, 4, 4}, {4, 4, 4, 3}, {4, 4, 4, 2}, {4, 4, 4, 1}, 
+ 
+>    {4, 4, 4, 0}, {4, 4, 3, 4}, {4, 4, 3, 3}, {4, 4, 3, 2}, {4, 4, 3, 1}, 
+ 
+>    {4, 4, 3, 0}, {4, 4, 2, 4}, {<<4>>}, <<607>>, {0, 0, 1, 0}, {0, 0, 0, 4}, 
+ 
+>    {0, 0, 0, 3}, {0, 0, 0, 2}, {0, 0, 0, 1}, {0, 0, 0, 0}}
+
+In[74]:= DeleteCases[Tuples[IntegerDigits[43210],4], {z__/;z==0, n__}] //Short[#
+,4]&                                                                            
+
+Out[74]//Short= {{4, 4, 4, 4}, {4, 4, 4, 3}, {4, 4, 4, 2}, {4, 4, 4, 1}, 
+ 
+>    {4, 4, 4, 0}, {4, 4, 3, 4}, {4, 4, 3, 3}, {4, 4, 3, 2}, {4, 4, 3, 1}, 
+ 
+>    {4, 4, 3, 0}, {4, 4, 2, 4}, {<<4>>}, <<482>>, {1, 0, 1, 0}, {1, 0, 0, 4}, 
+ 
+>    {1, 0, 0, 3}, {1, 0, 0, 2}, {1, 0, 0, 1}, {1, 0, 0, 0}}
+
+In[75]:= FromDigits[IntegerDigits[987654321]]                                   
+
+Out[75]= 987654321
+
+In[76]:= Fromdigits[IntegerDigits[987654321,2],2] (*In base 2*)                 
+
+Out[76]= Fromdigits[{1, 1, 1, 0, 1, 0, 1, 1, 0, 1, 1, 1, 1, 0, 0, 1, 1, 0, 1, 
+ 
+>     0, 0, 0, 1, 0, 1, 1, 0, 0, 0, 1}, 2]
+
+In[77]:= FromDigits["4750"] + 1                                                 
+
+Out[77]= 4751
+
+In[78]:= FromDigits["MMXIX", "Roman"] - 10                                      
+
+Out[78]= 2009
+
+In[79]:= IntegerString[4750] //InputForm                                        
+
+Out[79]//InputForm= "4750"
+
+In[80]:= IntegerString[2009, "Roman"] //InputForm                               
+
+Out[80]//InputForm= "MMIX"
+
+In[81]:= Clear[error1, error2, mass, velocity, kineticEnergy]; error1 = 0.01; er
+ror2 = 0.005; mass = Interval[{1.10-error1,1.10+error1}];                       
+
+In[82]:= velocity = Interval[(7.50 - error2, 7.50 + error2)];kineticEnergy = 1/2
+ mass velocity ^ 2                                                              
+
+Syntax::sntxf: "velocity = Interval[(7.50 - error2" cannot be followed by 
+    ", 7.50 + error2)];kineticEnergy = 1/2 mass velocity ^ 2".
+
+
+In[83]:= Interval[{1,2}]                                                        
+
+Out[83]= Interval[{1, 2}]
+
+In[84]:= Interval[{2,1}]                                                        
+
+Out[84]= Interval[{1, 2}]
+
+In[85]:= Interval[{4,3}, {2,1}]                                                 
+
+Out[85]= Interval[{1, 2}, {3, 4}]
+
+In[86]:= Interval[{1,2}] + Interval[{3,4}]                                      
+
+Out[86]= Interval[{4, 6}]
+
+In[87]:= Interval[{1,2}]  Interval[{3,4}] (*multiplication*)                    
+
+Out[87]= Interval[{3, 8}]
+
+In[88]:= Interval[{1,2}] / Interval[{3,4}]                                      
+
+                   1  2
+Out[88]= Interval[{-, -}]
+                   4  3
+
+In[89]:= Sqrt[Interval[{1.0,2.0}]]                                              
+
+Out[89]= Interval[{1., 1.41421}]
+
+In[90]:= Clear[x]; Limit[Sin[x] + 1/2Cos[x], x -> infinity]                     
+
+         Cos[infinity]
+Out[90]= ------------- + Sin[infinity]
+               2
+
+In[91]:= Limit[2Sin[1/x] + 1/2Cos[x], x -> 0]                                   
+
+                     3   5
+Out[91]= Interval[{-(-), -}]
+                     2   2
+
+In[92]:= Head[4/2]                                                              
+
+Out[92]= Integer
+
+In[93]:= Floor[5/2]                                                             
+
+Out[93]= 2
+
+In[94]:= Ceiling[5/2]                                                           
+
+Out[94]= 3
+
+In[95]:= Round[7/2]                                                             
+
+Out[95]= 4
+
+In[96]:= Rationalize[3.14159]                                                   
+
+         314159
+Out[96]= ------
+         100000
+
+In[97]:= Rationalize[3.1415927]                                                 
+
+Out[97]= 3.14159
+
+In[98]:= Rationalize[3.1415927, 10^-8]                                          
+
+         121033
+Out[98]= ------
+         38526
+
+In[99]:= Rationalize[3.1415927,0]                                               
+
+         31415927
+Out[99]= --------
+         10000000
+
+In[100]:= UnbiasedRound[x_] := Block[{whole=Floor[x], v}, v = 10 * (x - whole); 
+whole + Floor[v/10 + RandomReal[]]]                                             
+
+In[101]:= Table[UnbiasedRound[10.5], {20}]                                      
+
+Out[101]= {11, 10, 11, 10, 11, 11, 10, 10, 11, 10, 10, 10, 11, 10, 10, 10, 11, 
+ 
+>    11, 11, 10}
+
+In[102]:= Table[UnbiasedRound[10.1], {20}]                                      
+
+Out[102]= {11, 10, 10, 11, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 
+ 
+>    10, 10, 10}
+
+In[103]:= Table[UnbiasedRound[10.8], {20}]                                      
+
+Out[103]= {11, 11, 10, 11, 11, 11, 11, 11, 11, 10, 11, 10, 11, 11, 11, 11, 11, 
+ 
+>    11, 10, 11}
+
+In[104]:=                                                                       
