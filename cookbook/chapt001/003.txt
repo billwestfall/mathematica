@@ -1,0 +1,165 @@
+
+pi@raspberrypi:~ $ wolfram
+Wolfram Language (Raspberry Pi Pilot Release)
+Copyright 1988-2016 Wolfram Research
+Information & help: wolfram.com/raspi
+
+In[1]:= number = 3.50 * 1000000                                                 
+
+              6
+Out[1]= 3.5 10
+
+In[2]:= number // AccountingForm                                                
+
+Out[2]//AccountingForm= 3500000.
+
+In[3]:= -number // AccountingForm                                               
+
+Out[3]//AccountingForm= (3500000.)
+
+In[4]:= NumberForm[number, {6.4}]                                               
+
+
+NumberForm::iprf: 
+   Formatting specification {6.4}
+     should be a positive integer or a pair of positive integers.
+                             6
+Out[4]//NumberForm= 3.5 × 10
+
+In[5]:= AccountingForm[Column[100000.00, 10000000.00}], (9,1), DigitBlock -> 3, 
+NumberPadding -> {" ","0"}]                                                     
+
+Syntax::sntxf: "AccountingForm[Column[100000.00, 10000000.00"
+     cannot be followed by "}], (9,1), DigitBlock -> 3, NumberPadding -> {"
+      ","0"}]".
+
+
+In[6]:= AccountingForm[Column[{100000.00, 10000000.00}], (9,1), DigitBlock -> 3,
+ NumberPadding -> {" ","0"}]                                                    
+
+Syntax::sntxf: "AccountingForm[Column[{100000.00, 10000000.00}], (9"
+     cannot be followed by ",1), DigitBlock -> 3, NumberPadding -> {" ","0"}]".
+
+
+In[7]:= AccountingForm[Column[{100000.00, 10000000.00}], {9,1}, DigitBlock -> 3,
+ NumberPadding -> {" ","0"}]                                                    
+
+Out[7]//AccountingForm=     100,000.00
+                         10,000,000.00
+
+In[8]:= AccountingForm[Column[{100000.00,1000000.00,10000000.00]]               
+
+Syntax::sntxf: "AccountingForm[Column[{100000.00,1000000.00,10000000.00"
+     cannot be followed by "]]".
+
+
+In[9]:= AccountingForm[Column[{100000.00,1000000.00,10000000.00}]]              
+
+Out[9]//AccountingForm= 100000.
+                        1000000.
+                        10000000.
+
+In[10]:= PaddedForm[10,8,NumberPadding -> {"0", ""}]                            
+
+Out[10]//PaddedForm= 000000010
+
+In[11]:= id = ToString[PaddedForm[10,8,NumberPadding -> {"0",""}]]              
+
+Out[11]= 000000010
+
+In[12]:= {10.0, 100.0, 1000.0,10000.0,100000.0,1000000.0} //EngineeringForm     
+
+Out[12]//EngineeringForm= 
+ 
+                        3           3            3          6
+>   {10., 100., 1. × 10 , 10. × 10 , 100. × 10 , 1. × 10 }
+
+In[13]:= {10.0, 100.0, 1000.0,10000.0,100000.0,1000000.0} //ScientificForm      
+
+Out[13]//ScientificForm= 
+ 
+             1          2          3          4          5          6
+>   {1. × 10 , 1. × 10 , 1. × 10 , 1. × 10 , 1. × 10 , 1. × 10 }
+
+In[14]:= ScientificForm[1.77x10^5,NumberFormat -> (Row[{#1, "E", #3}]&)]        
+
+                                  5E
+Out[14]//ScientificForm= 1.77E x10
+
+In[15]:= array = RandomReal[{-1,1}, 100000];                                    
+
+In[16]:= (sum = 0;                                                              
+         Do[sum += array[[i]],{i,1,Length[array]}];                             
+         sum //Timing                                                           
+                                                                                
+                                                                                
+In[16]:= (sum = 0; Do[sum += array[[i]],{i,1,Length[array]}]; sum) //Timing     
+
+Out[16]= {1.6, -70.1318}
+
+In[17]:=                                                                        
+In[17]:= Fold[Plus, 0, array] //Timing                                          
+
+Out[17]= {0.12, -70.1318}
+
+In[18]:= Total[array] //Timing                                                  
+
+Out[18]= {0., -70.1318}
+
+In[19]:= zz /@ {1, {1}, {1, 2}}                                                 
+
+Out[19]= {zz[1], zz[{1}], zz[{1, 2}]}
+
+In[20]:= zz @@ {1, {1}, {1,2}}                                                  
+
+Out[20]= zz[1, {1}, {1, 2}]
+
+In[21]:= zz @@@ {1, {1}, {1,2}}                                                 
+
+Out[21]= {1, zz[1], zz[1, 2]}
+
+In[22]:= Fold[zz, 0, {1,{1}, {1,2}}]                                            
+
+Out[22]= zz[zz[zz[0, 1], {1}], {1, 2}]
+
+In[23]:= FoldList[zz, 0, {1,{1}, {1,2}}]                                        
+
+Out[23]= {0, zz[0, 1], zz[zz[0, 1], {1}], zz[zz[zz[0, 1], {1}], {1, 2}]}
+
+In[24]:= Nest[zz, {1, {1}, {1,2}}, 3]                                           
+
+Out[24]= zz[zz[zz[{1, {1}, {1, 2}}]]]
+
+In[25]:= NestList[zz, {1, {1}, {1,2}}, 3]                                       
+
+Out[25]= {{1, {1}, {1, 2}}, zz[{1, {1}, {1, 2}}], zz[zz[{1, {1}, {1, 2}}]], 
+ 
+>    zz[zz[zz[{1, {1}, {1, 2}}]]]}
+
+In[26]:= ClearAll[f]                                                            
+
+In[27]:= f[0] := 1                                                              
+
+In[28]:= f[1] := 1                                                              
+
+In[29]:= f[n_Integer] := n * f[n-1]                                             
+
+In[30]:= DownValues[f]                                                          
+
+Out[30]= {HoldPattern[f[0]] :> 1, HoldPattern[f[1]] :> 1, 
+ 
+>    HoldPattern[f[n_Integer]] :> n f[n - 1]}
+
+In[31]:= DownValues[f] = DownValues[f][[2,1,3}]]                                
+
+Syntax::sntxf: "DownValues[f] = DownValues[f][[2,1,3" cannot be followed by 
+    "}]]".
+
+
+In[32]:= DownValues[f] = DownValues[f][[{2,1,3}]]                               
+
+Out[32]= {HoldPattern[f[1]] :> 1, HoldPattern[f[0]] :> 1, 
+ 
+>    HoldPattern[f[n_Integer]] :> n f[n - 1]}
+
+In[33]:=                                                                        
