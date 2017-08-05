@@ -1,0 +1,156 @@
+Wolfram Language (Raspberry Pi Pilot Release)
+Copyright 1988-2016 Wolfram Research
+Information & help: wolfram.com/raspi
+
+In[1]:= Apply[f, {a, b, c}]                                                     
+
+Out[1]= f[a, b, c]
+
+In[2]:= Apply[Plus, {a, b, c}]                                                  
+
+Out[2]= a + b + c
+
+In[3]:= Apply[List, {a + b + c}]                                                
+
+Out[3]= {a + b + c}
+
+In[4]:= m = {{a, b, c}, {b, c, d}}                                              
+
+Out[4]= {{a, b, c}, {b, c, d}}
+
+In[5]:= Apply[f, m]                                                             
+
+Out[5]= f[{a, b, c}, {b, c, d}]
+
+In[6]:= Apply[f, m, {i}]                                                        
+
+Apply::level: Level specification {i} is not of the form n, {n}, or {m, n}.
+
+Out[6]= Apply[f, {{a, b, c}, {b, c, d}}, {i}]
+
+In[7]:= Apply[f, m, {1}]                                                        
+
+Out[7]= {f[a, b, c], f[b, c, d]}
+
+In[8]:= Apply[f, m, {0, 1}]                                                     
+
+Out[8]= f[f[a, b, c], f[b, c, d]]
+
+In[9]:= Map[f, {a, b, c}]                                                       
+
+Out[9]= {f[a], f[b], f[c]}
+
+In[10]:= take2[list_] := Take[list, 2]                                          
+
+In[11]:= Map[take2, {{1, 3, 4},{5,6,7},{2,1,6,6}}]                              
+
+Out[11]= {{1, 3}, {5, 6}, {2, 1}}
+
+In[12]:= Map[f, a + b + c]                                                      
+
+Out[12]= f[a] + f[b] + f[c]
+
+In[13]:= Map[Sqrt, g[x^2, x^3]]                                                 
+
+                 2         3
+Out[13]= g[Sqrt[x ], Sqrt[x ]]
+
+In[14]:= m = {{a, b}, {c, d}}                                                   
+
+Out[14]= {{a, b}, {c, d}}
+
+In[15]:= Map[f, m]                                                              
+
+Out[15]= {f[{a, b}], f[{c, d}]}
+
+In[16]:= MapAll[f, m]                                                           
+
+Out[16]= f[{f[{f[a], f[b]}], f[{f[c], f[d]}]}]
+
+In[17]:= Map[f, m, {2}]                                                         
+
+Out[17]= {{f[a], f[b]}, {f[c], f[d]}}
+
+In[18]:= Map[f, m, Heads -> True]                                               
+
+Out[18]= f[List][f[{a, b}], f[{c, d}]]
+
+In[19]:= mm = {{a, b, c}, {b, c, d}}                                            
+
+Out[19]= {{a, b, c}, {b, c, d}}
+
+In[20]:= MapAt[f, m, {{1, 2}, {2, 3}}]                                          
+
+MapAt::partw: Part {2, 3} of {{a, b}, {c, d}} does not exist.
+
+Out[20]= MapAt[f, {{a, b}, {c, d}}, {{1, 2}, {2, 3}}]
+
+In[21]:= MapAt[f, mm, {{1, 2}, {2, 3}}]                                         
+
+Out[21]= {{a, f[b], c}, {b, c, f[d]}}
+
+In[22]:= Position[mm, b]                                                        
+
+Out[22]= {{1, 2}, {2, 1}}
+
+In[23]:= MapAt[f, mm, %]                                                        
+
+Out[23]= {{a, f[b], c}, {f[b], c, d}}
+
+In[24]:= MapAt[f, {a, b, c, d}, {{2}, {3}}]                                     
+
+Out[24]= {a, f[b], f[c], d}
+
+In[25]:= t = 1 + (3 + x)^2 / x                                                  
+
+                    2
+             (3 + x)
+Out[25]= 1 + --------
+                x
+
+In[26]:= FullForm[ t ]                                                          
+
+Out[26]//FullForm= Plus[1, Times[Power[x, -1], Power[Plus[3, x], 2]]]
+
+In[27]:= MapAt[f, t, {{2, 1, 1}, {2, 2}}]                                       
+
+                      2
+             f[(3 + x) ]
+Out[27]= 1 + -----------
+                f[x]
+
+In[28]:= MapIndexed[f, {a, b, c}]                                               
+
+Out[28]= {f[a, {1}], f[b, {2}], f[c, {3}]}
+
+In[29]:= MapIndexed[f, {{a, b}, {c, d}}, 2]                                     
+
+Out[29]= {f[{f[a, {1, 1}], f[b, {1, 2}]}, {1}], 
+ 
+>    f[{f[c, {2, 1}], f[d, {2, 2}]}, {2}]}
+
+In[30]:= MapThread[f, {{a, b, c}, {ap, bp, cp}}]                                
+
+Out[30]= {f[a, ap], f[b, bp], f[c, cp]}
+
+In[31]:= MapThread[f, {{a, b}, {ap, bp}, {app, bpp}}]                           
+
+Out[31]= {f[a, ap, app], f[b, bp, bpp]}
+
+In[32]:= Map[f, {a, b, c}]                                                      
+
+Out[32]= {f[a], f[b], f[c]}
+
+In[33]:= Scan[Print, {a, b, c}]                                                 
+a
+b
+c
+
+In[34]:= Scan[Print, 1 + x^2, Infinity]                                         
+1
+x
+2
+ 2
+x
+
+In[35]:=                                                                        
