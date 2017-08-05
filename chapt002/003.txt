@@ -1,0 +1,114 @@
+
+pi@raspberrypi:~ $ wolfram
+Wolfram Language (Raspberry Pi Pilot Release)
+Copyright 1988-2016 Wolfram Research
+Information & help: wolfram.com/raspi
+
+In[1]:= f[x] + f[1 - x] /. f -> g                                               
+
+Out[1]= g[1 - x] + g[x]
+
+In[2]:= p1 = p2; p1[x, y]                                                       
+
+Out[2]= p2[x, y]
+
+In[3]:= pf[f_,x_] := f[x] + f[1 - x]                                            
+
+In[4]:= pf[Log, q]                                                              
+
+Out[4]= Log[1 - q] + Log[q]
+
+In[5]:= InverseFunction[ArcSin]                                                 
+
+Out[5]= Sin
+
+In[6]:= %[x]                                                                    
+
+Out[6]= Sin[x]
+
+In[7]:= Inversefunction[f] [x]                                                  
+
+Out[7]= Inversefunction[f][x]
+
+In[8]:= InverseFunction[f] [x]                                                  
+
+          (-1)
+Out[8]= (f    )[x]
+
+In[9]:= Nest[f, x, 4]                                                           
+
+Out[9]= f[f[f[f[x]]]]
+
+In[10]:= NestList[f, x, 4]                                                      
+
+Out[10]= {x, f[x], f[f[x]], f[f[f[x]]], f[f[f[f[x]]]]}
+
+In[11]:= recip[x_] := 1/(1+x)                                                   
+
+In[12]:= Nest[recip, x, 3]                                                      
+
+               1
+Out[12]= -------------
+                 1
+         1 + ---------
+                   1
+             1 + -----
+                 1 + x
+
+In[13]:= newton3[x_] := N[ 1/2 (x + 3x)]                                        
+
+In[14]:= NestList[newton3, 1.0, 5]                                              
+
+Out[14]= {1., 2., 4., 8., 16., 32.}
+
+In[15]:= newton3[x_] := N[ 1/2 (x + 3/x)]                                       
+
+In[16]:= NestList[newton3, 1.0, 5]                                              
+
+Out[16]= {1., 2., 1.75, 1.73214, 1.73205, 1.73205}
+
+In[17]:= newton3[x_] := N[ 1/2 (x + 3/x)]                                       
+
+In[18]:= NestList[newton3, 1.0, 5]                                              
+
+Out[18]= {1., 2., 1.75, 1.73214, 1.73205, 1.73205}
+
+In[19]:= newton4[x_] := N[ 1/2 (x + 3/x)]                                       
+
+In[20]:= NestList[newton4, 1.0, 5]                                              
+
+Out[20]= {1., 2., 1.75, 1.73214, 1.73205, 1.73205}
+
+In[21]:= FixedPoint[newton3, 1.0]                                               
+
+Out[21]= 1.73205
+
+In[22]:= FixedPointList[newton3, 1.0]                                           
+
+Out[22]= {1., 2., 1.75, 1.73214, 1.73205, 1.73205, 1.73205}
+
+In[23]:= FixedPointList[newton3, 1.0, SameTest -> (Abs[#1 -#2] < 10.^-4 &)]     
+
+Out[23]= {1., 2., 1.75, 1.73214, 1.73205}
+
+In[24]:= FoldList[f, x, {a, b, c}]                                              
+
+Out[24]= {x, f[x, a], f[f[x, a], b], f[f[f[x, a], b], c]}
+
+In[25]:= Fold[f, x, {a, b, c}]                                                  
+
+Out[25]= f[f[f[x, a], b], c]
+
+In[26]:= FoldList[Plus, 0, {a, b, c}]                                           
+
+Out[26]= {0, a, a + b, a + b + c}
+
+In[27]:= nextdigit[a_, b_] := 10 a + b                                          
+
+In[28]:= tonumber[digits_] := Fold[nextdigit, 0, digits]                        
+
+In[29]:= tonumber[{1, 3, 7, 2, 9, 1}]                                           
+
+Out[29]= 137291
+
+In[30]:=                                                                        
