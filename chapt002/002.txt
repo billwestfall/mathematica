@@ -1,0 +1,132 @@
+pi@raspberrypi:~ $ wolfram
+Wolfram Language (Raspberry Pi Pilot Release)
+Copyright 1988-2016 Wolfram Research
+Information & help: wolfram.com/raspi
+
+In[1]:= t = 1 + x + x^2 + y^2                                                   
+
+                 2    2
+Out[1]= 1 + x + x  + y
+
+In[2]:= Take[t, 2]                                                              
+
+Out[2]= 1 + x
+
+In[3]:= Length[t]                                                               
+
+Out[3]= 4
+
+In[4]:= FreeQ[t, x]                                                             
+
+Out[4]= False
+
+In[5]:= Position[t, x]                                                          
+
+Out[5]= {{2}, {3, 1}}
+
+In[6]:= f[a,b,c,d]                                                              
+
+Out[6]= f[a, b, c, d]
+
+In[7]:= Append[%, e]                                                            
+
+Out[7]= f[a, b, c, d, e]
+
+In[8]:= Reverse[%]                                                              
+
+Out[8]= f[e, d, c, b, a]
+
+In[9]:= FullForm[x^3 + (1 + x)^2]                                               
+
+Out[9]//FullForm= Plus[Power[x, 3], Power[Plus[1, x], 2]]
+
+In[10]:= TreeForm[x^3 + (1 + x)^2]                                              
+
+Out[10]//TreeForm= Plus[|          , |                   ]
+                        Power[x, 3]  Power[|         , 2]
+                                           Plus[1, x]
+
+In[11]:= TreeForm[{{a,b},{c,d}}]                                                
+
+Out[11]//TreeForm= List[|         , |         ]
+                        List[a, b]  List[c, d]
+
+In[12]:= {{a b, c d^2}, {x^3 y^4}}                                              
+
+                   2     3  4
+Out[12]= {{a b, c d }, {x  y }}
+
+In[13]:= TreeForm[%]                                                            
+
+Out[13]//TreeForm= 
+ 
+>   List[|                                       , 
+         List[|          , |                    ]
+              Times[a, b]  Times[c, |          ]
+                                    Power[d, 2]
+ 
+>    |                                    ]
+     List[|                              ]
+          Times[|          , |          ]
+                Power[x, 3]  Power[y, 4]
+
+In[14]:= (t = {x, {x, y}, y}) // TreeForm                                       
+
+Out[14]//TreeForm= List[x, |         , y]
+                           List[x, y]
+
+In[15]:= Position[t, x, 1]                                                      
+
+Out[15]= {{1}}
+
+In[16]:= Position[t, x, 2]                                                      
+
+Out[16]= {{1}, {2, 1}}
+
+In[17]:= Position[t, x, {2}]                                                    
+
+Out[17]= {{2, 1}}
+
+In[18]:= (u = f[f[g[a], a], a, h[a],f])                                         
+
+Out[18]= f[f[g[a], a], a, h[a], f]
+
+In[19]:= (u = f[f[g[a], a], a, h[a],f]) // TreeForm                             
+
+Out[19]//TreeForm= f[|         , a, |   , f]
+                     f[|   , a]     h[a]
+                       g[a]
+
+In[20]:= Position[u, a, {2, Infinity}]                                          
+
+Out[20]= {{1, 1, 1}, {1, 2}, {3, 1}}
+
+In[21]:= Position[u, f, Heads->False]                                           
+
+Out[21]= {{4}}
+
+In[22]:= Position[u, f, Heads->True]                                            
+
+Out[22]= {{0}, {1, 0}, {4}}
+
+In[23]:= Level[u, 2]                                                            
+
+Out[23]= {g[a], a, f[g[a], a], a, a, h[a], f}
+
+In[24]:= Level[u, {2}]                                                          
+
+Out[24]= {g[a], a, a}
+
+In[25]:= Level[u, {-1}]                                                         
+
+Out[25]= {a, a, a, a, f}
+
+In[26]:= Depth[ g[a] ]                                                          
+
+Out[26]= 2
+
+In[27]:= Level[u, {-2}]                                                         
+
+Out[27]= {g[a], h[a]}
+
+In[28]:=                                                                        
