@@ -1,0 +1,168 @@
+pi@raspberrypi:~ $ wolfram
+Wolfram Language (Raspberry Pi Pilot Release)
+Copyright 1988-2016 Wolfram Research
+Information & help: wolfram.com/raspi
+
+In[1]:= f[a] + f[b] /. f[x_] -> x^2                                             
+
+         2    2
+Out[1]= a  + b
+
+In[2]:= Position[{f[a], g[b], f[c]}, f[x_]]                                     
+
+Out[2]= {{1}, {3}}
+
+In[3]:= f[{a, b}] + f[c] /. f[{x_, y_}] -> p[x + y]                             
+
+Out[3]= f[c] + p[a + b]
+
+In[4]:= g[list_] := Part[list, 1] ^ Part[list, 2]                               
+
+In[5]:= h[{x, y}] := x ^ y                                                      
+
+In[6]:= {1, x, x^2, x^3} /. x^n -> r[n]                                         
+
+                2   3
+Out[6]= {1, x, x , x }
+
+In[7]:= {a/b, 1/b^2, 2/b^2} /. b^n -> d[n]                                      
+
+         a   -2  2
+Out[7]= {-, b  , --}
+         b        2
+                 b
+
+In[8]:= f[a + b] + f[a + c] + f[b + d] /. f[a + x_] + f[c + y_] -> p[x, y]      
+
+Out[8]= f[b + d] + p[b, a]
+
+In[9]:= Cases[ {3, 4, x, x^2, x^3}, x^_]                                        
+
+          2   3
+Out[9]= {x , x }
+
+In[10]:= Count[ {3, 4, x, x^2, x^3}, x^_]                                       
+
+Out[10]= 2
+
+In[11]:= Cases[ {3, 4, x, x^2, x^3}, x^n_ -> n]                                 
+
+Out[11]= {2, 3}
+
+In[12]:= Cases[ {3, 4, x, x^2, x^3}, _Integer, Infinity]                        
+
+Out[12]= {3, 4, 2, 3}
+
+In[13]:= DeleteCases[ {3, 4, x, x^2, x^3}, x^n_]                                
+
+Out[13]= {3, 4, x}
+
+In[14]:= DeleteCases[ {3, 4, x, x^2, x^3}, _Integer, Infinity]]                 
+
+Syntax::sntxf: "DeleteCases[ {3, 4, x, x^2, x^3}, _Integer, Infinity]"
+     cannot be followed by "]".
+
+
+In[15]:= DeleteCases[ {3, 4, x, x^2, x^3}, _Integer, Infinity ]                 
+
+Out[15]= {x, x, x}
+
+In[16]:= {f[a, a], f[a, b]} /. f[x_, x_] -> p[x]                                
+
+Out[16]= {p[a], f[a, b]}
+
+In[17]:= f[a^b] /. f[x:_x_] -> p[x]                                             
+
+            b
+Out[17]= f[a ]
+
+In[18]:= f[a^b] /. f[x:_^n_] -> p[x, n]                                         
+
+            b
+Out[18]= p[a , b]
+
+In[19]:= {f[h[4], h[4]], f[h[4], h[5]]}, /. f[h[_], h[_]] -> q                  
+
+Syntax::sntxf: "{f[h[4], h[4]], f[h[4], h[5]]}" cannot be followed by 
+    ", /. f[h[_], h[_]] -> q".
+
+
+In[20]:= {a, 4, 5, b} /. x_Integer -> p[x]                                      
+
+Out[20]= {a, p[4], p[5], b}
+
+In[21]:= gamma[n_Integer] := (n - 1)!                                           
+
+In[22]:= gamma[4] + gamma[x]                                                    
+
+Out[22]= 6 + gamma[x]
+
+In[23]:= gamma[4.]                                                              
+
+Out[23]= gamma[4.]
+
+In[24]:= d[x_^n_Integer] := n x^(n - 1)                                         
+
+In[25]:= d[x^4] + d[(a+b)^3 + d[x^(1/2)]                                        
+         ]                                                                      
+
+            3            3
+Out[25]= 4 x  + d[(a + b)  + d[Sqrt[x]]]
+
+In[26]:= d[x^4] + d[(a+b)^3] + d[x^(1/2)] ]                                     
+
+                  2      3
+Out[26]= 3 (a + b)  + 4 x  + d[Sqrt[x]]
+
+
+Syntax::sntxf: "" cannot be followed by "d[x^4] + d[(a+b)^3] + d[x^(1/2)]".
+
+
+In[28]:= d[x^4] + d[(a+b)^3] + d[x^(1/2)]                                       
+
+                  2      3
+Out[28]= 3 (a + b)  + 4 x  + d[Sqrt[x]]
+
+In[29]:= fac[n_ /; n > 0] := n!                                                 
+
+In[30]:= fac[6] + fac[-4]                                                       
+
+Out[30]= 720 + fac[-4]
+
+In[31]:= Cases[{3, -4, 5, -2}, x_ /; x < 0]                                     
+
+Out[31]= {-4, -2}
+
+In[32]:= fac[n_] := n! /; n > 0                                                 
+
+In[33]:= fac[6] + fac[-4]                                                       
+
+Out[33]= 720 + fac[-4]
+
+In[34]:= v[x_, 1 - x] := p[x[                                                   
+         ]                                                                      
+         ]                                                                      
+
+In[35]:= v[x_, 1 - x] := p[x]                                                   
+
+In[36]:= v[a^2, 1 + a^2]                                                        
+
+            2       2
+Out[36]= v[a , 1 + a ]
+
+In[37]:= v[a^2, 1 - a^2]                                                        
+
+            2       2
+Out[37]= v[a , 1 - a ]
+
+In[38]:= v[4, -3]                                                               
+
+Out[38]= v[4, -3]
+
+In[39]:= w[x_,y_] := p[x] /; y == 1 - x                                         
+
+In[40]:= w[4, -3]                                                               
+
+Out[40]= p[4]
+
+In[41]:=                                                                        
