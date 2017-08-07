@@ -1,0 +1,100 @@
+pi@raspberrypi:~ $ wolfram
+Wolfram Language (Raspberry Pi Pilot Release)
+Copyright 1988-2016 Wolfram Research
+Information & help: wolfram.com/raspi
+
+In[1]:= mySum[{}] := 0                                                          
+
+In[2]:= mySum[1_] := First[1] + mySum[Rest[1]]                                  
+
+In[3]:= mySum[{1,2,3,4,5}]                                                      
+
+First::normal: Nonatomic expression expected at position 1 in First[1].
+
+Rest::normal: Nonatomic expression expected at position 1 in Rest[1].
+
+$RecursionLimit::reclim2: 
+   Recursion depth of 1024 exceeded during evaluation of First[1].
+
+Out[3]= Hold[First[1] + mySum[Rest[1]]]
+
+In[4]:= myMap[Sqrt, {}]                                                         
+
+Out[4]= myMap[Sqrt, {}]
+
+In[5]:= myMap[Sqrt, {1,2,3,4}]                                                  
+
+Out[5]= myMap[Sqrt, {1, 2, 3, 4}]
+
+In[6]:= f = Composition[Exp,Cos]                                                
+
+Out[6]= Exp @* Cos
+
+In[7]:= result =f[0.5]                                                          
+
+Out[7]= 2.40508
+
+In[8]:= Exp[Cos[0.5]]                                                           
+
+Out[8]= 2.40508
+
+In[9]:= InverseFunction[f][result]                                              
+
+Out[9]= 0.5
+
+In[10]:= Composition[HoldForm, Plus] @@ Range[20]                               
+
+Out[10]= 1 + 2 + 3 + 4 + 5 + 6 + 7 + 8 + 9 + 10 + 11 + 12 + 13 + 14 + 15 + 16 + 
+ 
+>    17 + 18 + 19 + 20
+
+In[11]:= TableForm[Composition[Through,{Identity,Sqrt}] /@ {0,1.0,2.0,3.0,4.0}] 
+
+Out[11]//TableForm= 0    0
+
+                    1.   1.
+
+                    2.   1.41421
+
+                    3.   1.73205
+
+                    4.   2.
+
+In[12]:= HoldForm[Plus[##]] & @@ Range[20]                                      
+
+Out[12]= 1 + 2 + 3 + 4 + 5 + 6 + 7 + 8 + 9 + 10 + 11 + 12 + 13 + 14 + 15 + 16 + 
+ 
+>    17 + 18 + 19 + 20
+
+In[13]:= {Identity[#],Sqrt[#]}& /@ {0,1.0,2.0,3.0,4.0} //TableForm              
+
+Out[13]//TableForm= 0    0
+
+                    1.   1.
+
+                    2.   1.41421
+
+                    3.   1.73205
+
+                    4.   2.
+
+In[14]:= InverseFunction[Composition[Exp,Cos]]                                  
+
+Out[14]= ArcCos @* Log
+
+In[15]:= InverseFunction[RotateRight][{1,2,3}]                                  
+
+Out[15]= {1, 2, 3}
+
+In[16]:= SetAttributes[call, HoldAll];                                          
+
+In[17]:= call[f_,c_] := Module[{val}, {val, c} = evaluate[f,c];val]             
+
+In[18]:= val = call[decr[],counter]                                             
+
+Set::shape: Lists {val$209, counter} and evaluate[decr[], counter]
+     are not the same shape.
+
+Out[18]= val$209
+
+In[19]:=                                                                        
