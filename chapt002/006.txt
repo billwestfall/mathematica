@@ -1,0 +1,156 @@
+pi@raspberrypi:~ $ wolfram
+Wolfram Language (Raspberry Pi Pilot Release)
+Copyright 1988-2016 Wolfram Research
+Information & help: wolfram.com/raspi
+
+In[1]:= Composition[f, g, h]                                                    
+
+Out[1]= f @* g @* h
+
+In[2]:= InverseFunction[Composition[%, q]]                                      
+
+          (-1)       (-1)       (-1)       (-1)
+Out[2]= (q    ) @* (h    ) @* (g    ) @* (f    )
+
+In[3]:= %[x]                                                                    
+
+          (-1)    (-1)    (-1)    (-1)
+Out[3]= (q    )[(h    )[(g    )[(f    )[x]]]]
+
+In[4]:= (f + g)[x]                                                              
+
+Out[4]= (f + g)[x]
+
+In[5]:= Through[%, Plus]                                                        
+
+Out[5]= f[x] + g[x]
+
+In[6]:= Identity + (D[#, x]&)                                                   
+
+Out[6]= Identity + (D[#1, x] & )
+
+In[7]:= % [x + 2]                                                               
+
+Out[7]= (Identity + (D[#1, x] & ))[2 + x]
+
+In[8]:= Through[%, Plus]                                                        
+
+Out[8]= 3 + x
+
+In[9]:= t = ((1 + a)(1 + b))[x]                                                 
+
+Out[9]= ((1 + a) (1 + b))[x]
+
+In[10]:= Expand[%]                                                              
+
+Out[10]= ((1 + a) (1 + b))[x]
+
+In[11]:= MapAll[Expand, t, Heads->True]                                         
+
+Out[11]= (1 + a + b + a b)[x]
+
+In[12]:= t /. a->1                                                              
+
+Out[12]= (2 (1 + b))[x]
+
+In[13]:= Operate[p, t]                                                          
+
+Out[13]= p[(1 + a) (1 + b)][x]
+
+In[14]:= Sort[ f[c, a, b] ]                                                     
+
+Out[14]= f[a, b, c]
+
+In[15]:= Sort[ {5, 1, 8, 2}, (#2 < #1)& ]                                       
+
+Out[15]= {8, 5, 2, 1}
+
+In[16]:= Sort[ {x^2, y, x+y, y-2}, FreeQ[#1, x]& ]                              
+
+                             2
+Out[16]= {y, -2 + y, x + y, x }
+
+In[17]:= Flatten[ f[a, f[b, c], f[f[d]]] ]                                      
+
+Out[17]= f[a, b, c, d]
+
+In[18]:= Flatten[ {a, f[b, c], f[a, b, d]}, 1, f]                               
+
+Out[18]= {a, b, c, a, b, d}
+
+In[19]:= Distribute[ f[a + b] ]                                                 
+
+Out[19]= f[a] + f[b]
+
+In[20]:= Distribute[ f[a + b, c + d] ]                                          
+
+Out[20]= f[a, c] + f[a, d] + f[b, c] + f[b, d]
+
+In[21]:= Expand[ (a + b) (c + d) ]                                              
+
+Out[21]= a c + b c + a d + b d
+
+In[22]:= Distribute[ f[{a, b}, {c, d}], List]                                   
+
+Out[22]= {f[a, c], f[a, d], f[b, c], f[b, d]}
+
+In[23]:= Distribute[ f[{a, b}, {c, d}], List, f]                                
+
+Out[23]= {f[a, c], f[a, d], f[b, c], f[b, d]}
+
+In[24]:= Distribute[ f[{a, b}, {c, d}], List, f, gp, fp]                        
+
+Out[24]= gp[fp[a, c], fp[a, d], fp[b, c], fp[b, d]]
+
+In[25]:= f[{a1, a2}, {b1, b2}]                                                  
+
+Out[25]= f[{a1, a2}, {b1, b2}]
+
+In[26]:= Thread[%]                                                              
+
+Out[26]= {f[a1, b1], f[a2, b2]}
+
+In[27]:= Thread[ f{a1, a2}, {b1, b2}, c, d] ]                                   
+
+Syntax::sntxf: "Thread[ f{a1, a2}, {b1, b2}, c, d] " cannot be followed by "]".
+
+
+In[28]:= Thread[ f[{a1, a2}, {b1, b2}, c, d] ]                                  
+
+Out[28]= {f[a1, b1, c, d], f[a2, b2, c, d]}
+
+In[29]:= Log[{a, b, c}]                                                         
+
+Out[29]= {Log[a], Log[b], Log[c]}
+
+In[30]:= Log[ x == y }                                                          
+
+Syntax::sntxf: "Log[ x == y " cannot be followed by "}".
+
+
+In[31]:= Log[ x == y ]                                                          
+
+Out[31]= Log[x == y]
+
+In[32]:= Thread[ %, Equal]                                                      
+
+Out[32]= Log[x] == Log[y]
+
+In[33]:= Outer[f, {a, b}, {1, 2, 3}]                                            
+
+Out[33]= {{f[a, 1], f[a, 2], f[a, 3]}, {f[b, 1], f[b, 2], f[b, 3]}}
+
+In[34]:= Outer[Greater, {1, 2, 3}, {1, 2, 3}]                                   
+
+Out[34]= {{False, False, False}, {True, False, False}, {True, True, False}}
+
+In[35]:= Inner[f, {a, b}, {c, d}, g]                                            
+
+Out[35]= g[f[a, c], f[b, d]]
+
+In[36]:= Inner[Times, {a, b}, {c, d}, Plus                                      
+         ]                                                                      
+
+Out[36]= a c + b d
+
+In[37]:=                                                                        
