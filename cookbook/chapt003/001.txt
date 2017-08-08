@@ -1,0 +1,53 @@
+
+someFunc[arg1_Integer,arg2_Integer : 0] := arg1 ^ 2 + arg2
+someFunc[10]
+someFunc[10]
+someFunc[10,1]
+Default[Plus]
+Plus[]
+Plus[1]
+ClearAll[myFuncWithDefault];Default[myFuncWithDefault,2]
+Default[myFuncWithDefault,2] = 0
+Default[myFuncWithDefault,2]
+myFuncWithDefault[x_,y_.] := x^y - x+y
+Definition[myFuncWithDefault]
+myFuncWithDefault[4]
+myFuncWithDefault[10,1]
+someFunc2[arg1_Integer : 1, arg2_Integer] := arg1^2 + arg2
+someFunc2[10]
+someFunc2[10,1]
+someFunc3[arg1_Integer : 1, arg2_Integer : 0] := 2arg1 + arg2
+someFunc3[10]
+someFunc4[arg1_String : "test", arg2_Integer : 1] := StringTake[arg1,arg2]
+someFunc4[3]
+Options[qsort] = {pivot -> First,compare -> Less};
+qsort[l_List,opts : OptionPattern[]] := Module[{pivotFunc, compareFunc}, {pivotFunc, compareFunc} = {OptionValue[pivot],OptionValue[compare]};Reap[qsort2[l,pivotFunc,compareFunc]] [[2,1]]]
+qsort2[{},_,_] := {}
+qsort2[{a_},_,_] := Sow[a]
+qsort2[l_List,pivot_,comp_] := Block[{l1,l2,l3},{l1,l2,l3} = partition[l,pivot[l],comp];qsort2[l1,pivot,comp];Scan[Sow,l2];qsort2[l3,pivot,comp]]
+{pivotFunc, compareFunc} = {pivot, compare} /. opts /. Options[qsort];
+unsorted = RandomInteger[{-100,100}, 50]
+qsort[unsorted]
+qsort[unsorted, compare -> Greater]
+qsort[unsorted,pivot -> RandomChoice]
+qsort[unsorted,pivot -> (Part[#,Floor[Length[#}/2]]&),compare -> (Less[Abs[#1],Abs[#2]]&)]
+Plot[Sin[x],{x,-Pi,Pi}, PlotStyle -> Dashed, PlotStyle -> Thick]
+Table[1, {10}]
+Table[i^2, {i,10}]
+Table[i^2, {i,2,10}]
+Table[i, {i,2,10,2}]
+Table[1, {2}, {3}]
+Table[i + j^2 + k^3, {i,0,2},{k,0,2}]//MatrixForm
+IdentityMatrix[3] //MatrixForm
+Table[If[i=j,1,0],{i,1,3},{j,1,3}]//MatrixForm
+Array[1&,10] == ConstantArray[1,10]
+list1 = Range[10]
+list2 = list1^2
+Append[list1, 11]
+Prepend[list1, 0]
+Insert[list1, 3.5, 4]
+Insert[list1, 3.5, -4]
+Insert[list1, 0, List /@ Range[2, Length[list1]]]
+Join[list1,list2]
+Riffle[list1, 0]
+list1[[3]] == Part[list1,3] 
