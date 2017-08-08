@@ -1,0 +1,185 @@
+rectX = 1;rectY = 2; rectAngle = 10 Degree; circR = 1; DynamicModule[{g}, g = Graphics[{Thick, Green, Rotate[Rectangle[{0,0}, {rectX, rectY}],rectAngle],Red,Disk[{0,0},circR]},ImageSize->Small];Dynamic[g]]
+ClearAll[shapeCtrl]
+shapeCtrl = closure[{rectX,rectY,rectAngle,circR},{1,2,10 Degree, 1},{rotate=Function[a,rectAngle+=a],grow = Function[r,rectX *= r; rectY *= r],rectCorner = Function[{rectX,rectY}],angle = Function[rectAngle],radius = Function[circR]}]
+closure[{rectX,rectY,rectAngle,circR},{1,2,10°,1},{rotate = Function[a,rectAngle+=a],grow=Function[r,rectX*=r;rectY*=r],rectCorner={rectX,rectY}&,angle=rectAngle&,radius=circR&}]
+Dynamic[Graphics[{Thick,Green,Rotate[Rectangle[{0,0},shapeCtrl=>rectCorner[]],shapeCtrl=>angle[]],Red,Disk[{0,0},shapeCtrl=>radius[]]},Frame -> True,PlotRange->All]];
+incr = closure[{x},{0},{incr = Function[x = x + 1]}]
+closure[{x}, {_}, {incr = Function[x = x + 1]}] [] := call[incr[],incr]
+incr[]
+incr[]
+incr[]
+Clear[f,f1,f2];Curry[f_,x__] := Module[{expr},expr = Hold[If[ValueQ[f[x],Curry[z,##]&]]//.g_[a_][b__]->g[a,b] /.z->f[x];ReleaseHold[expr]]]
+f1 = Curry[f,10]
+f2 = f1[20]
+f2[30]
+f1[20,30]
+f1[20][30]
+f1 = f[10]
+f2 = f1[20]
+f2[30]
+f2[30] //.g_[a_][b__]->g[a, b]
+CurryHold[f_,x__] := Module[{expr},expr = Hold[If[ValueQ[f[x]],f[x],Curry[z,##]&]]//.g_[a_][b__]->g[a,b] /.z->f[x]]
+CurryHold[f,10]
+CurryHold[f1, 20]
+CurryHold[f2,30]
+makeCurry[f_] := Curry[f,##]&
+f0 = makeCurry[f]
+f0[10] [20] [30]
+explicitCurry[f_,v_] := Function[f[v, ##]]
+f1 = explicitCurry[f,10];
+f2 = explicitCurry[f1,20];
+f1[20,30]
+f2[30]
+someFunc[arg1_Integer,arg2_Integer : 0] := arg1 ^ 2 + arg2
+someFunc[10]
+someFunc[10,1]
+Default[Plus]
+Plus[]
+Plus[1]
+pi@raspberrypi:~ $ wolfram
+Wolfram Language (Raspberry Pi Pilot Release)
+Copyright 1988-2016 Wolfram Research
+Information & help: wolfram.com/raspi
+
+In[1]:= closure[{x}, {_}, {incr = Function[x = x + 1]}] [] := call[incr[],incr]
+
+In[2]:= incr[]
+
+$RecursionLimit::reclim2:
+   Recursion depth of 1024 exceeded during evaluation of 1 + x.
+
+Out[2]= Hold[1 + x]
+
+In[3]:= incr[]
+
+$RecursionLimit::reclim2:
+   Recursion depth of 1024 exceeded during evaluation of 1 + x.
+
+Out[3]= Hold[x = x + 1]
+
+In[4]:= incr[]
+
+$RecursionLimit::reclim2:
+   Recursion depth of 1024 exceeded during evaluation of 1 + x.
+
+Out[4]= Hold[x = x + 1]
+
+In[5]:= Clear[f,f1,f2];Curry[f_,x__] := Module[{expr},expr = Hold[If[ValueQ[f[x]
+,Curry[z,##]&]]//.g_[a_][b__]->g[a,b] /.z->f[x];ReleaseHold[expr]]]
+
+In[6]:= f1 = Curry[f,10]
+
+Out[6]= Hold[If[ValueQ[f[10], Curry[z, ##1] & ]] //.
+
+>       (g_)[a_][b__] -> g[a, b] /. z -> f[10]; ReleaseHold[expr$204]]
+
+In[7]:= f2 = f1[20]
+
+Out[7]= Hold[If[ValueQ[f[10], Curry[z, ##1] & ]] //.
+
+>        (g_)[a_][b__] -> g[a, b] /. z -> f[10]; ReleaseHold[expr$204]][20]
+
+In[8]:= f2[30]
+
+Out[8]= Hold[If[ValueQ[f[10], Curry[z, ##1] & ]] //.
+
+>         (g_)[a_][b__] -> g[a, b] /. z -> f[10]; ReleaseHold[expr$204]][20][30]
+
+In[9]:= f1[20,30]
+
+Out[9]= Hold[If[ValueQ[f[10], Curry[z, ##1] & ]] //.
+
+>        (g_)[a_][b__] -> g[a, b] /. z -> f[10]; ReleaseHold[expr$204]][20, 30]
+
+In[10]:= f1[20][30]
+
+Out[10]= Hold[If[ValueQ[f[10], Curry[z, ##1] & ]] //.
+
+>         (g_)[a_][b__] -> g[a, b] /. z -> f[10]; ReleaseHold[expr$204]][20][30]
+
+In[11]:= f1 = f[10]
+
+Out[11]= f[10]
+
+In[12]:= f2 = f1[20]
+
+Out[12]= f[10][20]
+
+In[13]:= f2[30]
+
+Out[13]= f[10][20][30]
+
+In[14]:= f2[30] //.g_[a_][b__]->g[a, b]
+
+Out[14]= f[10, 20, 30]
+
+In[15]:= CurryHold[f_,x__] := Module[{expr},expr = Hold[If[ValueQ[f[x]],f[x],Cur
+ry[z,##]&]]//.g_[a_][b__]->g[a,b] /.z->f[x]]
+
+In[16]:= CurryHold[f,10]
+
+Out[16]= Hold[If[ValueQ[f[10]], f[10], Curry[f[10], ##1] & ]]
+
+In[17]:= CurryHold[f1, 20]
+
+Out[17]= Hold[If[ValueQ[f[10, 20]], f[10, 20], Curry[f[10][20], ##1] & ]]
+
+In[18]:= CurryHold[f2,30]
+
+Out[18]= Hold[If[ValueQ[f[10, 20, 30]], f[10, 20, 30],
+
+>     Curry[f[10][20][30], ##1] & ]]
+
+In[19]:= makeCurry[f_] := Curry[f,##]&
+
+In[20]:= f0 = makeCurry[f]
+
+Out[20]= Curry[f, ##1] &
+
+In[21]:= f0[10] [20] [30]
+
+Out[21]= Hold[If[ValueQ[f[10], Curry[z, ##1] & ]] //.
+
+>         (g_)[a_][b__] -> g[a, b] /. z -> f[10]; ReleaseHold[expr$208]][20][30]
+
+In[22]:= explicitCurry[f_,v_] := Function[f[v, ##]]
+
+In[23]:= f1 = explicitCurry[f,10];
+
+In[24]:= f2 = explicitCurry[f1,20];
+
+In[25]:= f1[20,30]
+
+Out[25]= f[10, 20, 30]
+
+In[26]:= f2[30]
+
+Out[26]= f[10, 20, 30]
+
+In[27]:= someFunc[arg1_Integer,arg2_Integer : 0] := arg1 ^ 2 + arg2
+
+In[28]:= someFunc[10]
+
+Out[28]= 100
+
+In[29]:= someFunc[10]
+
+Out[29]= 100
+
+In[30]:= someFunc[10,1]
+
+Out[30]= 101
+
+In[31]:= Default[Plus]
+
+Out[31]= 0
+
+In[32]:= Plus[]
+
+Out[32]= 0
+
+In[33]:= Plus[1]
+
+Out[33]= 1
+
+In[34]:=                                                                        
