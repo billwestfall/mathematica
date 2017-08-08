@@ -1,0 +1,367 @@
+pi@raspberrypi:~ $ wolfram
+Wolfram Language (Raspberry Pi Pilot Release)
+Copyright 1988-2016 Wolfram Research
+Information & help: wolfram.com/raspi
+
+In[1]:= someFunc[arg1_Integer,arg2_Integer : 0] := arg1 ^ 2 + arg2              
+
+In[2]:= someFunc[10]                                                            
+
+Out[2]= 100
+
+In[3]:= someFunc[10.1]                                                          
+
+Out[3]= someFunc[10.1]
+
+In[4]:= someFunc[10,1]                                                          
+
+Out[4]= 101
+
+In[5]:= Default[Plus]                                                           
+
+Out[5]= 0
+
+In[6]:= Plus[                                                                   
+        ]                                                                       
+
+Out[6]= 0
+
+In[7]:= Plus[1]                                                                 
+
+Out[7]= 1
+
+In[8]:= ClearAll[myFuncWithDefault];Default[myFuncWithDefault,2]                
+
+Out[8]= Default[myFuncWithDefault, 2]
+
+In[9]:= Default[myFuncWithDefault,2] = 0                                        
+
+Out[9]= 0
+
+In[10]:= Default[myFuncWithDefault,2]                                           
+
+Out[10]= 0
+
+In[11]:= myFuncWithDefault[x_,y_.] := x^y - x+y                                 
+
+In[12]:= Definition[myFuncWithDefault]                                          
+
+                                        y
+Out[12]= myFuncWithDefault[x_, y_.] := x  - x + y
+          
+         myFuncWithDefault /: Default[myFuncWithDefault, 2] = 0
+
+In[13]:= myFuncWithDefault[4]                                                   
+
+Out[13]= -3
+
+In[14]:= myFuncWithDefault[10,1]                                                
+
+Out[14]= 1
+
+In[15]:= someFunc2[arg1_Integer : 1, arg2_Integer] := arg1^2 + arg2             
+
+In[16]:= someFunc2[10]                                                          
+
+Out[16]= 11
+
+In[17]:= someFunc2[10,1]                                                        
+
+Out[17]= 101
+
+In[18]:= someFunc3[arg1_Integer : 1, arg2_Integer : 0] := 2arg1 + arg2          
+
+In[19]:= someFunc2[10]                                                          
+
+Out[19]= 11
+
+In[20]:= someFunc3[10]                                                          
+
+Out[20]= 20
+
+In[21]:= someFunc4[arg1_String : "test", arg2_Integer : 1] := StringTake[arg1,ar
+g2]                                                                             
+
+In[22]:= someFunc4[3]                                                           
+                                                                                
+Out[22]= tes
+
+In[23]:= Options[qsort] = {pivot -> First,compare -> Less};                     
+
+In[24]:= qsort[l_List,opts : OptionPattern[]] := Module[{pivotFunc, compareFunc}
+, {pivotFunc, compareFunc} = {OptionValue[pivot],OptionValue[compare]};Reap[qsor
+t2[l,pivotFunc,compareFunc]] [[2,1]]]                                           
+
+In[25]:= qsort2[{},_,_] := {}                                                   
+
+In[26]:= qsort2[{a_},_,_] := Sow[a]                                             
+
+In[27]:= qsort2[l_List,pivot_,comp_] := Block[{l1,l2,l3},{l1,l2,l3} = partition[
+l,pivot[l],comp];qsort2[l1,pivot,comp];Scan[Sow,l2];qsort2[l3,pivot,comp]]      
+
+In[28]:= {pivotFunc, compareFunc} = {pivot, compare} /. opts /. Options[qsort]; 
+
+ReplaceAll::reps: 
+   {opts} is neither a list of replacement rules nor a valid dispatch table, and
+     so cannot be used for replacing.
+
+ReplaceAll::reps: 
+   {opts} is neither a list of replacement rules nor a valid dispatch table, and
+     so cannot be used for replacing.
+
+Set::shape: Lists {pivotFunc, compareFunc} and {First, Less} /. opts
+     are not the same shape.
+
+In[29]:= unsorted = RandomInteger[{-100,100}, 50]                               
+
+Out[29]= {-54, -72, 40, -37, 9, 27, 25, 63, 81, 69, 83, -52, 61, -72, -5, -55, 
+ 
+>    47, -42, 75, -38, 73, -61, 25, 71, 20, -19, -29, 89, -52, 55, 1, -46, 94, 
+ 
+>    -18, -77, -94, 86, 35, -69, 54, 12, -69, 42, -45, -38, -49, -61, 9, 8, -81}
+
+In[30]:= qsort[unsorted]                                                        
+
+Out[30]= qsort[{-54, -72, 40, -37, 9, 27, 25, 63, 81, 69, 83, -52, 61, -72, -5, 
+ 
+>     -55, 47, -42, 75, -38, 73, -61, 25, 71, 20, -19, -29, 89, -52, 55, 1, 
+ 
+>     -46, 94, -18, -77, -94, 86, 35, -69, 54, 12, -69, 42, -45, -38, -49, -61, 
+ 
+>     9, 8, -81}]
+
+In[31]:= qsort[unsorted, compare -> Greater]                                    
+
+Out[31]= qsort[{-54, -72, 40, -37, 9, 27, 25, 63, 81, 69, 83, -52, 61, -72, -5, 
+ 
+>     -55, 47, -42, 75, -38, 73, -61, 25, 71, 20, -19, -29, 89, -52, 55, 1, 
+ 
+>     -46, 94, -18, -77, -94, 86, 35, -69, 54, 12, -69, 42, -45, -38, -49, -61, 
+ 
+>     9, 8, -81}, compare -> Greater]
+
+In[32]:= Table[1, {10}]                                                         
+
+Out[32]= {1, 1, 1, 1, 1, 1, 1, 1, 1, 1}
+
+In[33]:= Table[i^2, {i,10}]                                                     
+
+Out[33]= {1, 4, 9, 16, 25, 36, 49, 64, 81, 100}
+
+In[34]:= Table[i^2, {i,2,10}]                                                   
+
+Out[34]= {4, 9, 16, 25, 36, 49, 64, 81, 100}
+
+In[35]:= Table[i, {i,2,10,2}]                                                   
+
+Out[35]= {2, 4, 6, 8, 10}
+
+In[36]:= Table[1, {2}, {3}]                                                     
+
+Out[36]= {{1, 1, 1}, {1, 1, 1}}
+
+In[37]:= Table[i + j^2 + k^3, {i,0,2},{k,0,2}]//MatrixForm                      
+
+Out[37]//MatrixForm=  2             2         2
+                     j         1 + j     8 + j
+
+                          2         2         2
+                     1 + j     2 + j     9 + j
+
+                          2         2          2
+                     2 + j     3 + j     10 + j
+
+In[38]:= IdentityMatrix[3] //MatrixForm                                         
+
+Out[38]//MatrixForm= 1   0   0
+
+                     0   1   0
+
+                     0   0   1
+
+In[39]:= Table[If[i=j,1,0],{i,1,3},{j,1,3}]//MatrixForm                         
+
+Out[39]//MatrixForm= If[1, 1, 0]   If[2, 1, 0]   If[3, 1, 0]
+
+                     If[1, 1, 0]   If[2, 1, 0]   If[3, 1, 0]
+
+                     If[1, 1, 0]   If[2, 1, 0]   If[3, 1, 0]
+
+In[40]:= Array[1&,10] == ConstantArray[1,10]                                    
+
+Out[40]= True
+
+In[41]:= list1 = Range[10]                                                      
+
+Out[41]= {1, 2, 3, 4, 5, 6, 7, 8, 9, 10}
+
+In[42]:= list2 = list1^2                                                        
+
+Out[42]= {1, 4, 9, 16, 25, 36, 49, 64, 81, 100}
+
+In[43]:= Append[list1, 11]                                                      
+
+Out[43]= {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11}
+
+In[44]:= Prepend[list1, 0]                                                      
+
+Out[44]= {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10}
+
+In[45]:= Insert[list1, 3.5, 4]                                                  
+
+Out[45]= {1, 2, 3, 3.5, 4, 5, 6, 7, 8, 9, 10}
+
+In[46]:= Insert[list1, 3.5, -4]                                                 
+
+Out[46]= {1, 2, 3, 4, 5, 6, 7, 3.5, 8, 9, 10}
+
+In[47]:= Insert[list1, 0, List /@ Range[2, Length[list1]]]                      
+
+Out[47]= {1, 0, 2, 0, 3, 0, 4, 0, 5, 0, 6, 0, 7, 0, 8, 0, 9, 0, 10}
+
+In[48]:= Join[list1,list2]                                                      
+
+Out[48]= {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 1, 4, 9, 16, 25, 36, 49, 64, 81, 100}
+
+In[49]:= Riffle[list1, 0]                                                       
+
+Out[49]= {1, 0, 2, 0, 3, 0, 4, 0, 5, 0, 6, 0, 7, 0, 8, 0, 9, 0, 10}
+
+In[50]:= list1[[3]] == Part[list1,3]                                            
+
+Out[50]= True
+
+In[51]:= First[list1]                                                           
+
+Out[51]= 1
+
+In[52]:= Last[list1]                                                            
+
+Out[52]= 10
+
+In[53]:= Rest[list1]                                                            
+
+Out[53]= {2, 3, 4, 5, 6, 7, 8, 9, 10}
+
+In[54]:= Most[list1]                                                            
+
+Out[54]= {1, 2, 3, 4, 5, 6, 7, 8, 9}
+
+In[55]:= Take[list1,3]                                                          
+
+Out[55]= {1, 2, 3}
+
+In[56]:= Drop[list1,3]                                                          
+
+Out[56]= {4, 5, 6, 7, 8, 9, 10}
+
+In[57]:= Select[list1, OddQ]                                                    
+
+Out[57]= {1, 3, 5, 7, 9}
+
+In[58]:= Cases[list1 /3,a_Integer -> 3 a]                                       
+
+Out[58]= {3, 6, 9}
+
+In[59]:= Reverse[list1]                                                         
+
+Out[59]= {10, 9, 8, 7, 6, 5, 4, 3, 2, 1}
+
+In[60]:= RotateLeft[list1]                                                      
+
+Out[60]= {2, 3, 4, 5, 6, 7, 8, 9, 10, 1}
+
+In[61]:= RotateRight[list1]                                                     
+
+Out[61]= {10, 1, 2, 3, 4, 5, 6, 7, 8, 9}
+
+In[62]:= bifurcate[list_] := Nest[Partition[#,2]&,list,Floor[Log[2, Length[list]
+]]]                                                                             
+
+In[63]:= (structured = bifurcate[list1]) //TreeForm                             
+
+Out[63]//TreeForm= {{{{1, 2}, {3, 4}}, {{5, 6}, {7, 8}}}}
+
+In[64]:= Flatten[structured]                                                    
+
+Out[64]= {1, 2, 3, 4, 5, 6, 7, 8}
+
+In[65]:= Flatten[structured,1] //TreeForm                                       
+
+Out[65]//TreeForm= {{{1, 2}, {3, 4}}, {{5, 6}, {7, 8}}}
+
+In[66]:= Flatten[structured,2] //TreeForm                                       
+
+Out[66]//TreeForm= {{1, 2}, {3, 4}, {5, 6}, {7, 8}}
+
+In[67]:= Flatten[structured,3]                                                  
+
+Out[67]= {1, 2, 3, 4, 5, 6, 7, 8}
+
+In[68]:= Union[list1,list2]                                                     
+
+Out[68]= {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 16, 25, 36, 49, 64, 81, 100}
+
+In[69]:= Intersection[list1,list2]                                              
+
+Out[69]= {1, 4, 9}
+
+In[70]:= Complement[list1, Intersection[list1,list2]]                           
+
+Out[70]= {2, 3, 5, 6, 7, 8, 10}
+
+In[71]:= Complement[list2, Intersection[list1,list2]]                           
+
+Out[71]= {16, 25, 36, 49, 64, 81, 100}
+
+In[72]:= Subsets[{a,b,c}]                                                       
+
+Out[72]= {{}, {a}, {b}, {c}, {a, b}, {a, c}, {b, c}, {a, b, c}}
+
+In[73]:= MemberQ[list2,4]                                                       
+
+Out[73]= True
+
+In[74]:= 3 * list1 - 3                                                          
+
+Out[74]= {0, 3, 6, 9, 12, 15, 18, 21, 24, 27}
+
+In[75]:= Intersection[Flatten[Attributes[{Times, Plus, Minus, Divide, Power}]]] 
+
+Out[75]= {Flat, Listable, NumericFunction, OneIdentity, Orderless, Protected}
+
+In[76]:= Range[10] ^ Range[10,1,-1]                                             
+
+Out[76]= {1, 512, 6561, 16384, 15625, 7776, 2401, 512, 81, 10}
+
+In[77]:= u = {-1,0.5,1}; v = {1,-0.5,1};                                        
+
+In[78]:= u.v                                                                    
+
+Out[78]= -0.25
+
+In[79]:= Norm[u]                                                                
+
+Out[79]= 1.5
+
+In[80]:= Orthogonalize[{u,v}]                                                   
+
+Out[80]= {{-0.666667, 0.333333, 0.666667}, {0.596285, -0.298142, 0.745356}}
+
+In[81]:= Projection[{u,v}]                                                      
+
+Out[81]= Projection[{{-1, 0.5, 1}, {1, -0.5, 1}}]
+
+In[82]:= Needs["VectorAnalysis"]                                                
+
+Needs::cxt: Invalid context specified at position 1 in Needs[VectorAnalysis]
+    . A context must consist of valid symbol names separated by and ending with 
+    `.
+
+Out[82]= Needs[VectorAnalysis]
+
+In[83]:= CrossProduct[u,v]                                                      
+
+Out[83]= CrossProduct[{-1, 0.5, 1}, {1, -0.5, 1}]
+
+In[84]:=                                                                        
