@@ -1,0 +1,172 @@
+pi@raspberrypi:~ $ wolfram
+Wolfram Language (Raspberry Pi Pilot Release)
+Copyright 1988-2016 Wolfram Research
+Information & help: wolfram.com/raspi
+
+In[1]:= {2.3, 4, 7/8, a, b} /. (x_ /; NumberQ[x]) -> x^2                        
+
+                   49
+Out[1]= {5.29, 16, --, a, b}
+                   64
+
+In[2]:= IntegerQ[4561]                                                          
+
+Out[2]= True
+
+In[3]:= IntegerQ[x]                                                             
+
+Out[3]= False
+
+In[4]:= {x == y, x === y}                                                       
+
+Out[4]= {x == y, False}
+
+In[5]:= MemberQ[{x, x^n}, n]                                                    
+
+Out[5]= False
+
+In[6]:= FreeQ[{x, x^n}, n]                                                      
+
+Out[6]= False
+
+In[7]:= h[a_, b_, x_] := a h[b, x] /; FreeQ[a, x]                               
+
+In[8]:= h[a b x, x] + h[2 (1 + x) x^2, x]                                       
+
+                           2
+Out[8]= h[a b x, x] + h[2 x  (1 + x), x]
+
+In[9]:= p[x_?NumberQ] := x^2                                                    
+
+In[10]:= p[4.5] + p[3/2] + p[u]                                                 
+
+Out[10]= 22.5 + p[u]
+
+In[11]:= q[{x_Integer, y_Integer} ? (Function[v, v.v > 4])] := qp[x + y]        
+
+In[12]:= {q[{3, 4}], q[{1,1}], q[{-5,-7}]}                                      
+
+Out[12]= {qp[7], q[{1, 1}], qp[-12]}
+
+In[13]:= h[a | b] := p                                                          
+
+In[14]:= {[h[a], h[b], h[c], h[d]}                                              
+
+Syntax::sntxf: "{" cannot be followed by "[h[a], h[b], h[c], h[d]}".
+
+
+In[15]:= {[h[a], h[b], h[c], h[d]]}                                             
+
+Syntax::sntxf: "{" cannot be followed by "[h[a], h[b], h[c], h[d]]}".
+
+
+In[16]:= {h[a], h[b], h[c], h[d]}                                               
+
+Out[16]= {p, p, h[c], h[d]}
+
+In[17]:= {a,b,c,d} /. (a|b) -> p                                                
+
+Out[17]= {p, p, c, d}
+
+In[18]:= {1,x,x^2,x^3,y^2} /. (x | x^_) -> q                                    
+
+                       2
+Out[18]= {1, q, q, q, y }
+
+In[19]:= {a[2], b[3], c[4], a[5]} /. (f:(a|b))[x_] -> r[f, x]                   
+
+Out[19]= {r[a, 2], r[b, 3], c[4], r[a, 5]}
+
+In[20]:= g[a + b, a] /. g[x_ +  y_, x_] -> p[x, y]                              
+
+Out[20]= p[a, b]
+
+In[21]:= g[a + b, b] /. g[x_ + y_, x_] -> p[x, y]                               
+
+Out[21]= p[b, a]
+
+In[22]:= h[a + b, a + b] /. h[x_ + y_, x_ + z_] -> p[x, y, z]                   
+
+Out[22]= p[a, b, b]
+
+In[23]:= h[a + b, a + b] /. h[x_ + y_, x_ + z_] :> p[x, y, z] /; Print[{x, y, z}
+]                                                                               
+{a, b, b}
+{b, a, a}
+
+Out[23]= h[a + b, a + b]
+
+In[24]:= Attributes[Plus]                                                       
+
+Out[24]= {Flat, Listable, NumericFunction, OneIdentity, Orderless, Protected}
+
+In[25]:= SetAttributes[q, Orderless]                                            
+
+In[26]:= q[b, a, c]                                                             
+
+Out[26]= q[a, b, c]
+
+In[27]:= f[q[a, b], q[b, c] /. f[q[x_, y_], q[x_, z_]] -> p[x, y, z]            
+         ]                                                                      
+
+Out[27]= f[q[a, b], q[b, c]]
+
+In[28]:= f[q[a, b], q[b, c]] /. f[q[x_, y_], q[x_, z_]] -> p[x, y, z]           
+
+Out[28]= p[b, a, c]
+
+In[29]:= g[a + b + c] /. g[x_ + y_] -> p[x, y]                                  
+
+Out[29]= p[a, b + c]
+
+In[30]:= g[a + b + c + d] /. g[x_ + y_] -> p[x, y]                              
+
+Out[30]= p[a, b + c + d]
+
+In[31]:= g[a + b + c] /. g[x_ + y_] :> p[x, y] /; Print[{x, y}]                 
+{a, b + c}
+{b, a + c}
+{c, a + b}
+{a + b, c}
+{a + c, b}
+{b + c, a}
+
+Out[31]= g[a + b + c]
+
+In[32]:= g[a + b + c + d, b + d] /. g[x_ + y_, x_] -> p[x, y]                   
+
+Out[32]= p[b + d, a + c]
+
+In[33]:= a + b + c /. a + c -> p                                                
+
+Out[33]= b + p
+
+In[34]:= u[a] + u[b] + v[c] + v[d] /. u[x_] + u[y_] -> u[x + y]                 
+
+Out[34]= u[a + b] + v[c] + v[d]
+
+In[35]:= a . b . c . d . a . b /. x_ . y_. x_ -> p[x , y]                       
+
+Out[35]= a . b . c . d . a . b
+
+In[36]:= a . b . c . d . a . b /. x_ . y_ . x_ -> p[x , y]                      
+
+Out[36]= p[a . b, c . d]
+
+In[37]:= SetAttributes[r, Flat]                                                 
+
+In[38]:= r[a, b, a, b] /. r[x_, x_] -> rp[x]                                    
+
+Out[38]= rp[r[a, b]]
+
+In[39]:= r[a, b, b, c] /. r[x_, x_] -> rp[x]                                    
+
+Out[39]= r[a, rp[r[b]], c]
+
+In[40]:= SetAttributes[r, OneIdentity]                                          
+
+In[41]:= r[a, b, b, c] /. r[x_, x_] -> rp[x]                                    
+
+Out[41]= r[a, rp[b], c]
+
+In[42]:=                                                                        
