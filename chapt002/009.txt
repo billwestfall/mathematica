@@ -1,0 +1,149 @@
+pi@raspberrypi:~ $ wolfram
+Wolfram Language (Raspberry Pi Pilot Release)
+Copyright 1988-2016 Wolfram Research
+Information & help: wolfram.com/raspi
+
+In[1]:= f[a, b, c] /. f[x__] -> p[x, x, x]                                      
+
+Out[1]= p[a, b, c, a, b, c, a, b, c]
+
+In[2]:= h[a___, x_, b___, x_, c___] := hh[x] h[a, b, c]                         
+
+In[3]:= h[2, 3, 2, 4, 5, 3]                                                     
+
+Out[3]= h[4, 5] hh[2] hh[3]
+
+In[4]:= f[a, b, c, d, e] /. f[x__, y__] :> 1 /; Print[{x}, {y}]                 
+{a}{b, c, d, e}
+{a, b}{c, d, e}
+{a, b, c}{d, e}
+{a, b, c, d}{e}
+
+Out[4]= f[a, b, c, d, e]
+
+In[5]:= j[x_, y_:1, z_:2] := jp[x, y, z]                                        
+
+In[6]:= j[a, b]                                                                 
+
+Out[6]= jp[a, b, 2]
+
+In[7]:= j[a]                                                                    
+
+Out[7]= jp[a, 1, 2]
+
+In[8]:= {f[a], f[a + b]} /. f[x_ + y_.] -> p[x, y]                              
+
+Out[8]= {p[a, 0], p[b, a]}
+
+In[9]:= {g[a^2], g[a + b]} /. g[x_^n_] -> p[x, n]                               
+
+Out[9]= {p[a, 2], g[a + b]}
+
+In[10]:= {g[a^2]. g[a + b]}, /. g[x_^n_.] -> p[x, n]                            
+
+Syntax::sntxf: "{g[a^2]. g[a + b]}" cannot be followed by 
+    ", /. g[x_^n_.] -> p[x, n]".
+
+
+In[11]:= {g[a^2], g[a + b]} /. g[x_^n_.] -> p[x, n]                             
+
+Out[11]= {p[a, 2], p[a + b, 1]}
+
+In[12]:= lin[a_. + b_. x_, x_] := p[a, b]                                       
+
+In[13]:= lin[1 + x, x]                                                          
+
+Out[13]= p[1, 1]
+
+In[14]:= lin[y, y]                                                              
+
+Out[14]= p[0, 1]
+
+In[15]:= f[list_, n_:Infinity] := f0[list, n]                                   
+
+In[16]:= fx[list_, n1_:1, n2_:2] := fx0[list, n1, n2]                           
+
+In[17]:= fx[k, m]                                                               
+
+Out[17]= fx0[k, m, 2]
+
+In[18]:= Options[fn] = { opt1 -> 1, opt2 -> 2 }                                 
+
+Out[18]= {opt1 -> 1, opt2 -> 2}
+
+In[19]:= opt1 /. Options[fn]                                                    
+
+Out[19]= 1
+
+In[20]:= opt1 /. opt1->3 /. Options[fn]                                         
+
+Out[20]= 3
+
+In[21]:= fn[x_, opts___] := k[x, opt2/.{opts}/.Options[fn]]                     
+
+In[22]:= fn[4]                                                                  
+
+Out[22]= k[4, 2]
+
+In[23]:= fn[4, opt2->7]                                                         
+
+Out[23]= k[4, 7]
+
+In[24]:= Cases[{ f[a], f[a, b, a], f[a, a, a] }, f[a..]]                        
+
+Out[24]= {f0[a, Infinity]}
+
+In[25]:= Cases[{ f[a], f[a, b, a], f[a, a, a] }, f[a..]]                        
+
+Out[25]= {f0[a, Infinity]}
+
+In[26]:= Cases[ { f[a], f[a, a, b], f[a, b, a], f[a, b, b] }, f[a.., b..]]      
+
+Out[26]= {}
+
+In[27]:= {2, 2.5, 2.5 + I, 2/7} // FullForm                                     
+
+Out[27]//FullForm= List[2, 2.5`, Complex[2.5`, 1.`], Rational[2, 7]]
+
+In[28]:= {2.5 - I, 3 + I} /. Complex[x_, y_] -> p[x, y]                         
+
+Out[28]= {p[2.5, -1.], p[3, 1]}
+
+In[29]:= {2.5 - I, x + I y} // FullForm                                         
+
+Out[29]//FullForm= List[Complex[2.5`, -1.`], Plus[x, Times[Complex[0, 1], y]]]
+
+In[30]:= Cases[ {2.5 - I, 2, 3 + I, 2 - 0.5 I, 2 + 2 I}, _Integer | Complex[_Int
+eger, _Integer] ]                                                               
+
+Out[30]= {2, 3 + I, 2 + 2 I}
+
+In[31]:= -1/z^2 - z/y + 2 (x z)^2 y                                             
+
+           -2   z      2    2
+Out[31]= -z   - - + 2 x  y z
+                y
+
+In[32]:= FullForm[%]                                                            
+
+Out[32]//FullForm= 
+ 
+>   Plus[Times[-1, Power[z, -2]], Times[-1, Power[y, -1], z], 
+ 
+>    Times[2, Power[x, 2], y, Power[z, 2]]]
+
+In[33]:= % /. x_^n_ -> e[x, n]                                                  
+
+Out[33]= -(z e[y, -1]) - e[z, -2] + 2 y e[x, 2] e[z, 2]
+
+In[34]:= {1, a, x, 2 x, 2 x + 1} /. a_. + b_. x -> p[a, b]                      
+
+Out[34]= {1, a, p[0, 1], p[0, 2], p[1, 2]}
+
+In[35]:= h[x:{ ({_} | {_, _})... }] := q                                        
+
+In[36]:= {h[{a, b}], h[{{a}, {b}}], h[{{a}, {b, c}}]}                           
+
+Out[36]= {h[{a, b}], q, q}
+
+In[37]:=                                                                        
