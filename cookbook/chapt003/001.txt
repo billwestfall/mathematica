@@ -51,3 +51,39 @@ Insert[list1, 0, List /@ Range[2, Length[list1]]]
 Join[list1,list2]
 Riffle[list1, 0]
 list1[[3]] == Part[list1,3] 
+
+First[list1]
+Last[list1]
+Rest[list1]
+Most[list1]
+Take[list1,3]
+Drop[list1,3]
+Select[list1, OddQ]
+Cases[list1 /3,a_Integer -> 3 a]
+Reverse[list1]
+RotateLeft[list1]
+RotateRight[list1]
+bifurcate[list_] := Nest[Partition[#,2]&,list,Floor[Log[2, Length[list]]]]
+(structured = bifurcate[list1]) //TreeForm
+Flatten[structured]
+Flatten[structured,1] //TreeForm
+Flatten[structured,2] //TreeForm
+Flatten[structured,3]
+
+Union[list1,list2]
+Intersection[list1,list2]
+Complement[list1, Intersection[list1,list2]]
+Complement[list2, Intersection[list1,list2]]
+Subsets[{a,b,c}]
+MemberQ[list2,4]
+
+3 * list1 - 3
+Intersection[Flatten[Attributes[{Times, Plus, Minus, Divide, Power}]]]
+Range[10] ^ Range[10,1,-1]
+u = {-1,0.5,1}; v = {1,-0.5,1};
+u.v
+Norm[u]
+Orthogonalize[{u,v}]
+Projection[{u,v}]
+Needs["VectorAnalysis"]
+CrossProduct[u,v]
