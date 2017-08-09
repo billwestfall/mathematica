@@ -1,0 +1,83 @@
+pi@raspberrypi:~ $ wolfram
+Wolfram Language (Raspberry Pi Pilot Release)
+Copyright 1988-2016 Wolfram Research
+Information & help: wolfram.com/raspi
+
+In[1]:= Log[7] = 2                                                              
+
+Set::write: Tag Log in Log[7] is Protected.
+
+Out[1]= 2
+
+In[2]:= Unprotect[Log]                                                          
+
+Out[2]= {Log}
+
+In[3]:= Log[7] = 2                                                              
+
+Out[3]= 2
+
+In[4]:= Log[7] + Log[3]                                                         
+
+Out[4]= 2 + Log[3]
+
+In[5]:= Log[7] =.                                                               
+
+In[6]:= Protect[Log]                                                            
+
+Out[6]= {Log}
+
+In[7]:= Exp[Log[y]]                                                             
+
+Out[7]= y
+
+In[8]:= f[x_] := x^2                                                            
+
+In[9]:= DownValues[f_]                                                          
+
+DownValues::sym: Argument f_ at position 1 is expected to be a symbol.
+
+Out[9]= DownValues[f_]
+
+In[10]:= DownValues[f]                                                          
+
+                                 2
+Out[10]= {HoldPattern[f[x_]] :> x }
+
+In[11]:= g[x_ + y_] := gp[x, y] ; g[x_, y_] := gm[x, y]                         
+
+In[12]:= DownValues[g]                                                          
+
+Out[12]= {HoldPattern[g[(x_) + (y_)]] :> gp[x, y], 
+ 
+>    HoldPattern[g[x_, y_]] :> gm[x, y]}
+
+In[13]:= DownValues[g] = Reverse[DownValues[g]]                                 
+
+Out[13]= {HoldPattern[g[x_, y_]] :> gm[x, y], 
+ 
+>    HoldPattern[g[(x_) + (y_)]] :> gp[x, y]}
+
+In[14]:= x1 = x2 + 2 ; x2 = 7                                                   
+
+Out[14]= 7
+
+In[15]:= x1                                                                     
+
+Out[15]= 9
+
+In[16]:= fac[1] = 1; fac[n_] := fac[n - 1]                                      
+
+In[17]:= fac[10]                                                                
+
+Out[17]= 1
+
+In[18]:= f[3] + 4f[3] + 1                                                       
+
+Out[18]= 46
+
+In[19]:= 1 + 5 f[3]                                                             
+
+Out[19]= 46
+
+In[20]:=                                                                        
