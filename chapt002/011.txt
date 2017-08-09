@@ -1,0 +1,178 @@
+pi@raspberrypi:~ $ wolfram
+Wolfram Language (Raspberry Pi Pilot Release)
+Copyright 1988-2016 Wolfram Research
+Information & help: wolfram.com/raspi
+
+In[1]:= sinexp = Sin[2 x_] -> 2 Sin[x] Cos[x]                                   
+
+Out[1]= Sin[2 (x_)] -> 2 Cos[x] Sin[x]
+
+In[2]:= Sin[2 (1 + x)^2] /. sinexp                                              
+
+                     2             2
+Out[2]= 2 Cos[(1 + x) ] Sin[(1 + x) ]
+
+In[3]:= facs = Table[f[i] -> i!, {i,5}]                                         
+
+Out[3]= {f[1] -> 1, f[2] -> 2, f[3] -> 6, f[4] -> 24, f[5] -> 120}
+
+In[4]:= dfacs = Dispatch[facs]                                                  
+
+Out[4]= Dispatch[<5>]
+
+In[5]:= f[4] /. dfacs                                                           
+
+Out[5]= 24
+
+In[6]:= (1 + x)^6 /. x -> 3 - a                                                 
+
+               6
+Out[6]= (4 - a)
+
+In[7]:= x = 3 - a                                                               
+
+Out[7]= 3 - a
+
+In[8]:= (1 + x)^7                                                               
+
+               7
+Out[8]= (4 - a)
+
+In[9]:= Factor[ x^2 - 1 ]                                                       
+
+Out[9]= (-4 + a) (-2 + a)
+
+In[10]:= Clear[x]                                                               
+
+In[11]:= Factor[ x^2 - 1 ]                                                      
+
+Out[11]= (-1 + x) (1 + x)
+
+In[12]:= t = 7 x                                                                
+
+Out[12]= 7 x
+
+In[13]:= t += 18x                                                               
+
+Out[13]= 25 x
+
+In[14]:= t                                                                      
+
+Out[14]= 25 x
+
+In[15]:= t = 8; t *= 7; t                                                       
+
+Out[15]= 56
+
+In[16]:= i=5; Print[i++]; Print[i]                                              
+5
+6
+
+In[17]:= i=5; Print[++i]; Print[i]                                              
+6
+6
+
+In[18]:= {x, y} = {5, 6}                                                        
+
+Out[18]= {5, 6}
+
+In[19]:= {x, y} = {y, x}                                                        
+
+Out[19]= {6, 5}
+
+In[20]:= x                                                                      
+
+Out[20]= 6
+
+In[21]:= y                                                                      
+
+Out[21]= 5
+
+In[22]:= {a, b, c} = {1, 2, 3}; {b, a, c} = {a, c, b}; {a, b, c}                
+
+Out[22]= {3, 1, 2}
+
+In[23]:= v = {5, 7, 9}                                                          
+
+Out[23]= {5, 7, 9}
+
+In[24]:= AppendTo[v, 11]                                                        
+
+Out[24]= {5, 7, 9, 11}
+
+In[25]:= v                                                                      
+
+Out[25]= {5, 7, 9, 11}
+
+In[26]:= v = {1}; Do[ v = {v, k^2}, {k, 1, 4} ]; v                              
+
+Out[26]= {{{{{1}, 1}, 4}, 9}, 16}
+
+In[27]:= Flatten[v]                                                             
+
+Out[27]= {1, 1, 4, 9, 16}
+
+In[28]:= a[1] = 9                                                               
+
+Set::write: Tag Integer in 3[1] is Protected.
+
+Out[28]= 9
+
+In[29]:= a[2] = 7                                                               
+
+Set::write: Tag Integer in 3[2] is Protected.
+
+Out[29]= 7
+
+In[30]:= ?a                                                                     
+Global`a
+
+a = 3
+
+In[31]:= Clear[a]                                                               
+
+In[32]:= a[1] = 9                                                               
+
+Out[32]= 9
+
+In[33]:= a[2] = 7                                                               
+
+Out[33]= 7
+
+In[34]:= ?a                                                                     
+Global`a
+
+a[1] = 9
+ 
+a[2] = 7
+
+In[35]:= a[5] = 0                                                               
+
+Out[35]= 0
+
+In[36]:= Table[a[i], {i, 5}]                                                    
+
+Out[36]= {9, 7, a[3], a[4], 0}
+
+In[37]:= area[square] = 1                                                       
+
+Out[37]= 1
+
+In[38]:= area[triangle] = 1/2                                                   
+
+         1
+Out[38]= -
+         2
+
+In[39]:= ?area                                                                  
+Global`area
+
+area[square] = 1
+ 
+area[triangle] = 1/2
+
+In[40]:= 4 area[square] + area[pentagon]                                        
+
+Out[40]= 4 + area[pentagon]
+
+In[41]:=                                                                        
