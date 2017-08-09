@@ -1,0 +1,52 @@
+list2 = Range[1,20,2]
+BinarySearch[list2, 7]
+BinartSearch[list2, 6]
+unsorted = RandomInteger[{90,99},10]
+Ordering[unsorted]
+Ordering[unsorted,3]
+Ordering[unsorted,-3]
+Ordering[unsorted, Length[unsorted], Greater]
+unsorted[[Ordering[unsorted]]]
+Block[{count = 0},{Ordering[unsorted,3,(count++;Less[#1,#2])&],Framed[count]}]
+Block[{count = 0},{Ordering[unsorted,6,(count++;Less[#1,#2])&],Framed[count]}]
+Timing[Ordering[RandomInteger[{1,999999},1000000],2]]
+(matrix = {{1,2,3},{4,5,6},{7,8,9}}) //MatrixForm
+Tr[matrix,List]
+Diagonal[matrix]
+Diagonal[Map[Reverse,matrix]]
+Tr[Map[Reverse,matrix],List]
+Diagonal[matrix,1]
+Diagonal[matrix,-1]
+IdentityMatrix[5] //MatrixForm
+DiagonalMatrix[Range[4]] //MatrixForm
+permutationMatrix[list_] := IdentityMatrix[Length[list]][[list]]
+(m1 = Table[2i + j, {i,1,3}, {j,1,3}]) //MatrixForm
+(p1 = permutationMatrix[{2,1,3}]) //MatrixForm
+(m1p1 = Dot[m1,p1]) //MatrixForm
+(p1m1 = Dot[p1,m1]) //MatrixForm
+shiftMatrix[n_,dir_] := DiagonalMatrix[Table[1,{n-Abs[dir]}], dir]
+Dot[shiftMatrix[4,2],Table[1,{i,1,4},{j,1,4}]] //MatrixForm
+Dot[m1,shiftMatrix[3,1]] //MatrixForm
+Dot[m1,shiftMatrix[3,-1]] //MatrixForm
+Dot[m1,shiftMatrix[3,1],m1] //MatrixForm
+Dot[m1,shiftMatrix[3,-1],m1] //MatrixForm
+(x = Table[0,{5},{5}])//MatrixForm
+x[[All,2]] = Range[5];
+x//MatrixForm
+x[[3,All]] = 3;
+x//MatrixForm
+x[[2;;4,2;;4]] = 9;
+x//MatrixForm
+AppendTo[x,Range[10,14]];
+x//MatrixForm
+Do[AppendTo[x[[i]],9],{i,1,6}]
+x//MatrixForm
+Attribute[AppendTo]
+ClearAll[myAppendTo];
+myAppendTo[x_,val_] := x = Append[x,val]
+Attributes[myAppendTo]
+x = {}; myAppendTo[x,10]
+x
+SetAttributes[myAppendTo, {HoldFirst}]
+myAppendTo[x,10]
+x
