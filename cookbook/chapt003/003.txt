@@ -1,0 +1,759 @@
+In[1]:= (tensor4 = 
+   Table[Subscript[a, i, j, k, l], {i, 1, 2}, {j, 1, 2}, {k, 1, 
+     2}, {l, 1, 2}]) // MatrixForm
+
+Out[1]//MatrixForm= \!\(
+TagBox[
+RowBox[{"(", "", GridBox[{
+{
+RowBox[{"(", "", GridBox[{
+{
+SubscriptBox["a", 
+RowBox[{"1", ",", "1", ",", "1", ",", "1"}]], 
+SubscriptBox["a", 
+RowBox[{"1", ",", "1", ",", "1", ",", "2"}]]},
+{
+SubscriptBox["a", 
+RowBox[{"1", ",", "1", ",", "2", ",", "1"}]], 
+SubscriptBox["a", 
+RowBox[{"1", ",", "1", ",", "2", ",", "2"}]]}
+},
+GridBoxAlignment->{
+          "Columns" -> {{Center}}, "ColumnsIndexed" -> {}, 
+           "Rows" -> {{Baseline}}, "RowsIndexed" -> {}},
+GridBoxSpacings->{"Columns" -> {
+Offset[0.27999999999999997`], {
+Offset[0.7]}, 
+Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+Offset[0.2], {
+Offset[0.4]}, 
+Offset[0.2]}, "RowsIndexed" -> {}}], "", ")"}], 
+RowBox[{"(", "", GridBox[{
+{
+SubscriptBox["a", 
+RowBox[{"1", ",", "2", ",", "1", ",", "1"}]], 
+SubscriptBox["a", 
+RowBox[{"1", ",", "2", ",", "1", ",", "2"}]]},
+{
+SubscriptBox["a", 
+RowBox[{"1", ",", "2", ",", "2", ",", "1"}]], 
+SubscriptBox["a", 
+RowBox[{"1", ",", "2", ",", "2", ",", "2"}]]}
+},
+GridBoxAlignment->{
+          "Columns" -> {{Center}}, "ColumnsIndexed" -> {}, 
+           "Rows" -> {{Baseline}}, "RowsIndexed" -> {}},
+GridBoxSpacings->{"Columns" -> {
+Offset[0.27999999999999997`], {
+Offset[0.7]}, 
+Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+Offset[0.2], {
+Offset[0.4]}, 
+Offset[0.2]}, "RowsIndexed" -> {}}], "", ")"}]},
+{
+RowBox[{"(", "", GridBox[{
+{
+SubscriptBox["a", 
+RowBox[{"2", ",", "1", ",", "1", ",", "1"}]], 
+SubscriptBox["a", 
+RowBox[{"2", ",", "1", ",", "1", ",", "2"}]]},
+{
+SubscriptBox["a", 
+RowBox[{"2", ",", "1", ",", "2", ",", "1"}]], 
+SubscriptBox["a", 
+RowBox[{"2", ",", "1", ",", "2", ",", "2"}]]}
+},
+GridBoxAlignment->{
+          "Columns" -> {{Center}}, "ColumnsIndexed" -> {}, 
+           "Rows" -> {{Baseline}}, "RowsIndexed" -> {}},
+GridBoxSpacings->{"Columns" -> {
+Offset[0.27999999999999997`], {
+Offset[0.7]}, 
+Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+Offset[0.2], {
+Offset[0.4]}, 
+Offset[0.2]}, "RowsIndexed" -> {}}], "", ")"}], 
+RowBox[{"(", "", GridBox[{
+{
+SubscriptBox["a", 
+RowBox[{"2", ",", "2", ",", "1", ",", "1"}]], 
+SubscriptBox["a", 
+RowBox[{"2", ",", "2", ",", "1", ",", "2"}]]},
+{
+SubscriptBox["a", 
+RowBox[{"2", ",", "2", ",", "2", ",", "1"}]], 
+SubscriptBox["a", 
+RowBox[{"2", ",", "2", ",", "2", ",", "2"}]]}
+},
+GridBoxAlignment->{
+          "Columns" -> {{Center}}, "ColumnsIndexed" -> {}, 
+           "Rows" -> {{Baseline}}, "RowsIndexed" -> {}},
+GridBoxSpacings->{"Columns" -> {
+Offset[0.27999999999999997`], {
+Offset[0.7]}, 
+Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+Offset[0.2], {
+Offset[0.4]}, 
+Offset[0.2]}, "RowsIndexed" -> {}}], "", ")"}]}
+},
+GridBoxAlignment->{
+      "Columns" -> {{Center}}, "ColumnsIndexed" -> {}, 
+       "Rows" -> {{Baseline}}, "RowsIndexed" -> {}},
+GridBoxSpacings->{"Columns" -> {
+Offset[0.27999999999999997`], {
+Offset[0.7]}, 
+Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+Offset[0.2], {
+Offset[0.4]}, 
+Offset[0.2]}, "RowsIndexed" -> {}}], "", ")"}],
+Function[BoxForm`e$, 
+MatrixForm[BoxForm`e$]]]\)
+
+In[2]:= tensor4[[1]] // MatrixForm
+
+Out[2]//MatrixForm= \!\(
+TagBox[
+RowBox[{"(", "", GridBox[{
+{
+RowBox[{"(", "", 
+TagBox[GridBox[{
+{
+SubscriptBox["a", 
+RowBox[{"1", ",", "1", ",", "1", ",", "1"}]]},
+{
+SubscriptBox["a", 
+RowBox[{"1", ",", "1", ",", "1", ",", "2"}]]}
+},
+GridBoxAlignment->{
+           "Columns" -> {{Center}}, "ColumnsIndexed" -> {}, 
+            "Rows" -> {{Baseline}}, "RowsIndexed" -> {}},
+GridBoxSpacings->{"Columns" -> {
+Offset[0.27999999999999997`], {
+Offset[0.5599999999999999]}, 
+Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+Offset[0.2], {
+Offset[0.4]}, 
+Offset[0.2]}, "RowsIndexed" -> {}}],
+Column], "", ")"}], 
+RowBox[{"(", "", 
+TagBox[GridBox[{
+{
+SubscriptBox["a", 
+RowBox[{"1", ",", "1", ",", "2", ",", "1"}]]},
+{
+SubscriptBox["a", 
+RowBox[{"1", ",", "1", ",", "2", ",", "2"}]]}
+},
+GridBoxAlignment->{
+           "Columns" -> {{Center}}, "ColumnsIndexed" -> {}, 
+            "Rows" -> {{Baseline}}, "RowsIndexed" -> {}},
+GridBoxSpacings->{"Columns" -> {
+Offset[0.27999999999999997`], {
+Offset[0.5599999999999999]}, 
+Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+Offset[0.2], {
+Offset[0.4]}, 
+Offset[0.2]}, "RowsIndexed" -> {}}],
+Column], "", ")"}]},
+{
+RowBox[{"(", "", 
+TagBox[GridBox[{
+{
+SubscriptBox["a", 
+RowBox[{"1", ",", "2", ",", "1", ",", "1"}]]},
+{
+SubscriptBox["a", 
+RowBox[{"1", ",", "2", ",", "1", ",", "2"}]]}
+},
+GridBoxAlignment->{
+           "Columns" -> {{Center}}, "ColumnsIndexed" -> {}, 
+            "Rows" -> {{Baseline}}, "RowsIndexed" -> {}},
+GridBoxSpacings->{"Columns" -> {
+Offset[0.27999999999999997`], {
+Offset[0.5599999999999999]}, 
+Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+Offset[0.2], {
+Offset[0.4]}, 
+Offset[0.2]}, "RowsIndexed" -> {}}],
+Column], "", ")"}], 
+RowBox[{"(", "", 
+TagBox[GridBox[{
+{
+SubscriptBox["a", 
+RowBox[{"1", ",", "2", ",", "2", ",", "1"}]]},
+{
+SubscriptBox["a", 
+RowBox[{"1", ",", "2", ",", "2", ",", "2"}]]}
+},
+GridBoxAlignment->{
+           "Columns" -> {{Center}}, "ColumnsIndexed" -> {}, 
+            "Rows" -> {{Baseline}}, "RowsIndexed" -> {}},
+GridBoxSpacings->{"Columns" -> {
+Offset[0.27999999999999997`], {
+Offset[0.5599999999999999]}, 
+Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+Offset[0.2], {
+Offset[0.4]}, 
+Offset[0.2]}, "RowsIndexed" -> {}}],
+Column], "", ")"}]}
+},
+GridBoxAlignment->{
+      "Columns" -> {{Center}}, "ColumnsIndexed" -> {}, 
+       "Rows" -> {{Baseline}}, "RowsIndexed" -> {}},
+GridBoxSpacings->{"Columns" -> {
+Offset[0.27999999999999997`], {
+Offset[0.7]}, 
+Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+Offset[0.2], {
+Offset[0.4]}, 
+Offset[0.2]}, "RowsIndexed" -> {}}], "", ")"}],
+Function[BoxForm`e$, 
+MatrixForm[BoxForm`e$]]]\)
+
+In[3]:= tensor4[[1, 1]] // MatrixForm
+
+Out[3]//MatrixForm= \!\(
+TagBox[
+RowBox[{"(", "", GridBox[{
+{
+SubscriptBox["a", 
+RowBox[{"1", ",", "1", ",", "1", ",", "1"}]], 
+SubscriptBox["a", 
+RowBox[{"1", ",", "1", ",", "1", ",", "2"}]]},
+{
+SubscriptBox["a", 
+RowBox[{"1", ",", "1", ",", "2", ",", "1"}]], 
+SubscriptBox["a", 
+RowBox[{"1", ",", "1", ",", "2", ",", "2"}]]}
+},
+GridBoxAlignment->{
+      "Columns" -> {{Center}}, "ColumnsIndexed" -> {}, 
+       "Rows" -> {{Baseline}}, "RowsIndexed" -> {}},
+GridBoxSpacings->{"Columns" -> {
+Offset[0.27999999999999997`], {
+Offset[0.7]}, 
+Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+Offset[0.2], {
+Offset[0.4]}, 
+Offset[0.2]}, "RowsIndexed" -> {}}], "", ")"}],
+Function[BoxForm`e$, 
+MatrixForm[BoxForm`e$]]]\)
+
+In[4]:= tensor4[[1, 1, 2]]
+
+Out[4]= {Subscript[a, 1, 1, 2, 1], Subscript[a, 1, 1, 2, 2]}
+
+In[5]:= tensor4[[2, 1, 2, 2]]
+
+Out[5]= Subscript[a, 2, 1, 2, 2]
+
+In[6]:= Dot[{x1, x2, x3}, {y1, y2, y3}]
+
+Out[6]= x1 y1 + x2 y2 + x3 y3
+
+In[7]:= Clear[x, y];
+
+In[8]:= Dot[Table[Subscript[x, i, j], {i, 1, 3}, {j, 1, 2}], 
+  Table[Subscript[y, i, j], {i, 1, 2}, {j, 1, 3}]] // MatrixForm
+
+Out[8]//MatrixForm= \!\(
+TagBox[
+RowBox[{"(", "", GridBox[{
+{
+RowBox[{
+RowBox[{
+SubscriptBox["x", 
+RowBox[{"1", ",", "1"}]], " ", 
+SubscriptBox["y", 
+RowBox[{"1", ",", "1"}]]}], "+", 
+RowBox[{
+SubscriptBox["x", 
+RowBox[{"1", ",", "2"}]], " ", 
+SubscriptBox["y", 
+RowBox[{"2", ",", "1"}]]}]}], 
+RowBox[{
+RowBox[{
+SubscriptBox["x", 
+RowBox[{"1", ",", "1"}]], " ", 
+SubscriptBox["y", 
+RowBox[{"1", ",", "2"}]]}], "+", 
+RowBox[{
+SubscriptBox["x", 
+RowBox[{"1", ",", "2"}]], " ", 
+SubscriptBox["y", 
+RowBox[{"2", ",", "2"}]]}]}], 
+RowBox[{
+RowBox[{
+SubscriptBox["x", 
+RowBox[{"1", ",", "1"}]], " ", 
+SubscriptBox["y", 
+RowBox[{"1", ",", "3"}]]}], "+", 
+RowBox[{
+SubscriptBox["x", 
+RowBox[{"1", ",", "2"}]], " ", 
+SubscriptBox["y", 
+RowBox[{"2", ",", "3"}]]}]}]},
+{
+RowBox[{
+RowBox[{
+SubscriptBox["x", 
+RowBox[{"2", ",", "1"}]], " ", 
+SubscriptBox["y", 
+RowBox[{"1", ",", "1"}]]}], "+", 
+RowBox[{
+SubscriptBox["x", 
+RowBox[{"2", ",", "2"}]], " ", 
+SubscriptBox["y", 
+RowBox[{"2", ",", "1"}]]}]}], 
+RowBox[{
+RowBox[{
+SubscriptBox["x", 
+RowBox[{"2", ",", "1"}]], " ", 
+SubscriptBox["y", 
+RowBox[{"1", ",", "2"}]]}], "+", 
+RowBox[{
+SubscriptBox["x", 
+RowBox[{"2", ",", "2"}]], " ", 
+SubscriptBox["y", 
+RowBox[{"2", ",", "2"}]]}]}], 
+RowBox[{
+RowBox[{
+SubscriptBox["x", 
+RowBox[{"2", ",", "1"}]], " ", 
+SubscriptBox["y", 
+RowBox[{"1", ",", "3"}]]}], "+", 
+RowBox[{
+SubscriptBox["x", 
+RowBox[{"2", ",", "2"}]], " ", 
+SubscriptBox["y", 
+RowBox[{"2", ",", "3"}]]}]}]},
+{
+RowBox[{
+RowBox[{
+SubscriptBox["x", 
+RowBox[{"3", ",", "1"}]], " ", 
+SubscriptBox["y", 
+RowBox[{"1", ",", "1"}]]}], "+", 
+RowBox[{
+SubscriptBox["x", 
+RowBox[{"3", ",", "2"}]], " ", 
+SubscriptBox["y", 
+RowBox[{"2", ",", "1"}]]}]}], 
+RowBox[{
+RowBox[{
+SubscriptBox["x", 
+RowBox[{"3", ",", "1"}]], " ", 
+SubscriptBox["y", 
+RowBox[{"1", ",", "2"}]]}], "+", 
+RowBox[{
+SubscriptBox["x", 
+RowBox[{"3", ",", "2"}]], " ", 
+SubscriptBox["y", 
+RowBox[{"2", ",", "2"}]]}]}], 
+RowBox[{
+RowBox[{
+SubscriptBox["x", 
+RowBox[{"3", ",", "1"}]], " ", 
+SubscriptBox["y", 
+RowBox[{"1", ",", "3"}]]}], "+", 
+RowBox[{
+SubscriptBox["x", 
+RowBox[{"3", ",", "2"}]], " ", 
+SubscriptBox["y", 
+RowBox[{"2", ",", "3"}]]}]}]}
+},
+GridBoxAlignment->{
+      "Columns" -> {{Center}}, "ColumnsIndexed" -> {}, 
+       "Rows" -> {{Baseline}}, "RowsIndexed" -> {}},
+GridBoxSpacings->{"Columns" -> {
+Offset[0.27999999999999997`], {
+Offset[0.7]}, 
+Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+Offset[0.2], {
+Offset[0.4]}, 
+Offset[0.2]}, "RowsIndexed" -> {}}], "", ")"}],
+Function[BoxForm`e$, 
+MatrixForm[BoxForm`e$]]]\)
+
+In[9]:= Dot[{x1, x2, x3}, {y1, y2, y3}]
+
+Out[9]= x1 y1 + x2 y2 + x3 y3
+
+In[10]:= Inner[List, Table[i^j, {1, 1, 4}, {j, 1, 3}], 
+  Table[j! i!, {i, 1, 3}, {j, 1, 4}], Max] // MatrixForm
+
+During evaluation of In[10]:= Table::itraw: Raw object 1 cannot be used as an iterator.
+
+During evaluation of In[10]:= Inner::heads: Heads List and Table at positions 3 and 2 are expected to be the same.
+
+Out[10]//MatrixForm= \!\(
+TagBox[
+RowBox[{"Inner", "[", 
+RowBox[{"List", ",", 
+RowBox[{"Table", "[", 
+RowBox[{
+SuperscriptBox["i", "j"], ",", 
+RowBox[{"{", 
+RowBox[{"1", ",", "1", ",", "4"}], "}"}], ",", 
+RowBox[{"{", 
+RowBox[{"j", ",", "1", ",", "3"}], "}"}]}], "]"}], ",", 
+RowBox[{"{", 
+RowBox[{
+RowBox[{"{", 
+RowBox[{"1", ",", "2", ",", "6", ",", "24"}], "}"}], ",", 
+RowBox[{"{", 
+RowBox[{"2", ",", "4", ",", "12", ",", "48"}], "}"}], ",", 
+RowBox[{"{", 
+RowBox[{"6", ",", "12", ",", "36", ",", "144"}], "}"}]}], "}"}], ",", 
+     "Max"}], "]"}],
+Function[BoxForm`e$, 
+MatrixForm[BoxForm`e$]]]\)
+
+In[11]:= Inner[List, Table[i + j, {i, 1, 3}, {j, 1, 2}], 
+  Table[i*j, {i, 1, 2}, {j, 1, 3}], List] // MatrixForm
+
+Out[11]//MatrixForm= \!\(
+TagBox[
+RowBox[{"(", "", GridBox[{
+{
+RowBox[{"(", "", GridBox[{
+{"2", "1"},
+{"3", "2"}
+},
+GridBoxAlignment->{
+          "Columns" -> {{Center}}, "ColumnsIndexed" -> {}, 
+           "Rows" -> {{Baseline}}, "RowsIndexed" -> {}},
+GridBoxSpacings->{"Columns" -> {
+Offset[0.27999999999999997`], {
+Offset[0.7]}, 
+Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+Offset[0.2], {
+Offset[0.4]}, 
+Offset[0.2]}, "RowsIndexed" -> {}}], "", ")"}], 
+RowBox[{"(", "", GridBox[{
+{"2", "2"},
+{"3", "4"}
+},
+GridBoxAlignment->{
+          "Columns" -> {{Center}}, "ColumnsIndexed" -> {}, 
+           "Rows" -> {{Baseline}}, "RowsIndexed" -> {}},
+GridBoxSpacings->{"Columns" -> {
+Offset[0.27999999999999997`], {
+Offset[0.7]}, 
+Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+Offset[0.2], {
+Offset[0.4]}, 
+Offset[0.2]}, "RowsIndexed" -> {}}], "", ")"}], 
+RowBox[{"(", "", GridBox[{
+{"2", "3"},
+{"3", "6"}
+},
+GridBoxAlignment->{
+          "Columns" -> {{Center}}, "ColumnsIndexed" -> {}, 
+           "Rows" -> {{Baseline}}, "RowsIndexed" -> {}},
+GridBoxSpacings->{"Columns" -> {
+Offset[0.27999999999999997`], {
+Offset[0.7]}, 
+Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+Offset[0.2], {
+Offset[0.4]}, 
+Offset[0.2]}, "RowsIndexed" -> {}}], "", ")"}]},
+{
+RowBox[{"(", "", GridBox[{
+{"3", "1"},
+{"4", "2"}
+},
+GridBoxAlignment->{
+          "Columns" -> {{Center}}, "ColumnsIndexed" -> {}, 
+           "Rows" -> {{Baseline}}, "RowsIndexed" -> {}},
+GridBoxSpacings->{"Columns" -> {
+Offset[0.27999999999999997`], {
+Offset[0.7]}, 
+Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+Offset[0.2], {
+Offset[0.4]}, 
+Offset[0.2]}, "RowsIndexed" -> {}}], "", ")"}], 
+RowBox[{"(", "", GridBox[{
+{"3", "2"},
+{"4", "4"}
+},
+GridBoxAlignment->{
+          "Columns" -> {{Center}}, "ColumnsIndexed" -> {}, 
+           "Rows" -> {{Baseline}}, "RowsIndexed" -> {}},
+GridBoxSpacings->{"Columns" -> {
+Offset[0.27999999999999997`], {
+Offset[0.7]}, 
+Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+Offset[0.2], {
+Offset[0.4]}, 
+Offset[0.2]}, "RowsIndexed" -> {}}], "", ")"}], 
+RowBox[{"(", "", GridBox[{
+{"3", "3"},
+{"4", "6"}
+},
+GridBoxAlignment->{
+          "Columns" -> {{Center}}, "ColumnsIndexed" -> {}, 
+           "Rows" -> {{Baseline}}, "RowsIndexed" -> {}},
+GridBoxSpacings->{"Columns" -> {
+Offset[0.27999999999999997`], {
+Offset[0.7]}, 
+Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+Offset[0.2], {
+Offset[0.4]}, 
+Offset[0.2]}, "RowsIndexed" -> {}}], "", ")"}]},
+{
+RowBox[{"(", "", GridBox[{
+{"4", "1"},
+{"5", "2"}
+},
+GridBoxAlignment->{
+          "Columns" -> {{Center}}, "ColumnsIndexed" -> {}, 
+           "Rows" -> {{Baseline}}, "RowsIndexed" -> {}},
+GridBoxSpacings->{"Columns" -> {
+Offset[0.27999999999999997`], {
+Offset[0.7]}, 
+Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+Offset[0.2], {
+Offset[0.4]}, 
+Offset[0.2]}, "RowsIndexed" -> {}}], "", ")"}], 
+RowBox[{"(", "", GridBox[{
+{"4", "2"},
+{"5", "4"}
+},
+GridBoxAlignment->{
+          "Columns" -> {{Center}}, "ColumnsIndexed" -> {}, 
+           "Rows" -> {{Baseline}}, "RowsIndexed" -> {}},
+GridBoxSpacings->{"Columns" -> {
+Offset[0.27999999999999997`], {
+Offset[0.7]}, 
+Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+Offset[0.2], {
+Offset[0.4]}, 
+Offset[0.2]}, "RowsIndexed" -> {}}], "", ")"}], 
+RowBox[{"(", "", GridBox[{
+{"4", "3"},
+{"5", "6"}
+},
+GridBoxAlignment->{
+          "Columns" -> {{Center}}, "ColumnsIndexed" -> {}, 
+           "Rows" -> {{Baseline}}, "RowsIndexed" -> {}},
+GridBoxSpacings->{"Columns" -> {
+Offset[0.27999999999999997`], {
+Offset[0.7]}, 
+Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+Offset[0.2], {
+Offset[0.4]}, 
+Offset[0.2]}, "RowsIndexed" -> {}}], "", ")"}]}
+},
+GridBoxAlignment->{
+      "Columns" -> {{Center}}, "ColumnsIndexed" -> {}, 
+       "Rows" -> {{Baseline}}, "RowsIndexed" -> {}},
+GridBoxSpacings->{"Columns" -> {
+Offset[0.27999999999999997`], {
+Offset[0.7]}, 
+Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+Offset[0.2], {
+Offset[0.4]}, 
+Offset[0.2]}, "RowsIndexed" -> {}}], "", ")"}],
+Function[BoxForm`e$, 
+MatrixForm[BoxForm`e$]]]\)
+
+In[12]:= Inner[List, Table[i*j, {i, 1, 2}, {j, 1, 2}], 
+  Table[i + j, {i, 1, 2}, {j, 1, 2}], Join] // MatrixForm
+
+Out[12]//MatrixForm= \!\(
+TagBox[
+RowBox[{"(", "", GridBox[{
+{
+RowBox[{"(", "", 
+TagBox[GridBox[{
+{"1"},
+{"2"},
+{"2"},
+{"3"}
+},
+GridBoxAlignment->{
+           "Columns" -> {{Center}}, "ColumnsIndexed" -> {}, 
+            "Rows" -> {{Baseline}}, "RowsIndexed" -> {}},
+GridBoxSpacings->{"Columns" -> {
+Offset[0.27999999999999997`], {
+Offset[0.5599999999999999]}, 
+Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+Offset[0.2], {
+Offset[0.4]}, 
+Offset[0.2]}, "RowsIndexed" -> {}}],
+Column], "", ")"}], 
+RowBox[{"(", "", 
+TagBox[GridBox[{
+{"1"},
+{"3"},
+{"2"},
+{"4"}
+},
+GridBoxAlignment->{
+           "Columns" -> {{Center}}, "ColumnsIndexed" -> {}, 
+            "Rows" -> {{Baseline}}, "RowsIndexed" -> {}},
+GridBoxSpacings->{"Columns" -> {
+Offset[0.27999999999999997`], {
+Offset[0.5599999999999999]}, 
+Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+Offset[0.2], {
+Offset[0.4]}, 
+Offset[0.2]}, "RowsIndexed" -> {}}],
+Column], "", ")"}]},
+{
+RowBox[{"(", "", 
+TagBox[GridBox[{
+{"2"},
+{"2"},
+{"4"},
+{"3"}
+},
+GridBoxAlignment->{
+           "Columns" -> {{Center}}, "ColumnsIndexed" -> {}, 
+            "Rows" -> {{Baseline}}, "RowsIndexed" -> {}},
+GridBoxSpacings->{"Columns" -> {
+Offset[0.27999999999999997`], {
+Offset[0.5599999999999999]}, 
+Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+Offset[0.2], {
+Offset[0.4]}, 
+Offset[0.2]}, "RowsIndexed" -> {}}],
+Column], "", ")"}], 
+RowBox[{"(", "", 
+TagBox[GridBox[{
+{"2"},
+{"3"},
+{"4"},
+{"4"}
+},
+GridBoxAlignment->{
+           "Columns" -> {{Center}}, "ColumnsIndexed" -> {}, 
+            "Rows" -> {{Baseline}}, "RowsIndexed" -> {}},
+GridBoxSpacings->{"Columns" -> {
+Offset[0.27999999999999997`], {
+Offset[0.5599999999999999]}, 
+Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+Offset[0.2], {
+Offset[0.4]}, 
+Offset[0.2]}, "RowsIndexed" -> {}}],
+Column], "", ")"}]}
+},
+GridBoxAlignment->{
+      "Columns" -> {{Center}}, "ColumnsIndexed" -> {}, 
+       "Rows" -> {{Baseline}}, "RowsIndexed" -> {}},
+GridBoxSpacings->{"Columns" -> {
+Offset[0.27999999999999997`], {
+Offset[0.7]}, 
+Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+Offset[0.2], {
+Offset[0.4]}, 
+Offset[0.2]}, "RowsIndexed" -> {}}], "", ")"}],
+Function[BoxForm`e$, 
+MatrixForm[BoxForm`e$]]]\)
+
+In[13]:= Inner[And, Table[i < j, {i, 1, 3}, {j, 1, 3}], 
+  Table[j < i, {i, 1, 3}, {j, 1, 3}], Or] // MatrixForm
+
+Out[13]//MatrixForm= \!\(
+TagBox[
+RowBox[{"(", "", GridBox[{
+{"True", "True", "False"},
+{"True", "True", "False"},
+{"False", "False", "False"}
+},
+GridBoxAlignment->{
+      "Columns" -> {{Center}}, "ColumnsIndexed" -> {}, 
+       "Rows" -> {{Baseline}}, "RowsIndexed" -> {}},
+GridBoxSpacings->{"Columns" -> {
+Offset[0.27999999999999997`], {
+Offset[0.7]}, 
+Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+Offset[0.2], {
+Offset[0.4]}, 
+Offset[0.2]}, "RowsIndexed" -> {}}], "", ")"}],
+Function[BoxForm`e$, 
+MatrixForm[BoxForm`e$]]]\)
+
+In[14]:= array1 = N[Table[i*Pi, {i, 0, 500000}]];
+
+In[15]:= Developer`PackedArrayQ[array1]
+
+Out[15]= False
+
+In[16]:= array2 = Table[i*Pi, {i, 0.0, 500000}];
+
+In[17]:= Developer`PackedArrayQ[array2]
+
+Out[17]= True
+
+In[18]:= Mean@Table[Timing[array1*array2][[1]], {100}]
+
+Out[18]= 0.425
+
+In[19]:= Mean@Table[Timing[array2*array2][[1]], {100}]
+
+Out[19]= 0.0227
+
+In[20]:= array1 = Developer`ToPackedArray[array1];
+
+In[21]:= Developer`PackedArrayQ[array1]
+
+Out[21]= True
+
+In[22]:= list = RandomInteger[{-100, 100}, 10];
+
+In[23]:= Sort[list]
+
+Out[23]= {-91, -86, -64, -21, -1, 53, 64, 66, 86, 87}
+
+In[24]:= Sort[list, Greater]
+
+Out[24]= {87, 86, 66, 64, 53, -1, -21, -64, -86, -91}
+
+In[25]:= SortBy[list, Abs]
+
+Out[25]= {-1, -21, 53, -64, 64, 66, -86, 86, 87, -91}
+
+In[26]:= Needs["Combinatoria`"]
+
+During evaluation of In[26]:= Get::noopen: Cannot open Combinatoria`.
+
+During evaluation of In[26]:= Needs::nocont: Context Combinatoria` was not created when Needs was evaluated.
+
+Out[26]= $Failed
+
+In[27]:= SelectionSort[list, less]
+
+Out[27]= SelectionSort[{53, 66, -21, 86, -1, -91, 64, 
+  87, -64, -86}, less]
+
+In[28]:= Block[{count = 0}, {Sort[list, (count++; Less[#1, #2]) &], 
+  Framed[count]}]
+
+Out[28]= {{-91, -86, -64, -21, -1, 53, 64, 66, 86, 87}, 
+\!\(\*FrameBox[\!\(27\),
+StripOnInput->False]\)}
+
+In[29]:= Log[2.0, Length[list]]*Length[list]
+
+Out[29]= 33.2193
+
+In[30]:= 
+Block[{count = 0}, {SelectionSort[list, (count++; Less[#1, #2]) &], 
+  Framed[count]}]
+
+Out[30]= {SelectionSort[{53, 66, -21, 86, -1, -91, 64, 
+   87, -64, -86}, (count++; #1 < #2) &], 
+\!\(\*FrameBox[\!\(0\),
+StripOnInput->False]\)}
+
+In[31]:= 
+Length[list]^2
+
+Out[31]= 100
+
+In[32]:= 
+HeapSort[list]
+
+Out[32]= HeapSort[{53, 66, -21, 86, -1, -91, 64, 87, -64, -86}]
