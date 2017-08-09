@@ -1,0 +1,161 @@
+pi@raspberrypi:~ $ wolfram
+Wolfram Language (Raspberry Pi Pilot Release)
+Copyright 1988-2016 Wolfram Research
+Information & help: wolfram.com/raspi
+
+In[1]:= f[x_] := f[x] = f[x - 1] + f[x -2]                                      
+
+In[2]:= f[0] = f[1] = 1                                                         
+
+Out[2]= 1
+
+In[3]:= ?f                                                                      
+Global`f
+
+f[0] = 1
+ 
+f[1] = 1
+ 
+f[x_] := f[x] = f[x - 1] + f[x - 2]
+
+In[4]:= f[5]                                                                    
+
+Out[4]= 8
+
+In[5]:= ?f                                                                      
+Global`f
+
+f[0] = 1
+ 
+f[1] = 1
+ 
+f[2] = 2
+ 
+f[3] = 3
+ 
+f[4] = 5
+ 
+f[5] = 8
+ 
+f[x_] := f[x] = f[x - 1] + f[x - 2]
+
+In[6]:= f[5]                                                                    
+
+Out[6]= 8
+
+In[7]:= f[g[x_]] := fg[x]                                                       
+
+In[8]:= ?f                                                                      
+Global`f
+
+f[0] = 1
+ 
+f[1] = 1
+ 
+f[2] = 2
+ 
+f[3] = 3
+ 
+f[4] = 5
+ 
+f[5] = 8
+ 
+f[g[x_]] := fg[x]
+ 
+f[x_] := f[x] = f[x - 1] + f[x - 2]
+
+In[9]:= g/: Exp[g[x_]] := expg[x]                                               
+
+In[10]:= ?g                                                                     
+Global`g
+
+Exp[g[x_]] ^:= expg[x]
+
+In[11]:= ?exp                                                                   
+
+Information::notfound: Symbol exp not found.
+
+In[12]:= ?Exp                                                                   
+Exp[z] gives the exponential of z. 
+
+In[13]:= Exp[g[5]]                                                              
+
+Out[13]= expg[5]
+
+In[14]:= g/: g[x_] + g[y_] := gplus[x, y]                                       
+
+In[15]:= ?g                                                                     
+Global`g
+
+Exp[g[x_]] ^:= expg[x]
+ 
+g[x_] + g[y_] ^:= gplus[x, y]
+
+In[16]:= g[5] + g[7]                                                            
+
+Out[16]= gplus[5, 7]
+
+In[17]:= area[square] ^= 1                                                      
+
+Out[17]= 1
+
+In[18]:= perimeter[square] ^= 4                                                 
+
+Out[18]= 4
+
+In[19]:= ?square                                                                
+Global`square
+
+area[square] ^= 1
+ 
+perimeter[square] ^= 4
+
+In[20]:= g/: h[w[x_], g[y_]] := hwg[x, y]                                       
+
+In[21]:= g/: h[w[g[x_]], y_] := hw[x, y]                                        
+
+TagSetDelayed::tagpos: 
+   Tag g in h[w[g[x_]], y_] is too deep for an assigned rule to be found.
+
+Out[21]= $Failed
+
+In[22]:= N[f[x_]] := Sum[x^-i/i^2, {i, 20}]                                     
+
+$RecursionLimit::reclim2: 
+   Recursion depth of 1024 exceeded during evaluation of -1021 + (x_).
+
+$RecursionLimit::reclim2: 
+   Recursion depth of 1024 exceeded during evaluation of -1021 + (x_).
+
+SetDelayed::write: Tag Hold in Hold[N[f[x_]]] is Protected.
+
+Out[22]= $Failed
+
+In[23]:= N[f[x_]] := Sum[x^-i/i^2, {i, 20}]                                     
+
+$RecursionLimit::reclim2: 
+   Recursion depth of 1024 exceeded during evaluation of -1021 + (x_).
+
+$RecursionLimit::reclim2: 
+   Recursion depth of 1024 exceeded during evaluation of -1021 + (x_).
+
+SetDelayed::write: Tag Hold in Hold[N[f[x_]]] is Protected.
+
+Out[23]= $Failed
+
+In[24]:= f[2] + f[5]                                                            
+
+Out[24]= 10
+
+In[25]:= N[%]                                                                   
+
+Out[25]= 10.
+
+In[26]:= N[const, n_] := Product[1 - 2^-1, {i, 2, 4n + 5}]                      
+
+In[27]:= N[const, 30]                                                           
+
+                                           -38
+Out[27]= 4.70197740328915003187494614889 10
+
+In[28]:=                                                                        
