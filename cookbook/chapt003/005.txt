@@ -1,0 +1,35 @@
+m1 = SparseArray[{{1,1} -> 1, {1000,1000} -> -1, {500, 750} -> 5}]
+v1 = SparseArray[{1,3,9,81,6561} -> {5, 10, 15, 20, 25}]
+dense = DiagonalMatrix[Range[1000]];
+sparse = SparseArray[dense]
+ByteCount[dense] - ByteCount[sparse]
+ClearAll[dense]
+identity = SparseArray[Band[{1,1}] -> 1, {100,100}]
+diagonal = SparseArray[Band[{1,1}] -> Range[100], {100,100}]
+deep = {1,{2,3,4,5,{1,6,1,7},{1,{{{{1,8},1}{1}},1}},1,1,1,9,10,11},12};
+Depth[deep]
+deep //TreeForm
+Position[deep,1]
+Extract[deep,Position[deep,1]]
+Position[deep,1,2]
+Position[deep,1,{2}]
+Position[deep,1,{3,5}]
+Position[deep,1,-1]
+Position[deep,1,-2]
+{Depth[1],Depth[3.7],Depth["foo"],Depth[1 + 7 I]}
+Level[deep,{2}]
+Depth /@ Level[deep,{2}]
+Level[deep, {-2}]
+Depth /@ Level[deep,{-2}]
+GraphicsRow[TreeForm /@ Level[deep, {-2}],ImageSize -> Large]
+Depth /@ Level[deep,-2]
+Clear[x,y];
+deepAlg = 1 + (x+y) - 2x^2 + (x + y)^3 + E^(x + y);
+deepAlg = Factor[deepAlg ^ deepAlg - deepAlg]
+Depth[deepAlg]
+Extract[deepAlg, Position[deepAlg,x,{2,3}]]
+Delete[deepAlg,Position[deepAlg,x,{2,3}]]
+Replace[deepAlg,x -> z, {2,3}]
+Count[%,z,{2,3}]
+Replace[deepAlg, _ -> z, {-3}]
+Map[#^2&, deepAlg, {-3}]
