@@ -1,0 +1,153 @@
+pi@raspberrypi:~ $ wolfram
+Wolfram Language (Raspberry Pi Pilot Release)
+Copyright 1988-2016 Wolfram Research
+Information & help: wolfram.com/raspi
+
+In[1]:= ord = {Arpit, Motikant, Shobhit, Shravan, Bill}; RandomSample[ord]      
+
+Out[1]= {Shobhit, Bill, Shravan, Motikant, Arpit}
+
+In[2]:= ord = {Arpit, Motikant, Shobhit, Shravan, Bill}; RandomSample[ord]      
+
+Out[2]= {Shobhit, Arpit, Motikant, Bill, Shravan}
+
+In[3]:= ord = {Arpit, Motikant, Shobhit, Shravan, Bill}; RandomSample[ord]      
+
+Out[3]= {Motikant, Shravan, Shobhit, Bill, Arpit}
+
+In[4]:= integrate[y_ + z_, x_] := integrate[y, x] + integrate[z, x]             
+
+In[5]:= integrate[a x + b x^2 + 3, x]                                           
+
+                                                           2
+Out[5]= integrate[3, x] + integrate[a x, x] + integrate[b x , x]
+
+In[6]:= x + y /. x -> 3                                                         
+
+Out[6]= 3 + y
+
+In[7]:= x + y /. {x -> a, y -> b}                                               
+
+Out[7]= a + b
+
+In[8]:= x + y /. {{x -> 1, y -> 2}, {x -> 4, y -> 2}}                           
+
+Out[8]= {3, 6}
+
+In[9]:= Solve[x^3 -5x^2 +2x + 8 == 0, x]                                        
+
+Out[9]= {{x -> -1}, {x -> 2}, {x -> 4}}
+
+In[10]:= x^2 + 6 /. %                                                           
+
+Out[10]= {7, 10, 22}
+
+In[11]:= {x^2, x^3, x^4} /. {x^3 -> u, x^n_ -> p[n]}                            
+
+Out[11]= {p[2], u, p[4]}
+
+In[12]:= h[x + h[y]] /. h[u_] -> u^2                                            
+
+                   2
+Out[12]= (x + h[y])
+
+In[13]:= Solve[5x + 1 == 11, x]                                                 
+
+Out[13]= {{x -> 2}}
+
+In[14]:= Solve[5x^2 + 9x - 1 == 0, x]                                           
+
+                -9 - Sqrt[101]         -9 + Sqrt[101]
+Out[14]= {{x -> --------------}, {x -> --------------}}
+                      10                     10
+
+In[15]:= {x^2, y^3} /. {x -> y, y -> x}                                         
+
+           2   3
+Out[15]= {y , x }
+
+In[16]:= x^2 /. x -> (1 + y) /. y -> b                                          
+
+                2
+Out[16]= (1 + b)
+
+In[17]:= x^2 + y^6 /. {x -> 2 + a, a -> 3}                                      
+
+                2    6
+Out[17]= (2 + a)  + y
+
+In[18]:= Solve[x^2 + 4 x + y == 10, x y]                                        
+
+Solve::ivar: x y is not a valid variable.
+
+                      2
+Out[18]= Solve[4 x + x  + y == 10, x y]
+
+In[19]:= Solve[x^2 + 4 x + y == 10, x, y]                                       
+
+Solve::bdomv: Warning: y is not a valid domain specification. Assuming it is a
+     variable to eliminate.
+
+Solve::fulldim: The solution set contains a full-dimensional component; use
+    Reduce for complete solution information.
+
+Out[19]= {{}}
+
+In[20]:= Reduce[x^2 + 4 x + y == 10, x, y]                                      
+
+Reduce::bdomv: Warning: y is not a valid domain specification. Assuming it is a
+     variable to eliminate.
+
+Out[20]= True
+
+In[21]:= Solve[x^2 + 4 x == 4 y, x, y]                                          
+
+Solve::bdomv: Warning: y is not a valid domain specification. Assuming it is a
+     variable to eliminate.
+
+Solve::fulldim: The solution set contains a full-dimensional component; use
+    Reduce for complete solution information.
+
+Out[21]= {{}}
+
+In[22]:= Reduce[x^2 + 4 x == 4 y, x, y]                                         
+
+Reduce::bdomv: Warning: y is not a valid domain specification. Assuming it is a
+     variable to eliminate.
+
+Out[22]= True
+
+In[23]:= x^2 + y^6 //. {x -> 2 + a, a -> 3}                                     
+
+               6
+Out[23]= 25 + y
+
+In[24]:= log[a b c d] /. log[x_ y_] -> log[x] + log[y]                          
+
+Out[24]= log[a] + log[b c d]
+
+In[25]:= log[a b c d] //. log[x_ y_] -> log[x] + log[y]                         
+
+Out[25]= log[a] + log[b] + log[c] + log[d]
+
+In[26]:= ReplaceRepeated[x, x -> x + 1, MaxIterations -> 1000]                  
+
+ReplaceRepeated::rrlim: Exiting after x scanned 1000 times.
+
+Out[26]= 1000 + x
+
+In[27]:= x^2 /. x -> a                                                          
+
+          2
+Out[27]= a
+
+In[28]:= Replace[x^2, x^2 -> b]                                                 
+
+Out[28]= b
+
+In[29]:= Replace[x^2, x -> a]                                                   
+
+          2
+Out[29]= x
+
+In[30]:=                                                                        
