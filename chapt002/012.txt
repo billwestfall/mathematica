@@ -1,0 +1,209 @@
+pi@raspberrypi:~ $ wolfram
+Wolfram Language (Raspberry Pi Pilot Release)
+Copyright 1988-2016 Wolfram Research
+Information & help: wolfram.com/raspi
+
+In[1]:= f[x] = u                                                                
+
+Out[1]= u
+
+In[2]:= f[x] + f[y]                                                             
+
+Out[2]= u + f[y]
+
+In[3]:= f[x_] = x^2                                                             
+
+         2
+Out[3]= x
+
+In[4]:= f[x] + f[y]                                                             
+
+             2
+Out[4]= u + y
+
+In[5]:= Clear[f]                                                                
+
+In[6]:= f[1] = 1                                                                
+
+Out[6]= 1
+
+In[7]:= f[n_] := n f[n-1]                                                       
+
+In[8]:= f[10]                                                                   
+
+Out[8]= 3628800
+
+In[9]:= 10!                                                                     
+
+Out[9]= 3628800
+
+In[10]:= f[n_] := n f[n-1]                                                      
+
+In[11]:= f[1] = 1                                                               
+
+Out[11]= 1
+
+In[12]:= ?f                                                                     
+Global`f
+
+f[1] = 1
+ 
+f[n_] := n*f[n - 1]
+
+In[13]:= log[x_ y_] := log[x] + log[y] ; log[x_^n_] := n log[x]                 
+
+In[14]:= ?log                                                                   
+Global`log
+
+log[(x_)*(y_)] := log[x] + log[y]
+ 
+log[(x_)^(n_)] := n*log[x]
+
+In[15]:= log[2 x_] := log[x] + log[y]                                           
+
+In[16]:= ?log                                                                   
+Global`log
+
+log[2*(x_)] := log[x] + log[y]
+ 
+log[(x_)*(y_)] := log[x] + log[y]
+ 
+log[(x_)^(n_)] := n*log[x]
+
+In[17]:= ex[x_] := Expand[(1 + x)^2]                                            
+
+In[18]:= ?ex                                                                    
+Global`ex
+
+ex[x_] := Expand[(1 + x)^2]
+
+In[19]:= iex[x_] = Expand[(1 + x)^2]                                            
+
+                    2
+Out[19]= 1 + 2 x + x
+
+In[20]:= ?iex                                                                   
+Global`iex
+
+iex[x_] = 1 + 2*x + x^2
+
+In[21]:= ex[y + 2]                                                              
+
+                    2
+Out[21]= 9 + 6 y + y
+
+In[22]:= iex[y + 2]                                                             
+
+                                2
+Out[22]= 1 + 2 (2 + y) + (2 + y)
+
+In[23]:= D[Log[Sin[x]]^2, x]                                                    
+
+Out[23]= 2 Cot[x] Log[Sin[x]]
+
+In[24]:= dlog[x_] = %                                                           
+
+Out[24]= 2 Cot[x] Log[Sin[x]]
+
+In[25]:= dlog[1 + a]                                                            
+
+Out[25]= 2 Cot[1 + a] Log[Sin[1 + a]]
+
+In[26]:= r1 = Random[ ]                                                         
+
+Out[26]= 0.031799
+
+In[27]:= r1 = Random[ ]                                                         
+
+Out[27]= 0.17304
+
+In[28]:= r2 := Random[ ]                                                        
+
+In[29]:= {r1, r2}                                                               
+
+Out[29]= {0.17304, 0.383675}
+
+In[30]:= {r1, r2}                                                               
+
+Out[30]= {0.17304, 0.558793}
+
+In[31]:= {r1, r2}                                                               
+
+Out[31]= {0.17304, 0.731019}
+
+In[32]:= a = 1                                                                  
+
+Out[32]= 1
+
+In[33]:= ri = a + 2                                                             
+
+Out[33]= 3
+
+In[34]:= rd := a + 2                                                            
+
+In[35]:= {ri, rd}                                                               
+
+Out[35]= {3, 3}
+
+In[36]:= a = 2                                                                  
+
+Out[36]= 2
+
+In[37]:= {ri, rd}                                                               
+
+Out[37]= {3, 4}
+
+In[38]:= t := {a, Factor[x^a - 1]}                                              
+
+In[39]:= a = 4; t                                                               
+
+                                    2
+Out[39]= {4, (-1 + x) (1 + x) (1 + x )}
+
+In[40]:= a = 6; t                                                               
+
+                                        2            2
+Out[40]= {6, (-1 + x) (1 + x) (1 - x + x ) (1 + x + x )}
+
+In[41]:= Expand[(1 + x)^2]                                                      
+
+                    2
+Out[41]= 1 + 2 x + x
+
+In[42]:= Expand[x]                                                              
+
+Out[42]= x
+
+In[43]:= f[x_] -> Expand[(1 + x)^2]                                             
+
+$RecursionLimit::reclim2: 
+   Recursion depth of 1024 exceeded during evaluation of -1021 + (x_).
+
+                                     2
+Out[43]= Hold[f[x_] -> Expand[(1 + x) ]]
+
+In[44]:= Clear[f]                                                               
+
+In[45]:= Clear[x_]                                                              
+
+Clear::ssym: x_ is not a symbol or a string.
+
+In[46]:= f[x_] -> Expand[(1 + x)^2]                                             
+
+                             2
+Out[46]= f[x_] -> 1 + 2 x + x
+
+In[47]:= f[x_] -> Expand[x]                                                     
+
+Out[47]= f[x_] -> x
+
+In[48]:= f[x_] :> Expand[x]                                                     
+
+Out[48]= f[x_] :> Expand[x]
+
+In[49]:= f[(1 + p)^2] /. f[x_] :> Expand[x]                                     
+
+                    2
+Out[49]= 1 + 2 p + p
+
+In[50]:=                                                                        
