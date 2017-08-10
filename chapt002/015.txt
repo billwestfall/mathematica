@@ -1,0 +1,153 @@
+pi@raspberrypi:~ $ wolfram
+Wolfram Language (Raspberry Pi Pilot Release)
+Copyright 1988-2016 Wolfram Research
+Information & help: wolfram.com/raspi
+
+In[1]:= x1 = x2 + 2 ; x2 = 7                                                    
+
+Out[1]= 7
+
+In[2]:= x1                                                                      
+
+Out[2]= 9
+
+In[3]:= fac[1] = 1; fac[n_] := n fac[n-1]                                       
+
+In[4]:= fac[10]                                                                 
+
+Out[4]= 3628800
+
+In[5]:= f[3] + 4f[3] + 1                                                        
+
+Out[5]= 1 + 5 f[3]
+
+In[6]:= 1 + 55 f[3]                                                             
+
+Out[6]= 1 + 55 f[3]
+
+In[7]:= 1 + 5 f[3]                                                              
+
+Out[7]= 1 + 5 f[3]
+
+In[8]:= f[x_] = x^2                                                             
+
+         2
+Out[8]= x
+
+In[9]:= 1 + 5 f[3]                                                              
+
+Out[9]= 46
+
+In[10]:= Do[Print[zzzz], {3}]                                                   
+zzzz
+zzzz
+zzzz
+
+In[11]:= (a + b) + c                                                            
+
+Out[11]= a + b + c
+
+In[12]:= c + a + b                                                              
+
+Out[12]= a + b + c
+
+In[13]:= f[a + c + b] - f[c + a + b]                                            
+
+Out[13]= 0
+
+In[14]:= t = {x^2 - 1, (x + 1)(x - 1)}                                          
+
+                2
+Out[14]= {-1 + x , (-1 + x) (1 + x)}
+
+In[15]:= Expand[t]                                                              
+
+                2        2
+Out[15]= {-1 + x , -1 + x }
+
+In[16]:= Factor[t]                                                              
+
+Out[16]= {(-1 + x) (1 + x), (-1 + x) (1 + x)}
+
+In[17]:= SetAttributes[f, Flat]                                                 
+
+In[18]:= f[f[a, b], c]                                                          
+
+Out[18]= f[a, b, c]
+
+In[19]:= f[x_, x_] := f[x]                                                      
+
+In[20]:= f[a, a, a, b, b, b, c, c]                                              
+
+            4      4      4
+Out[20]= f[a , a, b , b, c ]
+
+In[21]:= Attributes[f]                                                          
+
+Out[21]= {Flat}
+
+In[22]:= Attributes[f] = { }                                                    
+
+Out[22]= {}
+
+In[23]:= Attributes[Plus]                                                       
+
+Out[23]= {Flat, Listable, NumericFunction, OneIdentity, Orderless, Protected}
+
+In[24]:= Sqrt[{5, 8, 11}]                                                       
+
+Out[24]= {Sqrt[5], 2 Sqrt[2], Sqrt[11]}
+
+In[25]:= SetAttributes[p, Listable]                                             
+
+In[26]:= p[{a, b, c}, d]                                                        
+
+Out[26]= {p[a, d], p[b, d], p[c, d]}
+
+In[27]:= g[x_] = x + 1                                                          
+
+Out[27]= 1 + x
+
+In[28]:= Protect[g]                                                             
+
+Out[28]= {g}
+
+In[29]:= g[x_] = x                                                              
+
+Set::write: Tag g in g[x_] is Protected.
+
+Out[29]= x
+
+In[30]:= ?g                                                                     
+Global`g
+
+Attributes[g] = {Protected}
+ 
+g[x_] = 1 + x
+
+In[31]:= SetAttributes[g, ReadProtected]                                        
+
+In[32]:= ?g                                                                     
+Global`g
+
+Attributes[g] = {Protected, ReadProtected}
+
+In[33]:= ClearAll[p]                                                            
+
+In[34]:= p[{a, b, c}, d]                                                        
+
+Out[34]= p[{a, b, c}, d]
+
+In[35]:= Thread[p[{a, b, c}, d]]                                                
+
+Out[35]= {p[a, d], p[b, d], p[c, d]}
+
+In[36]:= Function[{x}, p[x]] [{a, b, c}]                                        
+
+Out[36]= p[{a, b, c}]
+
+In[37]:= Function[{x}, p[x], {Listable}] [{a, b, c}]                            
+
+Out[37]= {p[a], p[b], p[c]}
+
+In[38]:=                                                                        
