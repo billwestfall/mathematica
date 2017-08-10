@@ -1,0 +1,113 @@
+pi@raspberrypi:~ $ wolfram
+Wolfram Language (Raspberry Pi Pilot Release)
+Copyright 1988-2016 Wolfram Research
+Information & help: wolfram.com/raspi
+
+In[1]:= Sum[Subscript[a,i]x^i,{1,0,4}]                                          
+
+Sum::itraw: Raw object 1 cannot be used as an iterator.
+
+Sum::vloc: The variable 1 cannot be localized so that it can be assigned to
+     numerical values.
+
+                i
+Out[1]= Sum[a  x , {1, 0, 4}]
+             i
+
+In[2]:= poly = Sum[Subscript[a,i]x^i,{i,0,6}]                                   
+
+                     2       3       4       5       6
+Out[2]= a  + x a  + x  a  + x  a  + x  a  + x  a  + x  a
+         0      1       2       3       4       5       6
+
+In[3]:= Coefficient[poly,x]                                                     
+
+Out[3]= a
+         1
+
+In[4]:= MonomialList[poly]                                                      
+
+              6      5      4      3      2
+Out[4]= {a , x  a , x  a , x  a , x  a , x  a , x a }
+          0      6      5      4      3      2     1
+
+In[5]:= Variables[(x+1)^2(y+3)^3]                                               
+
+Out[5]= {x, y}
+
+In[6]:= Coefficient[8+12x+6x^2+x^3,x^2]                                         
+
+Out[6]= 6
+
+In[7]:= Coefficient[8+12x+6x^2+x^3,x,2]                                         
+
+Out[7]= 6
+
+In[8]:= Coefficient[8+12x+6x^2+x^3,x,0]                                         
+
+Out[8]= 8
+
+In[9]:= poly = Expand[(x+2)^2(y+3)^3]                                           
+
+                          2                         2         2         2
+Out[9]= 108 + 108 x + 27 x  + 108 y + 108 x y + 27 x  y + 36 y  + 36 x y  + 
+ 
+        2  2      3        3    2  3
+>    9 x  y  + 4 y  + 4 x y  + x  y
+
+In[10]:= MonomialList[poly, {x,y}, "DegreeLexicographic"]                       
+
+           2  3     2  2       3      2          2     3      2
+Out[10]= {x  y , 9 x  y , 4 x y , 27 x  y, 36 x y , 4 y , 27 x , 108 x y, 
+ 
+         2
+>    36 y , 108 x, 108 y, 108}
+
+In[11]:= MonomialList[poly, {x,y}, "Lexicographic"]                             
+
+           2  3     2  2      2        2       3        2
+Out[11]= {x  y , 9 x  y , 27 x  y, 27 x , 4 x y , 36 x y , 108 x y, 108 x, 
+ 
+        3      2
+>    4 y , 36 y , 108 y, 108}
+
+In[12]:= MonomialList[poly, {x,y}, "NegativeDegreeLexicographic"]               
+
+                                 2               2      2          2     3
+Out[12]= {108, 108 x, 108 y, 27 x , 108 x y, 36 y , 27 x  y, 36 x y , 4 y , 
+ 
+        2  2       3   2  3
+>    9 x  y , 4 x y , x  y }
+
+In[13]:= HoldForm[Plus[##]] & @@ MonomialList[poly,{x,y},"Lexicographic"]       
+
+          2  3      2  2       2         2        3         2
+Out[13]= x  y  + 9 x  y  + 27 x  y + 27 x  + 4 x y  + 36 x y  + 108 x y + 
+ 
+                3       2
+>    108 x + 4 y  + 36 y  + 108 y + 108
+
+In[14]:= PolynomialQuotient[x^3+x^2-x+1,x+1,x]                                  
+
+               2
+Out[14]= -1 + x
+
+In[15]:= PolynomialRemainder[x^3+x^2-x+1,x+1,x]                                 
+
+Out[15]= 2
+
+In[16]:= PolynomialQuotientRemainder[x^3+x^2-x+1,x+1,x]                         
+
+                2
+Out[16]= {-1 + x , 2}
+
+In[17]:= PolynomialMod[13x^3+15x^2-5x+7,7]                                      
+
+                2      3
+Out[17]= 2 x + x  + 6 x
+
+In[18]:= PolynomialRemainder[x^3+x^2-x+1,7,x]                                   
+
+Out[18]= 0
+
+In[19]:=                                                                        
