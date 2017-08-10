@@ -1,0 +1,222 @@
+pi@raspberrypi:~ $ wolfram
+Wolfram Language (Raspberry Pi Pilot Release)
+Copyright 1988-2016 Wolfram Research
+Information & help: wolfram.com/raspi
+
+In[1]:= m1 = SparseArray[{{1,1} -> 1, {1000,1000} -> -1, {500, 750} -> 5}]      
+
+Out[1]= SparseArray[<3>, {1000, 1000}]
+
+In[2]:= v1 = SparseArray[{1,3,9,81,6561} -> {5, 10, 15, 20, 25}]                
+
+Out[2]= SparseArray[<5>, {6561}]
+
+In[3]:= dense = DiagonalMatrix[Range[1000]];                                    
+
+In[4]:= sparse = SparseArray[dense]                                             
+
+Out[4]= SparseArray[<1000>, {1000, 1000}]
+
+In[5]:= ByteCount[dense] - ByteCount[sparse]                                    
+
+Out[5]= 3987304
+
+In[6]:= ClearAll[dense]                                                         
+
+In[7]:= identity = SparseArray[Band[{1,1}] -> 1, {100,100}]                     
+
+Out[7]= SparseArray[<100>, {100, 100}]
+
+In[8]:= diagonal = SparseArray[Band[{1,1}] -> Range[100], {100,100}]            
+
+Out[8]= SparseArray[<100>, {100, 100}]
+
+In[9]:= deep = {1,{2,3,4,5,{1,6,1,7},{1,{{{{1,8},1}{1}},1}},1,1,1,9,10,11},12}; 
+
+Thread::tdlen: Objects of unequal length in {{1, 8}, 1} {1} cannot be combined.
+
+In[10]:= deep = {1,{2,3,4,5,{1,6,1,7},{1,{{{{1,8},1},{1}},1}},1,1,1,9,10,11},12}
+;                                                                               
+
+In[11]:= Depth[deep]                                                            
+
+Out[11]= 8
+
+In[12]:= deep //TreeForm                                                        
+
+Out[12]//TreeForm= 
+ 
+>   List[1, |                                                                  \
+            List[2, 3, 4, 5, |               , 
+                             List[1, 6, 1, 7]
+             
+            >   |                                                   , 1, 1, 1, 
+                List[1, |                                          ]
+                        List[|                                 , 1]
+                             List[|                  , |      ]
+                                  List[|         , 1]  List[1]
+                                       List[1, 8]
+             
+            >   9, 10, 11]
+ 
+>     , 12]
+
+In[13]:= Position[deep,1]                                                       
+
+Out[13]= {{1}, {2, 5, 1}, {2, 5, 3}, {2, 6, 1}, {2, 6, 2, 1, 1, 1, 1}, 
+ 
+>    {2, 6, 2, 1, 1, 2}, {2, 6, 2, 1, 2, 1}, {2, 6, 2, 2}, {2, 7}, {2, 8}, 
+ 
+>    {2, 9}}
+
+In[14]:= Extract[deep,Position[deep,1]]                                         
+
+Out[14]= {1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1}
+
+In[15]:= Position[deep,1,2]                                                     
+
+Out[15]= {{1}, {2, 7}, {2, 8}, {2, 9}}
+
+In[16]:= Position[deep,1,{2}]                                                   
+
+Out[16]= {{2, 7}, {2, 8}, {2, 9}}
+
+In[17]:= Position[deep,1,{3,5}]                                                 
+
+Out[17]= {{2, 5, 1}, {2, 5, 3}, {2, 6, 1}, {2, 6, 2, 2}}
+
+In[18]:= Position[deep,1,-1]                                                    
+
+Out[18]= {{1}, {2, 5, 1}, {2, 5, 3}, {2, 6, 1}, {2, 6, 2, 1, 1, 1, 1}, 
+ 
+>    {2, 6, 2, 1, 1, 2}, {2, 6, 2, 1, 2, 1}, {2, 6, 2, 2}, {2, 7}, {2, 8}, 
+ 
+>    {2, 9}}
+
+In[19]:= Position[deep,1,-2]                                                    
+
+Out[19]= {}
+
+In[20]:= {Depth[1],Depth[3.7],Depth["foo"],Depth[1 + 7 I]}                      
+
+Out[20]= {1, 1, 1, 1}
+
+In[21]:= Level[deep,{2}]                                                        
+
+Out[21]= {2, 3, 4, 5, {1, 6, 1, 7}, {1, {{{{1, 8}, 1}, {1}}, 1}}, 1, 1, 1, 9, 
+ 
+>    10, 11}
+
+In[22]:= Depth /@ Level[deep,{2}]                                               
+
+Out[22]= {1, 1, 1, 1, 2, 6, 1, 1, 1, 1, 1, 1}
+
+In[23]:= Level[deep, {-2}]                                                      
+
+Out[23]= {{1, 6, 1, 7}, {1, 8}, {1}}
+
+In[24]:= Depth /@ Level[deep,{-2}]                                              
+
+Out[24]= {2, 2, 2}
+
+In[25]:= GraphicsRow[TreeForm /@ Level[deep, {-2}],ImageSize -> Large]          
+
+Out[25]= -Graphics-
+
+In[26]:= Depth /@ Level[deep,-2]                                                
+
+Out[26]= {2, 2, 3, 2, 4, 5, 6, 7}
+
+In[27]:= Clear[x,y];                                                            
+
+In[28]:= deepAlg = 1 + (x+y) - 2x^2 + (x + y)^3 + E^(x + y);                    
+
+In[29]:= deepAlg = Factor[deepAlg ^ deepAlg - deepAlg]                          
+
+                x + y          2    3          2          2    3
+Out[29]= ((1 + E      + x - 2 x  + x  + y + 3 x  y + 3 x y  + y ) 
+ 
+                                                  2
+               x + y          2              3 2 x
+>      (-(1 + E      + x - 2 x  + y + (x + y) )     + 
+ 
+                                                x + y                  3
+               x + y          2              3 E      + x + y + (x + y)
+>        (1 + E      + x - 2 x  + y + (x + y) )                         )) / 
+ 
+                                              2
+           x + y          2              3 2 x
+>    (1 + E      + x - 2 x  + y + (x + y) )
+
+In[30]:= Depth[deepAlg]                                                         
+
+Out[30]= 8
+
+In[31]:= Extract[deepAlg, Position[deepAlg,x,{2,3}]]                            
+
+Out[31]= {x, x, x, x}
+
+In[32]:= Delete[deepAlg,Position[deepAlg,x,{2,3}]]                              
+
+                x + y      2          2        2    3
+Out[32]= ((4 + E      - 2 x  + y + 3 x  y + 3 y  + y ) 
+ 
+                                                  2
+               x + y          2              3 2 x
+>      (-(1 + E      + x - 2 x  + y + (x + y) )     + 
+ 
+                                                x + y                  3
+               x + y          2              3 E      + x + y + (x + y)
+>        (1 + E      + x - 2 x  + y + (x + y) )                         )) / 
+ 
+                                          2
+           x + y      2              3 2 x
+>    (1 + E      - 2 x  + y + (x + y) )
+
+In[33]:= Replace[deepAlg,x -> z, {2,3}]                                         
+
+                                                     2
+                  x + y          2              3 2 x
+Out[33]= ((-(1 + E      + x - 2 x  + y + (x + y) )     + 
+ 
+                                                x + y                  3
+               x + y          2              3 E      + x + y + (x + y)
+>        (1 + E      + x - 2 x  + y + (x + y) )                         ) 
+ 
+             x + y      2          2      3          2      3
+>      (1 + E      - 2 x  + y + 3 x  y + y  + z + 3 y  z + z )) / 
+ 
+                                              2
+           x + y      2              3     2 x
+>    (1 + E      - 2 x  + y + (x + y)  + z)
+
+In[34]:= Count[%,z,{2,3}]                                                       
+
+Out[34]= 4
+
+In[35]:= Replace[deepAlg, _ -> z, {-3}]                                         
+
+                          z           3        3
+Out[35]= (1 + x + y + 3 z)  (1 + x + x  + y + y  + 4 z) 
+ 
+                        z                    x + y + 2 z
+>    (-(1 + x + y + 3 z)  + (1 + x + y + 3 z)           )
+
+In[36]:= Map[#^2&, deepAlg, {-3}]                                               
+
+               2 x + 2 y        3      4          4  2    3      2  4
+Out[36]= (1 + E          + x + x  + 4 x  + y + 9 x  y  + y  + 9 x  y ) 
+ 
+                                                  4
+           2 x + 2 y          4              6 4 x
+>    (1 + E          + x + 4 x  + y + (x + y) )     
+ 
+                                                    4
+             2 x + 2 y          4              6 4 x
+>    (-(1 + E          + x + 4 x  + y + (x + y) )     + 
+ 
+                                                  2 x + 2 y                  6
+             2 x + 2 y          4              6 E          + x + y + (x + y)
+>      (1 + E          + x + 4 x  + y + (x + y) )                             )
+
+In[37]:=                                                                        
