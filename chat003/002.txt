@@ -1,0 +1,120 @@
+pi@raspberrypi:~ $ wolfram
+Wolfram Language (Raspberry Pi Pilot Release)
+Copyright 1988-2016 Wolfram Research
+Information & help: wolfram.com/raspi
+
+In[1]:= Table[Random[ ], {3}]                                                   
+
+Out[1]= {0.309495, 0.874007, 0.719255}
+
+In[2]:= Random[Real, {0, 1}, 30]                                                
+
+Out[2]= 0.232163177368874569171181602876
+
+In[3]:= Table[Random[Integer, {100, 200}], {8}]                                 
+
+Out[3]= {153, 150, 173, 174, 169, 115, 124, 149}
+
+In[4]:= Sin[Cos[x]] == Cos[Sin[x]]                                              
+
+Out[4]= Sin[Cos[x]] == Cos[Sin[x]]
+
+In[5]:= % /. x -> Random[ ]                                                     
+
+Out[5]= False
+
+In[6]:= SeedRandom[143]                                                         
+
+In[7]:= Table[Random[ ], {3}]                                                   
+
+Out[7]= {0.952312, 0.93591, 0.813754}
+
+In[8]:= SeedRandom[143]; Table[Random[ ], {3}]                                  
+
+Out[8]= {0.952312, 0.93591, 0.813754}
+
+In[9]:= Mod[17, 3]                                                              
+
+Out[9]= 2
+
+In[10]:= Quotient[17, 3]                                                        
+
+Out[10]= 5
+
+In[11]:= Mod[5.6, 1.2]                                                          
+
+Out[11]= 0.8
+
+In[12]:= Mod[-5.6, 1.2]                                                         
+
+Out[12]= 0.4
+
+In[13]:= GCD[24,15]                                                             
+
+Out[13]= 3
+
+In[14]:= FactorInteger[24]                                                      
+
+Out[14]= {{2, 3}, {3, 1}}
+
+In[15]:= FactorInteger[111111111111111]                                         
+
+Out[15]= {{3, 1}, {31, 1}, {37, 1}, {41, 1}, {271, 1}, {2906161, 1}}
+
+In[16]:= 30!                                                                    
+
+Out[16]= 265252859812191058636308480000000
+
+In[17]:= FactorInteger[%]                                                       
+
+Out[17]= {{2, 26}, {3, 14}, {5, 7}, {7, 4}, {11, 2}, {13, 2}, {17, 1}, {19, 1}, 
+ 
+>    {23, 1}, {29, 1}}
+
+In[18]:= PrimeQ[234242423]                                                      
+
+Out[18]= False
+
+In[19]:= ListPlot[ Table[ Prime[n], {n, 100}]]                                  
+
+Out[19]= -Graphics-
+
+In[20]:= PrimePi[10^9]                                                          
+
+Out[20]= 50847534
+
+In[21]:= FactorInteger[2, GaussianIntegers -> True]                             
+
+Out[21]= {{-I, 1}, {1 + I, 2}}
+
+In[22]:= FactorInteger[111 + 79 I, GaussianIntegers -> True]                    
+
+Out[22]= {{-I, 1}, {1 + I, 1}, {16 + 95 I, 1}}
+
+In[23]:= PowerMod[2, 13451, 3]                                                  
+
+Out[23]= 2
+
+In[24]:= PowerMod[3, -1, 7]                                                     
+
+Out[24]= 5
+
+In[25]:= Mod[3 %, 7]                                                            
+
+Out[25]= 1
+
+In[26]:= EulerPhi[17]                                                           
+
+Out[26]= 16
+
+In[27]:= PowerMod[3 %, 7]                                                       
+
+PowerMod::argrx: PowerMod called with 2 arguments; 3 arguments are expected.
+
+Out[27]= PowerMod[48, 7]
+
+In[28]:= PowerMod[3, %, 7]                                                      
+
+Out[28]= PowerMod[3, PowerMod[48, 7], 7]
+
+In[29]:=                                                                        
