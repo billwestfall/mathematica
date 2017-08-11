@@ -1,0 +1,196 @@
+pi@raspberrypi:~ $ wolfram
+Wolfram Language (Raspberry Pi Pilot Release)
+Copyright 1988-2016 Wolfram Research
+Information & help: wolfram.com/raspi
+
+In[1]:= 12344/2222                                                              
+
+        6172
+Out[1]= ----
+        1111
+
+In[2]:= 5456.                                                                   
+
+Out[2]= 5456.
+
+In[3]:= 4.565475474554                                                          
+
+Out[3]= 4.56548
+
+In[4]:= 4 + 7/8 I                                                               
+
+            7 I
+Out[4]= 4 + ---
+             8
+
+In[5]:= 4 + 5.6 I                                                               
+
+Out[5]= 4. + 5.6 I
+
+In[6]:= Head[123]                                                               
+
+Out[6]= Integer
+
+In[7]:= Head[123.]                                                              
+
+Out[7]= Real
+
+In[8]:= NumberQ[5.6]                                                            
+
+Out[8]= True
+
+In[9]:= IntegerQ[5.]                                                            
+
+Out[9]= False
+
+In[10]:= Head[ 123 + 0 I ]                                                      
+
+Out[10]= Integer
+
+In[11]:= Head[ 123 + 0. I ]                                                     
+
+Out[11]= Complex
+
+In[12]:= IntegerQ[x]                                                            
+
+Out[12]= False
+
+In[13]:= x/: IntegerQ[x] = True                                                 
+
+Out[13]= True
+
+In[14]:= IntegerQ[x]                                                            
+
+Out[14]= True
+
+In[15]:= N[3/7, 30]                                                             
+
+Out[15]= 0.428571428571428571428571428571
+
+In[16]:= N[%, 20]                                                               
+
+Out[16]= 0.42857142857142857143
+
+In[17]:= Rationalize[%]                                                         
+
+         3
+Out[17]= -
+         7
+
+In[18]:= Rationalize[ N[Pi]]                                                    
+
+Out[18]= 3.14159
+
+In[19]:= Rationalize[ N[Pi], 10^5 ]                                             
+
+Out[19]= 3
+
+In[20]:= Rationalize[ N[Pi], 10^-5 ]                                            
+
+         355
+Out[20]= ---
+         113
+
+In[21]:= Rationalize[ N[Pi], 0]                                                 
+
+         245850922
+Out[21]= ---------
+         78256779
+
+In[22]:= IntegerDigits[1234135634, 16]                                          
+
+Out[22]= {4, 9, 8, 15, 6, 10, 5, 2}
+
+In[23]:= RealDigits[123.456765867]                                              
+
+Out[23]= {{1, 2, 3, 4, 5, 6, 7, 6, 5, 8, 6, 7, 0, 0, 0, 0}, 3}
+
+In[24]:= 2^^100101                                                              
+
+Out[24]= 37
+
+In[25]:= BaseForm[37, 2]                                                        
+
+Out[25]//BaseForm= 100101
+                         2
+
+In[26]:= 16^^ffffaa00                                                           
+
+Out[26]= 4294945280
+
+In[27]:= 16^^fffaa2 + 16^^ff - 1                                                
+
+Out[27]= 16776096
+
+In[28]:= BaseForm[%, 16]                                                        
+
+Out[28]//BaseForm= fffba0
+                         16
+
+In[29]:= 2^^101.100101                                                          
+
+Out[29]= 5.57813
+
+In[30]:= BaseForm[N[Sqrt[2], 30], 8]                                            
+
+Out[30]//BaseForm= 1.324047463177167462204262766115467
+                                                      8
+
+In[31]:= MantissaExponent[3.45 10^125]                                          
+
+Out[31]= {0.345, 126}
+
+In[32]:= xacc = 431.64556756                                                    
+
+Out[32]= 431.646
+
+In[33]:= Precision[xacc]                                                        
+
+Out[33]= MachinePrecision
+
+In[34]:= Accuracy[xacc]                                                         
+
+Out[34]= 13.3195
+
+In[35]:= N[Pi^25, 30]                                                           
+
+                                           12
+Out[35]= 2.68377941431776454900992812440 10
+
+In[36]:= Precision[%]                                                           
+
+Out[36]= 30.
+
+In[37]:= N[Pi]                                                                  
+
+Out[37]= 3.14159
+
+In[38]:= Precision[%]                                                           
+
+Out[38]= MachinePrecision
+
+In[39]:= $MachinePrecision                                                      
+
+Out[39]= 15.9546
+
+In[40]:= 3.00000000000                                                          
+
+Out[40]= 3.
+
+In[41]:= InputForm[%]                                                           
+
+Out[41]//InputForm= 3.
+
+In[42]:= Precision[%]                                                           
+
+Out[42]= MachinePrecision
+
+In[43]:= Precision[ 3. ]                                                        
+
+Out[43]= MachinePrecision
+
+In[44]:= Precision[ 3.00 ]                                                      
+
+Out[44]= MachinePrecision
+
+In[45]:=                                                                        
