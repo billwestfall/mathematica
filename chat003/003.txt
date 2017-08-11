@@ -1,0 +1,213 @@
+pi@raspberrypi:~ $ wolfram
+Wolfram Language (Raspberry Pi Pilot Release)
+Copyright 1988-2016 Wolfram Research
+Information & help: wolfram.com/raspi
+
+In[1]:= EulerPhi[17]                                                            
+
+Out[1]= 16
+
+In[2]:= PowerMod[3, %, 17]                                                      
+
+Out[2]= 1
+
+In[3]:= Divisors[24]                                                            
+
+Out[3]= {1, 2, 3, 4, 6, 8, 12, 24}
+
+In[4]:= Divisors[124]                                                           
+
+Out[4]= {1, 2, 4, 31, 62, 124}
+
+In[5]:= Divisors[8]                                                             
+
+Out[5]= {1, 2, 4, 8}
+
+In[6]:= Divisors[9]                                                             
+
+Out[6]= {1, 3, 9}
+
+In[7]:= Divisors[64]                                                            
+
+Out[7]= {1, 2, 4, 8, 16, 32, 64}
+
+In[8]:= DivisorSigma[0, 24]                                                     
+
+Out[8]= 8
+
+In[9]:= ExtendedGCD[105, 196]                                                   
+
+Out[9]= {7, {-13, 7}}
+
+In[10]:= 15 105 - 8 196                                                         
+
+Out[10]= 7
+
+In[11]:= LatticeReduce[{1,0,0}, {0,1,0},{0,0,1}]                                
+
+LatticeReduce::argx: 
+   LatticeReduce called with 3 arguments; 1 argument is expected.
+
+Out[11]= LatticeReduce[{1, 0, 0}, {0, 1, 0}, {0, 0, 1}]
+
+In[12]:= LatticeReduce[{1,0,0},{0,1,0},{0,0,1}]                                 
+
+LatticeReduce::argx: 
+   LatticeReduce called with 3 arguments; 1 argument is expected.
+
+Out[12]= LatticeReduce[{1, 0, 0}, {0, 1, 0}, {0, 0, 1}]
+
+In[13]:= 30!                                                                    
+
+Out[13]= 265252859812191058636308480000000
+
+In[14]:= 3.6!                                                                   
+
+Out[14]= 13.3813
+
+In[15]:= Binomial[n, 2]                                                         
+
+         (-1 + n) n
+Out[15]= ----------
+             2
+
+In[16]:= Multinomial[6, 5]                                                      
+
+Out[16]= 462
+
+In[17]:= Binomial[11, 6]                                                        
+
+Out[17]= 462
+
+In[18]:= BernoulliB[2, x]                                                       
+
+         1        2
+Out[18]= - - x + x
+         6
+
+In[19]:= Series[t Exp[x t]/(Exp[t] - 1), {t, 0, 4}]                             
+
+                             2               2     3         2      3
+                1           t  (1 - 6 x + 6 x )   t  (x - 3 x  + 2 x )
+Out[19]= 1 + (-(-) + x) t + ------------------- + -------------------- + 
+                2                   12                     12
+ 
+      4           2       3       4
+     t  (-1 + 30 x  - 60 x  + 30 x )       5
+>    ------------------------------- + O[t]
+                   720
+
+In[20]:= BernoulliB[20]                                                         
+
+           174611
+Out[20]= -(------)
+            330
+
+In[21]:= NBernoulliB[20]                                                        
+
+General::deprec: 
+   NBernoulliB is deprecated and will not be supported in future versions of the
+     Wolfram Language. Use BernoulliB instead.
+
+Out[21]= -529.1242424242424
+
+In[22]:= Table[StirlingS1[5, i], {i, 5}]                                        
+
+Out[22]= {24, -50, 35, -10, 1}
+
+In[23]:= Expand[Product[x - i, {i, 0, 4}]                                       
+         ]                                                                      
+
+                    2       3       4    5
+Out[23]= 24 x - 50 x  + 35 x  - 10 x  + x
+
+In[24]:= {PartitionsQ[100], PartitionsP[100]}                                   
+
+Out[24]= {444793, 190569292}
+
+In[25]:= ThreeJSymbol[{j, m}, {j+1/2, -m-1/2}, {1/2, 1/2}]                      
+
+                         1 - j + m          1 + j + m
+                     (-1)          Sqrt[-----------------]
+                                        (1 + j) (1 + 2 j)
+Out[25]= Piecewise[{{-------------------------------------, 
+                                    Sqrt[2]
+ 
+>      j >= 0 && j + m >= 0 && j >= m}}]
+
+In[26]:= Log[2, 1024]                                                           
+
+Out[26]= 10
+
+In[27]:= N[Log[2], 40]                                                          
+
+Out[27]= 0.6931471805599453094172321214581765680755
+
+In[28]:= N[ Log[-2] }                                                           
+
+Syntax::sntxf: "N[ Log[-2] " cannot be followed by "}".
+
+
+In[29]:= N[ Log[2 + 8 I] ]                                                      
+
+Out[29]= 2.10975 + 1.32582 I
+
+In[30]:= Sin[Pi/2]                                                              
+
+Out[30]= 1
+
+In[31]:= N[ Sin[30 Degree] ]                                                    
+
+Out[31]= 0.5
+
+In[32]:= Sqrt[4]                                                                
+
+Out[32]= 2
+
+In[33]:= Sqrt[(-2)^2]                                                           
+
+Out[33]= 2
+
+In[34]:= N[ Sqrt[-2 I] ]                                                        
+
+Out[34]= 1. - 1. I
+
+In[35]:= {Sqrt[-2 + 0.1 I], Sqrt[-2 - 0.1 I]}                                   
+
+Out[35]= {0.0353443 + 1.41466 I, 0.0353443 - 1.41466 I}
+
+In[36]:= %^2                                                                    
+
+Out[36]= {-2. + 0.1 I, -2. - 0.1 I}
+
+In[37]:= (2.5 + I)^10                                                           
+
+Out[37]= -15781.2 - 12335.8 I
+
+In[38]:= %^(1/10)                                                               
+
+Out[38]= 2.61033 - 0.660446 I
+
+In[39]:= ArcSin[Sin[4.5]]                                                       
+
+Out[39]= -1.35841
+
+In[40]:= {ArcSin[2 + 0.1 I], ArcSin[2 - 0.1 I]]                                 
+
+Syntax::sntxf: "{ArcSin[2 + 0.1 I], ArcSin[2 - 0.1 I]" cannot be followed by "]"
+
+    .
+
+In[41]:= {ArcSin[2 + 0.1 I], ArcSin[2 - 0.1 I]}                                 
+
+Out[41]= {1.51316 + 1.31888 I, 1.51316 - 1.31888 I}
+
+In[42]:= Plot3D[ Im[Sqrt[x + I y]], {x, -4, 4}, {y, -4, 4}]                     
+
+Out[42]= -Graphics3D-
+
+In[43]:= Plot3D[ Im[ArcSin[x + I y]], {x, -4, 4}, {y, -4, 4}]                   
+
+Out[43]= -Graphics3D-
+
+In[44]:=                                                                        
