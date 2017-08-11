@@ -1,0 +1,248 @@
+pi@raspberrypi:~ $ wolfram
+Wolfram Language (Raspberry Pi Pilot Release)
+Copyright 1988-2016 Wolfram Research
+Information & help: wolfram.com/raspi
+
+In[1]:= N[Gamma[1/7, 30]                                                        
+        ]                                                                       
+
+                  -15
+Out[1]= 4.93396 10
+
+In[2]:= N[Gamma[1/7], 30]                                                       
+
+Out[2]= 6.54806294024782443771409334943
+
+In[3]:= Precision[%]                                                            
+
+Out[3]= 30.
+
+In[4]:= N[Gamma[0.142], 30]                                                     
+
+Out[4]= 6.58965
+
+In[5]:= N[Gamma[142/1000]. 30]                                                  
+
+Out[5]= 6.58965 . 30.
+
+In[6]:= N[Gamma[142/1000], 30]                                                  
+
+Out[6]= 6.58964729492039788328481917496
+
+In[7]:= 1.1111111111 -                                                          
+                                                                                
+        ]                                                                       
+
+Syntax::sntxf: "1.1111111111 -" cannot be followed by "]".
+
+
+
+In[8]:= 1.1111111 - 1.11111100000                                               
+
+             -7
+Out[8]= 1. 10
+
+In[9]:= Sin[11111111.0000000]                                                   
+
+Out[9]= 0.997566
+
+In[10]:= N[Exp[-40], 20]                                                        
+
+                                 -18
+Out[10]= 4.2483542552915889953 10
+
+In[11]:= 1 + %                                                                  
+
+Out[11]= 1.0000000000000000042483542552915889953
+
+In[12]:= x = N[1 - 10^-30, 40]                                                  
+
+Out[12]= 0.999999999999999999999999999999000000000
+
+In[13]:= 1 + x                                                                  
+
+Out[13]= 1.999999999999999999999999999999000000000
+
+In[14]:= Precision[%]                                                           
+
+Out[14]= 40.301
+
+In[15]:= (x^2 - 1) / (x - 1)                                                    
+
+Out[15]= 2.000000000
+
+In[16]:= Precision[%]                                                           
+
+Out[16]= 9.69897
+
+In[17]:= 3 == 3.000000000000                                                    
+
+Out[17]= True
+
+In[18]:= N[Sin[10^30], 20]                                                      
+
+Out[18]= -0.090116901912138058030
+
+In[19]:= {Precision[%], Accuracy[%]}                                            
+
+Out[19]= {20., 21.0452}
+
+In[20]:= N[Sin[10^30], 40]                                                      
+
+Out[20]= -0.09011690191213805803038642895298733027440
+
+In[21]:= delta = N[3^-30, 20]                                                   
+
+                                 -15
+Out[21]= 4.8569357496188611379 10
+
+In[22]:= Precision[1 + delta]                                                   
+
+Out[22]= 34.3136
+
+In[23]:= Precision[(1 + delta) - delta]                                         
+
+Out[23]= 34.0126
+
+In[24]:= delta = SetPrecision[delta, 30]                                        
+
+                                           -15
+Out[24]= 4.85693574961886113790624266497 10
+
+In[25]:= (1 + delta) - delta                                                    
+
+Out[25]= 1.00000000000000000000000000000000000000000000
+
+In[26]:= Precision[%]                                                           
+
+Out[26]= 44.0126
+
+In[27]:= SetPrecision[0.30000000, 40)                                           
+
+Syntax::sntxf: "SetPrecision[0.30000000, 40" cannot be followed by ")".
+
+
+In[28]:= SetPrecision[0.30000000, 40]                                           
+
+Out[28]= 0.2999999999999999888977697537484345957637
+
+In[29]:= 1.44444444 ^ 5.7                                                       
+
+Out[29]= 8.13382
+
+In[30]:= N[Zeta[5.6], 30]                                                       
+
+Out[30]= 1.02338
+
+In[31]:= N[Zeta[56/10], 30]                                                     
+
+Out[31]= 1.02337547922702991086041788103
+
+In[32]:= diff = 1.111111 - 1.11111                                              
+
+              -6
+Out[32]= 1. 10
+
+In[33]:= Precision[diff]                                                        
+
+Out[33]= MachinePrecision
+
+In[34]:= InputForm[diff]                                                        
+
+Out[34]//InputForm= 9.999999999177334*^-7
+
+In[35]:= %MachineEpsilon                                                        
+
+              -6
+Out[35]= 1. 10   MachineEpsilon
+
+In[36]:= 1. + %MachineEpsilon                                                   
+
+                   -6               2
+Out[36]= 1. + 1. 10   MachineEpsilon
+
+In[37]:= % - 1.                                                                 
+
+                   -6               2
+Out[37]= 0. + 1. 10   MachineEpsilon
+
+In[38]:= 1. + $MachineEpsilon                                                   
+
+Out[38]= 1.
+
+In[39]:= % - 1.                                                                 
+
+                   -16
+Out[39]= 2.22045 10
+
+In[40]:= $MaxMachineNumber                                                      
+
+                   308
+Out[40]= 1.79769 10
+
+In[41]:= Exp[1000.]                                                             
+
+                          434
+Out[41]= 1.970071114017 10
+
+In[42]:= 0/0                                                                    
+
+                                 1
+Power::infy: Infinite expression - encountered.
+                                 0
+
+Infinity::indet: Indeterminate expression 0 ComplexInfinity encountered.
+
+Out[42]= Indeterminate
+
+In[43]:= Indeterminate - Indeterminate                                          
+
+Out[43]= Indeterminate
+
+In[44]:= 2 Indeterminate - 7                                                    
+
+Out[44]= Indeterminate
+
+In[45]:= Check[(7 - 7)/(8 - 8), meaningless]                                    
+
+                                 1
+Power::infy: Infinite expression - encountered.
+                                 0
+
+Infinity::indet: Indeterminate expression 0 ComplexInfinity encountered.
+
+Out[45]= meaningless
+
+In[46]:= Integrate[1/x^3, {x, 1, Infinity}]                                     
+
+Integrate::ilim: 
+   Invalid integration variable or limit(s) in 
+    {0.999999999999999999999999999999000000000, 1, Infinity}.
+
+Out[46]= Integrate[1.000000000000000000000000000003000000000, 
+ 
+>    {0.999999999999999999999999999999000000000, 1, Infinity}]
+
+In[47]:= 1/Infinity                                                             
+
+Out[47]= 0
+
+In[48]:= Infinity/Infinity                                                      
+
+Infinity::indet: Indeterminate expression 0 Infinity encountered.
+
+Out[48]= Indeterminate
+
+In[49]:= Infinity // FullForm                                                   
+
+Out[49]//FullForm= DirectedInfinity[1]
+
+In[50]:= 1/0                                                                    
+
+                                 1
+Power::infy: Infinite expression - encountered.
+                                 0
+
+Out[50]= ComplexInfinity
+
+In[51]:=                                                                        
