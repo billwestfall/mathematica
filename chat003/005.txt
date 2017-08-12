@@ -1,0 +1,161 @@
+pi@raspberrypi:~ $ wolfram
+Wolfram Language (Raspberry Pi Pilot Release)
+Copyright 1988-2016 Wolfram Research
+Information & help: wolfram.com/raspi
+
+In[1]:= LegendreP[6, x]                                                         
+
+                  2        4        6
+        -5 + 105 x  - 315 x  + 231 x
+Out[1]= -----------------------------
+                     16
+
+In[2]:= Integrate[LegendreP[5,x] LegendreP[6,x], {x, -1, 1}]                    
+
+Out[2]= 0
+
+In[3]:= Integrate[LegendreP[6,x]^2, {x, -1, 1}]                                 
+
+        2
+Out[3]= --
+        13
+
+In[4]:= Plot[LegendreP[10,x], {x, -1, 1}]                                       
+
+Out[4]= -Graphics-
+
+In[5]:= LegendreP[6. 3. x]                                                      
+
+LegendreP::argbu: 
+   LegendreP called with 1 argument; between 2 and 4 arguments are expected.
+
+Out[5]= LegendreP[18. x]
+
+In[6]:= LegendreP[6, 3, x]                                                      
+
+                      2         2              3
+        315 Sqrt[1 - x ] (-1 + x ) (-3 x + 11 x )
+Out[6]= -----------------------------------------
+                            2
+
+In[7]:= LegendreP[6.1, 0]                                                       
+
+Out[7]= -0.306319
+
+In[8]:= Plot[(HermiteH[6,x] Exp[-x^2/2])^2, {x, -6, 6}]                         
+
+Out[8]= -Graphics-
+
+In[9]:= LaguerreL[2, a, x]                                                      
+
+                   2                  2
+        2 + 3 a + a  - 4 x - 2 a x + x
+Out[9]= -------------------------------
+                       2
+
+In[10]:= Gamma[15/2]                                                            
+
+         135135 Sqrt[Pi]
+Out[10]= ---------------
+               128
+
+In[11]:= Gamma[15/7]                                                            
+
+               15
+Out[11]= Gamma[--]
+               7
+
+In[12]:= N[%,7]                                                                 
+
+Out[12]= 1.069072
+
+In[13]:= N[%,40]                                                                
+
+Out[13]= 1.069072
+
+In[14]:= Gamma[3 + 4I] //N                                                      
+
+Out[14]= 0.00522554 - 0.172547 I
+
+In[15]:= Gamma[[{3/2, 5/2, 7/2}]                                                
+         ]                                                                      
+
+                               3  5  7
+Part::pkspec1: The expression {-, -, -} cannot be used as a part specification.
+                               2  2  2
+
+                 3  5  7
+Out[15]= Gamma[[{-, -, -}]]
+                 2  2  2
+
+In[16]:= Gamma[{3/2, 5/2, 7/2}]                                                 
+
+          Sqrt[Pi]  3 Sqrt[Pi]  15 Sqrt[Pi]
+Out[16]= {--------, ----------, -----------}
+             2          4            8
+
+In[17]:= D[Gamma[x], {x, 2}]                                                    
+
+                                 2
+Out[17]= Gamma[x] PolyGamma[0, x]  + Gamma[x] PolyGamma[1, x]
+
+In[18]:= FindRoot[ BesselJ[0, x], {x, 1}]                                       
+
+Out[18]= {x -> 2.40483}
+
+In[19]:= PolyGamma[6]                                                           
+
+         137
+Out[19]= --- - EulerGamma
+         60
+
+In[20]:= ContourPlot[ Abs[Gamma[x + I y]], {x, -3, 3}, {y, -2, 2}, PlotPoints->4
+0 ]                                                                             
+
+Out[20]= -Graphics-
+
+In[21]:= Zeta[6]                                                                
+
+           6
+         Pi
+Out[21]= ---
+         945
+
+In[22]:= Plot3D[ Abs[ Zeta[x + I y] ], {x, -3, 3}, {y, 2, 35}, PlotPoints->30]  
+
+Out[22]= -Graphics3D-
+
+In[23]:= Plot[ Abs[ Zeta[ 1/2 + I y] ], {y, 0, 40}]                             
+
+Out[23]= -Graphics-
+
+In[24]:= Plot[ BesselJ[0, Sqrt[x]], {x, 0, 50}]                                 
+
+Out[24]= -Graphics-
+
+In[25]:= BesselK[3/2, x]                                                        
+
+              Pi       1
+         Sqrt[--] (1 + -)
+              2        x
+Out[25]= ----------------
+             x
+            E  Sqrt[x]
+
+In[26]:= Plot[ AiryAi[x], {x, -10, 10}]                                         
+
+Out[26]= -Graphics-
+
+In[27]:= Plot[EllipticE[m], {m, 0, 1}]                                          
+
+Out[27]= -Graphics-
+
+In[28]:= EllipticK[Sin[30 Degree]^2] // N                                       
+
+Out[28]= 1.68575
+
+In[29]:= Plot3D[ Im[EllipticF[px + I py, 2]], {px, 0.5, 2.5}, {py, -1, 1}]      
+
+Out[29]= -Graphics3D-
+
+In[30]:=                                                                        
