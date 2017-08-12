@@ -1,0 +1,242 @@
+pi@raspberrypi:~ $ wolfram
+Wolfram Language (Raspberry Pi Pilot Release)
+Copyright 1988-2016 Wolfram Research
+Information & help: wolfram.com/raspi
+
+In[1]:= Factor[12p - 18q]                                                       
+
+Out[1]= 6 (2 p - 3 q)
+
+In[2]:= Factor[8x^3 - 9x^2 + 15x]                                               
+
+                         2
+Out[2]= x (15 - 9 x + 8 x )
+
+In[3]:= Factor[y^2 + 8y + 15]                                                   
+
+Out[3]= (3 + y) (5 + y)
+
+In[4]:= Factor[4x^2 + 8xy - 5y^2]                                               
+
+           2             2
+Out[4]= 4 x  + 8 xy - 5 y
+
+In[5]:= Expand[4x^2 + 8xy - 5y^2]                                               
+
+           2             2
+Out[5]= 4 x  + 8 xy - 5 y
+
+In[6]:= fullFactor[4x^2 + 8xy - 5y^2]                                           
+
+                      2             2
+Out[6]= fullFactor[4 x  + 8 xy - 5 y ]
+
+In[7]:= Solve[4x^2 + 8xy - 5y^2]                                                
+
+                2             2
+Solve::naqs: 4 x  + 8 xy - 5 y  is not a quantified system of equations and
+     inequalities.
+
+                 2             2
+Out[7]= Solve[4 x  + 8 xy - 5 y ]
+
+In[8]:= Factor[(x + 5y)(4x - y)]                                                
+
+Out[8]= (4 x - y) (x + 5 y)
+
+In[9]:= Factor[(64p^2 - 49q^2)]                                                 
+
+Out[9]= (8 p - 7 q) (8 p + 7 q)
+
+In[10]:= Factor[x^2 + 36]                                                       
+
+               2
+Out[10]= 36 + x
+
+In[11]:= Factor[x^2 + 12x + 36]                                                 
+
+                2
+Out[11]= (6 + x)
+
+In[12]:= Factor[9y^2 - 24yz + 16z^2]                                            
+
+            2               2
+Out[12]= 9 y  - 24 yz + 16 z
+
+In[13]:= FactorSquareFree[9y^2 - 24yz + 16z^2]                                  
+
+            2               2
+Out[13]= 9 y  - 24 yz + 16 z
+
+In[14]:= FactorSquareFree[9y^2 - 24yz + 1[[DD6z^2]                              
+         ]                                                                      
+                                                                                
+In[14]:= FactorTerms[9y^2 - 24yz + 16z^2]                                       
+
+            2               2
+Out[14]= 9 y  - 24 yz + 16 z
+
+In[15]:= Factor[9y^2-24yz+16z^2]                                                
+
+            2               2
+Out[15]= 9 y  - 24 yz + 16 z
+
+In[16]:= Factor[y^3 - 8]                                                        
+
+                              2
+Out[16]= (-2 + y) (4 + 2 y + y )
+
+In[17]:= Factor[m^3 + 125]                                                      
+
+                              2
+Out[17]= (5 + m) (25 - 5 m + m )
+
+In[18]:= Factor[8k^3 - 27z^3]                                                   
+
+                         2              2
+Out[18]= (2 k - 3 z) (4 k  + 6 k z + 9 z )
+
+In[19]:= Factor[8a^3 - 16a^2 + 24a]                                             
+
+                         2
+Out[19]= 8 a (3 - 2 a + a )
+
+In[20]:= Factor[60m^4 - 120m^3n + 50m^2n^2                                      
+         ]                                                                      
+
+             2     2               2
+Out[20]= 10 m  (6 m  - 12 m n + 5 n )
+
+In[21]:= Factor[z^2 + 9z + 20]                                                  
+
+Out[21]= (4 + z) (5 + z)
+
+In[22]:= Factor[s^2 + 2st -35t^2]                                               
+
+          2              2
+Out[22]= s  + 2 st - 35 t
+
+In[23]:= Factor[3m^3 + 12m^2 + 9m]                                              
+
+Out[23]= 3 m (1 + m) (3 + m)
+
+In[24]:= Factor[2a^2 - 17a + 30]                                                
+
+Out[24]= (-6 + a) (-5 + 2 a)
+
+In[25]:= Factor[9m^2 - 25]                                                      
+
+Out[25]= (-5 + 3 m) (5 + 3 m)
+
+In[26]:= Factor[z^2 + 14zy + 49y^2]                                             
+
+             2    2
+Out[26]= 49 y  + z  + 14 zy
+
+In[27]:= Factor[a^3 - 216]                                                      
+
+                               2
+Out[27]= (-6 + a) (36 + 6 a + a )
+
+In[28]:= Factor[x^4 - y^4]                                                      
+
+                           2    2
+Out[28]= (x - y) (x + y) (x  + y )
+
+In[29]:= Factor[3y^3 + 24y^2 + 9y]                                              
+
+                         2
+Out[29]= 3 y (3 + 8 y + y )
+
+In[30]:= Factor[m^2 + 9m + 14]                                                  
+
+Out[30]= (2 + m) (7 + m)
+
+In[31]:= Factor[b^2 - 8b + 7]                                                   
+
+Out[31]= (-7 + b) (-1 + b)
+
+In[32]:= Factor[y^2 - 4yz -21z^2]                                               
+
+          2              2
+Out[32]= y  - 4 yz - 21 z
+
+In[33]:= Factor[2x^2 - 5x - 3]                                                  
+
+Out[33]= (-3 + x) (1 + 2 x)
+
+In[34]:= Factor[15y^2 + y - 2]                                                  
+
+Out[34]= (-1 + 3 y) (2 + 5 y)
+
+In[35]:= Factor[32z^5 - 20z^4a - 12z^3a^2]                                      
+
+                     3
+Out[35]= -4 (a - z) z  (3 a + 8 z)
+
+In[36]:= Factor[121a^2 - 100]                                                   
+
+Out[36]= (-10 + 11 a) (10 + 11 a)
+
+In[37]:= Factor[m^2 - 6mn + 9n^2]                                               
+
+          2             2
+Out[37]= m  - 6 mn + 9 n
+
+In[38]:= Factor[8r^3 - 27s^3]                                                   
+
+                         2              2
+Out[38]= (2 r - 3 s) (4 r  + 6 r s + 9 s )
+
+In[39]:= Factor[16a^4 - 81b^4]                                                  
+
+                                     2      2
+Out[39]= (2 a - 3 b) (2 a + 3 b) (4 a  + 9 b )
+
+In[40]:= Factor[25p^4 - 20p^3q + 100p^2q^2]                                     
+
+            2     2               2
+Out[40]= 5 p  (5 p  - 4 p q + 20 q )
+
+In[41]:= Factor[x^2 + 4x - 5]                                                   
+
+Out[41]= (-1 + x) (5 + x)
+
+In[42]:= Factor[a^2 - 6ab + 5b^2]                                               
+
+          2             2
+Out[42]= a  - 6 ab + 5 b
+
+In[43]:= Factor[6a^2 - 48a - 120]                                               
+
+Out[43]= 6 (-10 + a) (2 + a)
+
+In[44]:= Factor[3a^2 + 10a + 7]                                                 
+
+Out[44]= (1 + a) (7 + 3 a)
+
+In[45]:= Factor[21m^2 + 13mn + 2n^2]                                            
+
+             2              2
+Out[45]= 21 m  + 13 mn + 2 n
+
+In[46]:= Factor[x^2 - 64]                                                       
+
+Out[46]= (-8 + x) (8 + x)
+
+In[47]:= Factor[9x^2 + 64]                                                      
+
+                 2
+Out[47]= 64 + 9 x
+
+In[48]:= Factor[9p^2 - 24p + 16]                                                
+
+                   2
+Out[48]= (-4 + 3 p)
+
+In[49]:= Factor[64m^3 + 125]                                                    
+
+                                    2
+Out[49]= (5 + 4 m) (25 - 20 m + 16 m )
+
+In[50]:=                                                                        
