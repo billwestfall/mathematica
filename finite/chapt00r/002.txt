@@ -1,0 +1,130 @@
+pi@raspberrypi:~ $ wolfram
+Wolfram Language (Raspberry Pi Pilot Release)
+Copyright 1988-2016 Wolfram Research
+Information & help: wolfram.com/raspi
+
+In[1]:= (2x^2 - 6x + 11) + (-3x^2 +7x -2)                                       
+
+                 2
+Out[1]= 9 + x - x
+
+In[2]:= Expand[-3*(4q^2 - 3q + 2) + 2*(-q^2 + q -4)]                            
+
+                         2
+Out[2]= -14 + 11 q - 14 q
+
+In[3]:= Expand[(.613x^2 - 4.215x + .892) - .47*(2x^2 - 3x +5)]                  
+
+                                  2
+Out[3]= -1.458 - 2.805 x - 0.327 x
+
+In[4]:= Expand[-9m*(2m^2 + 3m -1)]                                              
+
+                  2       3
+Out[4]= 9 m - 27 m  - 18 m
+
+In[5]:= Expand[(5r - 3s)*(5r + 4s)]                                             
+
+            2               2
+Out[5]= 25 r  + 5 r s - 12 s
+
+In[6]:= Expand[(2/5y + 1/8z)*(3/5y + 1/2z)]                                     
+
+           2             2
+        6 y    11 y z   z
+Out[6]= ---- + ------ + --
+         25      40     16
+
+In[7]:= Expand[(12x - 1)*(12x + 1)]                                             
+
+                  2
+Out[7]= -1 + 144 x
+
+In[8]:= Expand[(3p - 1)*(9p^2 + 3p + 1)]                                        
+
+                 3
+Out[8]= -1 + 27 p
+
+In[9]:= Expand[(-4y^2 - 3y + 8)-(2y^2 - 6y - 2)]                                
+
+                      2
+Out[9]= 10 + 3 y - 6 y
+
+In[10]:= Expand[2*(3r^2 + 4r + 2) - 3*(-r^2 + 4r - 5)]                          
+
+                       2
+Out[10]= 19 - 4 r + 9 r
+
+In[11]:= Expand[.83*(5r^2 - 2r + 7) - (7.12r^2 + 6.423r - 2)]                   
+
+                                2
+Out[11]= 7.81 - 8.083 r - 2.97 r
+
+In[12]:= Expand[(6k - 1)*(2k - 3)]                                              
+
+                        2
+Out[12]= 3 - 20 k + 12 k
+
+In[13]:= Expand[(9k + q)*(2k - q)]                                              
+
+             2            2
+Out[13]= 18 k  - 7 k q - q
+
+In[14]:= Expand[(3/4r - 2/3s)*(5/4r + 1/3s)]                                    
+
+             2              2
+         15 r    7 r s   2 s
+Out[14]= ----- - ----- - ----
+          16      12      9
+
+In[15]:= Expand[(6m + 5)*(6m - 5)]                                              
+
+                   2
+Out[15]= -25 + 36 m
+
+In[16]:= Expand[(2p - 1)*(3p^2 - 4p + 5)]                                       
+
+                         2      3
+Out[16]= -5 + 14 p - 11 p  + 6 p
+
+In[17]:= Expand[(2m + 1)*(4m^2 - 2m + 1)]                                       
+
+                3
+Out[17]= 1 + 8 m
+
+In[18]:= Expand[(m - n + k)*(m + 2n - 3k)]                                      
+
+             2            2                    2
+Out[18]= -3 k  - 2 k m + m  + 5 k n + m n - 2 n
+
+In[19]:= Expand[(x + 1)*(x + 2)*(x + 3)]                                        
+
+                       2    3
+Out[19]= 6 + 11 x + 6 x  + x
+
+In[20]:= Expand[(3a + b)^2]                                                     
+
+            2            2
+Out[20]= 9 a  + 6 a b + b
+
+In[21]:= Expand[(k + 2)*(12k^3  - 3k^2 + k + 1)]                                
+
+                      2       3       4
+Out[21]= 2 + 3 k - 5 k  + 21 k  + 12 k
+
+In[22]:= Expand[(r - 3s + t)*(2r - s + t)]                                      
+
+            2              2                    2
+Out[22]= 2 r  - 7 r s + 3 s  + 3 r t - 4 s t + t
+
+In[23]:= Expand[(x - 1)*(x + 2)*(x - 3)]                                        
+
+                      2    3
+Out[23]= 6 - 5 x - 2 x  + x
+
+In[24]:= Expand[(x - 2y)^3]                                                     
+
+          3      2           2      3
+Out[24]= x  - 6 x  y + 12 x y  - 8 y
+
+In[25]:=                                                                        
