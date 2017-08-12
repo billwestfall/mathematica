@@ -1,0 +1,163 @@
+pi@raspberrypi:~ $ wolfram
+Wolfram Language (Raspberry Pi Pilot Release)
+Copyright 1988-2016 Wolfram Research
+Information & help: wolfram.com/raspi
+
+In[1]:= Factor[x^2 / 3x]                                                        
+
+         3
+        x
+Out[1]= --
+        3
+
+In[2]:= Simplify[x^2/3x]                                                        
+
+         3
+        x
+Out[2]= --
+        3
+
+In[3]:= x^2/3x                                                                  
+
+         3
+        x
+Out[3]= --
+        3
+
+In[4]:= FullSimplify[x^2/3x]                                                    
+
+         3
+        x
+Out[4]= --
+        3
+
+In[5]:= FullSimplify[(8x+16)/4]                                                 
+
+Out[5]= 2 (2 + x)
+
+In[6]:= FullSimplify[{k^2+7k+12)/(k^2+2k-30)]                                   
+
+Syntax::sntxf: "FullSimplify[{k^2+7k+12" cannot be followed by ")/(k^2+2k-30)]".
+
+
+In[7]:= FullSimplify[(k^2+7k+12)/(k^2+2k-30)]                                   
+
+        (3 + k) (4 + k)
+Out[7]= ---------------
+        -30 + k (2 + k)
+
+In[8]:= FullSimplify[((3y+9)/6)*(18/(5y+15))]                                   
+
+        9
+Out[8]= -
+        5
+
+In[9]:= FullSimplify[((m^2+5m+6)/{m+3))*(m/(m^2+3m+2))]                         
+
+Syntax::sntxf: "FullSimplify[((m^2+5m+6)/{m+3" cannot be followed by 
+    "))*(m/(m^2+3m+2))]".
+
+
+In[10]:= FullSimplify[((m^2+5m+6)/(m+3))*(m/(m^2+3m+2))]                        
+
+           m
+Out[10]= -----
+         1 + m
+
+In[11]:= FullSimplify[((9p-36)/12)/(5*(p-4)/18)                                 
+         ]                                                                      
+
+         27
+Out[11]= --
+         10
+
+In[12]:= FullSimplify[(4/5k)-(11/5k)]                                           
+
+         -7 k
+Out[12]= ----
+          5
+
+In[13]:= FullSimplify[(7/p)+(9/2p)+(1/3p)]                                      
+
+         7   29 p
+Out[13]= - + ----
+         p    6
+
+In[14]:= FullSimplify[((x-1)/(x^2+5x+6))-((5x-1)/(x^2-x-12))]                   
+
+            6 - 2 x (7 + 2 x)
+Out[14]= ------------------------
+         (-4 + x) (2 + x) (3 + x)
+
+In[15]:= FullSimplify[7z^2/14z]                                                 
+
+          3
+         z
+Out[15]= --
+         2
+
+In[16]:= FullSimplify[(25p^3)/(10p^2)]                                          
+
+         5 p
+Out[16]= ---
+          2
+
+In[17]:= FullSimplify[(8k+16)/(9k+18)]                                          
+
+         8
+Out[17]= -
+         9
+
+In[18]:= FullSimplify[(3(t+5))/((t+5)(t-3))]                                    
+
+           3
+Out[18]= ------
+         -3 + t
+
+In[19]:= FullSimplify[(8x^2+16x)/4x^2]                                          
+
+            3
+Out[19]= 2 x  (2 + x)
+
+In[20]:= FullSimplify[(36y^2 + 72y)/9y]                                         
+
+            2
+Out[20]= 4 y  (2 + y)
+
+In[21]:= FullSimplify[(m^2-4m+4)/(m^2+m-6)]                                     
+
+         -2 + m
+Out[21]= ------
+         3 + m
+
+In[22]:= FullSimplify[(r^2-r-6)/(r^2+r-12)]                                     
+
+         2 + r
+Out[22]= -----
+         4 + r
+
+In[23]:= FullSimplify[(x^2+3x-4)/(x^2-1)]                                       
+
+         4 + x
+Out[23]= -----
+         1 + x
+
+In[24]:= FullSimplify[(z^2-5z+6)/(z^2-4)]                                       
+
+         -3 + z
+Out[24]= ------
+         2 + z
+
+In[25]:= FullSimplify[(8m^2+6m-9)/(16m^2-9)]                                    
+
+         3 + 2 m
+Out[25]= -------
+         3 + 4 m
+
+In[26]:= FullSimplify[(6y^2+11y+4)/(3y^2+7y+4)]                                 
+
+               1
+Out[26]= 2 - -----
+             1 + y
+
+In[27]:=                                                                        
