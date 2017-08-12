@@ -1,0 +1,164 @@
+pi@raspberrypi:~ $ wolfram
+Wolfram Language (Raspberry Pi Pilot Release)
+Copyright 1988-2016 Wolfram Research
+Information & help: wolfram.com/raspi
+
+In[1]:= Solve[{12y^4 + 6y^4} = {(12 + 6)y^4} = 18y^4]                           
+
+                             4          4
+Set::shape: Lists {(12 + 6) y } and 18 y  are not the same shape.
+
+                       4      4          4
+Set::shape: Lists {12 y  + 6 y } and 18 y  are not the same shape.
+
+                 4
+Solve::naqs: 18 y  is not a quantified system of equations and inequalities.
+
+                  4
+Out[1]= Solve[18 y ]
+
+In[2]:= Reduce[{12y^4 + 6y^4} = {(12 + 6)y^4} = 18y^4]                          
+
+                             4          4
+Set::shape: Lists {(12 + 6) y } and 18 y  are not the same shape.
+
+                       4      4          4
+Set::shape: Lists {12 y  + 6 y } and 18 y  are not the same shape.
+
+                  4
+Reduce::naqs: 18 y  is not a quantified system of equations and inequalities.
+
+                   4
+Out[2]= Reduce[18 y ]
+
+In[3]:= Reduce[{12y^4 + 6y^4} == {(12 + 6)y^4} == 18y^4, y]                     
+
+Out[3]= True
+
+In[4]:= Solve[{12y^4 + 6y^4} == {(12 + 6)y^4} == 18y^4, y]                      
+
+Out[4]= {{}}
+
+In[5]:= Solve[{12y^4 + 6y^4} == {(12 + 6)y^4} && {(12 + 6)y^4} == 18y^4, y]     
+
+Out[5]= {{}}
+
+In[6]:= Solve[{12y^4 + 6y^4} == {(12 + 6)y^4} && {(12 + 6)y^4}, y]              
+
+                 4
+Solve::naqs: 18 y  is not a quantified system of equations and inequalities.
+
+                   4
+Out[6]= Solve[{18 y }, y]
+
+In[7]:= Solve[{-2m^2 + 8m^2} == {(-2 + 8)m^2}, m]                               
+
+Out[7]= {{}}
+
+In[8]:= {8x^3 - 4x^2 + 6x} + {3x^3 + 5x^2 - 9x + 8}                             
+
+                    2       3
+Out[8]= {8 - 3 x + x  + 11 x }
+
+In[9]:= 12y^4 + 6y^4                                                            
+
+            4
+Out[9]= 18 y
+
+In[10]:= -2m^2 + 8m^2                                                           
+
+            2
+Out[10]= 6 m
+
+In[11]:= (8x^3 - 4x^2 + 6x} + {3x^3 + 5x^2 - 9x + 8}                            
+
+Syntax::sntxf: "(8x^3 - 4x^2 + 6x" cannot be followed by 
+    "} + {3x^3 + 5x^2 - 9x + 8}".
+
+
+In[12]:= {8x^3 - 4x^2 + 6x} + {3x^3 + 5x^2 - 9x + 8}                            
+
+                     2       3
+Out[12]= {8 - 3 x + x  + 11 x }
+
+In[13]:= {-4x^4 + 3x^3 - x^2 - 11x - 5}                                         
+
+                       2      3      4
+Out[13]= {-5 - 11 x - x  + 3 x  - 4 x }
+
+In[14]:= {-4x^4 + 6x^3 - 9x^2 -12) + (-3x^3 + 8x^2 - 11x +7)                    
+
+Syntax::sntxf: "{-4x^4 + 6x^3 - 9x^2 -12" cannot be followed by 
+    ") + (-3x^3 + 8x^2 - 11x +7)".
+
+
+In[15]:= (-4x^4 + 6x^3 - 9x^2 -12) + (-3x^3 + 8x^2 - 11x +7)                    
+
+                      2      3      4
+Out[15]= -5 - 11 x - x  + 3 x  - 4 x
+
+In[16]:= (2x^2 - 11x + 8) + (-7x^2 + 6x -2)                                     
+
+                      2
+Out[16]= 6 - 5 x - 5 x
+
+In[17]:= 8x(6x -4)                                                              
+
+Out[17]= 8 x (-4 + 6 x)
+
+In[18]:= 8x (6x -4)                                                             
+
+Out[18]= 8 x (-4 + 6 x)
+
+In[19]:= 8x x (6x -4)                                                           
+
+            2
+Out[19]= 8 x  (-4 + 6 x)
+
+In[20]:= (8x)(6x -4)                                                            
+
+Out[20]= 8 x (-4 + 6 x)
+
+In[21]:= (6x - 4)(8x)                                                           
+
+Out[21]= 8 x (-4 + 6 x)
+
+In[22]:= (6x - 4)*(8x)                                                          
+
+Out[22]= 8 x (-4 + 6 x)
+
+In[23]:= (3p -2)(p^2 + 5p - 1)                                                  
+
+                                 2
+Out[23]= (-2 + 3 p) (-1 + 5 p + p )
+
+In[24]:= Expand(6x - 4)*(8x)                                                    
+
+Out[24]= 8 Expand x (-4 + 6 x)
+
+In[25]:= Expand[(6x - 4)*(8x)]                                                  
+
+                     2
+Out[25]= -32 x + 48 x
+
+In[26]:= Expand[(3p -2)*(p^2 + 5p - 1)]                                         
+
+                        2      3
+Out[26]= 2 - 13 p + 13 p  + 3 p
+
+In[27]:= Expand[(x + 2)*(x + 3)*(x - 4)]                                        
+
+                       2    3
+Out[27]= -24 - 14 x + x  + x
+
+In[28]:= Expand[(2m-5)(m+4)]                                                    
+
+                        2
+Out[28]= -20 + 3 m + 2 m
+
+In[29]:= Expand[(2k-5)^2]                                                       
+
+                        2
+Out[29]= 25 - 20 k + 4 k
+
+In[30]:=                                                                        
