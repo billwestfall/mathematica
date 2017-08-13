@@ -1,0 +1,163 @@
+pi@raspberrypi:~ $ wolfram
+Wolfram Language 11.0.1 Engine for Linux ARM (32-bit)
+Copyright 1988-2017 Wolfram Research, Inc.
+
+In[1]:= FullSimplify[(a-3/16)/(a-3/32)]                                         
+                                                                                
+               3
+Out[1]= 1 + --------
+            3 - 32 a
+
+In[2]:= FullSimplify[{4a+12/2a-10)/(a^2-9/2^2-a-20)]                            
+
+Syntax::sntxf: "FullSimplify[{4a+12/2a-10" cannot be followed by 
+    ")/(a^2-9/2^2-a-20)]".
+
+
+In[3]:= FullSimplify[(4a+12/2a-10)/(a^2-9/2^2-a-20)]                            
+
+           40 (-1 + a)
+Out[3]= ------------------
+        -89 + 4 (-1 + a) a
+
+In[4]:= FullSimplify[(k^2-k-6/k^2+k-12)*(k^2+3k-4)/(k^2+2k-3)]                  
+
+                          2    4
+        (4 + k) (-6 - 12 k  + k )
+Out[4]= -------------------------
+                2
+               k  (3 + k)
+
+In[5]:= FullSimplify[(2m^2-5m-12/m^2-10m+24)/(4m^2-9/m^2-9m+18)]                
+
+               2
+        -12 + m  (24 + m (-15 + 2 m))
+Out[5]= -----------------------------
+               2
+         -9 + m  (18 + m (-9 + 4 m))
+
+In[6]:= FullSimplify[(a+1/2)-(a-1/2)]                                           
+
+Out[6]= 1
+
+In[7]:= FullSimplify[(1/6m)+(2/5m)+(4/m)]                                       
+
+        4   17 m
+Out[7]= - + ----
+        m    30
+
+In[8]:= FullSimplify[(8/3*(a-1))+(2/a-1)]                                       
+
+          11    2   8 a
+Out[8]= -(--) + - + ---
+          3     a    3
+
+In[9]:= FullSimplify[(2/(x^2-2x-3))+(5/(x^2-x-6))]                              
+
+           9 + 7 x
+Out[9]= -------------
+                    3
+        -6 - 7 x + x
+
+In[10]:= FullSimplify[{3k/2k^2+3k-2)-(2k/2k^2-7k+3)]                            
+
+Syntax::sntxf: "FullSimplify[{3k/2k^2+3k-2" cannot be followed by 
+    ")-(2k/2k^2-7k+3)]".
+
+
+In[11]:= FullSimplify[(3k/2k^2+3k-2)-(2k/2k^2-7k+3)]                            
+
+                      3
+                     k
+Out[11]= -5 + 10 k + --
+                     2
+
+In[12]:= FullSimplify[(2/a+2)+(1/a)+(a-1/a^2+2a)]                               
+
+                          3
+             -1 + 3 (a + a )
+Out[12]= 2 + ---------------
+                    2
+                   a
+
+In[13]:= FullSimplify[(2k+8/6)/(3k+12/2)]                                       
+
+         4 + 6 k
+Out[13]= --------
+         18 + 9 k
+
+In[14]:= FullSimplify[(9y-18/6y+12)*(3y+6/15y-30)]                              
+
+         6 (2 + y) (-150 + 17 y)
+Out[14]= -----------------------
+                    5
+
+In[15]:= FullSimplify[(6r-18/9r^3+6r-24)*(12r-16/4r-12)]                        
+
+                                    3
+Out[15]= -8 (-3 + 2 r) (12 - 6 r + r )
+
+In[16]:= FullSimplify[(m^2+3m+2/m^2+5m+4)/(m^2+5m+6/m^2+10m+24)]                
+
+               2
+          2 + m  (4 + m (8 + m))
+Out[16]= ------------------------
+              2
+         6 + m  (24 + m (15 + m))
+
+In[17]:= FullSimplify[(6n^2-5n-6/6n^2+5n-6)*(12n^2-17n+6/12n^2-n-6)]            
+
+                                      2
+                  2               25 n
+Out[17]= (-6 + 5 n ) (-6 - 18 n + -----)
+                                    2
+
+In[18]:= FullSimplify[(3/p)+(1/2)]                                              
+
+         1   3
+Out[18]= - + -
+         2   p
+
+In[19]:= FullSimplify[(1/m-1)+(2/m)]                                            
+
+              3
+Out[19]= -1 + -
+              m
+
+In[20]:= FullSimplify[(2/y)-(1/4)]                                              
+
+           1    2
+Out[20]= -(-) + -
+           4    y
+
+In[21]:= FullSimplify[(6/r)-(5/r-2)]                                            
+
+             1
+Out[21]= 2 + -
+             r
+
+In[22]:= FullSimplify[(2/5(k-2))+(3/4(k-2))]                                    
+
+         23 (-2 + k)
+Out[22]= -----------
+             20
+
+In[23]:= FullSimplify[(2y/y^2+7y+12)-(y/y^2+5y+6)]                              
+
+             1
+Out[23]= 6 + - + 2 y
+             y
+
+In[24]:= FullSimplify[(4m/3m^2+7m-6)-(m/3m^2-14m+8)]                            
+
+                       3
+Out[24]= -14 + 21 m + m
+
+In[25]:= FullSimplify[(5x+2/x^2-1)+(3/x^2+x)-(1/x^2-x)]                         
+
+              4
+Out[25]= -1 + -- + 7 x
+               2
+              x
+
+In[26]:=                                                                        
