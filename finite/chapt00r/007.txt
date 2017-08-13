@@ -1,0 +1,95 @@
+In[25]:= RandomFunction[BinomialProcess[1/3], {0, 50}]                          
+
+Out[25]= TemporalData[<<1>>]
+
+In[26]:= RandomChoice[{a, b, c}]                                                
+
+Out[26]= b
+
+In[27]:= RandomChoice[{a, b, c}]                                                
+
+Out[27]= a
+
+In[28]:= RandomChoice[{a, b, c}]                                                
+
+Out[28]= a
+
+In[29]:= RandomChoice[{a, b, c}]                                                
+
+Out[29]= c
+
+In[30]:= RandomChoice[{a, b, c}, 20]                                            
+
+Out[30]= {a, b, c, c, a, b, c, c, c, a, a, a, c, a, c, a, b, b, a, c}
+
+In[31]:= RandomChoice[{a, b, c}, 20]                                            
+
+Out[31]= {c, c, a, a, a, b, c, a, b, c, b, a, c, b, c, c, c, c, c, a}
+
+In[32]:= RandomChoice[{a, b, c}, 30]                                            
+
+Out[32]= {b, c, b, a, b, c, c, b, a, a, b, b, c, c, a, c, b, c, c, b, c, a, a, 
+ 
+>    b, a, a, a, b, b, b}
+
+In[33]:= RandomVariate[NormalDistribution[]]                                    
+
+Out[33]= -3.00609
+
+In[34]:= data = RandomVariate[NormalDistribution[1, 3], 10^4];                  
+
+In[35]:= Show[                                                                  
+          Histogram[data, 20, "ProbabilityDensity"],                            
+          Plot[PDF[NormalDistribution[1, 3], x], {x, -9, 9},                    
+           PlotStyle -> Thick]]                                                 
+
+Out[35]= -Graphics-
+
+In[36]:= RandomVariate[PoissonDistribution[3], 10]                              
+
+Out[36]= {2, 4, 5, 1, 6, 2, 0, 3, 3, 5}
+
+In[37]:= data = RandomVariate[PoissonDistribution[10], 10^4];                   
+
+In[38]:= Show[                                                                  
+          Histogram[data, Automatic, "ProbabilityDensity"],                     
+          DiscretePlot[PDF[PoissonDistribution[10], x], {x, 0, 20},             
+           PlotStyle -> PointSize[Medium]]]                                     
+
+Out[38]= -Graphics-
+
+In[39]:= RandomVariate[BinormalDistribution[1/2], 5]                            
+
+Out[39]= {{-2.33494, -1.17465}, {-1.43264, 0.735837}, {-0.281268, 1.38234}, 
+ 
+>    {-0.679498, -0.997292}, {0.917761, 0.043944}}
+
+In[40]:= data = RandomVariate[BinormalDistribution[1/2], 10^4];                 
+
+In[41]:= {Histogram3D[data, 20, "ProbabilityDensity"],                          
+          Plot3D[PDF[BinormalDistribution[1/2], {x, y}] // Evaluate, {x, -3,    
+            3}, {y, -3, 3}]}                                                    
+
+Out[41]= {-Graphics3D-, -Graphics3D-}
+
+In[42]:= RandomVariate[MultivariatePoissonDistribution[1, {2, 3}], 5]           
+
+Out[42]= {{0, 3}, {3, 4}, {2, 1}, {4, 5}, {4, 7}}
+
+In[43]:= data = RandomVariate[MultivariatePoissonDistribution[1, {2, 3}],       
+            10^4];                                                              
+
+In[44]:= {Histogram3D[data, 20, "Probability",                                  
+           PlotRange -> {{0, 10}, {0, 10}, All}],                               
+          DiscretePlot3D[                                                       
+           PDF[MultivariatePoissonDistribution[1, {2, 3}], {x, y}], {x, 0,      
+            10}, {y, 0, 10}, PlotRange -> All, ExtentSize -> Full]}             
+
+Out[44]= {-Graphics3D-, -Graphics3D-}
+
+In[45]:= dist = MixtureDistribution[{1, 2}, {NormalDistribution[1, 1/2],        
+             NormalDistribution[4, 5/3]}];                                      
+
+In[46]:= data = RandomVariate[dist, 10^5];                                      
+
+In[47]:=                                                                        
