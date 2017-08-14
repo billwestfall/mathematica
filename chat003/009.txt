@@ -1,0 +1,198 @@
+pi@raspberrypi:~ $ wolfram
+Wolfram Language 11.0.1 Engine for Linux ARM (32-bit)
+Copyright 1988-2017 Wolfram Research, Inc.
+
+In[1]:= PolynomialGCD[ (1-x)^2 (1+x) (2+x), (1-x) (2+x) (3+x) ]                 
+
+Out[1]= (-1 + x) (2 + x)
+
+In[2]:= PolynomialMod[x^2, x+1]                                                 
+
+Out[2]= 1
+
+In[3]:= {PolynomialMod[x^2, 2x+1], PolynomialRemainder[x^2, 2x+1, x]}           
+
+         1  1
+Out[3]= {-, -}
+         4  4
+
+In[4]:= PolynomialMod[x^2 + 1, {x + 1, 2}]                                      
+
+Out[4]= 0
+
+In[5]:= Resultant[(x-y)^2-2, y^2-3, y]                                          
+
+                2    4
+Out[5]= 1 - 10 x  + x
+
+In[6]:= t = Expand[ 2 (1 + x)^2 (2 + x) (3 + x) ]                               
+
+                        2       3      4
+Out[6]= 12 + 34 x + 34 x  + 14 x  + 2 x
+
+In[7]:= FactorTerms[t]                                                          
+
+                          2      3    4
+Out[7]= 2 (6 + 17 x + 17 x  + 7 x  + x )
+
+In[8]:= FactorSquareFree[t]                                                     
+
+                 2             2
+Out[8]= 2 (1 + x)  (6 + 5 x + x )
+
+In[9]:= Factor[t]                                                               
+
+                 2
+Out[9]= 2 (1 + x)  (2 + x) (3 + x)
+
+In[10]:= FactorList[t]                                                          
+
+Out[10]= {{2, 1}, {1 + x, 2}, {2 + x, 1}, {3 + x, 1}}
+
+In[11]:= Factor[1 + x^2]                                                        
+
+              2
+Out[11]= 1 + x
+
+In[12]:= Factor[1+x^2, GaussianIntegers -> True]                                
+
+Out[12]= (-I + x) (I + x)
+
+In[13]:= Cyclotomic[6, x]                                                       
+
+                  2
+Out[13]= 1 - x + x
+
+In[14]:= Factor[x^6 - 1]                                                        
+
+                                    2            2
+Out[14]= (-1 + x) (1 + x) (1 - x + x ) (1 + x + x )
+
+In[15]:= Decompose[x^4 + x^2 + 1, x]                                            
+
+                   2   2
+Out[15]= {1 + x + x , x }
+
+In[16]:= ( q1[x_] = 1 - 2x + x^4 ; q2[x_] = 5x + x^3 ;]                         
+
+Syntax::sntxf: "( q1[x_] = 1 - 2x + x^4 ; q2[x_] = 5x + x^3 ;"
+     cannot be followed by "]".
+
+
+In[17]:= ( q1[x_] = 1 - 2x + x^4 ; q2[x_] = 5x + x^3 ;)                         
+
+In[18]:= Expand[ q1[ q2[ x ] ] ]                                                
+
+                       3        4        6        8       10    12
+Out[18]= 1 - 10 x - 2 x  + 625 x  + 500 x  + 150 x  + 20 x   + x
+
+In[19]:= Decompose[%, x]                                                        
+
+                     4         3
+Out[19]= {1 - 2 x + x , 5 x + x }
+
+In[20]:= InterpolatingPolynomial[{{-1, 4}, {0,2}, {1,6}}, x]                    
+
+Out[20]= 4 + (1 + x) (-2 + 3 x)
+
+In[21]:= % /. x -> 0                                                            
+
+Out[21]= 2
+
+In[22]:= Expand[ (1 + x)^6 ]                                                    
+
+                       2       3       4      5    6
+Out[22]= 1 + 6 x + 15 x  + 20 x  + 15 x  + 6 x  + x
+
+In[23]:= PolynomialMod[%, 2]                                                    
+
+              2    4    6
+Out[23]= 1 + x  + x  + x
+
+In[24]:= Factor[%]                                                              
+
+               2        4
+Out[24]= (1 + x ) (1 + x )
+
+In[25]:= Factor[%, Modulus->2]                                                  
+
+                6
+Out[25]= (1 + x)
+
+In[26]:= Expand[Sin[x]^2 + Sin[2x]^2]                                           
+
+               2           2
+Out[26]= Sin[x]  + Sin[2 x]
+
+In[27]:= Expand[%, Trig -> True]                                                
+
+                   2         4         2                             4
+             Cos[x]    Cos[x]    Sin[x]            2       2   Sin[x]
+Out[27]= 1 - ------- - ------- + ------- + 3 Cos[x]  Sin[x]  - -------
+                2         2         2                             2
+
+In[28]:= Expand[Sin[a x] Cos[b x]^2, Trig -> True]                              
+
+                            2                             2
+         Sin[a x]   Cos[b x]  Sin[a x]   Sin[a x] Sin[b x]
+Out[28]= -------- + ------------------ - ------------------
+            2               2                    2
+
+In[29]:= Factor[%, Trig -> True]                                                
+
+                 2
+Out[29]= Cos[b x]  Sin[a x]
+
+In[30]:= ComplexExpand[Tan[x + I y]]                                            
+
+               Sin[2 x]             I Sinh[2 y]
+Out[30]= -------------------- + --------------------
+         Cos[2 x] + Cosh[2 y]   Cos[2 x] + Cosh[2 y]
+
+In[31]:= ComplexExpand[a + x^2, {x}]                                            
+
+                  2                            2
+Out[31]= a - Im[x]  + (2 I) Im[x] Re[x] + Re[x]
+
+In[32]:= ComplexExpand[Sin[x]^2 Exp[y], {x,y}]                                  
+
+          Re[y]                       2           2
+Out[32]= E      Cos[Im[y]] Cosh[Im[x]]  Sin[Re[x]]  - 
+ 
+        Re[y]
+>    2 E      Cos[Re[x]] Cosh[Im[x]] Sin[Im[y]] Sin[Re[x]] Sinh[Im[x]] - 
+ 
+      Re[y]                      2            2
+>    E      Cos[Im[y]] Cos[Re[x]]  Sinh[Im[x]]  + 
+ 
+         Re[y]            2                      2
+>    I (E      Cosh[Im[x]]  Sin[Im[y]] Sin[Re[x]]  + 
+ 
+           Re[y]
+>       2 E      Cos[Im[y]] Cos[Re[x]] Cosh[Im[x]] Sin[Re[x]] Sinh[Im[x]] - 
+ 
+         Re[y]           2                       2
+>       E      Cos[Re[x]]  Sin[Im[y]] Sinh[Im[x]] )
+
+In[33]:= ComplexExpand[x^2, {x}]                                                
+
+               2                            2
+Out[33]= -Im[x]  + (2 I) Im[x] Re[x] + Re[x]
+
+In[34]:= ComplexExpand[x^2, {x}, TargetFunctions -> {Abs, Args}]                
+
+                                   I       4
+          2         4              - Abs[x]
+         x    Abs[x]       -I  2   2
+Out[34]= -- + ------- + I (-- x  + ---------)
+         2        2        2           2
+               2 x                    x
+
+In[35]:= ComplexExpand[x^2, {x}, TargetFunctions -> {Conjugate, Sign}]          
+
+          2               2
+         x    Conjugate[x]       -I  2   I             2
+Out[35]= -- + ------------- + I (-- x  + - Conjugate[x] )
+         2          2            2       2
+
+In[36]:=                                                                        
