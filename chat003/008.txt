@@ -1,0 +1,146 @@
+pi@raspberrypi:~ $ wolfram
+Wolfram Language 11.0.1 Engine for Linux ARM (32-bit)
+Copyright 1988-2017 Wolfram Research, Inc.
+
+In[1]:= t = (1 + x)^2 / (1 - x) + 3 x^2 / (1 + x)^2 + (2 - x)^2                 
+
+                        2            2
+               2     3 x      (1 + x)
+Out[1]= (2 - x)  + -------- + --------
+                          2    1 - x
+                   (1 + x)
+
+In[2]:= ExpandNumerator[t]                                                      
+
+                            2                2
+                   2     3 x      1 + 2 x + x
+Out[2]= 4 - 4 x + x  + -------- + ------------
+                              2      1 - x
+                       (1 + x)
+
+In[3]:= Expand[t]                                                               
+
+                                         2          2
+              1            2 x     2    x        3 x
+Out[3]= 4 + ----- - 4 x + ----- + x  + ----- + --------
+            1 - x         1 - x        1 - x          2
+                                               (1 + x)
+
+In[4]:= ExpandDenominator[t]                                                    
+
+                          2          2
+               2   (1 + x)        3 x
+Out[4]= (2 - x)  + -------- + ------------
+                    1 - x                2
+                              1 + 2 x + x
+
+In[5]:= ExpandAll[t]                                                            
+
+                                         2            2
+              1            2 x     2    x          3 x
+Out[5]= 4 + ----- - 4 x + ----- + x  + ----- + ------------
+            1 - x         1 - x        1 - x              2
+                                               1 + 2 x + x
+
+In[6]:= ExpandAll[(x + 1)^2/y^2 + (y + 1)^2/y^2, y]                             
+
+                         2
+             -2   (1 + x)    2
+Out[6]= 1 + y   + -------- + -
+                      2      y
+                     y
+
+In[7]:= u = (-4x + x^2)/(-x + x^2) + (-4 + 3x + x^2)/(-1 + x^2)                 
+
+                2               2
+        -4 x + x    -4 + 3 x + x
+Out[7]= --------- + -------------
+               2             2
+         -x + x        -1 + x
+
+In[8]:= Together[u]                                                             
+
+                   2
+          2 (-4 + x )
+Out[8]= ----------------
+        (-1 + x) (1 + x)
+
+In[9]:= Factor[u]                                                               
+
+        2 (-2 + x) (2 + x)
+Out[9]= ------------------
+         (-1 + x) (1 + x)
+
+In[10]:= Factor[%]                                                              
+
+         2 (-2 + x) (2 + x)
+Out[10]= ------------------
+          (-1 + x) (1 + x)
+
+In[11]:= Apart[u]                                                               
+
+               3        3
+Out[11]= 2 - ------ + -----
+             -1 + x   1 + x
+
+In[12]:= Cancel[u]                                                              
+
+         -4 + x   4 + x
+Out[12]= ------ + -----
+         -1 + x   1 + x
+
+In[13]:= Factor[%]                                                              
+
+         2 (-2 + x) (2 + x)
+Out[13]= ------------------
+          (-1 + x) (1 + x)
+
+In[14]:= v = (x^2 + y^2)/(x + y)                                                
+
+          2    2
+         x  + y
+Out[14]= -------
+          x + y
+
+In[15]:= Apart(v, x)                                                            
+
+Syntax::sntxf: "Apart(v" cannot be followed by ", x)".
+
+
+In[16]:= Apart[v, x]                                                            
+
+                    2
+                 2 y
+Out[16]= x - y + -----
+                 x + y
+
+In[17]:= Apart[v, y]                                                            
+
+                     2
+                  2 x
+Out[17]= -x + y + -----
+                  x + y
+
+In[18]:= PolynomialReminder[x^2, x+1, x]                                        
+
+                             2
+Out[18]= PolynomialReminder[x , 1 + x, x]
+
+In[19]:= PolynomialRemainder[x^2, x+1, x]                                       
+
+Out[19]= 1
+
+In[20]:= PolynomialQuotient[x^2, x+1, x]                                        
+
+Out[20]= -1 + x
+
+In[21]:= Simplify[ (x+1) % + %%]                                                
+
+          2
+Out[21]= x
+
+In[22]:= {PolynomialRemainder[x+y, x-y, x], PolynomialRemainder[x+y,x-y,y]}     
+
+Out[22]= {2 y, 2 x}
+
+In[23]:=                                                                        
