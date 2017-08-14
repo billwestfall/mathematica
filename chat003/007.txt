@@ -1,0 +1,213 @@
+pi@raspberrypi:~ $ wolfram
+Wolfram Language 11.0.1 Engine for Linux ARM (32-bit)
+Copyright 1988-2017 Wolfram Research, Inc.
+
+In[1]:= m[x1_, x2_, y1_, y2_] := (y2 - y1)/(x2 - x1)                            
+
+In[2]:= m[2, 4, 2, 4]                                                           
+
+Out[2]= 1
+
+In[3]:= m[-7, 4, 6, 5]                                                          
+
+          1
+Out[3]= -(--)
+          11
+
+In[4]:= m[5, -2, -2, -3]                                                        
+
+        1
+Out[4]= -
+        7
+
+In[5]:= m[5, -2, -3, -3]                                                        
+
+Out[5]= 0
+
+In[6]:= m[2, 2, -4, 3]                                                          
+
+                                 1
+Power::infy: Infinite expression - encountered.
+                                 0
+
+Out[6]= ComplexInfinity
+
+In[7]:= m[4, -7, 5, 6]                                                          
+
+          1
+Out[7]= -(--)
+          11
+
+In[8]:= soln[m, x, b] := mx + b                                                 
+
+In[9]:= soln[(3/4), 1, 1]                                                       
+
+             3
+Out[9]= soln[-, 1, 1]
+             4
+
+In[10]:= myeq1=Solve[y=4.9x-9783.9,{x,y}]                                       
+
+Solve::ivar: -9783.9 + 4.9 x is not a valid variable.
+
+Out[10]= Solve[-9783.9 + 4.9 x, {x, -9783.9 + 4.9 x}]
+
+In[11]:= ndist = NormalDistribution[0.1]                                        
+
+NormalDistribution::argr: 
+   NormalDistribution called with 1 argument; 2 arguments are expected.
+
+NormalDistribution::argr: 
+   NormalDistribution called with 1 argument; 2 arguments are expected.
+
+Out[11]= NormalDistribution[0.1]
+
+In[12]:= ndist = NormalDistribution[0,1]                                        
+
+Out[12]= NormalDistribution[0, 1]
+
+In[13]:= CDF[ndist, x]                                                          
+
+                   x
+         Erfc[-(-------)]
+                Sqrt[2]
+Out[13]= ----------------
+                2
+
+In[14]:= Quantile[ndist, 0.9] // N                                              
+
+Out[14]= 1.28155
+
+In[15]:= Table[ Random[ndist], {5} ]                                            
+
+Out[15]= {0.380015, 0.550677, -0.482496, 1.18283, -0.720844}
+
+In[16]:= (2 + 4 x^2)^2 (x - 1)^3                                                
+
+                 3         2 2
+Out[16]= (-1 + x)  (2 + 4 x )
+
+In[17]:= t = Expand[ % ]                                                        
+
+                         2       3       4       5       6       7
+Out[17]= -4 + 12 x - 28 x  + 52 x  - 64 x  + 64 x  - 48 x  + 16 x
+
+In[18]:= Factor[ t ]                                                            
+
+                   3         2 2
+Out[18]= 4 (-1 + x)  (1 + 2 x )
+
+In[19]:= FactorTerms[ t ]                                                       
+
+                          2       3       4       5       6      7
+Out[19]= 4 (-1 + 3 x - 7 x  + 13 x  - 16 x  + 16 x  - 12 x  + 4 x )
+
+In[20]:= Expand[ (1 + 2x + y)^3 ]                                               
+
+                    11            9               6  2            3
+Out[20]= -9.36274 10   + 1.9811 10  x - 1.39729 10  x  + 328.509 x
+
+In[21]:= Collect[ %, x ]                                                        
+
+                    11            9               6  2            3
+Out[21]= -9.36274 10   + 1.9811 10  x - 1.39729 10  x  + 328.509 x
+
+In[22]:= Collect[ Expand[ (1 + x + 2y + 3z)^3 ], {x, y}]                        
+
+                    12            3             9              2       3
+Out[22]= -7.49134 10   + 1259.71 x  + 3.44574 10  z - 528304. z  + 27 z  + 
+ 
+      2             6                             10             6            2
+>    x  (-6.84681 10  + 1049.76 z) + x (1.24047 10   - 3.80379 10  z + 291.6 z )
+
+In[23]:= Expand[(x + 1)^2 (y + 1)^2, x]                                         
+
+                   7             8               7  2            3          4
+Out[23]= 9.57051 10  + 1.91314 10  x + 9.55134 10  x  - 95824.4 x  + 24.01 x
+
+In[24]:= Expand[(a[1] + a[2] +1)^2 (1 + b[1])^2, b[_]]                          
+
+                          2                      2
+Out[24]= (1 + a[1] + a[2])  + 2 (1 + a[1] + a[2])  b[1] + 
+ 
+                      2     2
+>    (1 + a[1] + a[2])  b[1]
+
+In[25]:= (x y)^n                                                                
+
+                              n
+Out[25]= (x (-9783.9 + 4.9 x))
+
+In[26]:= clear y                                                                
+
+Out[26]= clear (-9783.9 + 4.9 x)
+
+In[27]:= (x y)^n                                                                
+
+                              n
+Out[27]= (x (-9783.9 + 4.9 x))
+
+In[28]:= Clear[y]                                                               
+
+In[29]:= (x y)^n                                                                
+
+              n
+Out[29]= (x y)
+
+In[30]:= PowerExpand[%]                                                         
+
+          n  n
+Out[30]= x  y
+
+In[31]:= t = Expand[ (1 + x)^3 (1 - y - x)^2 ]                                  
+
+                    2      3    4    5                    3        4      2
+Out[31]= 1 + x - 2 x  - 2 x  + x  + x  - 2 y - 4 x y + 4 x  y + 2 x  y + y  + 
+ 
+          2      2  2    3  2
+>    3 x y  + 3 x  y  + x  y
+
+In[32]:= PolynomialQ[t, x]                                                      
+
+Out[32]= True
+
+In[33]:= PolynomialQ[x + Sin[x], x]                                             
+
+Out[33]= False
+
+In[34]:= Variables[t]                                                           
+
+Out[34]= {x, y}
+
+In[35]:= Length[t]                                                              
+
+Out[35]= 14
+
+In[36]:= Exponent[t, x]                                                         
+
+Out[36]= 5
+
+In[37]:= Coefficient[t, x^2]                                                    
+
+                 2
+Out[37]= -2 + 3 y
+
+In[38]:= Coefficient[t, x, 2]                                                   
+
+                 2
+Out[38]= -2 + 3 y
+
+In[39]:= Coefficient[t, x, 0]                                                   
+
+                    2
+Out[39]= 1 - 2 y + y
+
+In[40]:= CoefficientList[1 + 3x^2 + 4x^4, x]                                    
+
+Out[40]= {1, 0, 3, 0, 4}
+
+In[41]:= CoefficientList[t, {x, y}]                                             
+
+Out[41]= {{1, -2, 1}, {1, -4, 3}, {-2, 0, 3}, {-2, 4, 1}, {1, 2, 0}, {1, 0, 0}}
+
+In[42]:=                                                                        
