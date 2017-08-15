@@ -1,0 +1,220 @@
+pi@raspberrypi:~ $ wolfram
+Wolfram Language 11.0.1 Engine for Linux ARM (32-bit)
+Copyright 1988-2017 Wolfram Research, Inc.
+
+In[1]:= Solve[5 + 11x + 17x^2 + 7x^3 + 16x^4 + x^5 == 0, x]                     
+
+                                     2       3        4     5
+Out[1]= {{x -> Root[5 + 11 #1 + 17 #1  + 7 #1  + 16 #1  + #1  & , 1]}, 
+ 
+                                 2       3        4     5
+>    {x -> Root[5 + 11 #1 + 17 #1  + 7 #1  + 16 #1  + #1  & , 2]}, 
+ 
+                                 2       3        4     5
+>    {x -> Root[5 + 11 #1 + 17 #1  + 7 #1  + 16 #1  + #1  & , 3]}, 
+ 
+                                 2       3        4     5
+>    {x -> Root[5 + 11 #1 + 17 #1  + 7 #1  + 16 #1  + #1  & , 4]}, 
+ 
+                                 2       3        4     5
+>    {x -> Root[5 + 11 #1 + 17 #1  + 7 #1  + 16 #1  + #1  & , 5]}}
+
+In[2]:= Solve[5 + 11x + 17x^2 + 7x^3 + 16x^4 + x^5==0, x]                       
+
+                                     2       3        4     5
+Out[2]= {{x -> Root[5 + 11 #1 + 17 #1  + 7 #1  + 16 #1  + #1  & , 1]}, 
+ 
+                                 2       3        4     5
+>    {x -> Root[5 + 11 #1 + 17 #1  + 7 #1  + 16 #1  + #1  & , 2]}, 
+ 
+                                 2       3        4     5
+>    {x -> Root[5 + 11 #1 + 17 #1  + 7 #1  + 16 #1  + #1  & , 3]}, 
+ 
+                                 2       3        4     5
+>    {x -> Root[5 + 11 #1 + 17 #1  + 7 #1  + 16 #1  + #1  & , 4]}, 
+ 
+                                 2       3        4     5
+>    {x -> Root[5 + 11 #1 + 17 #1  + 7 #1  + 16 #1  + #1  & , 5]}}
+
+In[3]:= Solve[5 + 11x + 17x^2 + 7x^3 + 16x^4 + x^5==0 && Modulus==19, x]]       
+
+Syntax::sntxf: "Solve[5 + 11x + 17x^2 + 7x^3 + 16x^4 + x^5==0 && Modulus==19,
+      x]" cannot be followed by "]".
+
+
+In[4]:= Solve[5 + 11x + 17x^2 + 7x^3 + 16x^4 + x^5==0 && Modulus==19, x]        
+
+Out[4]= {}
+
+In[5]:= Clear[x]                                                                
+
+In[6]:= Solve[5 + 11x + 17x^2 + 7x^3 + 16x^4 + x^5==0, x]                       
+
+                                     2       3        4     5
+Out[6]= {{x -> Root[5 + 11 #1 + 17 #1  + 7 #1  + 16 #1  + #1  & , 1]}, 
+ 
+                                 2       3        4     5
+>    {x -> Root[5 + 11 #1 + 17 #1  + 7 #1  + 16 #1  + #1  & , 2]}, 
+ 
+                                 2       3        4     5
+>    {x -> Root[5 + 11 #1 + 17 #1  + 7 #1  + 16 #1  + #1  & , 3]}, 
+ 
+                                 2       3        4     5
+>    {x -> Root[5 + 11 #1 + 17 #1  + 7 #1  + 16 #1  + #1  & , 4]}, 
+ 
+                                 2       3        4     5
+>    {x -> Root[5 + 11 #1 + 17 #1  + 7 #1  + 16 #1  + #1  & , 5]}}
+
+In[7]:= Solve[{x^2 + 1 == 0, x^3 + 1 == 0}, x, Mode -> Modular]                 
+
+Solve::optx: Unknown option Mode in 
+                2            3
+    Solve[{1 + x  == 0, 1 + x  == 0}, x, Mode -> Modular].
+
+                    2            3
+Out[7]= Solve[{1 + x  == 0, 1 + x  == 0}, x, Mode -> Modular]
+
+In[8]:= Solve[{x^2 + 1 == 0, x^3 + 1 == 0}, x, Mode -> Modular]                 
+
+Solve::optx: Unknown option Mode in 
+                2            3
+    Solve[{1 + x  == 0, 1 + x  == 0}, x, Mode -> Modular].
+
+                    2            3
+Out[8]= Solve[{1 + x  == 0, 1 + x  == 0}, x, Mode -> Modular]
+
+In[9]:= f = x^3 + 4x + 17                                                       
+
+                    3
+Out[9]= 17 + 4 x + x
+
+In[10]:= Solve[ f == D[f,x] == 0, x, Mode->Modular]                             
+
+Solve::optx: Unknown option Mode in 
+                      3           2
+    Solve[17 + 4 x + x  == 4 + 3 x  == 0, x, Mode -> Modular].
+
+                           3           2
+Out[10]= Solve[17 + 4 x + x  == 4 + 3 x  == 0, x, Mode -> Modular]
+
+In[11]:= Clear[f, x]                                                            
+
+In[12]:= Solve[ f == D[f,x] == 0, x, Mode->Modular]                             
+
+Solve::optx: Unknown option Mode in Solve[f == 0 == 0, x, Mode -> Modular].
+
+Out[12]= Solve[f == 0 == 0, x, Mode -> Modular]
+
+In[13]:= {f, D[f,x]} /. %                                                       
+
+ReplaceAll::reps: 
+   {Solve[f == 0 == 0, x, Mode -> Modular]}
+     is neither a list of replacement rules nor a valid dispatch table, and so
+     cannot be used for replacing.
+
+Out[13]= {f, 0} /. Solve[f == 0 == 0, x, Mode -> Modular]
+
+In[14]:= Mod[%, 8059]                                                           
+
+Out[14]= Mod[{f, 0} /. Solve[f == 0 == 0, x, Mode -> Modular], 8059]
+
+In[15]:= f = y^2 - y - x^3 + x^2                                                
+
+          2    3        2
+Out[15]= x  - x  - y + y
+
+In[16]:= Solve[ f == D[f,x] == D[f,y] == 0, {x, y}, Mode->Modular]              
+
+Solve::optx: Unknown option Mode in 
+           2    3        2             2
+    Solve[x  - x  - y + y  == 2 x - 3 x  == -1 + 2 y == 0, {x, y}, 
+     Mode -> Modular].
+
+                2    3        2             2
+Out[16]= Solve[x  - x  - y + y  == 2 x - 3 x  == -1 + 2 y == 0, {x, y}, 
+ 
+>    Mode -> Modular]
+
+In[17]:= 1 + x^2 + x^4 /. x^2 -> a                                              
+
+                  4
+Out[17]= 1 + a + x
+
+In[18]:= Solve[{ f == 1 + x^2 + x^4, x^2 == a}, f, x]                           
+
+Solve::bdomv: Warning: x is not a valid domain specification. Assuming it is a
+     variable to eliminate.
+
+              2    3        2
+Solve::ivar: x  - x  - y + y  is not a valid variable.
+
+                 2    3        2         2    4   2         2    3        2
+Out[18]= Solve[{x  - x  - y + y  == 1 + x  + x , x  == a}, x  - x  - y + y , x]
+
+In[19]:= ar = AlgebraicRules[x^2 == a, {x, a}]                                  
+
+           2
+Out[19]= {x  -> a}
+
+In[20]:= 1 + x^2 + x^4 /. ar                                                    
+
+                  2
+Out[20]= 1 + a + a
+
+In[21]:= 1 + x^3 + x^7 /. ar                                                    
+
+                    3
+Out[21]= 1 + a x + a  x
+
+In[22]:= GroebnerBasis[{x^2 - y^2, x^3 + y^3}, {x, y}]                          
+
+             2    3   2    2
+Out[22]= {x y  + y , x  - y }
+
+In[23]:= ar = AlgebraicRules[{a == x+y, b == x y}, {x, y, a, b}]                
+
+           2
+Out[23]= {y  -> -b + a y, x -> a - y}
+
+In[24]:= x^3 + y^3 /. ar                                                        
+
+          3
+Out[24]= a  - 3 a b
+
+In[25]:= x^4 + y^4 /. ar                                                        
+
+          4      2        2
+Out[25]= a  - 4 a  b + 2 b
+
+In[26]:= x^3 + y^4 /. ar                                                        
+
+          3            2      2    2      3
+Out[26]= a  - 2 a b - a  b + b  - a  y + a  y + b y - 2 a b y
+
+In[27]:= D[x^n, x]                                                              
+
+            -1 + n
+Out[27]= n x
+
+In[28]:= D[x^n, {x, 3}]                                                         
+
+                              -3 + n
+Out[28]= (-2 + n) (-1 + n) n x
+
+In[29]:= D[ x[1]^2 + x[2]^2, x[1] ]                                             
+
+Out[29]= 2 x[1]
+
+In[30]:= D[x^2 + y^2, x]                                                        
+
+Out[30]= 2 x
+
+In[31]:= D[x^2 + y[x]^2, x]                                                     
+
+Out[31]= 2 x + 2 y[x] y'[x]
+
+In[32]:= D[x^2 + y^2, x, NonConstants -> {y}]                                   
+
+Out[32]= 2 x + 2 y D[y, x, NonConstants -> {y}]
+
+In[33]:=                                                                        
