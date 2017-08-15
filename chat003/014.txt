@@ -1,0 +1,244 @@
+pi@raspberrypi:~ $ wolfram
+Wolfram Language 11.0.1 Engine for Linux ARM (32-bit)
+Copyright 1988-2017 Wolfram Research, Inc.
+
+In[1]:= Solve[ { a x + b y == 1, x - y == 2 }, {x, y}]                          
+
+                 -1 - 2 b          -1 + 2 a
+Out[1]= {{x -> -(--------), y -> -(--------)}}
+                  a + b             a + b
+
+In[2]:= Solve[ { x^2 + y^2 == 1, x + y == a}, {x, y}]                           
+
+                             2                      2
+               a - Sqrt[2 - a ]       a + Sqrt[2 - a ]
+Out[2]= {{x -> ----------------, y -> ----------------}, 
+                      2                      2
+ 
+                         2                      2
+           a + Sqrt[2 - a ]       a - Sqrt[2 - a ]
+>    {x -> ----------------, y -> ----------------}}
+                  2                      2
+
+In[3]:= x^3 + y^3 /. % /. a -> 0.7                                              
+
+Out[3]= {0.8785, 0.8785}
+
+In[4]:= Solve[{x^3 + y^3 == x,y, x + y + x y == 1},                             
+        ]                                                                       
+
+Syntax::com: Warning: comma encountered with no adjacent expression. The
+     expression will be treated as Null. .
+
+
+              3    3
+Solve::naqs: x  + y  == x && y && x + y + x y == 1
+     is not a quantified system of equations and inequalities.
+
+                3    3
+Out[4]= Solve[{x  + y  == x, y, x + y + x y == 1}, Null]
+
+In[5]:= N[ % ]                                                                  
+
+              3    3
+Solve::naqs: x  + y  == x && y && x + y + x y == 1.
+     is not a quantified system of equations and inequalities.
+
+                3    3
+Out[5]= Solve[{x  + y  == x, y, x + y + x y == 1.}, Null]
+
+In[6]:= Table[ 2 a[i] + a[i-1] == a[a+1], {i, 3}]                               
+
+Out[6]= {a[0] + 2 a[1] == a[1 + a], a[1] + 2 a[2] == a[1 + a], 
+ 
+>    a[2] + 2 a[3] == a[1 + a]}
+
+In[7]:= Solve[%, {a[1], a[2], a[3]} ]                                           
+
+                  -a[0] + a[1 + a]          a[0] + a[1 + a]
+Out[7]= {{a[1] -> ----------------, a[2] -> ---------------, 
+                         2                         4
+ 
+              -a[0] + 3 a[1 + a]
+>     a[3] -> ------------------}}
+                      8
+
+In[8]:= Solve[ {x + y == 1, x - 3 y == 2} ]                                     
+
+               5         1
+Out[8]= {{x -> -, y -> -(-)}}
+               4         4
+
+In[9]:= {{3,1},{2,-5}},{x,y}=={7,8}                                             
+
+Syntax::sntxf: "{{3,1},{2,-5}}" cannot be followed by ",{x,y}=={7,8}".
+
+
+In[10]:= {{3,1},{2,-5}}.{x,y}=={7,8}                                            
+
+Out[10]= {3 x + y, 2 x - 5 y} == {7, 8}
+
+In[11]:= Solve[%, {x,y}]                                                        
+
+                43         10
+Out[11]= {{x -> --, y -> -(--)}}
+                17         17
+
+In[12]:= LogicalExpand[%%]                                                      
+
+Out[12]= 2 x - 5 y == 8 && 3 x + y == 7
+
+In[13]:= Solve[ArcSin[x] == a,x]                                                
+
+Out[13]= {{x -> ConditionalExpression[Sin[a], 
+ 
+                  -Pi                   -Pi           Pi
+>       (Re[a] == --- && Im[a] >= 0) || --- < Re[a] < -- || 
+                   2                     2            2
+ 
+                   Pi
+>        (Re[a] == -- && Im[a] <= 0)]}}
+                   2
+
+In[14]:= Clear[a, x]                                                            
+
+In[15]:= Solve[ArcSin[x] == a,x]                                                
+
+Out[15]= {{x -> ConditionalExpression[Sin[a], 
+ 
+                  -Pi                   -Pi           Pi
+>       (Re[a] == --- && Im[a] >= 0) || --- < Re[a] < -- || 
+                   2                     2            2
+ 
+                   Pi
+>        (Re[a] == -- && Im[a] <= 0)]}}
+                   2
+
+In[16]:= Solve[Sin[x] == a,x]                                                   
+
+Out[16]= {{x -> ConditionalExpression[Pi - ArcSin[a] + 2 Pi C[1], 
+ 
+>       C[1] ∈ Integers]}, {x -> 
+ 
+>      ConditionalExpression[ArcSin[a] + 2 Pi C[1], C[1] ∈ Integers]}}
+
+In[17]:= Solve[f[x] == a, x]                                                    
+
+Solve::ifun: Inverse functions are being used by Solve, so some solutions may
+     not be found; use Reduce for complete solution information.
+
+                  (-1)
+Out[17]= {{x -> (f    )[a]}}
+
+In[18]:= InputForm[%]                                                           
+
+Out[18]//InputForm= {{x -> InverseFunction[f, 1, 1][a]}}
+
+In[19]:= InverseFunction[f][a]                                                  
+
+           (-1)
+Out[19]= (f    )[a]
+
+In[20]:= Solve[ a x == 0 , x ]                                                  
+
+Out[20]= {{x -> 0}}
+
+In[21]:= Roots[ a x == 0, x ]                                                   
+
+Out[21]= x == 0
+
+In[22]:= Reduce[ a x == 0, x ]                                                  
+
+Out[22]= a == 0 || x == 0
+
+In[23]:= Roots[a x + b == 0, x ]                                                
+
+                b
+Out[23]= x == -(-)
+                a
+
+In[24]:= Reduce[ a x + b == 0, x ]                                              
+
+                                                 b
+Out[24]= (b == 0 && a == 0) || (a != 0 && x == -(-))
+                                                 a
+
+In[25]:= Reduce[a x^2 + b x + c == 0, x ]                                       
+
+                                     2
+                          -b - Sqrt[b  - 4 a c]
+Out[25]= (a != 0 && (x == --------------------- || 
+                                   2 a
+ 
+                         2
+              -b + Sqrt[b  - 4 a c]                                  c
+>        x == ---------------------)) || (a == 0 && b != 0 && x == -(-)) || 
+                       2 a                                           b
+ 
+>    (c == 0 && b == 0 && a == 0)
+
+In[26]:= Reduce[ x == 1 && x == 2, x ]                                          
+
+Out[26]= False
+
+In[27]:= Reduce[ x == 1 && x == a, x ]                                          
+
+Out[27]= a == 1 && x == 1
+
+In[28]:= Solve[x == 1 && x == a, x ]                                            
+
+Out[28]= {}
+
+In[29]:= Reduce[ x == x, x ]                                                    
+
+Out[29]= True
+
+In[30]:= Solve[x == x, x ]                                                      
+
+Out[30]= {{}}
+
+In[31]:= m = Table[i + j, {i, 3}, {j, 3}]                                       
+
+Out[31]= {{2, 3, 4}, {3, 4, 5}, {4, 5, 6}}
+
+In[32]:= Det[ m ]                                                               
+
+Out[32]= 0
+
+In[33]:= eqn = m . {x, y, z} = {a, b, c}                                        
+
+Set::write: Tag Dot in {{2, 3, 4}, {3, 4, 5}, {4, 5, 6}} . {x, y, z}
+     is Protected.
+
+Out[33]= {a, b, c}
+
+In[34]:= eqn = m . {x, y, z} == {a, b, c}                                       
+
+Out[34]= {2 x + 3 y + 4 z, 3 x + 4 y + 5 z, 4 x + 5 y + 6 z} == {a, b, c}
+
+In[35]:= Solve[eqn, {x, y, z}                                                   
+         ]                                                                      
+
+Out[35]= {}
+
+In[36]:= Reduce[eqn, {x, y, z}]                                                 
+
+Out[36]= a == 2 b - c && y == -6 b + 5 c - 2 x && z == 5 b - 4 c + x
+
+In[37]:= eqn = {x y == a, x^2 y^2 == b}                                         
+
+                     2  2
+Out[37]= {x y == a, x  y  == b}
+
+In[38]:= Solve[eqn, {x, y}]                                                     
+
+Out[38]= {}
+
+In[39]:= Reduce[eqn, {x, y}]                                                    
+
+Out[39]= (b == 0 && a == 0 && x == 0) || 
+ 
+                                                        a
+>    ((a == -Sqrt[b] || a == Sqrt[b]) && x != 0 && y == -)
+                                                        x
+
