@@ -1,0 +1,57 @@
+pi@raspberrypi:~ $ wolfram
+Wolfram Language 11.0.1 Engine for Linux ARM (32-bit)
+Copyright 1988-2017 Wolfram Research, Inc.
+
+In[1]:= D[x^2 + y^2, x]                                                         
+
+Out[1]= 2 x
+
+In[2]:= Dt[x^2 + y^2, x]                                                        
+
+Out[2]= 2 x + 2 y Dt[y, x]
+
+In[3]:= % /. Dt[y, x] -> yx                                                     
+
+Out[3]= 2 x + 2 y yx
+
+In[4]:= y/: Dt[y, x] = 0                                                        
+
+Out[4]= 0
+
+In[5]:= Dt[x^2 + y^2 + x^2, x]                                                  
+
+Out[5]= 4 x
+
+In[6]:= Dt[x^2 + y^2 + z^2, x]                                                  
+
+Out[6]= 2 x + 2 z Dt[z, x]
+
+In[7]:= Clear[y]                                                                
+
+In[8]:= Dt[x^2 + y^2 + z^2, Constants->{z}]                                     
+
+Out[8]= 2 x Dt[x, Constants -> {z}] + 2 y Dt[y, Constants -> {z}]
+
+In[9]:= Dt[x^2 + y^2 + z^2, x, Constants->{z}]                                  
+
+Out[9]= 2 x + 2 y Dt[y, x, Constants -> {z}]
+
+In[10]:= SetAttributes[c, Constant]                                             
+
+In[11]:= Dt[a^2 + c x^2, x]                                                     
+
+Out[11]= 2 c x + 2 a Dt[a, x]
+
+In[12]:= Dt[a^2 + c[x] x^2, x]                                                  
+
+Out[12]= 2 x c[x] + 2 a Dt[a, x]
+
+In[13]:= Dt[x^2 + c y^2]                                                        
+
+Out[13]= 2 x Dt[x] + 2 c y Dt[y]
+
+In[14]:= % /. Dt[y] -> dy                                                       
+
+Out[14]= 2 c dy y + 2 x Dt[x]
+
+In[15]:=                                                                        
