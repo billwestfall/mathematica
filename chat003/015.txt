@@ -1,0 +1,110 @@
+pi@raspberrypi:~ $ wolfram
+Wolfram Language 11.0.1 Engine for Linux ARM (32-bit)
+Copyright 1988-2017 Wolfram Research, Inc.
+
+In[1]:= eqn = {x == 1 + 2 a, y == 9 + 2 x}                                      
+
+Out[1]= {x == 1 + 2 a, y == 9 + 2 x}
+
+In[2]:= Solve[eqn, {x, y}]                                                      
+
+Out[2]= {{x -> 1 + 2 a, y -> 11 + 4 a}}
+
+In[3]:= Solve[eqn, {x, a}]                                                      
+
+               -9 + y       -11 + y
+Out[3]= {{x -> ------, a -> -------}}
+                 2             4
+
+In[4]:= Solve[eqn, {x, y}]                                                      
+
+Out[4]= {{x -> 1 + 2 a, y -> 11 + 4 a}}
+
+In[5]:= Solve[eqn, {x, a}]                                                      
+
+               -9 + y       -11 + y
+Out[5]= {{x -> ------, a -> -------}}
+                 2             4
+
+In[6]:= Eliminate[eqn, a]                                                       
+
+Out[6]= -9 + y == 2 x
+
+In[7]:= Eliminate[eqn, y]                                                       
+
+Out[7]= -1 + x == 2 a
+
+In[8]:= Eliminate[ {f == x^5 + y^5, a == x + y, b == x y}; {x, y}]              
+
+Eliminate::argmu: 
+   Eliminate called with 1 argument; 2 or more arguments are expected.
+
+Out[8]= Eliminate[{x, y}]
+
+In[9]:= Eliminate[ {f == x^5 + y^5, a == x + y, b == x y}, {x, y}]              
+
+              5      3          2
+Out[9]= f == a  - 5 a  b + 5 a b
+
+In[10]:= sincos = Sin[x]^2 + Cos[x]^2 == 1                                      
+
+               2         2
+Out[10]= Cos[x]  + Sin[x]  == 1
+
+In[11]:= Solve[ { Sin[x] + 2 Cos[x] == 1, sincos }, {Sin[x], Cos[x] } ]         
+
+                       3             4
+Out[11]= {{Sin[x] -> -(-), Cos[x] -> -}, {Sin[x] -> 1, Cos[x] -> 0}}
+                       5             5
+
+In[12]:= Solve[ { Sin[x] == Cos[x] , sincos }, {Sin[x], Cos[x] } ]              
+
+                          1                     1
+Out[12]= {{Sin[x] -> -(-------), Cos[x] -> -(-------)}, 
+                       Sqrt[2]               Sqrt[2]
+ 
+                   1                  1
+>    {Sin[x] -> -------, Cos[x] -> -------}}
+                Sqrt[2]            Sqrt[2]
+
+In[13]:= Solve[{x + y == 1, x - y == 2}, {x, y}]                                
+
+                3         1
+Out[13]= {{x -> -, y -> -(-)}}
+                2         2
+
+In[14]:= Solve[{x + y == 1 && x - y == 2}, {x, y}]                              
+
+                3         1
+Out[14]= {{x -> -, y -> -(-)}}
+                2         2
+
+In[15]:= Solve[x + y == 1 || x - y == 2, x]                                     
+
+Out[15]= {{x -> 1 - y}, {x -> 2 + y}}
+
+In[16]:= Solve[x^3 == x, x]                                                     
+
+Out[16]= {{x -> -1}, {x -> 0}, {x -> 1}}
+
+In[17]:= Solve[x^3 == x && x != 0, x]                                           
+
+Out[17]= {{x -> -1}, {x -> 1}}
+
+In[18]:= Solve[x^3 == x && x != 1 || x^2 == 2, x]                               
+
+Out[18]= {{x -> -1}, {x -> 0}, {x -> -Sqrt[2]}, {x -> Sqrt[2]}}
+
+In[19]:= Reduce[x^2 == x, x]                                                    
+
+Out[19]= x == 0 || x == 1
+
+In[20]:= Reduce[x^5 == x && !%, x]                                              
+
+Out[20]= x == -1 || x == -I || x == I
+
+In[21]:= SolveAlways[ Implies[ x + y == 1, a x^2 + b x y + c y^2 == 1 ], {x, y}]
+                                                                                
+
+Out[21]= {{a -> 1, b -> 2, c -> 1}}
+
