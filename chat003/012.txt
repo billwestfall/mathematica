@@ -1,0 +1,184 @@
+pi@raspberrypi:~ $ wolfram
+Wolfram Language 11.0.1 Engine for Linux ARM (32-bit)
+Copyright 1988-2017 Wolfram Research, Inc.
+
+In[1]:= SetCoordinates[Spherical]                                               
+
+Out[1]= SetCoordinates[Spherical]
+
+In[2]:= CoordinateSystem                                                        
+
+Out[2]= CoordinateSystem
+
+In[3]:= Dot[{1,Pi/2,0},{1,Pi/2,Pi/2}]                                           
+
+              2
+            Pi
+Out[3]= 1 + ---
+             4
+
+In[4]:= Together[Div[{1,1,1}/(x^2 + y^2 + z^2), Cartesian[x,y,z]]]              
+
+Div::nocoord: Cartesian[x, y, z] is not a non-empty list of valid variables.
+
+Div::nocoord: Cartesian[x, y, z] is not a non-empty list of valid variables.
+
+                  1             1             1
+Out[4]= Div[{------------, ------------, ------------}, Cartesian[x, y, z]]
+              2    2    2   2    2    2   2    2    2
+             x  + y  + z   x  + y  + z   x  + y  + z
+
+In[5]:= Together[Curl[{1,1,1}/(x^2 + y^2 + z^2),Cartesian[x,y,z]]]              
+
+Curl::nocoord: Cartesian[x, y, z] is not a non-empty list of valid variables.
+
+                   1             1             1
+Out[5]= Curl[{------------, ------------, ------------}, Cartesian[x, y, z]]
+               2    2    2   2    2    2   2    2    2
+              x  + y  + z   x  + y  + z   x  + y  + z
+
+In[6]:= SetCoordinates[Cartesian[x,y,z]];                                       
+
+In[7]:= Div[Curl[{1,1,1}/(x^2 + y^2 + z^2)]]                                    
+
+Curl::argtu: Curl called with 1 argument; 2 or 3 arguments are expected.
+
+Div::argtu: Div called with 1 argument; 2 or 3 arguments are expected.
+
+                       1             1             1
+Out[7]= Div[Curl[{------------, ------------, ------------}]]
+                   2    2    2   2    2    2   2    2    2
+                  x  + y  + z   x  + y  + z   x  + y  + z
+
+In[8]:= GraphicsRow[{Plot3D[x^2 y^3, {x,-1,1},{y,-1,1},PlotRange -> Full], Vecto
+rPlot[Evaluate[Drop[Grad[x^2 y^3 1, Cartesian[x,y,z]],-1]],{x,-1,1},{y,-1,1}]},I
+mageSize -> 500]                                                                
+
+Grad::nocoord: Cartesian[x, y, z] is not a non-empty list of valid variables.
+
+Grad::argtu: Grad called with 1 argument; 2 or 3 arguments are expected.
+
+Grad::argtu: Grad called with 1 argument; 2 or 3 arguments are expected.
+
+Grad::argtu: Grad called with 1 argument; 2 or 3 arguments are expected.
+
+General::stop: Further output of Grad::argtu
+     will be suppressed during this calculation.
+
+Out[8]= -Graphics-
+
+In[9]:= Sum[1/n^2,{n, 1, Infinity}]                                             
+
+          2
+        Pi
+Out[9]= ---
+         6
+
+In[10]:= Product[1-1/i^3,{i,2,Infinity}]                                        
+
+              Sqrt[3] Pi
+         Cosh[----------]
+                  2
+Out[10]= ----------------
+               3 Pi
+
+In[11]:= Sum[1/n, {n,1,Infinity}]                                               
+
+Sum::div: Sum does not converge.
+
+             1
+Out[11]= Sum[-, {n, 1, Infinity}]
+             n
+
+In[12]:= Table[{1/n^k,SumConvergence[1/n^k,n]},{k,1,4}] //TableForm             
+
+Out[12]//TableForm= 1
+                    -
+                    n     False
+
+                     -2
+                    n     True
+
+                     -3
+                    n     True
+
+                     -4
+                    n     True
+
+In[13]:= Sum[(m^2n)/(m2^n + (2^m)*n),{n,1,Infinity}, {m,1,Infinity}]            
+
+                 2
+                m  n
+Out[13]= Sum[----------, {n, 1, Infinity}, {m, 1, Infinity}]
+               n    m
+             m2  + 2  n
+
+In[14]:= Sum[(((4k)!)*(1103 + 26390k))/((k!)^4)*(396^4k),{k,0,Infinity}]*((2*Sqr
+t[2])/9801)                                                                     
+
+Sum::div: Sum does not converge.
+
+                       24591257856 k (1103 + 26390 k) (4 k)!
+         2 Sqrt[2] Sum[-------------------------------------, {k, 0, Infinity}]
+                                          4
+                                        k!
+Out[14]= ----------------------------------------------------------------------
+                                          9801
+
+In[15]:= Sum[((3k)!(5+10k))/(((k!)^4)/300^4k),{k,0,Infinity}]                   
+
+                                 1
+Power::infy: Infinite expression - encountered.
+                                 0
+
+             8100000000 (5 + 10 k) (3 k)!
+Out[15]= Sum[----------------------------, {k, 0, Infinity}]
+                            4
+                        k k!
+
+In[16]:= (Product[(1+(1/4n^2-1)),{n,1,Infinity}])/(Sum[(1/(4n^2-1)),{n,1,Infinit
+y}])                                                                            
+
+Product::div: Product does not converge.
+
+Product::div: Product does not converge.
+
+                    2
+                   n
+Out[16]= 2 Product[--, {n, 1, Infinity}]
+                   4
+
+In[17]:= Sum[(3k^3)-k^2+3k+5,{k,0,Infinity}]                                    
+
+Sum::div: Sum does not converge.
+
+                        2      3
+Out[17]= Sum[5 + 3 k - k  + 3 k , {k, 0, Infinity}]
+
+In[18]:= Product[(k^2-3k+5),{k,0,Infinity}]                                     
+
+Product::div: Product does not converge.
+
+                            2
+Out[18]= Product[5 - 3 k + k , {k, 0, Infinity}]
+
+In[19]:= ZTransform[n^2,n,z]                                                    
+
+         z (1 + z)
+Out[19]= ---------
+                 3
+         (-1 + z)
+
+In[20]:= Cases[Expand[Sum[x1^n,{n,4,8}],Sum[x2^n,{n,2,6}],Sum[x3^n,{n,2,5}]],x1^
+n1_*x^n2_*x3^n3_ /; n1 + n2 + n3 == 12 -> {n1,n2,n3}]                           
+
+                                               2     3     4     5
+Expand::nonopt: Options expected (instead of x3  + x3  + x3  + x3
+                                    4     5     6     7     8
+    ) beyond position 2 in Expand[x1  + x1  + x1  + x1  + x1 , 
+       2     3     4     5     6    2     3     4     5
+     x2  + x2  + x2  + x2  + x2 , x3  + x3  + x3  + x3 ]. An option must be a
+     rule or a list of rules.
+
+Out[20]= {}
+
