@@ -1,0 +1,248 @@
+
+pi@raspberrypi:~ $ wolfram
+Wolfram Language 11.0.1 Engine for Linux ARM (32-bit)
+Copyright 1988-2017 Wolfram Research, Inc.
+
+In[1]:= D[Log[x]^2, x]                                                          
+
+        2 Log[x]
+Out[1]= --------
+           x
+
+In[2]:= D[f[x]^2, x]                                                            
+
+Out[2]= 2 f[x] f'[x]
+
+In[3]:= D[x f[x^2], x]                                                          
+
+           2       2     2
+Out[3]= f[x ] + 2 x  f'[x ]
+
+In[4]:= D[%, x]                                                                 
+
+                2       3      2
+Out[4]= 6 x f'[x ] + 4 x  f''[x ]
+
+In[5]:= D[g[x^2, y^2], x]                                                       
+
+             (1,0)  2   2
+Out[5]= 2 x g     [x , y ]
+
+In[6]:= D[g[x, y],x, x, y]                                                      
+
+         (2,1)
+Out[6]= g     [x, y]
+
+In[7]:= % /. x->0                                                               
+
+         (2,1)
+Out[7]= g     [0, y]
+
+In[8]:= f' // FullForm                                                          
+
+Out[8]//FullForm= Derivative[1][f]
+
+In[9]:= f'[x] // FullForm                                                       
+
+Out[9]//FullForm= Derivative[1][f][x]
+
+In[10]:= f''[x] // FullForm                                                     
+
+Out[10]//FullForm= Derivative[2][f][x]
+
+In[11]:= D[g[x, y], y]                                                          
+
+          (0,1)
+Out[11]= g     [x, y]
+
+In[12]:= % // FullForm                                                          
+
+Out[12]//FullForm= Derivative[0, 1][g][x, y]
+
+In[13]:= D[g[x, y], {y, 2}] // FullForm                                         
+
+Out[13]//FullForm= Derivative[0, 2][g][x, y]
+
+In[14]:= D[g[x, y], x, y, y] // FullForm                                        
+
+Out[14]//FullForm= Derivative[1, 2][g][x, y]
+
+In[15]:= D[g[x, y], y, y, x] // FullForm                                        
+
+Out[15]//FullForm= Derivative[1, 2][g][x, y]
+
+In[16]:= D[g[x, x], x]                                                          
+
+          (0,1)          (1,0)
+Out[16]= g     [x, x] + g     [x, x]
+
+In[17]:= % // FullForm                                                          
+
+Out[17]//FullForm= Plus[Derivative[0, 1][g][x, x], Derivative[1, 0][g][x, x]]
+
+In[18]:= f'[0] // FullForm                                                      
+
+Out[18]//FullForm= Derivative[1][f][0]
+
+In[19]:= D[f[x^2], x]                                                           
+
+                 2
+Out[19]= 2 x f'[x ]
+
+In[20]:= % /. x->2                                                              
+
+Out[20]= 4 f'[4]
+
+In[21]:= h[x_] := x^4                                                           
+
+In[22]:= D[h[x], x]                                                             
+
+            3
+Out[22]= 4 x
+
+In[23]:= h'[x]                                                                  
+
+            3
+Out[23]= 4 x
+
+In[24]:= h'                                                                     
+
+             3
+Out[24]= 4 #1  & 
+
+In[25]:= TN'                                                                    
+
+Out[25]= TN'
+
+In[26]:= Tan'                                                                   
+
+                2
+Out[26]= Sec[#1]  & 
+
+In[27]:= %[y]                                                                   
+
+               2
+Out[27]= Sec[y]
+
+In[28]:= f'[x_] := fp[x]                                                        
+
+In[29]:= D[f[x^2], x]                                                           
+
+                 2
+Out[29]= 2 x fp[x ]
+
+In[30]:= D[%, x]                                                                
+
+               2       2      2
+Out[30]= 2 fp[x ] + 4 x  fp'[x ]
+
+In[31]:= g'[0] = g0                                                             
+
+Out[31]= g0
+
+In[32]:= D[g[x]^2, x] /. x->0                                                   
+
+Out[32]= 2 g0 g[0]
+
+In[33]:= g''[x_] = gpp[x]                                                       
+
+Out[33]= gpp[x]
+
+In[34]:= D[g[x]^2, {x, 2}]                                                      
+
+                                2
+Out[34]= 2 g[x] gpp[x] + 2 g'[x]
+
+In[35]:= Derivative[0, 2][g][x_, y_] := g2p[x, y]                               
+
+In[36]:= Integrate[x^2, x]                                                      
+
+          3
+         x
+Out[36]= --
+         3
+
+In[37]:= D[ % + c , x ]                                                         
+
+          2
+Out[37]= x
+
+In[38]:= Integrate[1/(x^2 - 1), x]                                              
+
+         Log[1 - x]   Log[1 + x]
+Out[38]= ---------- - ----------
+             2            2
+
+In[39]:= D[%, x]                                                                
+
+            -1           1
+Out[39]= --------- - ---------
+         2 (1 - x)   2 (1 + x)
+
+In[40]:= Simplify[%]                                                            
+
+            1
+Out[40]= -------
+               2
+         -1 + x
+
+In[41]:= Integrate[a x^2, x]                                                    
+
+            3
+         a x
+Out[41]= ----
+          3
+
+In[42]:= Integrate[x b[x]^2, b[x]]                                              
+
+               3
+         x b[x]
+Out[42]= -------
+            3
+
+In[43]:= Integrate[x^n, x]                                                      
+
+          1 + n
+         x
+Out[43]= ------
+         1 + n
+
+In[44]:= Integrate[x^-1, x]                                                     
+
+Out[44]= Log[x]
+
+In[45]:= Integrate[1/(x^2 - 8), x]                                              
+
+         Log[2 Sqrt[2] - x] - Log[2 Sqrt[2] + x]
+Out[45]= ---------------------------------------
+                        4 Sqrt[2]
+
+In[46]:= Integrate[1/(x^2 + 8), x]                                              
+
+                    x
+         ArcTan[---------]
+                2 Sqrt[2]
+Out[46]= -----------------
+             2 Sqrt[2]
+
+In[47]:= Integrate[1/(x^2 + a), x]                                              
+
+                   x
+         ArcTan[-------]
+                Sqrt[a]
+Out[47]= ---------------
+             Sqrt[a]
+
+In[48]:= a/: Sign[a] = -1                                                       
+
+Out[48]= -1
+
+In[49]:= Integrate[1/(x^2 + a), x]                                              
+
+                   x
+         ArcTan[-------]
+                Sqrt[a]
+Out[49]= ---------------
+             Sqrt[a]
+
+In[50]:=                                                                        
