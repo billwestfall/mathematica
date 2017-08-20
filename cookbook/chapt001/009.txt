@@ -1,0 +1,38 @@
+Wolfram Language 11.0.1 Engine for Linux ARM (32-bit)
+Copyright 1988-2017 Wolfram Research, Inc.
+
+In[1]:= ClearOut[x_ /; PosIntQ[x] || PosIntListQ[x]] := 
+Module[{a = Flatten{x}], k = 1}, Unprotect[Out]; For[k, 
+k <= Length[a], k++, Out[a[[k]]] =. ]; Protect[Out];]   
+
+Syntax::sntxf: 
+   "rOut[x_ /; PosIntQ[x] || PosIntListQ[x]] :=
+      Module[{a = Flatten{x}" cannot be followed by 
+    "], k = 1}, Unprotect[Out]; For[k, k <= Length[a],
+      k++, Out[a[[k]]] =. ]; Protect[Out];]".
+
+
+In[2]:= ClearOut[x_ /; PosIntQ[x] || PosIntListQ[x]] := 
+Module[{a = Flatten[{x}], k = 1}, Unprotect[Out]; For[k,
+ k <= Length[a], k++, Out[a[[k]]] =. ]; Protect[Out];]  
+                                                        
+In[3]:= {Out[1508], Out[1510], Out[1511], Out[1515]}    
+
+Out[3]= {Out[1508], Out[1510], Out[1511], Out[1515]}
+
+In[4]:= AgnAvzVsv = 80                                  
+
+Out[4]= 80
+
+In[5]:= {a=42,b=90,c:=75,d=590,h5:=69,Kr=20,Art=x+Sin[y]
+}                                                       
+
+Out[5]= {42, 90, Null, 590, Null, 20, x + Sin[y]}
+
+In[6]:= Clear[{42,90,75,590,69,20,x + Sin[y]}]          
+
+Clear::ssym: 
+   {42, 90, 75, 590, 69, 20, x + Sin[y]}
+     is not a symbol or a string.
+
+In[7]:= Clear[a,b,c,d,h5,Kr,Art]  
