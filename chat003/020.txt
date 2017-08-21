@@ -1,0 +1,171 @@
+billw@billw-ThinkPad-X220:~$ ssh pi@10.0.0.225
+pi@10.0.0.225's password: 
+
+The programs included with the Debian GNU/Linux system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Debian GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent
+permitted by applicable law.
+Last login: Sun Aug 20 01:29:57 2017 from 10.0.0.184
+pi@raspberrypi:~ $ wolfram
+Wolfram Language 11.0.1 Engine for Linux ARM (32-bit)
+Copyright 1988-2017 Wolfram Research, Inc.
+
+In[1]:= Integrate[x/((x-1)(x+2)), x]                         
+
+        Log[1 - x]   2 Log[2 + x]
+Out[1]= ---------- + ------------
+            3             3
+
+In[2]:= Integrate[1/(1 + 3x + x^5), x]                       
+
+                             5     Log[x - #1]
+Out[2]= RootSum[1 + 3 #1 + #1  & , ----------- & ]
+                                            4
+                                    3 + 5 #1
+
+In[3]:= Integrate[x^4 Log[x]^2, x]                           
+
+           5      5           5       2
+        2 x    2 x  Log[x]   x  Log[x]
+Out[3]= ---- - ----------- + ----------
+        125        25            5
+
+In[4]:= Integrate[Sin[x]^3 Cos[x}^2, x]                      
+
+Syntax::sntxf: 
+   "Integrate[Sin[x]^3 Cos[x" cannot be followed by "}^2, x]"
+
+    .
+
+In[5]:= Integrate[Sin[x]^3 Cos[x]^2, x]                      
+
+        -Cos[x]   Cos[3 x]   Cos[5 x]
+Out[5]= ------- - -------- + --------
+           8         48         80
+
+In[6]:= Integrate[Sin[Log[x]], x]                            
+
+        -(x Cos[Log[x]])   x Sin[Log[x]]
+Out[6]= ---------------- + -------------
+               2                 2
+
+In[7]:= Integrate[Sin[Sin[x]], x]                            
+
+Out[7]= Integrate[Sin[Sin[x]], x]
+
+In[8]:= Integrate[Log[1-x]/x, x]                             
+
+Out[8]= -PolyLog[2, x]
+
+In[9]:= Integrate[Log[Log[x]], x]                            
+
+Out[9]= x Log[Log[x]] - LogIntegral[x]
+
+In[10]:= Integrate[4 Cos[Cos[x]], x]                         
+
+Out[10]= 4 Integrate[Cos[Cos[x]], x]
+
+In[11]:= Integrate[(1 + Log[x]^2)/(1 - Log[x]), x]           
+
+Out[11]= -2 E ExpIntegralEi[-1 + Log[x]] - x Log[x]
+
+In[12]:= Integrate[f'[x], x]                                 
+
+Out[12]= f[x]
+
+In[13]:= Integrate[f'[x] f[x]^2, x]                          
+
+             3
+         f[x]
+Out[13]= -----
+           3
+
+In[14]:= D[Log[Log[Log[x]]], x]                              
+
+                  1
+Out[14]= --------------------
+         x Log[x] Log[Log[x]]
+
+In[15]:= Integrate[%, x]                                     
+
+Out[15]= Log[Log[Log[x]]]
+
+In[16]:= Integrate[x^2, {x, a, b}]                           
+
+           3    3
+         -a    b
+Out[16]= --- + --
+          3    3
+
+In[17]:= Integrate[x^2 + y^2, {x, 0, a}, {y, 0, b}]          
+
+               2    2
+         a b (a  + b )
+Out[17]= -------------
+               3
+
+In[18]:= Integrate[x^2 + y^2, {x, 0, a}, {y, 0, x}]          
+
+          4
+         a
+Out[18]= --
+         3
+
+In[19]:= Integrate[Sin[Sin[x]], x]                           
+
+Out[19]= Integrate[Sin[Sin[x]], x]
+
+In[20]:= Unprotect[Integrate]                                
+
+Out[20]= {Integrate}
+
+In[21]:= Integrate[Sin[Sin[a_. + b_. x]], x] := Jones[a, x]/b
+                                                             
+
+In[22]:= Integrate[Sin[Sin[3x]], x]                          
+                                                             
+         Jones[0, x]
+Out[22]= -----------
+              3
+
+In[23]:= Integrate[x^2 f[x], x]                              
+
+                    2
+Out[23]= Integrate[x  f[x], x]
+
+In[24]:= D[%, x]                                             
+
+          2
+Out[24]= x  f[x]
+
+In[25]:= Integrate[f[x], {x, a[x], b[x]}]                    
+
+Out[25]= Integrate[f[x], {x, a[x], b[x]}]
+
+In[26]:= D[%, x]                                             
+
+Out[26]= -(f[a[x]] a'[x]) + f[b[x]] b'[x]
+
+In[27]:= defint = Integrate[f[x], {x, a[x], b[x]}]           
+
+Out[27]= Integrate[f[x], {x, a[x], b[x]}]
+
+In[28]:= D[defint, x]                                        
+
+Out[28]= -(f[a[x]] a'[x]) + f[b[x]] b'[x]
+
+In[29]:= defint = Integrate[f[x], {x, a, b}]                 
+
+Out[29]= Integrate[f[x], {x, a, b}]
+
+In[30]:= D[defint, x]                                        
+
+Out[30]= 0
+
+In[31]:= Dt[defint, x]                                       
+
+Out[31]= -(Dt[a, x] f[a]) + Dt[b, x] f[b]
+
+In[32]:=                                                     
