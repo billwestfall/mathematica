@@ -1,0 +1,54 @@
+pi@raspberrypi:~ $ wolfram
+Wolfram Language 11.0.1 Engine for Linux ARM (32-bit)
+Copyright 1988-2017 Wolfram Research, Inc.
+
+In[1]:= coffeeIQ = {{2,123},{1,112},{1,102},{1,98},{0,79},{0,87},{1,102},{2,120}
+,{2,120},{3,145}};                                                              
+
+In[2]:= lm = LinearModelFit[coffeeIQ,x,x];                                      
+
+In[3]:= Show[ListPlot[coffeIQ],Plot[lm[x],{x,0,4}],ImageSize->Small]            
+
+ListPlot::lpn: coffeIQ is not a list of numbers or pairs of numbers.
+
+Show::gcomb: Could not combine the graphics objects in 
+    Show[ListPlot[coffeIQ], -Graphics-, ImageSize -> Small].
+
+Out[3]= Show[ListPlot[coffeIQ], -Graphics-, ImageSize -> Small]
+
+In[4]:= Normal[lm]                                                              
+
+Out[4]= 83.0247 + 19.8272 x
+
+In[5]:= experiments = {{1,110},{1,100},{1,120},{1,125},{1,120},{1,120},{1,115},{
+1,98},{1,95},{1,91},{0,100},{0,95},{0,100},{0,122},{0,115},{0,88},{0,97},{0,87},
+{0,92},{0,76}};                                                                 
+
+In[6]:= Needs["ANOVA"]                                                          
+
+Needs::cxt: Invalid context specified at position 1 in Needs[ANOVA]
+    . A context must consist of valid symbol names separated by and ending with 
+    `.
+
+Out[6]= Needs[ANOVA]
+
+In[7]:= ANOVA[experiments]                                                      
+
+Out[7]= ANOVA[{{1, 110}, {1, 100}, {1, 120}, {1, 125}, {1, 120}, {1, 120}, 
+ 
+>     {1, 115}, {1, 98}, {1, 95}, {1, 91}, {0, 100}, {0, 95}, {0, 100}, 
+ 
+>     {0, 122}, {0, 115}, {0, 88}, {0, 97}, {0, 87}, {0, 92}, {0, 76}}]
+
+In[8]:= (ANOVA /. ANOVA[experiments])[[1]]                                      
+
+ReplaceAll::reps: 
+   {ANOVA[{{1, 110}, {1, 100}, {1, 120}, {1, 125}, {1, 120}, {1, 120}, 
+       {1, 115}, {1, 98}, {1, 95}, {1, 91}, {0, 100}, {0, 95}, <<2>>, {0, 115}, 
+       {0, 88}, {0, 97}, {0, 87}, {0, 92}, {0, 76}}]} is neither a list of
+     replacement rules nor a valid dispatch table, and so cannot be used for
+     replacing.
+
+Out[8]= ANOVA
+
+In[9]:=  
