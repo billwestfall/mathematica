@@ -1,0 +1,204 @@
+pi@raspberrypi:~ $ wolfram
+Wolfram Language 11.0.1 Engine for Linux ARM (32-bit)
+Copyright 1988-2017 Wolfram Research, Inc.
+
+In[1]:= DSolve[y'[x] + y[x] == 1, y[x], x]                                      
+
+                      C[1]
+Out[1]= {{y[x] -> 1 + ----}}
+                        x
+                       E
+
+In[2]:= y[x] + 2y'[x] + y[0] /. %                                               
+
+             C[1]
+Out[2]= {1 + ---- + y[0] + 2 y'[x]}
+               x
+              E
+
+In[3]:= DSolve[y'[x] + y[x] == 1, y, x]                                         
+
+                                 C[1]
+Out[3]= {{y -> Function[{x}, 1 + ----]}}
+                                   x
+                                  E
+
+In[4]:= y[x] + 2y'[x] + y[0] /. %                                               
+
+                    C[1]
+Out[4]= {2 + C[1] - ----}
+                      x
+                     E
+
+In[5]:= DSolve[{y[x] == -z'[x], z[x] == -y'[x]}, {y, x}, x]                     
+
+DSolve::dsfun: x cannot be used as a function.
+
+Out[5]= DSolve[{y[x] == -z'[x], z[x] == -y'[x]}, {y, x}, x]
+
+In[6]:= DSolve[{y[x] == -z'[x], z[x] == -y'[x]}, {y, z}, x]                     
+
+                                   2 x                2 x
+                             (1 + E   ) C[1]   (-1 + E   ) C[2]
+Out[6]= {{y -> Function[{x}, --------------- - ----------------], 
+                                     x                  x
+                                  2 E                2 E
+ 
+                                  2 x                2 x
+                         -((-1 + E   ) C[1])   (1 + E   ) C[2]
+>     z -> Function[{x}, ------------------- + ---------------]}}
+                                   x                   x
+                                2 E                 2 E
+
+In[7]:= DSolve[y[x] y'[x] == 1, y, x]                                           
+
+Out[7]= {{y -> Function[{x}, -(Sqrt[2] Sqrt[x + C[1]])]}, 
+ 
+>    {y -> Function[{x}, Sqrt[2] Sqrt[x + C[1]]]}}
+
+In[8]:= DSolve[{y'[x] == a y[x], y[0] == 1}, y[x], x]                           
+
+                   a x
+Out[8]= {{y[x] -> E   }}
+
+In[9]:= Series[ Exp[x], {x, 0, 4}]                                              
+
+                 2    3    4
+                x    x    x        5
+Out[9]= 1 + x + -- + -- + -- + O[x]
+                2    6    24
+
+In[10]:= Series[ Exp[x], {x, 0, 3}]                                             
+
+                  2    3
+                 x    x        4
+Out[10]= 1 + x + -- + -- + O[x]
+                 2    6
+
+In[11]:= Series[ [x], {x, 0, 3}]                                                
+
+Syntax::sntxf: "Series[ [x]" cannot be followed by ", {x, 0, 3}]".
+
+
+In[12]:= Series[ {x, 0, 3}]                                                     
+
+Series::argmu: Series called with 1 argument; 2 or more arguments are expected.
+
+Out[12]= Series[{x, 0, 3}]
+
+In[13]:= Series[ x {x, 0, 3}]                                                   
+
+Series::argmu: Series called with 1 argument; 2 or more arguments are expected.
+
+                  2
+Out[13]= Series[{x , 0, 3 x}]
+
+In[14]:= Series[ x, {x, 0, 3}]                                                  
+
+                 4
+Out[14]= x + O[x]
+
+In[15]:= Series[ Log[x], {x, 0, 3}]                                             
+
+                      4
+Out[15]= Log[x] + O[x]
+
+In[16]:= Series[ f[x], {x, 0, 3}]                                               
+
+                           2           3  (3)
+                          x  f''[0]   x  f   [0]       4
+Out[16]= f[0] + f'[0] x + --------- + ---------- + O[x]
+                              2           6
+
+In[17]:= Series[ Exp[x], {x, 1, 4}]                                             
+
+                                    2             3             4
+                          E (-1 + x)    E (-1 + x)    E (-1 + x)             5
+Out[17]= E + E (-1 + x) + ----------- + ----------- + ----------- + O[-1 + x]
+                               2             6            24
+
+In[18]:= Series[ Exp[x]/x^2, {x, 0, 4}]                                         
+
+                            2    3     4
+          -2   1   1   x   x    x     x         5
+Out[18]= x   + - + - + - + -- + --- + --- + O[x]
+               x   2   6   24   120   720
+
+In[19]:= Series[ Exp[Sqrt[x]], {x, 0, 3}]                                       
+
+                            3/2    2    5/2    3
+                       x   x      x    x      x         7/2
+Out[19]= 1 + Sqrt[x] + - + ---- + -- + ---- + --- + O[x]
+                       2    6     24   120    720
+
+In[20]:= Series[ Exp[Sqrt[x]], {x, 0, 2}]                                       
+
+                            3/2    2
+                       x   x      x        5/2
+Out[20]= 1 + Sqrt[x] + - + ---- + -- + O[x]
+                       2    6     24
+
+In[21]:= Series[ Exp[2x] Log[x], {x, 0, 2}]                                     
+
+                                  2              3
+Out[21]= Log[x] + 2 x Log[x] + 2 x  Log[x] + O[x]
+
+In[22]:= Series[ Log[x], {x, 0, 2}]                                             
+
+                      3
+Out[22]= Log[x] + O[x]
+
+In[23]:= Series[ Log[2x], {x, 0, 2}]                                            
+
+                                 3
+Out[23]= (Log[2] + Log[x]) + O[x]
+
+In[24]:= Series[ Log[x^2], {x, 0, 2}]                                           
+
+                        3
+Out[24]= 2 Log[x] + O[x]
+
+In[25]:= Series[ Exp[1/x], {x, 0, 2}]                                           
+
+          1/x
+Out[25]= E
+
+In[26]:= Series[ Exp[1/x], {x, Infinity, 3}]                                    
+
+             1    1      1       1 4
+Out[26]= 1 + - + ---- + ---- + O[-]
+             x      2      3     x
+                 2 x    6 x
+
+In[27]:= Series[ Sin[x]/x^2, {x, 0, 3}]                                         
+
+                  3
+         1   x   x         4
+Out[27]= - - - + --- + O[x]
+         x   6   120
+
+In[28]:= Series[ {a + x}^n , {x, 0 , 2}]                                        
+
+                              -2 + n             2
+           n    -1 + n       a       (-1 + n) n x        3
+Out[28]= {a  + a       n x + --------------------- + O[x] }
+                                       2
+
+In[29]:= Series[ {a[x] + x}^n, {x, 0, 2}]                                       
+
+              n           -1 + n
+Out[29]= {a[0]  + n x a[0]       (1 + a'[0]) + 
+ 
+                      -2 + n            2         -1 + n
+       (-1 + n) n a[0]       (1 + a'[0])    n a[0]       a''[0]   2       3
+>     (---------------------------------- + -------------------) x  + O[x] }
+                       2                             2
+
+In[30]:= Series[ Exp[x y], {x, 0, 3}, {y, 0, 3}]                                
+
+                               2                 3
+                      4       y        4   2    y        4   3       4
+Out[30]= 1 + (y + O[y] ) x + (-- + O[y] ) x  + (-- + O[y] ) x  + O[x]
+                              2                 6
+
+In[31]:=                                                                        
