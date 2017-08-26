@@ -1,0 +1,153 @@
+pi@raspberrypi:~ $ wolfram
+Wolfram Language 11.0.1 Engine for Linux ARM (32-bit)
+Copyright 1988-2017 Wolfram Research, Inc.
+
+In[1]:= Series[Cos[x], {x, 0, 4}]                                               
+
+             2    4
+            x    x        5
+Out[1]= 1 - -- + -- + O[x]
+            2    24
+
+In[2]:= InputForm[%]                                                            
+
+Out[2]//InputForm= SeriesData[x, 0, {1, 0, -1/2, 0, 1/24}, 0, 5, 1]
+
+In[3]:= a x + Exp[x] + 0[x]+3                                                   
+
+             x
+Out[3]= 3 + E  + a x + 0[x]
+
+In[4]:= a x + Exp[x] + 0[x]^3                                                   
+
+         x             3
+Out[4]= E  + a x + 0[x]
+
+In[5]:= Series[ Exp[x], {x, 0, 4}]                                              
+
+                 2    3    4
+                x    x    x        5
+Out[5]= 1 + x + -- + -- + -- + O[x]
+                2    6    24
+
+In[6]:= %^2                                                                     
+
+                            3      4
+                     2   4 x    2 x        5
+Out[6]= 1 + 2 x + 2 x  + ---- + ---- + O[x]
+                          3      3
+
+In[7]:= Log[%]                                                                  
+
+                  5
+Out[7]= 2 x + O[x]
+
+In[8]:= Series[ Exp[x], {x, 0, 4}]                                              
+
+                 2    3    4
+                x    x    x        5
+Out[8]= 1 + x + -- + -- + -- + O[x]
+                2    6    24
+
+In[9]:= 1 / (1 - %)                                                             
+
+          1    1   x        3
+Out[9]= -(-) + - - -- + O[x]
+          x    2   12
+
+In[10]:= Series[Cos[x], {x, 0, 6}]                                              
+
+              2    4    6
+             x    x    x         7
+Out[10]= 1 - -- + -- - --- + O[x]
+             2    24   720
+
+In[11]:= D[%, x]                                                                
+
+               3    5
+              x    x         6
+Out[11]= -x + -- - --- + O[x]
+              6    120
+
+In[12]:= Integrate[%, x]                                                        
+
+           2    4    6
+         -x    x    x         7
+Out[12]= --- + -- - --- + O[x]
+          2    24   720
+
+In[13]:= Series[ Exp[x], {x, 0, 4}]                                             
+
+                  2    3    4
+                 x    x    x        5
+Out[13]= 1 + x + -- + -- + -- + O[x]
+                 2    6    24
+
+In[14]:= % + x^2                                                                
+
+                    2    3    4
+                 3 x    x    x        5
+Out[14]= 1 + x + ---- + -- + -- + O[x]
+                  2     6    24
+
+In[15]:= % + Sin[x]                                                             
+
+                      2    4
+                   3 x    x        5
+Out[15]= 1 + 2 x + ---- + -- + O[x]
+                    2     24
+
+In[16]:= (a + x) %^2                                                            
+
+                                      2              3        7 a   4       5
+Out[16]= a + (1 + 4 a) x + (4 + 7 a) x  + (7 + 6 a) x  + (6 + ---) x  + O[x]
+                                                               3
+
+In[17]:= f[Series[ Exp[x], {x, 0, 3} ] ]                                        
+
+                    2    3
+                   x    x        4
+Out[17]= f[1 + x + -- + -- + O[x] ]
+                   2    6
+
+In[18]:= Series[Sin[x], {x, 0, 5}]                                              
+
+              3    5
+             x    x         6
+Out[18]= x - -- + --- + O[x]
+             6    120
+
+In[19]:= % /. x -> Series[Sin[x], {x, 0, 5}]                                    
+
+              3    5
+             x    x        6
+Out[19]= x - -- + -- + O[x]
+             3    10
+
+In[20]:= Series[Sin[Sin[x]], {x, 0, 5}]                                         
+
+              3    5
+             x    x        6
+Out[20]= x - -- + -- + O[x]
+             3    10
+
+In[21]:= Series[Sin[y], {y, 0, 5}]                                              
+
+              3    5
+             y    y         6
+Out[21]= y - -- + --- + O[y]
+             6    120
+
+In[22]:= InverseSeries[%, x]                                                    
+
+              3      5
+             x    3 x        6
+Out[22]= x + -- + ---- + O[x]
+             6     40
+
+In[23]:= % /. x -> %%                                                           
+
+                 6
+Out[23]= y + O[y]
+
+In[24]:=                                                                        
