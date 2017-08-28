@@ -1,0 +1,23 @@
+data := { {60, 300}, {10, 390}}
+expectedValues[rc_List] := Module[{rowTotals,colTotals,grandTotal}, colTotals := Total[rc]; rowTotals := Total[Transpose[rc]]; grandTotal := Total[rowTotals]; Outer[Times,rowTotals,colTotals]/grandTotal]
+chiSquare[data_List] := Module[{ev}, ev = expectedValues[data]; Total[((data - ev)^2)/ev,2]]
+chiSquare[data] //N
+
+Needs["HypothesisTesting`"]
+ChiSquarePValue[45.4741,1]
+degreesOfFreedom[rc_List] := Times @@ (Dimensions[rc] -1)
+degreesOfFreedom[data]
+chiSqUpperP[criticalValue_,df_] := With[{infinity=1000},NIntegrate[PDF[ChiSquareDistribution[df_] := NIntegrate[PDF[ChiSquareDistribution[df],x]{x,0,criticalValue}] criticalValueUpper[alpha,df_] := FindRoot[chiSqUpper[alpha_,df_] := FindRoot[chi]]]]]
+
+FindClusters[{1,100,2,101,3,102,1000,1010,4,1020,7}]
+FindClusters[DictionaryLookup[_~~ "ead" ~~ _]]
+FindClusters[{1,100,2,101,3,102,1000,1010,4,1020,7},4]
+data = {{"Wanda", 41},{"Sal",44}, {"Leo",9},{"Salvatore",6},{"Steven",37},{"Adrian",3}};
+FindClusters[data /. {name_, age_} :> age -> name]
+FindClusters[data /. {name_, age_} :> age -> {name,age}]
+keys = {41,44,9,6,37,3};value = {"Wanda","Sal","Leo","Salvatore","Steven","Adrian"};
+FindClusters[keys -> values]
+FindClusters[data,DistanceFunction -> Function[{x,y}, Abs[x[[2]] - y[[2]]]]]
+data = Join[RandomReal[{-10,-5},{200.50}],RandomReal[{-5,0},{200, 50}], RandomReal[{0,1},{200,50}], RandomReal[{5,10}, {200, 50}]];
+Length[FindClusters[data]]
+Length[FindClusters[data,DistanceFunction -> CosineDistance]]
