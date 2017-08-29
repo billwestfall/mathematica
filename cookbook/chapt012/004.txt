@@ -1,0 +1,89 @@
+pi@raspberrypi:~ $ wolfram
+Wolfram Language 11.0.1 Engine for Linux ARM (32-bit)
+Copyright 1988-2017 Wolfram Research, Inc.
+
+In[1]:= data := { {60, 300}, {10, 390}}                                         
+
+In[2]:= expectedValues[rc_List] := Module[{rowTotals,colTotals,grandTotal}, colT
+otals := Total[rc]; rowTotals := Total[Transpose[rc]]; grandTotal := Total[rowTo
+tals]; Outer[Times,rowTotals,colTotals]/grandTotal]                             
+
+In[3]:= chiSquare[data_List] := Module[{ev}, ev = expectedValues[data]; Total[((
+data - ev)^2)/ev,2]]                                                            
+
+In[4]:= chiSquare[data] //N                                                     
+
+Out[4]= 45.4741
+
+In[5]:= FindClusters[{1,100,2,101,3,102,1000,1010,4,1020,7}]                    
+
+Out[5]= {{1, 2, 3, 4, 7}, {100, 101, 102}, {1000, 1010, 1020}}
+
+In[6]:= FindClusters[DictionaryLookup[_~~ "ead" ~~ _]]                          
+                                                                                
+Out[6]= {{beads, beady, heads, heady, leads, reads, ready}, {Meade, Reade}}
+
+In[7]:= FindClusters[{1,100,2,101,3,102,1000,1010,4,1020,7},4]                  
+
+Out[7]= {{1, 2, 3, 4, 7}, {100, 101, 102}, {1000, 1010}, {1020}}
+
+In[8]:= data = {{"Wanda", 41},{"Sal",44}, {"Leo",9},{"Salvatore",6},{"Steven",37
+},{"Adrian",3}};                                                                
+
+In[9]:= FindClusters[data /. {name_, age_} :> age -> name]                      
+
+Out[9]= {{Wanda, Sal, Steven}, {Leo, Salvatore, Adrian}}
+
+In[10]:= FindClusters[data /. {name_, age_} :> age -> {name,age}]               
+
+Out[10]= {{{Wanda, 41}, {Sal, 44}, {Steven, 37}}, 
+ 
+>    {{Leo, 9}, {Salvatore, 6}, {Adrian, 3}}}
+
+In[11]:= keys = {41,44,9,6,37,3};value = {"Wanda","Sal","Leo","Salvatore","Steve
+n","Adrian"};                                                                   
+
+In[12]:= FindClusters[keys -> values]                                           
+
+FindClusters::bddata: 
+   The labels values need to be a list of the same length as 
+    {41, 44, 9, 6, 37, 3}.
+
+Out[12]= FindClusters[{41, 44, 9, 6, 37, 3} -> values]
+
+In[13]:= keys = {41,44,9,6,37,3};                                               
+
+In[14]:= values = {"Wanda","Sal","Leo","Salvatore","Steven","Adrian"};          
+
+In[15]:= FindClusters[keys -> values]                                           
+
+Out[15]= {{Wanda, Sal, Steven}, {Leo, Salvatore, Adrian}}
+
+In[16]:= FindClusters[data,DistanceFunction -> Function[{x,y}, Abs[x[[2]] - y[[2
+]]]]]                                                                           
+
+FindClusters::nosup: FindClusters does not support this type of data. 
+
+Out[16]= FindClusters[{{Wanda, 41}, {Sal, 44}, {Leo, 9}, {Salvatore, 6}, 
+ 
+>     {Steven, 37}, {Adrian, 3}}, 
+ 
+>    DistanceFunction -> Function[{x, y}, Abs[x[[2]] - y[[2]]]]]
+
+In[17]:= data = Join[RandomReal[{-10,-5},{200.50}],RandomReal[{-5,0},{200, 50}],
+ RandomReal[{0,1},{200,50}], RandomReal[{5,10}, {200, 50}]];                    
+
+RandomReal::array: 
+   The array dimensions {200.5} given in position 2 of 
+    RandomReal[{-10, -5}, {200.5}]
+     should be a list of non-negative machine-sized integers giving the
+     dimensions for the result.
+
+Join::heads: Heads RandomReal and List at positions 1 and 2
+     are expected to be the same.
+
+In[18]:= data = Join[RandomReal[{-10,-5},{200,50}],RandomReal[{-5,0},{200, 50}],
+ RandomReal[{0,1},{200,50}], RandomReal[{5,10}, {200, 50}]];                    
+
+In[19]:= FindClusters[data,DistanceFunction -> Function[{x,y}, Abs[x[[2]] - y[[2
+]]]]]                                                                           
