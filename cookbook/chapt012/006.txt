@@ -1,0 +1,8 @@
+results=CellularAutomaton[1,{{1},0},100,{All,All}]
+Print @@@ (% /. {1 -> "#", 0 -> "."});
+results=CellularAutomaton[18,{{1},0},100,{All,All}]
+Print @@@ (% /. {1 -> "#", 0 -> "."});
+results=With[{width=201,steps=100},SeedRandom[1234];   NestList[Replace
+Part[Last[CellularAutomaton[18,#1,1,{All,All}]],         Random[Integer],Ceiling
+[width/2]]&,     ReplacePart[Table[0,{width}],1,Ceiling[width/2]],steps]]
+Print @@@ (% /. {1 -> "#", 0 -> "."});
