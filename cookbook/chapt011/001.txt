@@ -1,0 +1,32 @@
+Limit[Sin[x]/x,x->0]
+Limit[Sin[x^2]/x,x->0]
+Limit[Sin[x]/x^2,x->0]
+GraphicsRow[{Plot[Sin[x]/x,{x,-1,1}],Plot[Sin[x^2/x], {x,-1,1}],Plot[Sin[x]/x^2,{x,-1,1}]}]
+Limit[Sin[x]/x^2, x-> 0, Direction -> 1]
+Limit[Sin[x]/x^2, x-> 0, Direction -> -1]
+f[x_] = Piecewise[{{Sqrt[1/x^2],x< -0.3}, {1/x,x,x > 0.3}, {3.33, True}}]
+Plot[f[x], {x,-3,3}]
+GraphicsRow[{Plot[Clip[2Sin[x]],{x,-Pi,Pi},PlotLabel -> "Clip"],Plot[Sign[2Sin[x]],{x,-Pi,Pi},PlotLabel -> "Sign"], Plot[UnitStep[2Sin[x]],{x,-Pi,Pi},PlotLabel->"UnitStep"]},ImageSize -> {500,150}]
+D[Clip[2Sin[x]],x]
+Integrate[Clip[2Sin[x]],x]
+PiecewiseExpand[Max[w,x,y,z]]
+PiecewiseExpand[Clip[Min[x,y]]]
+Series[Sin[x],{x,0,10}]
+%//InputForm
+f[x_] := Evaluate[Normal[Series[Sin[x],{x,0,10}]]]
+GraphicsColumn[Table[Plot[{Sin[x],f[x]},{x, -nPi, nPi}], {n,1,3}]]
+fInv[x_] = Normal[InverseSeries[Series[Sin[x],{x,0,10}]]]
+Plot[{ArcSin[x],fInv[x]},{x,-1,1},ImageSize -> Small]
+D[SIn[x],x]
+D[Sin[x],{x,2}]
+D[Sin[x] Sin[y], {x,1}]
+D[Sin[x] Sin[y], x,x,y]
+D[Sin[x] Sin[y], {x,2},{y,1}]
+{Sin'[x], Sin''[x]}
+implicitFunction = x^4 + 2y[x]^2 == 8;
+Solve[D[implicitFunction, x],y'[x]]
+f1[x_] = D[Sin[Pi x Cos[x^2]], x];
+f2[x_] := Evaluate[D[Sin[Pi x Cos[x^2]], x]]
+{f1[2.], f2[2.]}
+f3[x_] := D[Sin[pi x Cos[x^2]], x]
+f3[2.]
