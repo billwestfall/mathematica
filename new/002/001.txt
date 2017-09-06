@@ -1,0 +1,77 @@
+pi@raspberrypi:~ $ wolfram
+Wolfram Language 11.0.1 Engine for Linux ARM (32-bit)
+Copyright 1988-2017 Wolfram Research, Inc.
+
+In[1]:= ArrayPlot[CellularAutomaton[{6681, 2, 3/2}, SeedRandom[4234]; RandomInte
+ger[1, 401], {100, {-100, 100}}], Frame -> False]                               
+
+Out[1]= -Graphics-
+
+In[2]:= ArrayPlot[CellularAutomaton[{110, 2, 1}, {{1}, 0}, {100, All}], Frame ->
+ False]                                                                         
+
+Out[2]= -Graphics-
+
+In[3]:= ArrayPlot[CellularAutomaton[{254, 2, 1}, {{1}, 0}, {100, All}], Frame ->
+ False]                                                                         
+
+Out[3]= -Graphics-
+
+In[4]:= ArrayPlot[CellularAutomaton[{250, 2, 1}, {{1}, 0}, {100, All}], Frame ->
+ False]                                                                         
+
+Out[4]= -Graphics-
+
+In[5]:= ArrayPlot[CellularAutomaton[{90, 2, 1}, {{1}, 0}, {100, All}], Frame -> 
+False]                                                                          
+
+Out[5]= -Graphics-
+
+In[6]:= ArrayPlot[CellularAutomaton[{30, 2, 1}, {{1}, 0}, {100, All}], Frame -> 
+False]                                                                          
+
+Out[6]= -Graphics-
+
+In[7]:= ArrayPlot[CellularAutomaton[{30, 2, 1}, {{1}, 0}, {500, All}], Frame -> 
+False]                                                                          
+
+Out[7]= -Graphics-
+
+In[8]:= ArrayPlot[CellularAutomaton[{30, 2, 1}, {{1}, 0}, {1500, All}], Frame ->
+ False]                                                                         
+
+Out[8]= -Graphics-
+
+In[9]:= ArrayPlot[CellularAutomaton[{250, 2, 1}, {{1}, 0}, {100, All}], Frame ->
+                                                                                
+         False]                                                                 
+
+Out[9]= -Graphics-
+
+In[10]:= ArrayPlot[CellularAutomaton[{110, 2, 1}, {{1}, 0}, {100, All}], Frame -
+>  False]                                                                       
+
+Out[10]= -Graphics-
+
+In[11]:= ArrayPlot[CellularAutomaton[{110, 2, 1}, {{1}, 0}, {100, All}],        
+In[11]:= ArrayPlot[CellularAutomaton[{110, 2, 1}, {{1}, 0}, {100, All}], Frame -
+>  False]                                                                       
+
+Out[11]= -Graphics-
+
+In[12]:= ArrayPlot[CellularAutomaton[{110, 2, 1}, {{1}, 0}, {700, All}], Frame -
+>  False]                                                                       
+
+Out[12]= -Graphics-
+
+In[13]:= ArrayPlot[CellularAutomaton[{110, 2, 1}, {{1}, 0}, {1400, All}], Frame 
+->  False]                                                                      
+
+Out[13]= -Graphics-
+
+In[14]:= ArrayPlot[CellularAutomaton[{110, 2, 1}, {{1}, 0}, {2780, All}], Frame 
+->  False]                                                                      
+
+Out[14]= -Graphics-
+
+In[15]:=                                                                        
