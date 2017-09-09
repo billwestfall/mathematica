@@ -1,0 +1,22 @@
+pi@raspberrypi:~ $ wolfram
+Wolfram Language 11.0.1 Engine for Linux ARM (32-bit)
+Copyright 1988-2017 Wolfram Research, Inc.
+
+In[1]:= CenterList[n_Integer] := ReplacePart[Table[0, {n}], 1, Ceiling[n/2]]    
+
+In[2]:= ElementaryRule[num_Integer] := IntegerDigits[num, 2, 8]                 
+
+In[3]:= CAStep[rule_List, a_List] := rule[[8 - (RotateLeft[a] + 2(a + 2 RotateRi
+ght[a]))]]                                                                      
+
+In[4]:= CAEvolveList[rule_, init_List, t_Integer] := NestList[CAStep[rule, #]&, 
+init, t]                                                                        
+
+In[5]:= CAGraphics[history_List] := Graphics[Raster[1 - Reverse[history]], Aspec
+tRatio -> Automatic]                                                            
+
+In[6]:= Show[CAGraphics[CAEvolveList[ElementaryRule[30], CenterList[103], 50]]] 
+
+Out[6]= -Graphics-
+
+In[7]:= 
