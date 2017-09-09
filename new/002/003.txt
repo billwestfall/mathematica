@@ -1,0 +1,211 @@
+pi@raspberrypi:~ $ wolfram
+Wolfram Language 11.0.1 Engine for Linux ARM (32-bit)
+Copyright 1988-2017 Wolfram Research, Inc.
+
+In[1]:= CellularAutomaton[30, {{1}, 0}, 3]                                      
+
+Out[1]= {{0, 0, 0, 1, 0, 0, 0}, {0, 0, 1, 1, 1, 0, 0}, {0, 1, 1, 0, 0, 1, 0}, 
+ 
+>    {1, 1, 0, 1, 1, 1, 1}}
+
+In[2]:= Show[RasterGraphics[CellularAutomaton[30, {{1}, 0}, 50]                 
+        ]                                                                       
+        ]                                                                       
+
+Show::gtype: RasterGraphics is not a type of graphics.
+
+
+
+In[3]:= ArrayPlot[CellularAutomaton[30, {{1}, 0}, 50] ]                         
+
+Out[3]= -Graphics-
+
+In[4]:= CellularAutomaton[30, {1,0,0,1,0}, 3]                                   
+
+Out[4]= {{1, 0, 0, 1, 0}, {1, 1, 1, 1, 0}, {1, 0, 0, 0, 0}, {1, 1, 0, 0, 1}}
+
+In[5]:= ArrayPlot[CellularAutomaton[30,{{1,1},{1,0,1,1}},50]]]                  
+
+Syntax::sntxf: "ArrayPlot[CellularAutomaton[30,{{1,1},{1,0,1,1}},50]]"
+     cannot be followed by "]".
+
+
+
+In[7]:= ArrayPlot[CellularAutomaton[30,{{1,1},{1,0,1,1}},50]]                   
+
+Out[7]= -Graphics-
+
+In[8]:= ArrayPlot[CellularAutomaton[30,{{1,1},{1,0,1,1}},50, {All,All}]]        
+
+Out[8]= -Graphics-
+
+In[9]:= ArrayPlot[CellularAutomaton[30,{{{{1}, {-10}}, {{1,1}, {20}}},0} 50]]   
+
+CellularAutomaton::initn: 
+   The initial condition specification {{{{50}, {-500}}, {{50, 50}, {1000}}}, 0}
+     should be of the form aspec, {aspec, bspec}, or {{{aspec1, off1}, {aspec2,
+     off2},... {aspecn, offn}}, bspec} (n > 0). Each aspec must be a non-empty
+     rank 1 array whose elements at level 1
+     are integers i in the range 0 <= i <= 1.
+
+ArrayPlot::mat: Argument CellularAutomaton[30, 
+     {{{{50}, {-500}}, {{50, 50}, {1000}}}, 0}] at position 1
+     is not a list of lists.
+
+Out[9]= ArrayPlot[CellularAutomaton[30, 
+ 
+>     {{{{50}, {-500}}, {{50, 50}, {1000}}}, 0}]]
+
+In[10]:= ArrayPlot[CellularAutomaton[30,{{{{1}, {-10}}, {{1,1}, {20}}},0}, 50]] 
+
+Out[10]= -Graphics-
+
+In[11]:= CellularAutomaton[30, {{1}, 0}, 10, -1]                                
+
+Out[11]= {{1, 1, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 1, 1, 1, 0, 1, 1, 0, 0, 1}}
+
+In[12]:= CellularAutomaton[30, {{1}, 0}, 5, {All, {-1, 1}}]                     
+
+Out[12]= {{0, 1, 0}, {1, 1, 1}, {1, 0, 0}, {0, 1, 1}, {0, 1, 0}, {1, 1, 1}}
+
+In[13]:= CellularAutomaton[30, {{1}, 0}, 100, {{1, 100, 2},{-200,200,2}}}]]     
+
+Syntax::sntxf: "CellularAutomaton[30, {{1}, 0}, 100, {{1, 100, 2},{-200,200,2}}"
+     cannot be followed by "}]]".
+
+
+In[14]:= CellularAutomaton[30, {{1}, 0}, 100, {{1, 100, 2},{-200,200,2}}}]      
+
+Syntax::sntxf: "CellularAutomaton[30, {{1}, 0}, 100, {{1, 100, 2},{-200,200,2}}"
+     cannot be followed by "}]".
+
+
+In[15]:= CellularAutomaton[30, {{1}, 0}, 100, {{1, 100, 2},{-200,200,2}}]]      
+
+Syntax::sntxf: "CellularAutomaton[30, {{1}, 0}, 100, {{1, 100,
+      2},{-200,200,2}}]" cannot be followed by "]".
+
+
+In[16]:= ArrayPlot[CellularAutomaton[30, {{1}, 0}, 100, {{1, 100, 2},{-200,200,2
+}}]]                                                                            
+
+Out[16]= -Graphics-
+
+In[17]:= ArrayPlot[CellularAutomaton[{921408,3,1}, {{1}, 0}, 100]]              
+                                                                                
+Out[17]= -Graphics-
+
+In[18]:= ArrayPlot[CellularAutomaton[{867,{3,1}, {{1}, 0}, 50]]                 
+
+Syntax::sntxf: "ArrayPlot[CellularAutomaton[{867,{3,1}, {{1}, 0}, 50"
+     cannot be followed by "]]".
+
+
+In[19]:= ArrayPlot[CellularAutomaton[{867,{3,1}, {{1}, 0}, 50]                  
+
+Syntax::sntxf: "ArrayPlot[CellularAutomaton[{867,{3,1}, {{1}, 0}, 50"
+     cannot be followed by "]".
+
+
+In[20]:= ArrayPlot[CellularAutomaton[{867,{3,1}, 1}, {{1}, 0}, 50]              
+         ]                                                                      
+
+Out[20]= -Graphics-
+
+In[21]:= ArrayPlot[CellularAutomaton[{867,{3,1}, 1}, {{1}, 0}, 50] ]            
+
+Out[21]= -Graphics-
+
+In[22]:= ArrayPlot[CellularAutomaton[{Mod[Apply[Plus, #],4]&,{},1},{{1}, 0},50]]
+                                                                                
+
+Out[22]= -Graphics-
+
+In[23]:= ArrayPlot[CellularAutomaton[{3702,{2,1}, {1,1}}, {{{1}}, 0}, 25, -5] ] 
+                                                                                
+CellularAutomaton::rsize: 
+   The specified rule number 3702
+     is greater than the largest possible rule number (1023).
+
+ArrayPlot::mat: Argument CellularAutomaton[{3702, {2, 1}, {1, 1}}, {{{1}}, 0}, 
+     25, -5] at position 1 is not a list of lists.
+
+Out[23]= ArrayPlot[CellularAutomaton[{3702, {2, 1}, {1, 1}}, {{{1}}, 0}, 25, 
+ 
+>     -5]]
+
+In[24]:=                                                                        
+In[24]:= ArrayPlot[CellularAutomaton[{3702,{2,1}, {1,1}}, {{{1}}, 0}, 25, -5] ] 
+
+CellularAutomaton::rsize: 
+   The specified rule number 3702
+     is greater than the largest possible rule number (1023).
+
+ArrayPlot::mat: Argument CellularAutomaton[{3702, {2, 1}, {1, 1}}, {{{1}}, 0}, 
+     25, -5] at position 1 is not a list of lists.
+
+Out[24]= ArrayPlot[CellularAutomaton[{3702, {2, 1}, {1, 1}}, {{{1}}, 0}, 25, 
+ 
+>     -5]]
+
+In[25]:= ArrayPlot[CellularAutomaton[{3702,{2,1}, {1,1}}, {{{1}}, 0}, 25, -5]]] 
+                                                                                
+Syntax::sntxf: "ayPlot[CellularAutomaton[{3702,{2,1}, {1,1}}, {{{1}}, 0}, 25,
+      -5]]" cannot be followed by "]".
+
+
+In[26]:= ArrayPlot[CellularAutomaton[{3702,{2,1}, {1,1}}, {{{1}}, 0}, 25, -5]]  
+
+CellularAutomaton::rsize: 
+   The specified rule number 3702
+     is greater than the largest possible rule number (1023).
+
+ArrayPlot::mat: Argument CellularAutomaton[{3702, {2, 1}, {1, 1}}, {{{1}}, 0}, 
+     25, -5] at position 1 is not a list of lists.
+
+Out[26]= ArrayPlot[CellularAutomaton[{3702, {2, 1}, {1, 1}}, {{{1}}, 0}, 25, 
+ 
+>     -5]]
+
+In[27]:= Show[GraphicsArray[Map[ArrayPlot[CellularAutomaton[{3702,{2,1}, {1,1}},
+ {{{1}}, 0}, 25, -5]]]]]                                                        
+
+CellularAutomaton::rsize: 
+   The specified rule number 3702
+     is greater than the largest possible rule number (1023).
+
+ArrayPlot::mat: Argument CellularAutomaton[{3702, {2, 1}, {1, 1}}, {{{1}}, 0}, 
+     25, -5] at position 1 is not a list of lists.
+
+Out[27]= -GraphicsArray-
+
+In[28]:= Show[GraphicsArray[Map[ArrayPlot[CellularAutomaton[{1023,{2,1}, {1,1}},
+ {{{1}}, 0}, 25, -5]]]]]                                                        
+
+Out[28]= -GraphicsArray-
+
+In[29]:= Show[GraphicsArray[Map[ArrayPlot[CellularAutomaton[{1023,{2,1}, {1,1}},
+ {{{1}}, 0}, 25, -5]]]]                                                         
+         ]                                                                      
+
+Out[29]= -GraphicsArray-
+
+In[30]:= Show[GraphicsArray[Map[CellularAutomaton[{1023,{2,1}, {1,1}}, {{{1}}, 0
+}, 25, -5]]]]                                                                   
+
+Out[30]= -GraphicsArray-
+
+In[31]:= Show[GraphicsArray[Map[CellularAutomaton[{1023,{2,1}, {1,1}}, {{{1}}, 0
+                                                                                
+In[31]:= Show[GraphicsGrid[Map[CellularAutomaton[{1023,{2,1}, {1,1}}, {{{1}}, 0}
+                                                                                
+         ]                                                                      
+         ]                                                                      
+         ]                                                                      
+                                                                                
+In[31]:= Show[GraphicsArray[Map[ArrayPlot[CellularAutomaton[{1023,{2,1}, {1,1}},
+ {{{1}}, 0}, 25, -5]]]] ]                                                       
+
+Out[31]= -GraphicsArray-
+
+In[32]:=                                                                        
