@@ -1,0 +1,41 @@
+pi@raspberrypi:~ $ wolfram
+Wolfram Language 11.0.1 Engine for Linux ARM (32-bit)
+Copyright 1988-2017 Wolfram Research, Inc.
+
+In[1]:= ArrayPlot[CellularAutomaton[254, {{1}, 0}, 50] ]                        
+
+Out[1]= -Graphics-
+
+In[2]:= ArrayPlot[CellularAutomaton[250, {{1}, 0}, 50] ]                        
+
+Out[2]= -Graphics-
+
+In[3]:= ArrayPlot[CellularAutomaton[30, {{1}, 0}, 50] ]                         
+
+Out[3]= -Graphics-
+
+In[4]:= ArrayPlot[CellularAutomaton[110, {{1}, 0}, 50] ]                        
+
+Out[4]= -Graphics-
+
+In[5]:= ArrayPlot[CellularAutomaton[90, {{1}, 0}, 50] ]                         
+
+Out[5]= -Graphics-
+
+In[6]:= ArrayPlot[CellularAutomaton[170, {{1}, 0}, 50] ]                        
+
+Out[6]= -Graphics-
+
+In[7]:= ArrayPlot[CellularAutomaton[60, {{1}, 0}, 50] ]                         
+
+Out[7]= -Graphics-
+
+In[8]:= ArrayPlot[CellularAutomaton[90, {{1}, 0}, 50] ]                         
+
+Out[8]= -Graphics-
+
+In[9]:= ArrayPlot[CellularAutomaton[90, {{1}, 0}, 100] ]                        
+
+Out[9]= -Graphics-
+
+In[10]:=                                                                        
