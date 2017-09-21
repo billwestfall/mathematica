@@ -1,0 +1,68 @@
+In[1]:= For[i=1,i<= 5, i++, Print[i]];                                          
+1
+2
+3
+4
+5
+
+In[2]:= i=1;While[i<=5, Print[i];i++)]                                          
+
+Syntax::sntxf: "i=1;While[i<=5, Print[i];i++" cannot be followed by ")]".
+
+
+In[3]:= i=1;While[i<=5, (Print[i];i++)]                                         
+1
+2
+3
+4
+5
+
+In[4]:= Do[Print[i],{i,5}]                                                      
+1
+2
+3
+4
+5
+
+In[5]:= a := i^2; Do[Print[a], {i,1,5}]                                         
+1
+4
+9
+16
+25
+
+In[6]:= i=1;Do[(Print["*"];If[i++>3,Break[]), {50}]                             
+
+Syntax::sntxf: "i=1;Do[(Print["*"];If[i++>3,Break[]" cannot be followed by 
+    "), {50}]".
+
+
+In[7]:= i=1;Do[(Print["*"];If[i++>3,Break[]]), {50}]                            
+*
+*
+*
+*
+
+In[8]:= i=1;Do[(Print["*"];sleep 1;If[i++>3,Break[]]), {50}]                    
+*
+*
+*
+*
+
+In[9]:= i=1;Do[(Print["*"];Timing[Pause[1]];If[i++>3,Break[]]), {50}]           
+*
+*
+*
+*
+
+In[10]:= i=1;Do[(WriteString["*"];Timing[Pause[1]];If[i++>3,Break[]]), {50}]    
+
+In[11]:= Timing[sm = 0; Do[sm=sm+i, {i,100000}];sm]                             
+
+Out[11]= {0.57, 5000050000}
+
+In[12]:= Timing[Apply[Plus, Range[100000]]]                                     
+
+Out[12]= {0.19, 5000050000}
+
+In[13]:=                                                                        
