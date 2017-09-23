@@ -1,0 +1,52 @@
+pi@raspberrypi:~ $ wolfram
+Wolfram Language 11.0.1 Engine for Linux ARM (32-bit)
+Copyright 1988-2017 Wolfram Research, Inc.
+
+In[1]:= ArrayPlot[Last /@ TuringMachine[2506, {1, {{}, 0}}, 50]]                
+
+Out[1]= -Graphics-
+
+In[2]:= ArrayPlot[Last /@ TuringMachine[2506, {1, {{}, 0}}, 50]]                
+
+Out[2]= -Graphics-
+
+In[3]:= ArrayPlot[Last /@ TuringMachine[2505, {1, {{}, 0}}, 100]]               
+
+Out[3]= -Graphics-
+
+In[4]:= ArrayPlot[Last /@ TuringMachine[1253, {1, {{}, 0}}, 100]]               
+
+Out[4]= -Graphics-
+
+In[5]:= ArrayPlot[Last /@ TuringMachine[125, {1, {{}, 0}}, 100]]                
+
+Out[5]= -Graphics-
+
+In[6]:= ArrayPlot[Last /@ TuringMachine[24, {1, {{}, 0}}, 100]]                 
+
+Out[6]= -Graphics-
+
+In[7]:= ArrayPlot[Last /@ TuringMachine[4096, {1, {{}, 0}}, 100]]               
+
+TuringMachine::rsize: 
+   The specified rule number 4096
+     is greater than the largest possible rule number (4095).
+
+Last::normal: Nonatomic expression expected at position 1 in Last[4096].
+
+Last::normal: Nonatomic expression expected at position 1 in Last[100].
+
+TuringMachine::nspec: 
+   The rule specification Last[4096]
+     must be a list of rules of the form {si, ai} -> {sn, kn, off}, or of the
+     form n, {n}, {n, s}, {n, s, k}, or {n, s, k, r} where n, s, and k are
+     integers and r is an integer, list of integers, or list of offsets.
+
+ArrayPlot::mat: Argument TuringMachine[Last[4096], {{}, 0}, Last[100]]
+     at position 1 is not a list of lists.
+
+Out[7]= ArrayPlot[TuringMachine[Last[4096], {{}, 0}, Last[100]]]
+
+In[8]:= ArrayPlot[Last /@ TuringMachine[4095, {1, {{}, 0}}, 100]]               
+
+Out[8]= -Graphics-
