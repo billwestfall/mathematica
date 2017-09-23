@@ -1,0 +1,93 @@
+pi@raspberrypi:~ $ wolfram
+Wolfram Language 11.0.1 Engine for Linux ARM (32-bit)
+Copyright 1988-2017 Wolfram Research, Inc.
+
+In[1]:= ArrayPlot[CellularAutomaton[110, {{1}, 0}, 100] ]                       
+                                                                                
+Out[1]= -Graphics-
+
+In[2]:= ArrayPlot[CellularAutomaton[{#, {3, 1}}, {{1}, 0}, 50]                  
+                                                                                
+In[2]:= ArrayPlot[CellularAutomaton[110, {{1}, 0}, 100] ]]                      
+
+Syntax::sntxf: "ArrayPlot[CellularAutomaton[110, {{1}, 0}, 100] ]"
+     cannot be followed by "]".
+
+
+In[3]:= ArrayPlot[CellularAutomaton[110, {{1}, 0}, 100] ]                       
+
+Out[3]= -Graphics-
+
+In[4]:= ArrayPlot[CellularAutomaton[{177, {3, 1}}, {{1}, 0}, 50]]               
+                                                                                
+Out[4]= -Graphics-
+
+In[5]:= ArrayPlot[CellularAutomaton[{993, {3, 1}}, {{1}, 0}, 50]]               
+
+Out[5]= -Graphics-
+
+In[6]:=  ArrayPlot[CellularAutomaton[{1086, {3, 1}}, {{1}, 0}, 50]]             
+
+Out[6]= -Graphics-
+
+In[7]:= ArrayPlot[CellularAutomaton[{1041, {3, 1}}, {{1}, 0}, 50]]              
+
+Out[7]= -Graphics-
+
+In[8]:= ArrayPlot[CellularAutomaton[{1110, {3, 1}}, {{1}, 0}, 50]]              
+
+Out[8]= -Graphics-
+
+In[9]:= ArrayPlot[CellularAutomaton[{600, {3, 1}}, {{1}, 0}, 50]]               
+
+Out[9]= -Graphics-
+
+In[10]:= ArrayPlot[CellularAutomaton[{966, {3, 1}}, {{1}, 0}, 50]]              
+
+Out[10]= -Graphics-
+
+In[11]:= ArrayPlot[CellularAutomaton[{1749, {3, 1}}, {{1}, 0}, 50]]             
+
+Out[11]= -Graphics-
+
+In[12]:= ArrayPlot[CellularAutomaton[{1884, {3, 1}}, {{1}, 0}, 50]]             
+
+Out[12]= -Graphics-
+
+In[13]:= ArrayPlot[CellularAutomaton[{177, {3, 1}}, {{1}, 0}, 50]]              
+
+Out[13]= -Graphics-
+
+In[14]:= ArrayPlot[CellularAutomaton[{177, {3, 1}}, {{1}, 0}, 1000]]            
+
+Out[14]= -Graphics-
+
+In[15]:= ArrayPlot[CellularAutomaton[{912, {3, 1}}, {{1}, 0}, 1000]]            
+
+Out[15]= -Graphics-
+
+In[16]:= ArrayPlot[CellularAutomaton[{2040, {3, 1}}, {{1}, 0}, 1000]]           
+
+Out[16]= -Graphics-
+
+In[17]:= ArrayPlot[CellularAutomaton[{420, {3, 1}}, {{1}, 0}, 500]]             
+
+Out[17]= -Graphics-
+
+In[18]:= ArrayPlot[CellularAutomaton[{1041, {3, 1}}, {{1}, 0}, 500]]            
+
+Out[18]= -Graphics-
+
+In[19]:= ArrayPlot[CellularAutomaton[{1635, {3, 1}}, {{1}, 0}, 500]]            
+
+Out[19]= -Graphics-
+
+In[20]:= ArrayPlot[CellularAutomaton[{2049, {3, 1}}, {{1}, 0}, 500]]            
+
+Out[20]= -Graphics-
+
+In[21]:= ArrayPlot[CellularAutomaton[{1599, {3, 1}}, {{1}, 0}, 500]]            
+
+Out[21]= -Graphics-
+
+In[22]:=                                                                        
