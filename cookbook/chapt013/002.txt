@@ -28,3 +28,8 @@ Out[4]= {C H  O , C H  O , C H  O , C H  O }
           6 12 6   6 12 6   6 12 6   6 12 6
 In[5]:= Partition[Sort[RandomSample[ChemicalData["Properties"],30]],3]// TableFo
 rm
+In[8]:= Length[ChemicalData[]]                                                  
+
+Out[8]= 44089
+
+In[9]:= ChemicalData["Classes"]
