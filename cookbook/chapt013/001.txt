@@ -8,4 +8,4 @@ In[3]:= Row[{ElementData[1],ElementData[1,"AtomicNumber"],
 Out[3]= Entity[Element, Hydrogen]	1	1.008 unified atomic mass units
  
 >    EntityClass[Element, Gas]
-Partition[ElementData["Properties"],3,3,1,""]//TableForm
+In[5]:= Partition[ElementData["Properties"],3,3,1,""]//TableForm
