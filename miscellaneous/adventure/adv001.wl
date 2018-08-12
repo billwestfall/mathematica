@@ -5,3 +5,6 @@ k=Input["Please enter N to travel north or S to travel south "]
 
 If[k == N, Print["You stand in front of a dark cave"]]
 If[k == S, Print["You stand in front of a building"]]
+
+clear[k]
+k=Input["Please enter N to travel north or S to travel south "]
