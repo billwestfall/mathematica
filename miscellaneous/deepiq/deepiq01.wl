@@ -1,1 +1,1 @@
-a=RandomInteger[{1,10}];Which[a==1,Print["it's one"],a==2,Print["not one"]]
+a=RandomInteger[{1,10}];Which[a<8,Print["Do nothing."],a==8,Print["Sacrifice your best creature."],a>8,Print["Put a 1/1 token on the battlefield (4)."]]
