@@ -3,3 +3,9 @@ Attempt to code DeepIQ Magic the Gathering AI bot, see: https://magic.wizards.co
 You can run the files like:
 
 `wolframscript -file deepiq06.wl`
+
+The output will prompt which file to run on next turn.
+
+If you cast a token, please run the token modifier file.
+
+If the modifier file lands on a color protection , please run the protection file.
