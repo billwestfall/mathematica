@@ -8,4 +8,4 @@ The output will prompt which file to run on next turn.
 
 If you cast a token, please run the token modifier file.
 
-If the modifier file lands on a color protection , please run the protection file.
+If the modifier file lands on a color protection , please run the protection file. If prompted for spooky modifier, run that file.
