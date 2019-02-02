@@ -1,0 +1,1 @@
+j=RandomInteger[{1,10}];Which[j<4,Print["Protection from black."],j>3&&j<7,Print["Protection from white."],j>6&&j<9,Print["Protection from red."],j==9,Print["Protection from blue."],j==10,Print["Protection from green."]]
