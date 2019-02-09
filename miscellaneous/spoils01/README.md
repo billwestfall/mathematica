@@ -2,4 +2,4 @@ Use DeepIQ mechanics ( https://magic.wizards.com/en/articles/archive/serious-fun
 
 run files like
 
-```wolframscript -file deepiq06.wl ```
+```wolframscript -file 01spoils.wl ```
