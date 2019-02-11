@@ -1,1 +1,1 @@
-c=RandomInteger[{1,6}];Which[c==1,Print["+1/+1"],c==2,Print["Flying."],c==3,Print["+0/+3"],c==4,Print["Regeneration token (remove the token to regenerate)"],c==5,Print["+2/+0"],c==6,Print["+1/+2"]]
+d=RandomInteger[{1,6}];Which[d==1,Print["+2/+2"],d==2,Print["Trample"],d==3,Print["First Strike"],d==4,Print["Banding"],d==5,Print["+3/+0"],d==6,Print["+2/+3"]]
