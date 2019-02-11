@@ -1,1 +1,1 @@
-e=RandomInteger[{1,6}];Which[e==1,Print["+3/+3"],e==2,Print["Unblockable or double blocker"],e==3,Print["Deals player 1 damage per turn"],e==4,Print["Does not tap to attack"],e==5,Print["Color protection, roll the protection die"],e==6,Print["+3/+4"]]
+f=RandomInteger[{1,6}];Which[f==1,Print["Destroy a creature"],f==2,Print["Destroy an enchantment"],f==3,Print["Destroy an artifact"],f==4,Print["You discard 2 cards at random"],f==5,Print["Summon 2/2 flying Attacker"],f==6,Print["Summon 1/3 flying Defender"]]
