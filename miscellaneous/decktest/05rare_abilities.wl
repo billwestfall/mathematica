@@ -1,1 +1,1 @@
-d=RandomInteger[{1,6}];Which[d==1,Print["+2/+2"],d==2,Print["Trample"],d==3,Print["First Strike"],d==4,Print["Banding"],d==5,Print["+3/+0"],d==6,Print["+2/+3"]]
+e=RandomInteger[{1,6}];Which[e==1,Print["+3/+3"],e==2,Print["Unblockable or double blocker"],e==3,Print["Deals player 1 damage per turn"],e==4,Print["Does not tap to attack"],e==5,Print["Color protection, roll the protection die"],e==6,Print["+3/+4"]]
