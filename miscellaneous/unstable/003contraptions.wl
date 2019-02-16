@@ -1,1 +1,1 @@
-creature gets +X/+0 where X is the number of creatures you control
+e=RandomInteger[{1,6}];Which[e==1,Print["creature gets +X/+0 where X is the number of creatures you control"],e==2,Print["+2/+2"],e==3,Print["+3/+3"],e==4,Print["+4/+4"],e==5,Print["+5/+5"],e==6,Print["+6/+6"]]
