@@ -1,1 +1,1 @@
-c=RandomInteger[{1,6}];Which[c==1,Print["+1/+1"],c==2,Print["+2/+2"],c==3,Print["+3/+3"],c==4,Print["+4/+4"],c==5,Print["+5/+5"],c==6,Print["+6/+6"]]
+a=RandomInteger[{1,10}];Which[a==1,Print["Azorius (blue/white)"],a==2,Print["Dimir (blue/black)"],a==3,Print["Rakdos (black/red)"],a==4,Print["Gruul (green/red)"],a==5,Print["Selesnya (green/white)"],a==6,Print["Simic (blue/green)"],a==7,Print["Orzhov (white/black)"],a==8,Print["Izzet (blue/red)"],a==9,Print["Golgari (black/green)"],a==10,Print["Boros (white/red)"]]
