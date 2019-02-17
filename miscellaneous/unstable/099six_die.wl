@@ -1,1 +1,1 @@
-z=RandomInteger[{1,6}];Print z
+z=RandomInteger[{1,6}];Print[z]
