@@ -1,0 +1,1 @@
+a=RandomInteger[{1,10}];Which[a==1,Print["Azorius (blue/white)"],a==2,Print["Dimir (blue/black)"],a==3,Print["Rakdos (black/red)"],a==4,Print["Gruul (green/red)"],a==5,Print["Selesnya (green/white)"],a==6,Print["Simic (blue/green)"],a==7,Print["Orzhov (white/black)"],a==8,Print["Izzet (blue/red)"],a==9,Print["Golgari (black/green)"],a==10,Print["Boros (white/red)"]]
