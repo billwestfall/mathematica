@@ -1,1 +1,1 @@
-b=RandomInteger[{1,10}];Which[b<3,Print["Do nothing."],b>2&&b<8,Print["Put a 2/2/2 token on the battlefield (+0)."],b==8,Print["Move Deep IQ up to Table IV."],b>8,Print["Exile your best creature."]];If[b<10,Print["Advance to Table 3"]]
+b=RandomInteger[{1,10}];Which[b<3,Print["Do nothing."],b>2&&b<8,Print["Put a 1/1/1 token on the battlefield (+0)."],b==8,Print["Move Deep IQ up to Table IV."],b>8,Print["Exile your best creature."]];If[b<10,Print["Advance to Table 3"]]
