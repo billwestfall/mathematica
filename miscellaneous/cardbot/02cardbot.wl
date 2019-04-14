@@ -6,3 +6,4 @@ Print["Your card is:"]
 your = DealFromDeck[]
 Print["My card is:"]
 mine = DealFromDeck[]
+your ∖[GreaterEqual] mine
