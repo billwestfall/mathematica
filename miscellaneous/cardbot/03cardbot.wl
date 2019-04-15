@@ -1,5 +1,7 @@
 Print["Your card is:"]
-your = RandomSample[Range[1], UpTo[10]]
+your = RandomSample[Range[13], 1]
+Print[your]
 Print["My card is:"]
-mine = RandomSample[Range[1], UpTo[10]]
+mine = RandomSample[Range[13], 1]
+Print[mine]
 your ∖[GreaterEqual] mine
