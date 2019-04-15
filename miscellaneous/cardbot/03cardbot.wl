@@ -1,6 +1,5 @@
-deck = RandomSample[{1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13}]
 Print["Your card is:"]
-your = deck[]
+your = RandomSample[Range[1], UpTo[10]]
 Print["My card is:"]
-mine = deck[]
+mine = RandomSample[Range[1], UpTo[10]]
 your ∖[GreaterEqual] mine
