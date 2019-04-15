@@ -5,6 +5,4 @@ Print["My card is:"]
 mine = RandomSample[Range[13], 1]
 Print[mine]
 your ∖[GreaterEqual] mine
-Print["You win!"] := If[your > mine]
-Print["I win!"] := If[mine > your]
-Print["A tie!"] := If[your == mine]
+Do[Print[{If[your >= mine, "You win!", "I win!"]}]]
