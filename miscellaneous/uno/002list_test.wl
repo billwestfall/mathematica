@@ -1,2 +1,1 @@
-data = {"a", "b", "c", "d"}
-data
+Echo[data = {"a", "b", "c", "d"}]
