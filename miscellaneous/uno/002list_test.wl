@@ -1,2 +1,2 @@
-my_data = {"a", "b", "c", "d"}
-my_data
+data = {"a", "b", "c", "d"}
+data
