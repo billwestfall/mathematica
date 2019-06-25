@@ -1,1 +1,1 @@
-List[a, b, c, d]
+data = {"a", "b", "c", "d"}
