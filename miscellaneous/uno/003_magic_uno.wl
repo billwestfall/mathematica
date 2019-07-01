@@ -1,1 +1,1 @@
-RandomChoice[{"a", "b", "c"}]
+Print[RandomChoice[{"a", "b", "c"}]]
