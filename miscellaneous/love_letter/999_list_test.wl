@@ -1,4 +1,7 @@
+myrand=RandomInteger[{1, 4}]
 lettera=List[a, b, c, d]
 Print[lettera]
 letterb=RandomChoice[lettera]
 Print[letterb]
+nextlist=Delete[{a, b, c, d}, myrand]
+Print[nextlist]
