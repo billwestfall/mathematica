@@ -8,7 +8,7 @@ nextlist=Delete[lettera, myrand]
 (*Print["Remaining cards:"]
 Print[nextlist]*)
 If[mycard == "Guard(1)", Print["I think your card is: ", RandomChoice[guardguess]]]
-If[mycard == "Baron(3)", Print["High card wins! My other card is: ", RandomChoice[guardguess]]]
+If[mycard == "Baron(3)", Print["High card will win! The card I play is: ", RandomChoice[guardguess]]]
 If[mycard == "Handmaiden(4)", Print["My hand has no effect from your cards this turn."]]
 If[mycard == "Prince(5)", Print["Please discard your hand and draw a new hand."]]
 If[mycard == "King(6)", Print["Please discard your card and take my card which is: ", RandomChoice[guardguess]]]
