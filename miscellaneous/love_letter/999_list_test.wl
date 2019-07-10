@@ -7,7 +7,7 @@ Print[mycard]
 nextlist=Delete[lettera, myrand]
 (*Print["Remaining cards:"]
 Print[nextlist]*)
-x=Input["Please enter the card you drew (in quotes): ",{}];Print[ToString[x]]
+x=Input["Please enter the value for the card you drew (1-5 for Guard, 6-7 for Priest, 8-9 for Baron, 10-11 for Handmaiden, 12-13 for Prince, 14 for King, 15 for Countess, 16 for Princess): ",{}];Print[ToString[x]]
   removemine=Delete[nextlist, x]
 If[mycard == "Guard(1)", Print["I think your card is: ", RandomChoice[guardguess]]]
 If[mycard == "Baron(3)", Print["High card will win! The card I play is: ", RandomChoice[guardguess]]]
