@@ -8,6 +8,7 @@ nextlist=Delete[lettera, myrand]
 (*Print["Remaining cards:"]
 Print[nextlist]*)
 x=Input["Please enter the card you drew (in quotes): ",{}];Print[ToString[x]]
+  removemine=Delete[nextlist, x]
 If[mycard == "Guard(1)", Print["I think your card is: ", RandomChoice[guardguess]]]
 If[mycard == "Baron(3)", Print["High card will win! The card I play is: ", RandomChoice[guardguess]]]
 If[mycard == "Handmaiden(4)", Print["My hand has no effect from your cards this turn."]]
