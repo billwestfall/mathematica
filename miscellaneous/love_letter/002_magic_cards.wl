@@ -31,7 +31,7 @@ If[q1 == "New_Horizons", Print["If I play an Island next turn, I will guess your
 If[q1 == "Jace", Print["High value wins! My value is: ", x1]]
 If[q1 == "Pollenbright", Print["No effect from your card."]]
 If[q1 == "Merfolk", Print["Please discard and redraw."]]
-If[q1 == "Tolsimir", Print["Please discard yours and take mine which is: ", q1]]
+If[q1 == "Tolsimir", Print["Please discard yours and take mine which is: ", x1]]
 If[q1 == "Nahiri", Print["Nahiri has to be discarded if mine is P5 or Tolsimir"]]
 If[q1 == "Massacre_Girl", Print["I discarded the P8, you win!"]]
 
@@ -49,7 +49,7 @@ If[n1 == "New_Horizons", Print["If I play an Island next turn, I will guess your
 If[n1 == "Jace", Print["High value wins! My value is: ", q1]]
 If[n1 == "Pollenbright", Print["No effect from your card."]]
 If[n1 == "Merfolk", Print["Please discard and redraw."]]
-If[n1 == "Tolsimir", Print["Please discard yours and take mine which is: ", n1]]
+If[n1 == "Tolsimir", Print["Please discard yours and take mine which is: ", q1]]
 If[n1 == "Nahiri", Print["Nahiri has to be discarded if mine is P5 or Tolsimir"]]
 If[n1 == "Massacre_Girl", Print["I discarded the P8, you win!"]]
 
@@ -67,7 +67,7 @@ If[j1 == "New_Horizons", Print["If I play an Island next turn, I will guess your
 If[j1 == "Jace", Print["High value wins! My value is: ", n1]]
 If[j1 == "Pollenbright", Print["No effect from your card."]]
 If[j1 == "Merfolk", Print["Please discard and redraw."]]
-If[j1 == "Tolsimir", Print["Please discard yours and take mine which is: ", j1]]
+If[j1 == "Tolsimir", Print["Please discard yours and take mine which is: ", n1]]
 If[j1 == "Nahiri", Print["Nahiri has to be discarded if mine is P5 or Tolsimir"]]
 If[j1 == "Massacre_Girl", Print["I discarded the P8, you win!"]]
 
@@ -85,7 +85,7 @@ If[d1 == "New_Horizons", Print["If I play an Island next turn, I will guess your
 If[d1 == "Jace", Print["High value wins! My value is: ", j1]]
 If[d1 == "Pollenbright", Print["No effect from your card."]]
 If[d1 == "Merfolk", Print["Please discard and redraw."]]
-If[d1 == "Tolsimir", Print["Please discard yours and take mine which is: ", d1]]
+If[d1 == "Tolsimir", Print["Please discard yours and take mine which is: ", j1]]
 If[d1 == "Nahiri", Print["Nahiri has to be discarded if mine is P5 or Tolsimir"]]
 If[d1 == "Massacre_Girl", Print["I discarded the P8, you win!"]]
 
@@ -103,7 +103,7 @@ If[yy1 == "New_Horizons", Print["If I play an Island next turn, I will guess you
 If[yy1 == "Jace", Print["High value wins! My value is: ", d1]]
 If[yy1 == "Pollenbright", Print["No effect from your card."]]
 If[yy1 == "Merfolk", Print["Please discard and redraw."]]
-If[yy1 == "Tolsimir", Print["Please discard yours and take mine which is: ", yy1]]
+If[yy1 == "Tolsimir", Print["Please discard yours and take mine which is: ", d1]]
 If[yy1 == "Nahiri", Print["Nahiri has to be discarded if mine is P5 or Tolsimir"]]
 If[yy1 == "Massacre_Girl", Print["I discarded the P8, you win!"]]
 
@@ -121,6 +121,6 @@ If[uu1 == "New_Horizons", Print["If I play an Island next turn, I will guess you
 If[uu1 == "Jace", Print["High value wins! My value is: ", yy1]]
 If[uu1 == "Pollenbright", Print["No effect from your card."]]
 If[uu1 == "Merfolk", Print["Please discard and redraw."]]
-If[uu1 == "Tolsimir", Print["Please discard yours and take mine which is: ", uu1]]
+If[uu1 == "Tolsimir", Print["Please discard yours and take mine which is: ", yy1]]
 If[uu1 == "Nahiri", Print["Nahiri has to be discarded if mine is P5 or Tolsimir"]]
 If[uu1 == "Massacre_Girl", Print["I discarded the P8, you win!"]]
