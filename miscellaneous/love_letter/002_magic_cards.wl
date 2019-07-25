@@ -1,7 +1,7 @@
 myrand=RandomInteger[{1,15}]
 mylista=List["Island","Island","Island","Island","Island","New_Horizons","New_Horizons","Jace","Jace","Pollenbright","Pollenbright","Merfolk","Merfolk","Tolsimir","Nahiri","Massacre_Girl"]
 v=Input["Enter the value to remove:",{}]
-If[v == "X", Exit[]]
+If[v == "0", Exit[]]
 w=Extract[v][mylista]
 u=Delete[mylista,v]
 x1=Extract[u,myrand]
