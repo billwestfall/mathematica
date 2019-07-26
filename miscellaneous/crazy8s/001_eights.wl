@@ -4,5 +4,5 @@ DeckShuffle[deck_] := RandomSample[deck, Length@deck]
 DealFromDeck[] := (Print@First@deck; deck = deck[[2 ;; All]];)
 deck = DeckShuffle@MakeDeck[]
 Print["The card I play is:"]
-mine = DealFromDeck[]
+mine = DealFromDeck[];
 i++]
