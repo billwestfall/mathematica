@@ -1,4 +1,4 @@
-MakeDeck[] :=  Tuples[{{"Land ", "Creature ", "Artifact " , "Enchantment " , "Planeswalker ", "Instant " , "Sorcery " , "Unhinged " , "Full art " , "Legendary Creature "}, {"Black", "Red", "White", Blue", "Green"}}]
+MakeDeck[] :=  Tuples[{{"Land ", "Creature ", "Artifact " , "Enchantment " , "Planeswalker ", "Instant " , "Sorcery " , "Unhinged " , "Full art " , "Legendary Creature "}, {"Black", "Red", "White", "Blue", "Green"}}]
 DeckShuffle[deck_] := RandomSample[deck, Length@deck]
 DealFromDeck[] := (Print@First@deck; deck = deck[[2 ;; All]];)
 deck = DeckShuffle@MakeDeck[]
