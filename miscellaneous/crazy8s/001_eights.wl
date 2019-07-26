@@ -4,3 +4,4 @@ DealFromDeck[] := (Print@First@deck; deck = deck[[2 ;; All]];)
 deck = DeckShuffle@MakeDeck[]
 Print["The card I play is:"]
 mine = DealFromDeck[]
+For[i = 0, i < 4, i++, Print[i]]
