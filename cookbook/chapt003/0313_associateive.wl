@@ -2,4 +2,5 @@ zipcode[11771] = {"Oyster Bay", "Upper Brookville", "East Norwhich", "Cove Neck"
 With[{zip=11771},
 Print["The number of towns in ",
 zip, " is ", Length[zipcode[zip]], ";"];]
-DownValues[zipcode]
+x=DownValues[zipcode]
+Print[x]
