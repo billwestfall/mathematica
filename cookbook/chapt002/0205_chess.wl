@@ -9,9 +9,9 @@ toPosA[{x_,y_}] :=
     file[[y]] <> ToString[x]]
 
 piecePos[Pc_, pos_] := {toColor[c], " Pawn ", toPos[pos]}
-piecePos[Nc_, pos_] := [toColor[c], " Knight ", toPos[pos]}
-piecePos[Bc_, pos_] := 8toColor[c], " Bishop ", toPos[pos]}
-piecePos[Rc_, pos_] := 8toColor[c], " Rook ", toPos[pos]}
-piecePos[Qc_, pos_] := 8toColor[c], " Queen ", toPos[pos]}
-piecePos[Kc_, pos_] := [toColor[c], " King ", toPos[pos]}
+piecePos[Nc_, pos_] := {toColor[c], " Knight ", toPos[pos]}
+piecePos[Bc_, pos_] := {toColor[c], " Bishop ", toPos[pos]}
+piecePos[Rc_, pos_] := {toColor[c], " Rook ", toPos[pos]}
+piecePos[Qc_, pos_] := {toColor[c], " Queen ", toPos[pos]}
+piecePos[Kc_, pos_] := {toColor[c], " King ", toPos[pos]}
 piecePos[0, _] := Sequence[]
