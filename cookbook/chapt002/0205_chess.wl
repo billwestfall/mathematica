@@ -16,4 +16,5 @@ piecePos[Qc_, pos_] := {toColor[c], " Queen ", toPos[pos]}
 piecePos[Kc_, pos_] := {toColor[c], " King ", toPos[pos]}
 piecePos[0, _] := Sequence[]
 
-Flatten[MapIndexed[piecePos,chessboard,{2}],1]
+zz=Flatten[MapIndexed[piecePos,chessboard,{2}],1]
+Print[zz]
