@@ -1,3 +1,4 @@
 x=ReadList["data.dat"]
 Print[x]
-FindAnomalies[x]
+y=FindAnomalies[x]
+Print[y]
