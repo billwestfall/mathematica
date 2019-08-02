@@ -1,1 +1,2 @@
-ReadList["data.dat"]
+x=ReadList["data.dat"]
+Print[x]
