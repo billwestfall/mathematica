@@ -1,2 +1,2 @@
-x=WeatherData["Seattle", "Temperature"]
+x=WeatherData["Seattle", "Temperature","NonMetricValue"]
 Print["Temperature is: ", x]
