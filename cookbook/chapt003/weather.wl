@@ -1,6 +1,6 @@
 
 x=WeatherData["Seattle", "Temperature","NonMetricValue"]
-Print["Temperature is: ", x]
+Print["Seattle temperature is: ", x]
 y=WeatherData["Bengaluru", "Temperature","NonMetricValue"]
 Print["Bangalore temperature is: ", y]
 z=WeatherData["Prague", "Temperature","NonMetricValue"]
