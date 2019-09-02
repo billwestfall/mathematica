@@ -1,0 +1,6 @@
+a=RandomInteger[{1, 100}]
+Print["Your card is ", a]
+Print["Hit enter when you are ready for me to play my card"]
+Input[]
+b=RandomInteger[{1, 100}]
+Print["My card is ", b]
