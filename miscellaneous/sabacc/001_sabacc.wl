@@ -2,5 +2,5 @@ y=RandomChoice[{4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 2, 2, 2, 2, 2, 2, 2
 z=RandomChoice[{4, 3, 2, 1, 4, 3, 2, 1, 1} -> {"20", "21", "22", "23", "-20", "-21", "-22", "-23", "Perfect Sabacc"}, 1]
 a=RandomChoice[{a,b}]
 Print[y]
-print[z]
-print[a]
+Print[z]
+Print[a]
