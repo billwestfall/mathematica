@@ -1,9 +1,4 @@
-MakeDeck[] :=  Tuples[{{"Ace ", 2, 3 , 4 , 5, 6 , 7 , 8 , 9 , 10, "Jack" , "Queen", "King"}, {\[ClubSuit], \[SpadeSuit], \[DiamondSuit], \[HeartSuit]}}]
-DeckShuffle[deck_] := RandomSample[deck, Length@deck]
-DealFromDeck[] := (Print@First@deck; deck = deck[[2 ;; All]];)
-deck = DeckShuffle@MakeDeck[]
-Print["The card I play is:"]
-mine = DealFromDeck[]
+
 z=RandomChoice[{3, 2, 1, 6} -> {"I give you one card you are looking for", "I give you two cards you are looking for", "I give you three cards you are looking for", "Go fish"}]
 Print[z]
 a=RandomChoice[{6, 1} -> {"I don't play any tricks", "I play a trick"}]
