@@ -1,4 +1,4 @@
-b=RandomChoice[{6, 1} -> {"I lose a card from my hand", "I gain a card to my hand", "My hand size stays the same"}]
+b=RandomChoice[{1, 1, 1} -> {"I lose a card from my hand", "I gain a card to my hand", "My hand size stays the same"}]
 Print[b]
 a=RandomChoice[{6, 1} -> {"I don't play any tricks", "I play a trick"}]
 Print[a]
