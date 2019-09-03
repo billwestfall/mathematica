@@ -7,3 +7,6 @@ Contents[show]
 CardsEdit
 
 A deck of sabacc consisted of 76 cards. 60 were distributed in four suits (Flasks, Sabers, Staves, and Coins), with 15 cards per suit: pip cards numbered 1 through 11, plus a Commander numbered 12, a Mistress numbered 13, a Master numbered 14, and an Ace numbered 15. The other 16 were two sets of 8 special cards: Balance (numbered −11), The Idiot (0), Endurance (−8), Moderation (−14), The Evil One (−15), The Queen of Air and Darkness (−2), Demise (−13), and The Star (−17[15] or −10).[14] 
+
+Tarot list from wikipedia, https://en.m.wikipedia.org/wiki/Tarot :
+The Magician, The High Priestess, The Empress, The Emperor, The Hierophant, The Lovers, The Chariot, Strength, The Hermit, Wheel of Fortune, Justice, The Hanged Man, Death, Temperance, The Devil, The Tower, The Star, The Moon, The Sun, Judgement, The World, and The Fool. Cards from The Magician to The World are numbered in Roman numerals from I to XXI, while The Fool is the only unnumbered card, sometimes placed at the beginning of the deck as 0, or at the end as XXII.
