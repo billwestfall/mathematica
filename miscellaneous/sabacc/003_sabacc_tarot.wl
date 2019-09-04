@@ -1,4 +1,4 @@
-y=RandomChoice[{4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 2, 2, 2, 2, 2, 2, 2, 2} -> {"One", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine", "Ten", "Eleven", "Twelve", "Thirteen", "Fourteen", "Fifteen", "Negative Eleven", "Zero", "Negative Eight", "Negative Fourteen", "Negative Fifteen", "Negative Two", "Negative Thirteen", "Negative Seventeen"}, 2]
+y=RandomChoice[{4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 2, 2, 2, 2, 2, 2, 2, 2, 2} -> {"One", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine", "Ten", "Eleven (Page)", "Twelve (Knight)", "Thirteen (Queen)", "Fourteen (King)", "Fifteen (Magician)", "Negative Eleven (High Priestess)", "Zero (Empress)", "Negative Eight (Emperor)", "Negative Fourteen (Hierophant)", "Negative Fifteen (Lovers)", "Negative Two (Chariot)", "Negative Thirteen (Strength)", "Negative Seventeen (Hermit)"}, 2]
 z=RandomChoice[{4, 3, 2, 1, 4, 3, 2, 1, 1} -> {"20", "21", "22", "23", "-20", "-21", "-22", "-23", "Perfect Sabacc"}, 1]
 a=RandomChoice[{1, 5} -> {z " is my total and I call", "Pass to draw"}]
 Print[y]
