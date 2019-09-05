@@ -1,4 +1,4 @@
-Print["Remove the following cards from the Tarot deck: "]
+Print["Remove the following cards from the Tarot deck: Sun, Judgement, The World and the Fool"]
 y=RandomChoice[{4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 2, 2, 2, 2, 2, 2, 2, 2, 2} -> {"One", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine", "Ten", "Eleven (Page)", "Twelve (Knight)", "Thirteen (Queen)", "Fourteen (King)", "Fifteen (Magician)", "Fifteen (High Priestess)", "Negative Eleven (Empress)", "Negative Eleven (Emperor)", "Zero (Hierophant)", "Zero (Lovers)", "Negative Eight (Chariot)", "Negative Eight (Strength)", "Negative Fourteen (Hermit)", "Negative Fourteen (Wheel of Fortune)", "Negative Fifteen (Justice)", "Negative Fifteen (Hanged Man)", "Negative Two (Death)", "Negative Two (Temperance)", "Negative Thirteen (Devil)", "Negative Thirteen (Tower)", "Negative Seventeen (Star)", "Negative Seventeen (Moon)"}, 2]
 z=RandomChoice[{4, 3, 2, 1, 4, 3, 2, 1, 1} -> {"20", "21", "22", "23", "-20", "-21", "-22", "-23", "Perfect Sabacc"}, 1]
 a=RandomChoice[{1, 5} -> {z " is my total and I call", "Pass to draw"}]
