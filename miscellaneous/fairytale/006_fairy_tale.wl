@@ -28,17 +28,17 @@ Print[tmp7]
 (* end draw *)
 (* blank *)
 (* draw *)
-Print[tmp3]
+Print[tmp7]
 Print["Please choose a card :"]
-a=Input[]
-tmp4 = DeleteCases[tmp3, a]
-Print[tmp4]
-b = RandomChoice[tmp4]
+e=Input[]
+tmp8 = DeleteCases[tmp7, e]
+Print[tmp8]
+f = RandomChoice[tmp8]
 Print["I choose to take: "]
-Print[b]
-tmp5 = DeleteCases[tmp4, b]
+Print[f]
+tmp9 = DeleteCases[tmp8, f]
 Print["Remaining in list: "]
-Print[tmp5]
+Print[tmp9]
 (* end draw *)
 (* blank *)
 (* draw *)
