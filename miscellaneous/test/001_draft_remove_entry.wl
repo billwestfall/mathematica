@@ -1,6 +1,6 @@
 (* Need way to remove an entry from a list after user and AI have chosen and present the remaining via terminal *)
 
-tmp3 = {a, b, c, d, e}
+tmp3 = {tl, tm, tn, to, tp}
 Print[tmp3]
 Print["Please enter a value to remove :"]
 y=Input[]
