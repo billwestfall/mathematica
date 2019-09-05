@@ -2,5 +2,7 @@
 
 tmp3 = {"a", "b", "c", "d"}
 Print[tmp3]
-tmp4 = DeleteCases[tmp3, "a"]
+Print["Please enter a value to remove :"]
+y=Input[]
+tmp4 = DeleteCases[tmp3, y]
 Print[tmp4]
