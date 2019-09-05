@@ -1,6 +1,6 @@
 (* Need way to remove an entry from a list after user and AI have chosen and present the remaining via terminal *)
 
-tmp3 = RandomChoice[{tl, tm, tn, to, tp, tq, tr, ts}, 5]
+tmp3 = RandomSample[{tl, tm, tn, to, tp, tq, tr, ts}, 5]
 Print[tmp3]
 Print["Please enter a value to remove :"]
 y=Input[]
