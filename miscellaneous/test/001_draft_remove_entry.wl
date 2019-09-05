@@ -2,5 +2,5 @@
 
 tmp3 = {"a", "b", "c", "d"}
 Print[tmp3]
-tmp4 = DeleteCases[tmp3, {"a", __}]
+tmp4 = DeleteCases[tmp3, "a"]
 Print[tmp4]
