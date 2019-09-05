@@ -14,7 +14,7 @@ Print[tmp5]
 (* end draw *)
 (* blank *)
 (* draw *)
-Print[tmp5]
+
 Print["Please choose a card :"]
 c=Input[]
 tmp6 = DeleteCases[tmp5, c]
@@ -28,7 +28,7 @@ Print[tmp7]
 (* end draw *)
 (* blank *)
 (* draw *)
-Print[tmp7]
+
 Print["Please choose a card :"]
 e=Input[]
 tmp8 = DeleteCases[tmp7, e]
@@ -42,7 +42,7 @@ Print[tmp9]
 (* end draw *)
 (* blank *)
 (* draw *)
-Print[tmp9]
+
 Print["Please choose a card :"]
 g=Input[]
 tmp10 = DeleteCases[tmp9, g]
@@ -56,7 +56,7 @@ Print[tmp11]
 (* end draw *)
 (* blank *)
 (* draw *)
-Print[tmp11]
+
 Print["Please choose a card :"]
 j=Input[]
 tmp12 = DeleteCases[tmp11, j]
