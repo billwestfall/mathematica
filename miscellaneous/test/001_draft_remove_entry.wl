@@ -1,6 +1,6 @@
 (* Need way to remove an entry from a list after user and AI have chosen and present the remaining via terminal *)
 
-tmp3 = {a, b, c, d}
+tmp3 = {a, b, c, d, e}
 Print[tmp3]
 Print["Please enter a value to remove :"]
 y=Input[]
@@ -16,3 +16,7 @@ Print[a]
 tmp6 = DeleteCases[tmp5, a]
 Print["Remaining in list: "]
 Print[tmp6]
+Print["Please enter a value to remove :"]
+b=Input[]
+tmp7 = DeleteCases[tmp6, b]
+Print[tmp7]
