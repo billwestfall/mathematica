@@ -1,5 +1,5 @@
 a={z, y, x}
-b=RandomChoice[a]
+b=RandomInteger[1,3]
 c=Extract[a, b]
 Print[a]
 Print[c]
