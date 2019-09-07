@@ -9,8 +9,8 @@ b = RandomChoice[tmp4, 5]
 Print["I choose to take these cards: "]
 Print[b]
 tmp5 = DeleteCases[tmp4, b]
-Print["Remaining in list: "]
+(* Print["Remaining in list: "]
 Print[tmp5]
-(* end draw *)
+ end draw *)
 (* blank *)
 (* draw *)
