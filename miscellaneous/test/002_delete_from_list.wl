@@ -1,5 +1,4 @@
-a={z, y, x}
-b=RandomInteger[{1,3}]
-c=Extract[a, b]
-Print[a]
-Print[c]
+b=RandomSample[Range[30], 20]
+(* c=Extract[a, b]
+Print[a] *)
+Print[b]
