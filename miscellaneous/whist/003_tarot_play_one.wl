@@ -9,4 +9,4 @@ DealFromDeck[] := (First@deck; deck = deck[[2 ;; All]];)
 deck = DeckShuffle@MakeDeck[]
 Print["AI plays the following card: "]
 mine = DealFromDeck[]
-Print[DealFromDeck[]]
+Print[z]
