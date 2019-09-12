@@ -1,4 +1,4 @@
-a=List[{Greed, Elitism, Rage, Deception, Obsession}]
+a=List[Greed, Elitism, Rage, Deception, Obsession]
 b=RandomChoice[a]
 Print["The trump suit is: ", b]
 c = DeleteCases[a, b]
