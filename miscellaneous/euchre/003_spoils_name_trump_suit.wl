@@ -1,2 +1,6 @@
-a=RandomChoice[{Greed, Elitism, Rage, Deception, Obsession}]
-Print["The trump suit is: ", a]
+a=List[{Greed, Elitism, Rage, Deception, Obsession}]
+b=RandomChoice[a]
+Print["The trump suit is: ", b]
+c = DeleteCases[a, b]
+d=RandomChoice[c]
+Print["The next highest trump resource is :", d]
