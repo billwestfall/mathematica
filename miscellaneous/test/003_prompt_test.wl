@@ -1,2 +1,2 @@
 a=Input[]
-If a="y"; Print[a]
+Which[a == "y", Print["Yes"], Print["No"]]
