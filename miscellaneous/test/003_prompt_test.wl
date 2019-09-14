@@ -1,2 +1,2 @@
 a=Input[]
-Which[StringMatchQ["y"][a], Print["Yes"], StringMatchQ["n"][a], Print["No"]]
+Which[StringMatchQ[a]["y"], Print["Yes"], StringMatchQ[a]["n"], Print["No"]]
