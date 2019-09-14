@@ -1,3 +1,3 @@
 z=Input[]
 a=ToString[z]
-Which[StringMatchQ[a]["y"], Print["Yes"], StringMatchQ[a]["n"], Print["No"]]
+Which[StringMatchQ[a]["y"], Exit[], StringMatchQ[a]["n"], Print["No"]]
