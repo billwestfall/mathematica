@@ -1,2 +1,2 @@
 a=Input[]
-Print[a]
+If a="y"; Print[a]
