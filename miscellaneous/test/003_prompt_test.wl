@@ -1,0 +1,2 @@
+a=Input[]
+Print[a]
