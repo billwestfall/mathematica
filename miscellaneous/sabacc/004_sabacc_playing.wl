@@ -1,5 +1,5 @@
 
-Print["Hearts and diamonds are negative, spades and clubs are positive. "]
+Print["Hearts and diamonds are negative, spades and clubs are positive. The dealer (AI) must stand on 19 (positive or negative) or greater."]
 Print["Values are Ace(One), Jack(Eleven), Queen(Twelve), King(Thirteen)"]
 cprom[] := (Print["Should I deal another card? (y/n): "]; z=Input[]; w=ToString[z])
 exprod[] := (e = DeleteCases[c, d]; f = RandomChoice[e]; Print["My fourth card is: ", f])
