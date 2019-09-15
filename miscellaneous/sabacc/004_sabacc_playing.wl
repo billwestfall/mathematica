@@ -1,6 +1,6 @@
 
 Print["Hearts and diamonds are negative, spades and clubs are positive. "]
-Print["Eleven (Page), Twelve (Knight), Thirteen (Queen), Fourteen (King), Fifteen (Magician), Fifteen (High Priestess), Negative Eleven (Empress), Negative Eleven (Emperor), Zero (Hierophant), Zero (Lovers), Negative Eight (Chariot), Negative Eight (Strength), Negative Fourteen (Hermit), Negative Fourteen (Wheel of Fortune), Negative Fifteen (Justice), Negative Fifteen (Hanged Man), Negative Two (Death), Negative Two (Temperance), Negative Thirteen (Devil), Negative Thirteen (Tower), Negative Seventeen (Star), Negative Seventeen (Moon)"]
+Print["Values are Ace(One), Jack(Eleven), Queen(Twelve), King(Thirteen)"]
 cprom[] := (Print["Should I deal another card? (y/n): "]; z=Input[]; w=ToString[z])
 exprod[] := (e = DeleteCases[c, d]; f = RandomChoice[e]; Print["My third card is: ", f])
 exproe[] := (g = DeleteCases[e, f]; h = RandomChoice[g]; Print["My fourth card is: ", h])
