@@ -5,7 +5,7 @@ exprof[] := (j = DeleteCases[g, h]; k = RandomChoice[j]; Print["The fifth card i
 exprog[] := (l = DeleteCases[j, k]; m = RandomChoice[l]; Print["The sixth card is: ", m])
 a=List["Ace \[ClubSuit]", "2 \[ClubSuit]", "3 \[ClubSuit]", "4 \[ClubSuit]", "5 \[ClubSuit]", "6 \[ClubSuit]", "7 \[ClubSuit]", "8 \[ClubSuit]", "9 \[ClubSuit]", "10 \[ClubSuit]", "Ace \[SpadeSuit]", "2 \[SpadeSuit]", "3 \[SpadeSuit]", "4 \[SpadeSuit]", "5 \[SpadeSuit]", "6 \[SpadeSuit]", "7 \[SpadeSuit]", "8 \[SpadeSuit]", "9 \[SpadeSuit]", "10 \[SpadeSuit]"]
 b=RandomChoice[a]
-Print["First deal is to AI (first) then to player. Then choose how many more main deck cards to deal. AI must stand on 16 on main deck (can still deal from side)"]
+Print["First deal is to AI (first) then to player. Then choose how many more main deck cards to deal, alternate deal to AI then player (if needed). AI must stand on 16 on main deck (can still deal from side)"]
 Print["My first card is: ", b]
 c = DeleteCases[a, b]
 d = RandomChoice[c]
