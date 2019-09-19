@@ -2,7 +2,7 @@ a=List["Ace \[ClubSuit]", "2 \[ClubSuit]", "3 \[ClubSuit]", "4 \[ClubSuit]", "5 
 b=RandomChoice[a, 12]
 Print["My hand is: ", b]
 c=DeleteCases[a, b]
-Print["Enter the number of cards to pull from remainder 0-8: "]
+Print["Enter the number of cards to pull from remainder 0-5: "]
 z=Input[]
 d=RandomChoice[c, z]
 Print["Here are the cards you drew from remainder: ", d]
