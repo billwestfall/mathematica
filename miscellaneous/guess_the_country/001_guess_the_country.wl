@@ -2,5 +2,5 @@ a=List["Afghanistan", "Aland Islands", "Albania", "Algeria", "American Samoa", "
 b=RandomChoice[a]
 c=ToString[b]
 Print[c]
-d=CountryData[c, "Population"]
+d=CountryData[c, "CapitalCity"]
 Print[d]
