@@ -1,4 +1,6 @@
 cprom[] := (Print["Should I deal another card? (y/n): "]; z=Input[]; w=ToString[z])
+exproo[] := (c = DeleteCases[a, b]; d = RandomChoice[c]; Print["My second card is: ", d])
+exprop[] := (e = DeleteCases[c, d]; f = RandomChoice[e]; Print["My third card is: ", f])
 exproe[] := (g = DeleteCases[e, f]; h = RandomChoice[g]; Print["My fourth card is: ", h])
 exprof[] := (j = DeleteCases[g, h]; k = RandomChoice[j]; Print["My fifth card is: ", k])
 exprog[] := (l = DeleteCases[j, k]; m = RandomChoice[l]; Print["My sixth card is: ", m])
@@ -12,8 +14,10 @@ expron[] := (mm = DeleteCases[ll, ll]; nn = RandomChoice[mm]; Print["My thirteen
 a=List["Ace \[ClubSuit]", "9 \[ClubSuit]", "10 \[ClubSuit]", "Jack \[ClubSuit]", "Queen \[ClubSuit]", "King \[ClubSuit]", "Ace \[SpadeSuit]", "9 \[SpadeSuit]", "10 \[SpadeSuit]", "Jack \[SpadeSuit]", "Queen \[SpadeSuit]", "King \[SpadeSuit]", "Ace \[DiamondSuit]", "9 \[DiamondSuit]", "10 \[DiamondSuit]", "Jack \[DiamondSuit]", "Queen \[DiamondSuit]", "King \[DiamondSuit]", "Ace \[HeartSuit]", "9 \[HeartSuit]", "10 \[HeartSuit]", "Jack \[HeartSuit]", "Queen \[HeartSuit]", "King \[HeartSuit]"]
 b=RandomChoice[a]
 Print["My first card is: ", b]
-c = DeleteCases[a, b]; d = RandomChoice[c]; Print["My second card is: ", d]
-e = DeleteCases[c, d]; f = RandomChoice[e]; Print["My third card is: ", f]
+cprom[]
+Which[StringMatchQ[w]["n"], Exit[], StringMatchQ[w]["y"], exproo[]]
+cprom[]
+Which[StringMatchQ[w]["n"], Exit[], StringMatchQ[w]["y"], exprop[]]
 cprom[]
 Which[StringMatchQ[w]["n"], Exit[], StringMatchQ[w]["y"], exproe[]]
 cprom[]
@@ -32,6 +36,4 @@ cprom[]
 Which[StringMatchQ[w]["n"], Exit[], StringMatchQ[w]["y"], exprol[]]
 cprom[]
 Which[StringMatchQ[w]["n"], Exit[], StringMatchQ[w]["y"], exprom[]]
-cprom[]
-Which[StringMatchQ[w]["n"], Exit[], StringMatchQ[w]["y"], expron[]]
 
