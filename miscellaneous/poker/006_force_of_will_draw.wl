@@ -2,7 +2,7 @@ cprom[] := (Print["Should I deal another card? (y/n): "]; z=Input[]; w=ToString[
 exprod[] := (l = DeleteCases[j, k]; m = RandomChoice[l]; Print["Next card is: ", m])
 exproe[] := (o = DeleteCases[l, m]; p = RandomChoice[o]; Print["Next card is: ", p])
 exprof[] := (q = DeleteCases[o, p]; r = RandomChoice[q]; Print["Next card is: ", r])
-a=List["Zero", "200", "300", "400", "500", "600", "700", "800", "900", "1000", "1500", "Light", "Dark", "Fire", "Water", "Wind"]
+a=List["Zero", "200", "300", "400", "500", "600", "700", "800", "900", "1000", "Light", "Dark", "Fire", "Water", "Wind"]
 b=RandomChoice[a]
 Print["My first card is: ", b]
 c = DeleteCases[a, b]
