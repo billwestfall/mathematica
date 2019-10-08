@@ -1,2 +1,2 @@
-a=RandomChoice[{Spades, Clubs, Hearts, Diamonds}]
+a=RandomChoice[{Dark, Fire, Light, Water, Wind}]
 Print["The trump suit is: ", a]
