@@ -1,5 +1,5 @@
 qq=RandomChoice[{0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, Null}]
-Print["The trump suit is: ", qq]
+Print["The trump rank is: ", qq]
 cprom[] := (Print["Should I deal another card? (y/n): "]; z=Input[]; w=ToString[z])
 exproc[] := (c = DeleteCases[a, b]; d = RandomChoice[c]; Print["My second card is: ", d])
 exprod[] := (e = DeleteCases[c, d]; f = RandomChoice[e]; Print["My third card is: ", f])
