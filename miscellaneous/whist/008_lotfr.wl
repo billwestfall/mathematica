@@ -1,4 +1,4 @@
-qq=RandomChoice[{Greed, Rage, Elitism, Obsession, Deception}]
+qq=RandomChoice[{0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, Null}]
 Print["The trump suit is: ", qq]
 cprom[] := (Print["Should I deal another card? (y/n): "]; z=Input[]; w=ToString[z])
 exproc[] := (c = DeleteCases[a, b]; d = RandomChoice[c]; Print["My second card is: ", d])
@@ -13,7 +13,7 @@ exprok[] := (gg = DeleteCases[ee, ff]; hh = RandomChoice[gg]; Print["My tenth ca
 exprol[] := (ii = DeleteCases[gg, hh]; jj = RandomChoice[ii]; Print["My eleventh card is: ", jj])
 exprom[] := (kk = DeleteCases[ii, jj]; ll = RandomChoice[kk]; Print["My twelth card is: ", ll])
 expron[] := (mm = DeleteCases[kk, ll]; nn = RandomChoice[mm]; Print["My thirteenth card is: ", nn])
-a=List["One(Greed)", "One(Rage)","One(Deception)","One(Elitism)","One(Obsession)","Two(Greed)", "Two(Rage)", "Two(Deception)", "Two(Elitism)", "Two(Obsession)", "Three(Greed)", "Three(Rage)", "Three(Deception)", "Three(Elitism)", "Three(Obsession)", "Four(Greed)", "Four(Rage)", "Four(Deception)", "Four(Elitism)", "Four(Obsession)", "Five(Greed)", "Five(Rage)", "Five(Deception)", "Five(Elitism)", "Five(Obsession)", "Six(Greed)", "Six(Rage)", "Six(Deception)", "Six(Elitism)", "Six(Obsession)", "Seven(Greed)", "Seven(Rage)", "Seven(Deception)", "Seven(Elitism)", "Seven(Obsession)", "Deception(Foil)", "Deception(Nonfoil)", "Greed(Foil)", "Greed(Nonfoil)", "Rage(Foil)", "Rage(Nonfoil)", "Elitism(Foil)", "Elitism(Nonfoil)", "Obsession(Foil)", "Obsession(Nonfoil)"]
+a=List["0a", "0b", "0c", "0d", "0e", "1a", "1b", "1c", "1d", "1e", "2a", "2b", "2c", "2d", "2e", "3a", "3b", "3c", "3d", "3e", "4a", "4b", "4c", "4d", "4e", "5a", "5b", "5c", "5d", "5e", "6a", "6b", "6c", "6d", "6e", "7a", "7b", "7c", "7d", "7e", "8a", "8b", "8c", "8d", "8e", "9a", "9b", "9c", "9d", "9e", "10a", "10b", "10c", "10d", "10e", "Nulla", "Nullb", "Nullc", "Nulld", "Nulle"]
 b=RandomChoice[a]
 Print["My first card is: ", b]
 cprom[]
