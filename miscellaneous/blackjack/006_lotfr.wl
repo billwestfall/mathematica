@@ -3,7 +3,7 @@ exprod[] := (e = DeleteCases[c, d]; f = RandomChoice[e]; Print["My third card is
 exproe[] := (g = DeleteCases[e, f]; h = RandomChoice[g]; Print["My fourth card is: ", h])
 exprof[] := (j = DeleteCases[g, h]; k = RandomChoice[j]; Print["My fifth card is: ", k])
 exprog[] := (l = DeleteCases[j, k]; m = RandomChoice[l]; Print["My sixth card is: ", m])
-a=List["Zero(1)", "Zero(2)","Zero(3)","Zero(4)","Zero(5)","200(1)", "200(2)", "200(3)", "200(4)", "200(5)", "300(1)", "300(2)", "300(3)", "300(4)", "300(5)", "400(1)", "400(2)", "400(3)", "400(4)", "400(5)", "500(1)", "500(2)", "500(3)", "500(4)", "500(5)", "600(1)", "600(2)", "600(3)", "600(4)", "600(5)", "700(1)", "700(2)", "700(3)", "700(4)", "700(5)", "800(1)", "800(2)", "800(3)", "800(4)", "800(5)", "900(1)", "900(2)", "900(3)", "900(4)", "900(5)", "1000(1)", "1000(2)", "1000(3)", "1000(4)", "1000(5)", "Light(1)", "Light(2)", "Light(3)", "Light(4)", "Light(5)", "Dark(1)", "Dark(2)", "Dark(3)", "Dark(4)", "Dark(5)", "Fire(1)", "Fire(2)", "Fire(3)", "Fire(4)", "Fire(5)", "Water(1)", "Water(2)", "Water(3)", "Water(4)", "Water(5)", "Wind(1)", "Wind(2)", "Wind(3)", "Wind(4)", "Wind(5)"]
+a=List["0a", "0b", "0c", "0d", "0e", "1a", "1b", "1c", "1d", "1e", "2a", "2b", "2c", "2d", "2e", "3a", "3b", "3c", "3d", "3e", "4a", "4b", "4c", "4d", "4e", "5a", "5b", "5c", "5d", "5e", "6a", "6b", "6c", "6d", "6e", "7a", "7b", "7c", "7d", "7e", "8a", "8b", "8c", "8d", "8e", "9a", "9b", "9c", "9d", "9e", "10a", "10b", "10c", "10d", "10e", "Nulla", "Nullb", "Nullc", "Nulld", "Nulle"]
 b=RandomChoice[a]
 Print["My first card is: ", b]
 c = DeleteCases[a, b]
