@@ -1,5 +1,5 @@
 z=RandomChoice[{4, 4, 3, 2, 1} -> {"1", "2", "3", "4", "5"}, 1]
-w=RandomChoice[{1,2,1} -> {"Fold", "Play", "Raise "z]
+w=RandomChoice[{1,2,1} -> {"Fold", "Play", "Raise "z}]
 Print["Dealer chooses to: ", w]
 Print["Choose to Fold, Play or Raise, type y and Enter when ready: "]
 Input[]
