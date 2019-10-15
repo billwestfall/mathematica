@@ -3,4 +3,4 @@ cpromb[] := (Print["What value do you want to add?: "]; y=Input[])
 cprom[]
 cpromb[]
 a=z+y
-Print[a]
+Print["Total: ", a]
