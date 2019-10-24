@@ -1,6 +1,5 @@
-cprom[] := (Print["Should I deal again? (y/n): "]; z=Input[]; w=ToString[z])
+cprom[] := (Print["Enter my starting card count: "]; z=Input[])
 cprom[]
-a=30
 c=RandomChoice[{1, 2, 5} -> {-2, -1, 0}]
-b=a+c
+b=z+c
 Print["My score is: ", b]
