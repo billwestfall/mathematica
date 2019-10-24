@@ -1,5 +1,4 @@
-
-cprom[] := (Print["Should I deal another card? (y/n): "]; z=Input[]; w=ToString[z])
+cprom[] := (Print["Should I deal again? (y/n): "]; z=Input[]; w=ToString[z])
 exprod[] := (e = DeleteCases[c, d]; f = RandomChoice[e]; Print["My third card is: ", f])
 exproe[] := (g = DeleteCases[e, f]; h = RandomChoice[g]; Print["My fourth card is: ", h])
 exprof[] := (j = DeleteCases[g, h]; k = RandomChoice[j]; Print["My fifth card is: ", k])
