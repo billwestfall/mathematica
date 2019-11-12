@@ -4,4 +4,4 @@ cprom[] := (Print["Please enter current life total for ", z]; Input[])
 cpron[] := (Print["Please enter current life total for ", y]; Input[])
 cprok[]
 cprol[]
-Do[cprom[], cpron[], 20]
+n = 1; While[n < 20, cprom[], cpron[]; n++]
