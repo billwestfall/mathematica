@@ -1,1 +1,2 @@
-RandomChoice[{0.2, 0.2, 0.6} -> {a, b, c}]
+a=RandomChoice[{1, 1, 2} -> {"Ground out", "Fly out", "Strike out"}]
+Print[a]
