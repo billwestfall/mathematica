@@ -1,0 +1,1 @@
+combine chess and Magic
