@@ -3,5 +3,5 @@ cprom[] := (Print["Enter pitcher's ERA: "]; z=Input[])
 cpromb[] := (Print["Enter batter's batting average: "]; w=Input[])
 cprom[]
 cpromb[]
-b=RandomChoice[{w, z} -> {"walk", "strikeout"},1]
+b=RandomChoice[{w, w, w, w, w, z} -> {"single", "double", "triple", "homerun", "walk", "strikeout"},1]
 Print[b]
