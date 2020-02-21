@@ -1,6 +1,6 @@
-cprom[] := (Print["Enter pitcher's ERA: "]; z=Input[]; w=ToInteger[z])
-cpromb[] := (Print["Enter batter's batting average: "]; v=Input[]; u=ToString[v])
+cprom[] := (Print["Enter pitcher's ERA: "]; z=Input[])
+cpromb[] := (Print["Enter batter's batting average: "]; w=Input[])
 cprom[]
 cpromb[]
-b=RandomChoice[{u, w} -> {"walk", "strikeout"},1]
+b=RandomChoice[{w, z} -> {"walk", "strikeout"},1]
 Print[b]
