@@ -12,5 +12,5 @@ w=b*4
 r=RandomChoice[{w, w/8, w/100, w/10, w/3, z, w/40, w/40, z/2, z/2} -> {"single", "double", "triple", "homerun", "walk", "strikeout", "hit by pitch", "fielding error", "fly out", "ground out"},1]
 Print[r]
 u={{Inning, 1, 2, 3, 4, 5, 6, 7, 8, 9}, {Dean, 4, 0, 0, 0, 0, 0, 0, 0, x}, {Cicotte, 3, 3, 0, 0, 2, 0, 0, 2, 0}}
-v=Grid[u]
+v={Grid[u]}
 Print[v]
