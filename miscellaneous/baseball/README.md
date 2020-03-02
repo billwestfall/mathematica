@@ -6,3 +6,5 @@ You can keep boxscore in an interactive Wolfram terminal with a line like:
 `Grid[{{Inning, 1, 2, 3, 4, 5, 6, 7, 8, 9}, {Mets, 0, 0, 0, 0, 0, 0, 0, 0, 0}, {Reds, 0, 0, 0, 0, 0, 0, 0, 0, 0}}] `
 
 and then run this line with updated score after every half inning
+
+the first file is a per batter - pitcher program, second is a team vs team stats, third is a predictor based on team average vs starting pitchers averages
