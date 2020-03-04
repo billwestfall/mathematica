@@ -13,7 +13,7 @@ pb=py-4
 t=s+pb
 tyy=sy+pa
 ra=RandomInteger[{1, 9}]
-Which[ra != 9, ty=tyy+0, ra = 9, ty=tyy+0]
+Which[ra != 9, ty=tyy+0, ra = 9, ty=tyy+100]
 Print[t]
 Print[ty]
 Which[t > ty, Print[cc, " wins!"], t < ty, Print[dd, " wins!"]]
