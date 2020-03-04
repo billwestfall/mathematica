@@ -12,8 +12,8 @@ pa=p-4
 pb=py-4
 t=s+pb
 tyy=sy+pa
-ra=RandomInteger[{1, 18}]
-Which[ra != 18, ty=tyy+0, ra = 18, ty=tyy+0]
+ra=RandomInteger[{1, 9}]
+Which[ra != 9, ty=tyy+0, ra = 9, ty=tyy+0]
 Print[t]
 Print[ty]
 Which[t > ty, Print[cc, " wins!"], t < ty, Print[dd, " wins!"]]
