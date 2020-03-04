@@ -12,8 +12,10 @@ pa=p-4
 pb=py-4
 t=s+pb
 tyy=sy+pa
+mxt=Max[ty, tyy]
+mnt=Min[ty, tyy]
 ra=RandomInteger[{1, 9}]
-Which[ra != 9, ty=tyy+0, ra = 9, ty=tyy+100]
-Print[t]
+Which[ra != 9, mxt=mxt+0, ra = 9, mnt=mnt+100]
+Print[]
 Print[ty]
-Which[t > ty, Print[cc, " wins!"], t < ty, Print[dd, " wins!"]]
+Which[mxt > ty, Print[cc, " wins!"], t < ty, Print[dd, " wins!"]]
