@@ -11,7 +11,9 @@ sy=Lookup[<|Houston -> 5.51, Boston -> 5.56, Minnesota -> 5.73, NYYankees -> 5.7
 pa=p-4
 pb=py-4
 t=s+pb
-ty=sy+pa
+tyy=sy+pa
+ra=RandomInteger[{1, 18}]
+Which[ra != 18, ty=tyy+0, ra = 18, ty=tyy+0]
 Print[t]
 Print[ty]
 Which[t > ty, Print[cc, " wins!"], t < ty, Print[dd, " wins!"]]
