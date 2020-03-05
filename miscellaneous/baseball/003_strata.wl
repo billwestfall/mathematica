@@ -10,12 +10,13 @@ py=Lookup[<|Houston -> 3.69, Boston -> 4.7, Minnesota -> 4.24, NYYankees -> 4.23
 sy=Lookup[<|Houston -> 5.51, Boston -> 5.56, Minnesota -> 5.73, NYYankees -> 5.77, Colorado -> 5.15, Pittsburgh -> 4.68, Washington -> 5.31, ChiSox -> 4.4, NYMets -> 4.88, Atlanta -> 5.22, LADodgers -> 5.44, TampaBay -> 4.71, ChiCubs -> 5.02, Arizona -> 5.02, Cleveland -> 4.75, Oakland -> 5.19, Texas -> 5, LAAngels -> 4.75, KansasCity -> 4.27, Baltimore -> 4.5, Milwaukee -> 4.74, Philadelphia -> 4.78, Cincinnati -> 4.33, StLouis -> 4.65, Miami -> 3.8, Detroit -> 3.61, SFGiants -> 4.19, SanDiego -> 4.21, Seattle -> 4.68, Toronto -> 4.48|>, dd]
 pa=p-4
 pb=py-4
-t=s+pb
+ty=s+pb
 tyy=sy+pa
+RandomChoice[{1, 9} -> {mxt=Min[ty, tyy], mxt=Max[ty, tyy]}]
+(*
 mxt=Max[ty, tyy]
 mnt=Min[ty, tyy]
 ra=RandomInteger[{1, 9}]
 Which[ra != 9, mxt=mxt+0, ra = 9, mnt=mnt+100]
-Print[]
-Print[ty]
-Which[mxt > ty, Print[cc, " wins!"], t < ty, Print[dd, " wins!"]]
+*)
+Which[mxt == ty, Print[cc, " wins!"], mxt == tyy, Print[dd, " wins!"]]
