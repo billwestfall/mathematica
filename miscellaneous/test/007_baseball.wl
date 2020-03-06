@@ -1,7 +1,9 @@
 
-cpromc[] := (Print["Enter first team's name: "]; cc=Input[])
-cpromb[] := (Print["Enter second team's name: "]; dd=Input[])
+cpromc[] := (Print["Enter first batting average: "]; cc=Input[])
+cpromb[] := (Print["Enter second batting average: "]; dd=Input[])
 cpromc[]
 cpromb[]
 Print[cc]
 Print[dd]
+ee=Mean[cc, dd]
+Print[ee]
