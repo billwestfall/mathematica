@@ -12,11 +12,7 @@ pa=p-4
 pb=py-4
 ty=s+pb
 tyy=sy+pa
-RandomChoice[{1, 9} -> {mxt=Min[ty, tyy], mxt=Max[ty, tyy]}]
-(*
-mxt=Max[ty, tyy]
-mnt=Min[ty, tyy]
-ra=RandomInteger[{1, 9}]
-Which[ra != 9, mxt=mxt+0, ra = 9, mnt=mnt+100]
-*)
-Which[mxt == ty, Print[cc, " wins!"], mxt == tyy, Print[dd, " wins!"]]
+hye=Min[ty, tyy]
+hyf=Max[ty, tyy]
+hyg=RandomChoice[{9, 1} -> {hyf, hye}]
+Which[hyg == ty, Print[cc, " wins!"], hyg == tyy, Print[dd, " wins!"]]
