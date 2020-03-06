@@ -1,5 +1,5 @@
 cpromc[] := (Print["Enter the pitcher's ERA then the batting average of the 9 team members: "]; cc=Input[]; ee=Input[]; ff=Input[]; gg=Input[]; hh=Input[]; ii=Input[]; jj=Input[]; kk=Input[]; ll=Input[]; mm=Input[])
-cpromb[] := (Print["Enter second team's name: "]; dd=Input[])
+cpromd[] := (Print["Enter the pitcher's ERA then the batting average of the 9 team members: "]; dd=Input[]; nn=Input[]; oo=Input[]; pp=Input[]; qq=Input[]; rr=Input[]; ss=Input[]; tt=Input[]; uu=Input[]; vv=Input[])
 cpromc[]
 cpromb[]
 pa=p-4
