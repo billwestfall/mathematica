@@ -4,6 +4,8 @@ cpromc[]
 cpromd[]
 pa=p-4
 pb=py-4
+s=Mean[{ee, ff, gg, hh, ii, jj, kk, ll, mm}]
+sy=Mean[{nn, oo, pp, qq, rr, ss, tt, uu, vv}]
 ty=s+pb
 tyy=sy+pa
 hye=Min[ty, tyy]
