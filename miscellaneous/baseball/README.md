@@ -16,3 +16,5 @@ the first file is a per batter - pitcher program, second is a team vs team stats
 003 team vs team with random win of team with worse metrics (per Sabermetrics site)
 
 004 team vs team by entering stats of pitchers and batters for each team
+
+005 is pitcher ERA vs batter batting average (enter both and get result)
