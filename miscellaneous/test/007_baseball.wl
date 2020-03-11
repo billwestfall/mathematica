@@ -1,5 +1,4 @@
-
-cpromc[] := (Print["Enter first batting average: "]; cc=Input[]; dd=Input[])
-cpromc[]
-ee=Mean[{cc, dd}]
-Print[ee]
+a=1
+b=2
+c=a+b
+Print[c]
