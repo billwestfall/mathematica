@@ -18,3 +18,7 @@ the first file is a per batter - pitcher program, second is a team vs team stats
 004 team vs team by entering stats of pitchers and batters for each team
 
 005 is pitcher ERA vs batter batting average (enter both and get result)
+
+006 is for entering ERA of pitcher, then batting average for all players
+
+007 is for entering ERA and for team batting average
