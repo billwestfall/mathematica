@@ -1,5 +1,5 @@
 cpromc[] := (Print["Enter pitcher's ERA: "]; p=Input[])
-cpromb[] := (Print["Enter the team batting average: "]; b=Input[]]
+cpromb[] := (Print["Enter the team batting average: "]; b=Input[])
 cpromc[]
 cpromb[]
 z=(1/p)*4
