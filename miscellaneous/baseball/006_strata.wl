@@ -1,7 +1,8 @@
 cpromc[] := (Print["Enter pitcher's ERA: "]; p=Input[])
-cpromb[] := (Print["Enter team's batting average: "]; b=Input[])
+cpromb[] := (Print["Enter the batting average of the 9 team members: "]; ee=Input[]; ff=Input[]; gg=Input[]; hh=Input[]; ii=Input[]; jj=Input[]; kk=Input[]; ll=Input[]; mm=Input[])
 cpromc[]
 cpromb[]
+b=Mean[{ee, ff, gg, hh, ii, jj, kk, ll, mm}]
 z=(1/p)*4
 w=b*4
 red="\033[1;31m"
