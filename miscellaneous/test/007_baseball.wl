@@ -2,4 +2,5 @@
 n = 1; While[n <= 4,
 {b=RandomChoice[{1, 0}],
 Which[b == 1, Print["out"], b == 0, Print["hit"]]}
-; n++]
+; n=n+b]
+For[i = 0, i < 4, i=i+1, Print[i]]
