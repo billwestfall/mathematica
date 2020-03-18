@@ -23,4 +23,4 @@ the first file is a per batter - pitcher program, second is a team vs team stats
 
 007 is for entering ERA and for team batting average
 
-008 is same as 005 but with rules as 1) starting life of 20 for each player 2) pull random card from deck 3) use default of 4 for ERA and .25 for average if no opponent on field 4) deal damage to player depending on results , i.e. if you hit a single, opponent loses one life. if a double, lose two life.  if strikeout or other out, you lose one life
+008 is same as 005 but with rules as 1) starting life of 20 for each player 2) pull random card from deck 3) use default of 4 for ERA and .25 for average if no opponent on field 4) deal damage to player depending on results , i.e. if you hit a single, pitcher card leaves field. if a double, lose pitcher and one life, etc.  if strikeout or other out, discard batter card. for pitcher vs pitcher and batter vs batter, low ERA and high batting average wins. card does not have to block, each unblocked hit causes loss of one life
