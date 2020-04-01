@@ -1,1 +1,1 @@
-While[Pause 15; Random[RealInteger[]]
+While[Pause 15; RandomReal[]]
