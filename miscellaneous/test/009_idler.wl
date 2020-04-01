@@ -1,3 +1,2 @@
-k = 1
-x = RandomInteger[]
-While[k<4, {Print[x], k++}]
+k=1
+While[k<4, {Print[RandomInteger[]], k++}]
