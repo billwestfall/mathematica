@@ -1,2 +1,2 @@
-Dynamic[i]
-Do[Print[i], {i, Infinity}]
+a=1
+Do[Print[a], Infinity]
