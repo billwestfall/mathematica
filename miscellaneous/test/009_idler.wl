@@ -1,4 +1,5 @@
 a = 1;
-For[a<4,
-Print[a],
-a++]
+k = 1;
+While[k <= 10,
+ Print[a]
+ ]
