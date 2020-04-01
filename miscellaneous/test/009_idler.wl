@@ -1,1 +1,1 @@
-While[Pause 15; x=RandomReal[{1,100}]; Print[x]]
+While[Pause 15; x=RandomInteger[{1,100}]; Print[x]]
