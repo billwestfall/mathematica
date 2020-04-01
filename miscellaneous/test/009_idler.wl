@@ -1,2 +1,1 @@
-k=1
-While[k<4, {Print[RandomInteger[{1,100}]], k++}]
+n = 1; While[True, Pause[1]; Print[n]; n++]
