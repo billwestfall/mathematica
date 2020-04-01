@@ -1,4 +1,6 @@
-i=1
-Do[Print[RandomInteger[{1,100}]
-Pause[0.5]
-{i, 10}
+a = 1;
+Do[
+ a = a k,
+ {k, 1, 10}
+ ]
+a
