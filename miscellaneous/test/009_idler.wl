@@ -1,2 +1,2 @@
-a=1
-Do[Print[a], Infinity]
+k=1
+While[k<4, {Print[RandomInteger[{1,100}]], k++}]
