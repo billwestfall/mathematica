@@ -1,4 +1,4 @@
-k=[RandomInteger[{1,100}]]
+k=RandomInteger[{1,100}]
 str = OpenWrite[]
 Write[str, k]
 Close[str]
