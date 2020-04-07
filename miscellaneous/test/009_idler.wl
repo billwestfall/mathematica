@@ -1,4 +1,4 @@
-k=RandomInteger[{1,100}]
+k=AbsoluteTime[]
 file = File[CreateFile[]]
 Write[file, k]
 Close[file]
