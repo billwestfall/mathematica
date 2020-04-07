@@ -1,2 +1,5 @@
-k=1
-While[k<4, {Print[RandomInteger[{1,100}]], k++}]
+k=[RandomInteger[{1,100}]]
+str = OpenWrite[]
+Write[str, k]
+Close[str]
+FilePrint[%]
