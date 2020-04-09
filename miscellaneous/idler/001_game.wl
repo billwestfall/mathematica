@@ -3,7 +3,7 @@ a=ReadList["/tmp/testfile"]
 Print[N[a]]
 b= Head @ a
 Print[b]
-c=k-b
+c=k-a
 Print[c]
 fname = FileNameJoin[{"/tmp", "testfile"}];
 s = OpenWrite[fname]
