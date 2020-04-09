@@ -1,6 +1,6 @@
 k=AbsoluteTime[]
 a=ReadList["/tmp/testfile"]
-Print[a]
+Print[{N[a]}]
 fname = FileNameJoin[{"/tmp", "testfile"}];
 s = OpenWrite[fname]
 Write[s, k]
