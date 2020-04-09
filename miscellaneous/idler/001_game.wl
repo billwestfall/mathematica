@@ -8,4 +8,5 @@ fname = FileNameJoin[{"/tmp", "testfile"}];
 s = OpenWrite[fname]
 Write[s, k]
 Close[s]
-FilePrint[FileNameJoin[{"/tmp", "testfile"}]]
+(* FilePrint[FileNameJoin[{"/tmp", "testfile"}]] *)
+Print["You have made ", c, " gold"]
