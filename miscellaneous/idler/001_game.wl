@@ -1,6 +1,6 @@
 k=AbsoluteTime[]
 a=ReadList["/tmp/testfile"]
-Print[N[a]]
+d=N[a]
 c=k-a
 Print[c]
 fname = FileNameJoin[{"/tmp", "testfile"}];
