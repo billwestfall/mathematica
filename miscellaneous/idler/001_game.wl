@@ -5,6 +5,6 @@ a=ReadList["/tmp/testfile"]
 Print[a]
 fname = FileNameJoin[{"/tmp", "testfile"}];
 s = OpenWrite[fname]
-Write[s, k]
+Write[s, k, FormatType -> Real]
 Close[s]
 FilePrint[FileNameJoin[{"/tmp", "testfile"}]]
