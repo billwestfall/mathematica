@@ -1,5 +1,6 @@
 k=AbsoluteTime[]
-Head @ k
+z={Head @ k}
+Print[z]
 a=ReadList["/tmp/testfile"]
 Print[a]
 fname = FileNameJoin[{"/tmp", "testfile"}];
