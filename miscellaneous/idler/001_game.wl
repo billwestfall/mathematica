@@ -10,7 +10,7 @@ Print["You have made ", c, " gold"]
 (* add amount to gold file *)
 g=ReadList["/tmp/goldfile"]
 j=c+g
-h=FlattenAt[j, 1]
+h=First[j]
 fnamed = FileNameJoin[{"/tmp", "goldfile"}];
 t = OpenWrite[fnamed]
 Write[t, h]
