@@ -1,2 +1,2 @@
-a=FinancialData["GE"]
+a=FinancialData["OTLK"]
 Print[a]
