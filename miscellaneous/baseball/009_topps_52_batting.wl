@@ -1,6 +1,7 @@
 cpromc[] := (Print["Enter your pitcher's ERA: "]; p=Input[])
 cpromc[]
-q={p/.04}
+n={p/4}
+q={100/n}
 Print["You have a normalized pitching result of ", q]
 a=RandomReal[{.16, .34}]
 r={a/.0025}
