@@ -1,3 +1,4 @@
 a=CharacterRange["a", "z"]
 b=RandomChoice[a, 100]
-Print[b]
+c=First[b]
+Print[c]
