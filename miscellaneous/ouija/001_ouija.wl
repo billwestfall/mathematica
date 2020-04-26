@@ -1,4 +1,5 @@
 a=CharacterRange["a", "z"]
-s=Do[RandomChoice[a], 100]
+r=Do[RandomChoice[a], 100]
+s=ToString[r]
 t=StringReplace[s, "\n" -> ""]
 Print[t]
