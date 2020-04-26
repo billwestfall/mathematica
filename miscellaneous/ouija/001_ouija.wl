@@ -1,2 +1,2 @@
 a=CharacterRange["a", "z"]
-Do[WriteString[RandomChoice[a]], 100]
+Do[$Output, WriteString[RandomChoice[a]], 100]
