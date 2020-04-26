@@ -1,2 +1,4 @@
 a=CharacterRange["a", "z"]
-Do[Print[RandomChoice[a]], 100]
+s=Do[[RandomChoice[a]], 100]
+t=StringReplace[s, "\n" -> ""]
+Print[t]
