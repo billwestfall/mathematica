@@ -3,7 +3,7 @@ exprod[] := (c = DeleteCases[a, b];k = DeleteCases[h, j];d = RandomChoice[c];l =
 exproe[] := (e = DeleteCases[c, d];m = DeleteCases[k, l];f = RandomChoice[e];n = RandomChoice[m];Print["My third card is: ", f, " in ", n])
 a=List["500", "500", "1000", "1000", "1500", "2500", "3000", "3000", "3500", "4500", "5500", "6500", "7500", "9000", "10000"]
 b=RandomChoice[a]
-h=List["First slot", "Second slot", "Third slot"]
+h=List["first slot", "second slot", "third slot"]
 j=RandomChoice[h]
 Print["My first card is: ", b, " in ", j]
 cprom[]
