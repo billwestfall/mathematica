@@ -1,0 +1,1 @@
+f=RandomInteger[{1,10}];Which[f<4,Print["Lose 100 life."],f==4,Print["Put a 300/500 token on the battlefield (+3)."],f==5,Print["Put a 400/500 token on the battlefield (+6)."],f==6||f==7,Print["Take 600 damage."],f==8,Print["Destroy your best artifact or enchantment."],f==9,Print["Roll on Spooky Chart (+3)."],f==10,Print["Roll on Spooky Chart (+4)."]]
