@@ -1,3 +1,2 @@
 i = 1;
-While[i < 10, i++];
-Print[i]
+While[i < 10, Print[i], i++]
