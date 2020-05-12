@@ -1,2 +1,6 @@
-i = 1;
-While[i < 10, Print[i], i++]
+x = {};
+n = 3;
+For[k = 1, k <= n, k++,
+ br = Input[Row[{"Enter the ", k, " element"}]];
+ AppendTo[x, br];
+ ]
