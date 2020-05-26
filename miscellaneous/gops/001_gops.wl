@@ -7,11 +7,11 @@ exprog[] := (c = DeleteCases[a, b]; d = RandomChoice[c]; Print["Next card is: ",
 exproh[] := (e = DeleteCases[c, d]; f = RandomChoice[e]; Print["Next card is: ", f])
 exproi[] := (g = DeleteCases[e, f]; h = RandomChoice[g]; Print["Next card is: ", h])
 exproj[] := (j = DeleteCases[g, h]; k = RandomChoice[j]; Print["Next card is: ", k])
-exprog[] := (c = DeleteCases[a, b]; d = RandomChoice[c]; Print["Next card is: ", d])
-exproh[] := (e = DeleteCases[c, d]; f = RandomChoice[e]; Print["Next card is: ", f])
-exproi[] := (g = DeleteCases[e, f]; h = RandomChoice[g]; Print["Next card is: ", h])
-exproj[] := (j = DeleteCases[g, h]; k = RandomChoice[j]; Print["Next card is: ", k])
-exprod[] := (l = DeleteCases[j, k]; m = RandomChoice[l]; Print["Next card is: ", m])
+exprog[] := (cc = DeleteCases[q, r]; dd = RandomChoice[cc]; Print["Next card is: ", dd])
+exproh[] := (ee = DeleteCases[cc, dd]; ff = RandomChoice[ee]; Print["Next card is: ", ff])
+exproi[] := (gg = DeleteCases[ee, ff]; hh = RandomChoice[gg]; Print["Next card is: ", hh])
+exproj[] := (jj = DeleteCases[gg, hh]; kk = RandomChoice[jj]; Print["Next card is: ", kk])
+exprod[] := (ll = DeleteCases[jj, kk]; mm = RandomChoice[ll]; Print["Next card is: ", mm])
 a=List["Ace \[ClubSuit]", "2 \[ClubSuit]", "3 \[ClubSuit]", "4 \[ClubSuit]", "5 \[ClubSuit]", "6 \[ClubSuit]", "7 \[ClubSuit]", "8 \[ClubSuit]", "9 \[ClubSuit]", "10 \[ClubSuit]", "Jack \[ClubSuit]", "Queen \[ClubSuit]", "King \[ClubSuit]"]
 cprom[]
 Which[StringMatchQ[w]["n"], Exit[], StringMatchQ[w]["y"], exproc[]]
