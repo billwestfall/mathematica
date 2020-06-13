@@ -1,3 +1,3 @@
 a=RandomChoice[{"Black","White"}]
-b=RandomChoice[{8,2} -> {"No creature","1/1 "a}, 1]
+b=RandomChoice[{7,3} -> {"No creature","2/2 "a}, 1]
 Print[b]
