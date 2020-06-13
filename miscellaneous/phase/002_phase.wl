@@ -1,6 +1,6 @@
 a=RandomChoice[{"Black","White"}]
-b=RandomChoice[{5,5} -> {"No creature","1/1 "a}, 1]
+b=RandomChoice[{3,7} -> {"No creature","2/2 "a}, 1]
 c=RandomChoice[{"Black","White"}]
-d=RandomChoice[{5,5} -> {"No creature","2/2 "c}, 1]
+d=RandomChoice[{4,6} -> {"No creature","3/3 "c}, 1]
 Print[b]
 Print[d]
