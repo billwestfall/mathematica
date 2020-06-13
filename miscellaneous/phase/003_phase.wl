@@ -1,5 +1,5 @@
 a=RandomChoice[{"Black","White"}]
-b=RandomChoice[{5,5} -> {"No creature","1/1 "a}, 1]
+b=RandomChoice[{4,6} -> {"No creature","1/1 "a}, 1]
 c=RandomChoice[{"Black","White"}]
 d=RandomChoice[{5,5} -> {"No creature","2/2 "c}, 1]
 e=RandomChoice[{"Black","White"}]
