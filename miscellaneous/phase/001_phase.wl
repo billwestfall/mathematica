@@ -1,2 +1,2 @@
-a=RandomChoice["Black","White"]
+a=RandomChoice[{"Black","White"}]
 Print[a]
