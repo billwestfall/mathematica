@@ -8,3 +8,5 @@ montyHall[nGames_] :=
  
     Grid[{{"Strategy", "Wins", "Win %"}, {"Stay", Row[{nStayWins, "/", nGames}], s=N[100 nStayWins/nGames]}, 
           {"Switch", Row[{nSwitchWins, "/", nGames}], 100 - s}},  Frame -> All]]
+
+montyHall[]
