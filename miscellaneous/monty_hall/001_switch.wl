@@ -7,10 +7,10 @@ montyHall[nGames_] :=
          nStayWins =  Count[Transpose[{winningDoors, firstChoices}], {d_, d_}];
          nSwitchWins = nGames - nStayWins;
  
-  Grid[{{"Strategy", "Wins", "Win %"}, {"Stay", Row[{nStayWins, "/", nGames}], s=N[100 nStayWins/nGames]}, 
-          {"Switch", Row[{nSwitchWins, "/", nGames}], 100 - s}},  Frame -> All]]
+  s=N[100 nStayWins/nGames]}
+  ss=N[100-s]
 
 cprom[]
 montyHall[z]
 Print["Stay wins: ", s]
-Print["Switch wins: ", 100 - s]
+Print["Switch wins: ", ss]
