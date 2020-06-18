@@ -1,0 +1,8 @@
+yy=RandomChoice[a,b,c]
+z=RandomChoice[yy]
+w=DeleteCases[y, z]
+v=RandomChoice[w]
+u=DeleteCases[w,z]
+u=DeleteCases[w, v]
+Print[yy]
+Print[u]
