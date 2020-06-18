@@ -1,4 +1,4 @@
-yy=RandomChoice[a,b,c]
+yy=List[{a,b,c}]
 z=RandomChoice[yy]
 w=DeleteCases[y, z]
 v=RandomChoice[w]
