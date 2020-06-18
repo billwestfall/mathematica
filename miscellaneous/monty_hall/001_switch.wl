@@ -6,7 +6,7 @@ montyHall[nGames_] :=
          firstChoices = r;
          nStayWins =  Count[Transpose[{winningDoors, firstChoices}], {d_, d_}];
          nSwitchWins = nGames - nStayWins;
-         s=N[100 nStayWins/nGames];
+         s=N[100*nStayWins/nGames];
          ss=N[100-s]]
 
 cprom[]
