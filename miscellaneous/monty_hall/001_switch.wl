@@ -1,3 +1,4 @@
+cprom[] := (Print["Enter number of games to play: "]; z=Input[])
 montyHall[nGames_] :=
     Module[{r, winningDoors, firstChoices, nStayWins, nSwitchWins, s},
          r := RandomInteger[{1, 3}, nGames];
@@ -9,4 +10,5 @@ montyHall[nGames_] :=
     Grid[{{"Strategy", "Wins", "Win %"}, {"Stay", Row[{nStayWins, "/", nGames}], s=N[100 nStayWins/nGames]}, 
           {"Switch", Row[{nSwitchWins, "/", nGames}], 100 - s}},  Frame -> All]]
 
-montyHall[]
+cprom[]
+montyHall[z]
