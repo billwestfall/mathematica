@@ -5,4 +5,4 @@ Print[y]
 Print[z]
 t={Print["You win"]}
 s={Print["You lose"]}
-Which[y = z, s, y != z, t]
+Which[y == z, s, y !== z, t]
