@@ -1,8 +1,5 @@
-w=List[1,2,3]
-y=RandomChoice[w]
-z=RandomChoice[w]
+y=RandomChoice[1,2,3]
+z=RandomChoice[1,2,3]
 Print[y]
 Print[z]
-t={Print["You win"]}
-s={Print["You lose"]}
-If[y == z, s]
+If[y == z, Print["You lose"]]
