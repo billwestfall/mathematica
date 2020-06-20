@@ -5,4 +5,4 @@ For[k = 1; x = 0, k < 101, k++,
 z=RandomInteger[{1, 3}],
 If[y == z, x++]}];
 w=100-x
-Print[w]
+Print["You won ", w, " out of 100 games"]
