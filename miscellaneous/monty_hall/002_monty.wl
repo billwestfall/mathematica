@@ -1,5 +1,5 @@
-y=RandomChoice[{1,2,3}]
-z=RandomChoice[{1,2,3}]
+y=RandomInteger[{1, 3}]
+z=RandomInteger[{1, 3}]
 Print[y]
 Print[z]
-If[y == z, Print["You lose"]]
+If[y = z, Print["You lose"]]
