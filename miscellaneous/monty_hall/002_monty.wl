@@ -1,8 +1,6 @@
-yy=List["a","b","c"]
-y=RandomChoice[yy]
-z=RandomChoice[yy]
-w=DeleteCases[yy, z]
-v=RandomChoice[w]
-u=DeleteCases[w, v]
-Print[y]
-Print[u]
+w=List[1,2,3]
+y=RandomChoice[w]
+z=RandomChoice[w]
+t={Print["You win"]}
+s={Print["You lose"]}
+Which[y = z, s, y != z, t]
