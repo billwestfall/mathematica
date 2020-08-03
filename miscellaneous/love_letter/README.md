@@ -1,7 +1,3 @@
-Love Letter card game rules for various manifestations (regular cards, Magic, Ascension, Spoils, Tarot, Hyborean Gates, etc)
-
-thinking about the logic for a basic AI
-
 If AI plays:
 
 1.  Guard - AI guesses my card from list, if guesses right it wins
@@ -13,11 +9,11 @@ If AI plays:
 7.  Countess - if I have this and Prince or King, I need to discard (Prince) or exchange (King)
 8.  Princess - if discarded then AI loses game
 
-if G print random guess from full list
-if P then I must discard or AI wins next turn
-If B then AI present random card from remaining list
-if H then my card has no affect on AI
-if P then I have to discard and draw
-if K then AI and I switch hands , AI picks random value from remaining list
-if C then no effect
-if P AI loses
+1.  if G print random guess from full list
+2.  if P then I must discard or AI wins next turn
+3.  If B then AI present random card from remaining list
+4.  if H then my card has no affect on AI
+5.  if P then I have to discard and draw
+6.  if K then AI and I switch hands , AI picks random value from remaining list
+7.  if C then no effect
+8.  if P AI loses
