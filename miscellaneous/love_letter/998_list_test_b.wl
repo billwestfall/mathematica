@@ -1,4 +1,5 @@
 myrand=RandomInteger[{1,15}]
+lettera=List["Guard(1)", "Guard(1)", "Guard(1)", "Guard(1)", "Guard(1)", "Priest(2)", "Priest(2)", "Baron(3)", "Baron(3)", "Handmaiden(4)", "Handmaiden(4)", "Prince(5)", "Prince(5)", "King(6)", "Countess(7)", "Princess(8)" ]
 mylista=List["G1","G1","G1","G1","G1","P2","P2","B3","B3","H4","H4","Pc5","Pc5","K6","C7","Ps8"]
 v=Input["Enter the value to remove:",{}]
 w=Extract[v][mylista]
@@ -16,6 +17,7 @@ If[x1 == "K6", Print["Please discard yours and take mine which is: ", x1]]
 If[x1 == "C7", Print["C7 has to be discarded if mine is P5 or K6"]]
 If[x1 == "Ps8", Print["I discarded the P8, you win!"]]
 
+Print["The card list is: ", lettera]
 myrandb=RandomInteger[{1,13}]
 t=Input["Enter the value to remove:",{}]
 s=Extract[t][x]
