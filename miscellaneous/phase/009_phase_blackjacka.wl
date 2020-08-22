@@ -1,1 +1,1 @@
-(e=RandomChoice[{"Cost", "Attack", "Defense"}]; Print["Value to play is: ", e]
+e=RandomChoice[{"Cost", "Attack", "Defense"}]; Print["Value to play is: ", e]
