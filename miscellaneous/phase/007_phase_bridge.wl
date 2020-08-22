@@ -1,4 +1,4 @@
-a=List["Fengarian", "Keeper", "Sun Dominion", "White", "Black"]
+a=List["Fengarian", "Keeper", "Sun Dominion"]
 d=List[1,2,3,4,5,6]
 e=List["Cost", "Attack", "Defense"]
 h=List["White", "Black"]
