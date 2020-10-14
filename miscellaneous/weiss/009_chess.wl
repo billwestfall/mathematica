@@ -1,0 +1,5 @@
+a=List["500", "500", "1000", "3000", "1500", "2500", "3000", "3000", "7500", "4500", "5500", "6500", "7500", "9000", "10000"]
+b=RandomChoice[a]
+h=List["first slot", "second slot", "third slot"]
+j=RandomChoice[h]
+Print["My first card is: ", b, " in ", j]
