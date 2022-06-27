@@ -1,3 +1,2 @@
-a=ResourceFunction["RandomString"][8]
-For[i = 0, i < 4, i++, Print[a]]
-Timing[Pause[1]]
+
+While[a > 0, n = 1; a=ResourceFunction["RandomString"][8]; Print[a]; Pause[1]; n++]
