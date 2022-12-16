@@ -1,4 +1,8 @@
 a=WeatherData["Seattle", "Temperature", "NonMetricValue"]
 Print[a]
 b=Sunrise[]
+Print["Sunrise :"]
 Print[b]
+c=Sunset[]
+Print["Sunset :"]
+Print[c]
