@@ -1,4 +1,4 @@
 z = Expand[(y + yx)^5]
-a = FactorTerms[%,y]
+a = FactorTerms[z,y]
 Print[z]
 Print[a]
