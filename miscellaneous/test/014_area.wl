@@ -1,2 +1,5 @@
-a=RandomInteger[{1, 400}]
-n=1; While[n < 401, If[a == n, Print["Correct! ", a], Print["Wrong ", a]]; n++]
+Input["Enter the length: "], l]
+Input["Enter the width: "], w]
+Input["Enter the height: "], h]
+a = (2*l*w) + (2*l*h) + (2*w*h)
+Print[a, " is the area"]
