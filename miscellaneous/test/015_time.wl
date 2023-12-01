@@ -1,1 +1,2 @@
-LocalTime[]
+t=LocalTime[]
+Print[t]
