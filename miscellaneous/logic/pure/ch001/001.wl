@@ -1,2 +1,2 @@
-k=Resolve[ForAll[{p,q}, (p/q) = (q/p)]]
+k=Resolve[ForAll[{p,q},((p/q) = (q/p))]]
 Print[k]
