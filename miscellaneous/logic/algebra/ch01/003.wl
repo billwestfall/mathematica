@@ -1,6 +1,5 @@
 a = 2;
-k = 1;
-While[k <= 200,
- l = a*a a++ k++;
+For[k = 1, k <= 200, k++, a++,
+ l = a*a;
  Print[l]
- ]
+]
