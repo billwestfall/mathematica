@@ -1,7 +1,1 @@
-a = 2;
-Do[
- l = a*a,
- {k, 1, 200}
- Print[l]
- a++
- ]
+Do[Print[{i*i}], {i, 200}]
