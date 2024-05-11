@@ -1,2 +1,2 @@
-k=Resolve[Exists[x, y, z, Element[x, y, z, Reals], ((x*x*x)+(y*y*y)) == (z*z*z)]]
+k=Resolve[Exists[x, y, z, ((x*x*x)+(y*y*y)) == (z*z*z)], Reals]
 Print[k]
