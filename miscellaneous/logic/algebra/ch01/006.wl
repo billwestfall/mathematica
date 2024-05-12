@@ -1,2 +1,1 @@
-(* print numbers +5 up to 100 *)
-Do[l = i + 5, Print[l], {i, 100}]
+Do[Print[{j}], {i, 100}, {j, i + 5}]
