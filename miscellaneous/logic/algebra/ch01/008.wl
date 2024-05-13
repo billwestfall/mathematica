@@ -4,4 +4,6 @@ x = Input[]
 y = Input[]
 z = Input[]
 k = (x - y) / (z*z*z)
+l = N[k]
 Print[k]
+Print[l]
