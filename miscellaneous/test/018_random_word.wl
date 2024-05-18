@@ -1,0 +1,2 @@
+k=RandomWord[]
+Print[k]
