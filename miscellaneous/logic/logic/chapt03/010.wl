@@ -1,2 +1,2 @@
-k=Resolve[!a \[Implies] a]
+k=Resolve[ForAll[a, !a \[Implies] a]]
 Print[k]
