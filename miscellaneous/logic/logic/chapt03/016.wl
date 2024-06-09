@@ -1,2 +1,2 @@
-k=Resolve[ForAll[{a}, (a === !a) => !(a === !a) ]]
+k=Resolve[ForAll[{a}, (a === !a) \[Implies] !(a === !a) ]]
 Print[k]
